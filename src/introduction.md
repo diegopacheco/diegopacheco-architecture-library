@@ -39,6 +39,7 @@ Strategies for architects to safeguard time for deep work
 Choosing the best and latest solutions
 - [Scalability](properties/SCALABILITY.md) - Designing for growth and load
 - [Observability](properties/OBSERVABLE.md) - Monitoring and understanding system behavior
+- [Stability](properties/STABILITY.md) - Ensuring stable daily pratices.
 
 4. Chapter 4 - Pratices:
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care

@@ -24,6 +24,7 @@
 Choosing the best and latest solutions
 - [Scalability](properties/SCALABILITY.md) - Designing for growth and load
 - [Observability](properties/OBSERVABLE.md) - Monitoring and understanding system behavior
+- [Stability](properties/STABILITY.md) - Ensuring stable daily pratices.
 
 # Chapter 4 - Pratices
 
