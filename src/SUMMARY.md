@@ -21,7 +21,12 @@
 - [Stagnation](anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
 - [Requirements](anti-patterns/REQUIREMENTS.md) - Challenging and validating decisions
 
-# 3. Chapter 3 - Properties:
+# 3. Chapter 3 - Dilemmas:
+- [Why](dilemmas/WHY.md)
+- [Discovery vs Delivery](dilemmas/DISCOVERY_VS_DELIVERY.md) - Balancing exploration and execution
+- [Move Fast vs Do it Right](dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) - Speed vs Quality
+
+# 4. Chapter 4 - Properties:
 
 - [Why](properties/WHY.md)
 - [Anti-Fragility](properties/ANTI-FRAGILITY.md) - Systems Thriving on Failure
@@ -32,7 +37,7 @@ Choosing the best and latest solutions
 - [Stability](properties/STABILITY.md) - Ensuring stable daily pratices.
 - [Secure](properties/SECURE.md) - Embeding security in architecture
 
-# Chapter 4 - Pratices
+# 5. Chapter 5 - Pratices
 
 - [Why](pratices/WHY.md)
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md)
@@ -43,7 +48,7 @@ Choosing the best and latest solutions
 - [Monthly Review](pratices/MONTHLY_REVIEW.md)
 - [Working on Trenches](pratices/WORKING_ON_TRENCHES.md)
 
-# Chapter 5 - Concepts
+# 6. Chapter 6 - Concepts
 
 - [Why](concepts/WHY.md)
 - [ACID](concepts/ACID.md)
@@ -56,7 +61,7 @@ Choosing the best and latest solutions
 - [Source of Truth](concepts/SOURCE_OF_TRUTH.md)
 - [Stateless vs Stateful Services](concepts/STATELESS_VS_STATEFULL_SVC.md)
 
-# Chapter 6 - Patterns
+# 7. Chapter 7 - Patterns
 
 - [Why](patterns/WHY.md)
 - [API Gateway](patterns/API_GATEWAY.md)

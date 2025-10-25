@@ -221,7 +221,15 @@ Strategies for architects to safeguard time for deep work</li>
 <li><a href="anti-patterns/REQUIREMENTS.html">Requirements</a> - Challenging and validating decisions</li>
 </ul>
 <ol start="3">
-<li>Chapter 3 - Properties:</li>
+<li>Chapter 3 - Dilemmas:</li>
+</ol>
+<ul>
+<li><a href="dilemmas/WHY.html">Why</a></li>
+<li><a href="dilemmas/DISCOVERY_VS_DELIVERY.html">Discovery vs Delivery</a> - Balancing exploration and execution</li>
+<li><a href="dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.html">Move Fast vs Do it Right</a> - Speed vs Quality</li>
+</ul>
+<ol start="4">
+<li>Chapter 4 - Properties:</li>
 </ol>
 <ul>
 <li><a href="properties/WHY.html">Why</a></li>
@@ -233,8 +241,8 @@ Choosing the best and latest solutions</li>
 <li><a href="properties/STABILITY.html">Stability</a> - Ensuring stable daily pratices.</li>
 <li><a href="properties/SECURE.html">Secure</a> - Embeding security in architecture</li>
 </ul>
-<ol start="4">
-<li>Chapter 4 - Pratices:</li>
+<ol start="5">
+<li>Chapter 5 - Pratices:</li>
 </ol>
 <ul>
 <li><a href="pratices/WHY.html">Why</a></li>
@@ -246,8 +254,8 @@ Choosing the best and latest solutions</li>
 <li><a href="pratices/MONTHLY_REVIEW.html">Monthly Review</a> - See the whole picture.</li>
 <li><a href="pratices/WORKING_ON_TRENCHES.html">Working on Trenches</a> - Hands-on, front-line work with the team.</li>
 </ul>
-<ol start="5">
-<li>Chapter 5 - Concepts:</li>
+<ol start="6">
+<li>Chapter 6 - Concepts:</li>
 </ol>
 <ul>
 <li><a href="concepts/WHY.html">Why</a></li>
@@ -261,8 +269,8 @@ Choosing the best and latest solutions</li>
 <li><a href="concepts/SOURCE_OF_TRUTH.html">Source of Truth</a> - Authoritative data source</li>
 <li><a href="concepts/STATELESS_VS_STATEFULL_SVC.html">Stateless vs Stateful Services</a> - Service state management</li>
 </ul>
-<ol start="6">
-<li>Chapter 6 - Patterns:</li>
+<ol start="7">
+<li>Chapter 7 - Patterns:</li>
 </ol>
 <ul>
 <li><a href="patterns/WHY.html">Why</a></li>
@@ -352,6 +360,23 @@ Choosing the best and latest solutions</li>
 <p>When a project starts, or when you start a task, it's very common that product did not tought a lot about the consequences, trade-offs, corner cases, implications and or even what the engineering team needs to get it done. The most common anti-pattern is empty jira tickets and tons of meetings to push the "discovery work" to engineering.</p>
 <p>There is nothing wrong in engineering colaborating with product, as long as we mark that as "Discovery work". The issue is, product push "not ready" tickets to development and ask: "Why is this not done yet?" them corners are cut, quality is compromised and technical debt is added. Remeber the Tech Debt Plague and Ignoring culture, they are all connected.</p>
 <p>You need see requirements are "Temporary decisions", not as martial law. You need develier requirements, but you must challenge them, you must question them and you must validate them. If you don't, you are just a delivery team, not an engineering team.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="why-dilemmas"><a class="header" href="#why-dilemmas">Why Dilemmas?</a></h1>
+<p>Dilemma is a situation where a difficult choice has to be made between two or more alternatives, especially ones that are equally undesirable. Dilemmas often arise in various aspects of architecture like decision-making, and problem-solving.</p>
+<p>Every single architect will face dilemmas, some dillamas are very common and part of any system or software developement. It's important to talk about dilemmas because no one talks about them.</p>
+<p>Having good perspectived allow you to make informed and balanced decisions. Consider this as a compass to navigate dilemmas.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="discovery-vs-delivery"><a class="header" href="#discovery-vs-delivery">Discovery Vs Delivery</a></h1>
+<p>Discovery it's the moment where you are trying to figure out what to build in order to solve a problem for your users. Discovery it's heavily around product and user research, prototyping, testing ideas and validating assumptions.</p>
+<p>However it's also necessary have someone from technology doing discovery otherwise you transfer slowness, confusion and risk even to be attempting to build something that is not pheasable or too complex to deliver.</p>
+<p>Delivery should be focusing on engineering and once we know what to build(often capture as requirements and figma prototypes for the frontend) we can start building it. The question is how I build it right. Sounds simple right? But here we have one of the biggest dilemmas in software development.</p>
+<p>IF you just go from discovery to delivery you very likely is working in a waterfall fashion. So this is not linear, but (I consider an anti-pattern), but happens all the time, the moment you touch discovery, people assume discovery is done or correct and them you only care aboud shipping it fast.</p>
+<p>You need speed, but is not just speed of delivery but actually speed of learning. The goal is to learn fast. sometimes you can learn before production but often times you can only goto production to learn.</p>
+<p>If you need goto production fast to learn, should we embrace the <code>Tech Debt plague</code> and be <code>Tech Debt First</code>? No. Because you might learn what the users want or don't want, you might find what can bring revenue to the compamny but the code is there(likely forever) and we need balance this. So you can't just <code>pick a side</code> you need to balance both sides.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="move-it-fast-or-do-it-right"><a class="header" href="#move-it-fast-or-do-it-right">Move it Fast or Do it Right?</a></h1>
+<p>Facebook and silicon valey culture often emphasize speed and rapid iteration in product development. The mantra "Move Fast and Break Things" encapsulates this ethos, encouraging teams to prioritize quick delivery and innovation over meticulous planning and perfection.</p>
+<p>However even face book admited that they need to shift to a more balanced approach where they move fast but with stable infrastructure. It's important to do it right, in engineering, however if you build it right the <code>wrong product</code>, the produt people dont care, them you are wasting your time and money.</p>
+<p>However it's not as simple as, them build it all fast, and all expedient, and pile up tech debt like the Tech debt plague. You will get the right product, but a proor experience, because it will be slow, full of bugs, and unreliable.</p>
+<p>Again this refer to the the dilemma of Discovery vs Delivery. You need to find the right balance between moving fast to discover what works and doing it right to ensure quality and reliability.</p>
+<p>In theory you could "just move fast" but the issue is, lots of companies are allergic to refactoring and they never pay the price to improve the code. Mostly because tech leadership is bad and or immature. But either way, you need to pay the price at some point. If you never pay the price, you end up with a big ball of mud that is hard to maintain and evolve.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-properties"><a class="header" href="#why-properties">Why Properties?</a></h1>
 <p>Properties are characteristics or attributes that define or describe an object, system, or concept. Properties give us benefits. Without architecture properties, we would be lost in a sea of ambiguity and confusion.</p>
 <p>Properties are things you really want for your architecture and systems. Think about a kid, you want your son or daughter to have good properties like honesty, kindness, and respectfulness. Similarly, in architecture and systems, we want properties that ensure scalability, security, and observability.</p>

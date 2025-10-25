@@ -65,7 +65,12 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Requirements](src/anti-patterns/REQUIREMENTS.md) - Challenging and validating decisions
 
 
-3. Chapter 3 - Properties:
+# 3. Chapter 3 - Dilemmas:
+- [Why](src/dilemmas/WHY.md)
+- [Discovery vs Delivery](src/dilemmas/DISCOVERY_VS_DELIVERY.md) - Balancing exploration and execution
+- [Move Fast vs Do it Right](src/dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) - Speed vs Quality
+
+4. Chapter 4 - Properties:
 - [Why](src/properties/WHY.md)
 - [Anti-Fragility](src/properties/ANTI-FRAGILITY.md) - Systems Thriving on Failure
 - [State of the Art](src/properties/STATE-OF-THE-ART.md) -
@@ -76,7 +81,7 @@ Choosing the best and latest solutions
 - [Secure](src/properties/SECURE.md) - Embeding security in architecture
 
 
-4. Chapter 4 - Pratices:
+5. Chapter 5 - Pratices:
 - [Why](src/pratices/WHY.md)
 - [Attention to Detail](src/pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care
 - [Architecture Review](src/pratices/ARCH_REVIEW.md) - Documenting architecture for communication and improvements
@@ -86,7 +91,7 @@ Choosing the best and latest solutions
 - [Monthly Review](src/pratices/MONTHLY_REVIEW.md) - See the whole picture.
 - [Working on Trenches](src/pratices/WORKING_ON_TRENCHES.md) - Hands-on, front-line work with the team.
 
-5. Chapter 5 - Concepts:
+6. Chapter 6 - Concepts:
 - [Why](src/concepts/WHY.md)
 - [ACID](src/concepts/ACID.md) - Relational database transaction properties
 - [Authentication & Authorization](src/concepts/AUTHENT.md) - Identity verification and access control
@@ -98,7 +103,7 @@ Choosing the best and latest solutions
 - [Source of Truth](src/concepts/SOURCE_OF_TRUTH.md) - Authoritative data source
 - [Stateless vs Stateful Services](src/concepts/STATELESS_VS_STATEFULL_SVC.md) - Service state management
 
-6. Chapter 6 - Patterns:
+7. Chapter 7 - Patterns:
 - [Why](src/patterns/WHY.md)
 - [API Gateway](src/patterns/API_GATEWAY.md) - Single entry point for microservices
 - [BFF Pattern](src/patterns/BFF_PATTERN.md) - Backend for Frontend pattern
