@@ -35,26 +35,27 @@ Consultant on development practices with XP / Kanban
 Hire, develop, retain, and truly grow talent at scale
 
 #### 🌐 Resources
-* 📝Blogger(https://diego-pacheco.blogspot.com/)
-* 📝Substack (https://diegopachecotech.substack.com/)
- *📝Medium(https://diego-pacheco.medium.com/)
-* 📚Amazon Author(https://amazon.com/author/diegopacheco)
-* 🏢LinkedIn (https://www.linkedin.com/in/diegopachecors/)
-* 🐦X (https://twitter.com/diego_pacheco) 🐦Blusky (https://bsky.app/profile/diegopacheco.bsky.social)
-* 📺YouTube Tech Channel (https://www.youtube.com/channel/UC81qdxTnQWQxw73_CmIZAjg/videos)
+* 📝[Blogger](https://diego-pacheco.blogspot.com/)
+* 📝[Substack](https://diegopachecotech.substack.com/)
+* 📝[Medium](https://diego-pacheco.medium.com/)
+* 📚[Amazon Author](https://amazon.com/author/diegopacheco)
+* 🏢[LinkedIn](https://www.linkedin.com/in/diegopachecors/)
+* 🐦[X](https://twitter.com/diego_pacheco)
+* 🐦[Blusky](https://bsky.app/profile/diegopacheco.bsky.social)
+* 📺[YouTube Tech Channel](https://www.youtube.com/channel/UC81qdxTnQWQxw73_CmIZAjg/videos)
 
 #### 📝 Tiny Essays
-* Typescript https://gist.github.com/diegopacheco/98c85dec602d308f533edb4d0df35471
-* Rust https://gist.github.com/diegopacheco/4b7dfeb781ad3455ae2a6b090d9deaa7
-* Scala https://gist.github.com/diegopacheco/1b5df4287dd1ce4276631fd630267311
-* Zig https://gist.github.com/diegopacheco/7d7c8110db68352d58a18b0e3e3c2bb0
-* Kotlin https://gist.github.com/diegopacheco/f6beabf1451cfe1ec2dc89a19a78fdc5
-* Clojure https://gist.github.com/diegopacheco/9453877378f007e8903a359f298a0afa
-* Haskell https://gist.github.com/diegopacheco/057087dc7ae236bdd0700014a31c88ef
-* Nim https://gist.github.com/diegopacheco/0fb84d881e2423147d9cb6f8619bf473
-* V https://gist.github.com/diegopacheco/3d0b176eb83e569da582a0770209e22f
-* Gleam https://gist.github.com/diegopacheco/2fdb5be0446ccb8f07d02105a46aab75
-* Misc https://gist.github.com/diegopacheco/49329d726d0e2bd1c709ba1187a92c97
+* [Typescript](https://gist.github.com/diegopacheco/98c85dec602d308f533edb4d0df35471)
+* [Rust](https://gist.github.com/diegopacheco/4b7dfeb781ad3455ae2a6b090d9deaa7)
+* [Scala](https://gist.github.com/diegopacheco/1b5df4287dd1ce4276631fd630267311)
+* [Zig](https://gist.github.com/diegopacheco/7d7c8110db68352d58a18b0e3e3c2bb0)
+* [Kotlin](https://gist.github.com/diegopacheco/f6beabf1451cfe1ec2dc89a19a78fdc5)
+* [Clojure](https://gist.github.com/diegopacheco/9453877378f007e8903a359f298a0afa)
+* [Haskell](https://gist.github.com/diegopacheco/057087dc7ae236bdd0700014a31c88ef)
+* [Nim](https://gist.github.com/diegopacheco/0fb84d881e2423147d9cb6f8619bf473)
+* [V](https://gist.github.com/diegopacheco/3d0b176eb83e569da582a0770209e22f)
+* [Gleam](https://gist.github.com/diegopacheco/2fdb5be0446ccb8f07d02105a46aab75)
+* [Misc](https://gist.github.com/diegopacheco/49329d726d0e2bd1c709ba1187a92c97)
 
 #### 🥇 Tiny Side Projects
 
