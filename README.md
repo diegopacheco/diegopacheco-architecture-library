@@ -52,6 +52,7 @@ Philosophy:
 - [Frontend vs Backend](src/philosofy/FRONTEND_VS_BACKEND.md) - Design philosophy differences
 - [Open Source First](src/philosofy/OSS.md) - Favor open source solutions always
 - [Service Orientation](src/philosofy/SO.md) - Services as first-class citizens
+- [Protect Your Time](src/philosofy/PROTECT_YOUR_TIME.md) - Strategies for architects to safeguard time for deep work
 
 Pratices:
 - [Attention to Detail](src/pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care

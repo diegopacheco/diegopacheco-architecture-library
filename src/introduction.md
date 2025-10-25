@@ -4,6 +4,19 @@
 
 This repository contains a curated collection of concepts, guidance about Software Architecture by Diego Pacheco.
 
+I wrote this book because I'm doing sfotware srchitecture for more than 20+ yearrs and I want to share with other architects and wanna-be architects my philosophy, pratices, and import concepts and patterns you sohuld know. This also it's an experiment. It's a live piece of advices that I want to improve over time.
+
+## What to Expect
+
+* Honest and direct advice
+* Highly opinionated content
+* Practical and actionable guidance
+
+## What this book is NOT
+
+* Not a tutorial or step-by-step guide
+* It's not a panacea for all architecture problems
+
 ## Table of Contents
 
 Philosophy:
@@ -13,6 +26,8 @@ Philosophy:
 - [Frontend vs Backend](philosofy/FRONTEND_VS_BACKEND.md) - Design philosophy differences
 - [Open Source First](philosofy/OSS.md) - Favor open source solutions always
 - [Service Orientation](philosofy/SO.md) - Services as first-class citizens
+- [Protect Your Time](philosofy/PROTECT_YOUR_TIME.md) -
+Strategies for architects to safeguard time for deep work
 
 Pratices:
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care

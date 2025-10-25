@@ -10,6 +10,7 @@
 - [Frontend vs Backend](philosofy/FRONTEND_VS_BACKEND.md)
 - [Open Source First](philosofy/OSS.md)
 - [Service Orientation](philosofy/SO.md)
+- [Protect Your Time](philosofy/PROTECT_YOUR_TIME.md)
 
 # Pratices
 
