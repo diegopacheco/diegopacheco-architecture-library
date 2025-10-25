@@ -9,3 +9,5 @@ src = "src"
 default-theme = "rust"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/diegopacheco/diegopacheco-architecture-library"
+additional-css = ["theme/custom.css"]
+additional-js = ["theme/version.js"]

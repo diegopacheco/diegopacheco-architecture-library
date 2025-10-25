@@ -1,0 +1,13 @@
+.book-version-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--sidebar-bg);
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--fg);
+    opacity: 0.6;
+}
+
+.book-version-footer p {
+    margin: 0;
+}

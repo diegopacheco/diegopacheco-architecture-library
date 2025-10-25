@@ -23,7 +23,23 @@ Serve the book locally:
 mdbook serve
 ```
 
+Or use the convenience script:
+```bash
+./run.sh
+```
+
 The generated book will be in the `book/` directory.
+
+## Versioning
+
+The book version is displayed in the footer of each page. Current version is stored in the `VERSION` file.
+
+To bump the version:
+```bash
+./bump-version.sh 1.1.0
+```
+
+This will update both the `VERSION` file and `theme/version.js`.
 
 ## Table of Contents
 
