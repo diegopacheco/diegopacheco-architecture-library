@@ -45,7 +45,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 
 ## Table of Contents
 
-1. Philosophy:
+1. Chapter 1 - Philosophy:
 - [Crystall Ball](src/philosofy/CRYSTAL_BALL.md) - Think about future changes
 - [Defensive Programming](src/philosofy/DEFENSIVE.md) - Anticipating and handling errors
 - [Doing Hard Things](src/philosofy/DOING_HARD_THINGS.md) - Tackling complex problems head-on
@@ -54,12 +54,19 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Service Orientation](src/philosofy/SO.md) - Services as first-class citizens
 - [Protect Your Time](src/philosofy/PROTECT_YOUR_TIME.md) - Strategies for architects to safeguard time for deep work
 
-2. Anti-Patterns:
+2. Chapter 2 - Anti-Patterns:
 - [Tech Debt Plague](src/anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
 - [Ignore Culture](src/anti-patterns/IGNORE_CULTURE.md) - Addressing ignored problems proactively
 - [Stagnation](src/anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
 
-3. Pratices:
+3. Chapter 3 - Properties:
+- [State of the Art](src/properties/STATE-OF-THE-ART.md) -
+Choosing the best and latest solutions
+- [Scalability](src/properties/SCALABILITY.md) - Designing for growth and load
+- [Observability](src/properties/OBSERVABLE.md) - Monitoring and understanding system behavior
+
+
+3. Chapter 4 - Pratices:
 - [Attention to Detail](src/pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care
 - [Architecture Review](src/pratices/ARCH_REVIEW.md) - Documenting architecture for communication and improvements
 - [Design First](src/pratices/DESIGN_FIRST.md) - Think first, act later
@@ -68,7 +75,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Monthly Review](src/pratices/MONTHLY_REVIEW.md) - See the whole picture.
 - [Working on Trenches](src/pratices/WORKING_ON_TRENCHES.md) - Hands-on, front-line work with the team.
 
-4. Concepts:
+5. Chapter 5 - Concepts:
 - [ACID](src/concepts/ACID.md) - Relational database transaction properties
 - [Authentication & Authorization](src/concepts/AUTHENT.md) - Identity verification and access control
 - [BASE](src/concepts/BASE.md) - NoSQL consistency model
@@ -79,7 +86,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Source of Truth](src/concepts/SOURCE_OF_TRUTH.md) - Authoritative data source
 - [Stateless vs Stateful Services](src/concepts/STATELESS_VS_STATEFULL_SVC.md) - Service state management
 
-5. Patterns:
+6. Chapter 6 - Patterns:
 - [API Gateway](src/patterns/API_GATEWAY.md) - Single entry point for microservices
 - [BFF Pattern](src/patterns/BFF_PATTERN.md) - Backend for Frontend pattern
 - [Cache](src/patterns/CACHE.md) - Data storage for faster access
@@ -92,4 +99,3 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Queue](src/patterns/QUEUE.md) - Asynchronous message processing
 - [Retry](src/patterns/RETRY.md) - Handling transient failures with retry strategies
 - [Web Hook](src/patterns/WEB_HOOK.md) - Event-driven HTTP callbacks
-
