@@ -1,0 +1,11 @@
+[book]
+title = "Diego Pacheco's Software Architecture Library"
+authors = ["Diego Pacheco"]
+language = "en"
+multilingual = false
+src = "src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/diegopacheco/diegopacheco-architecture-library"

@@ -1,0 +1,747 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Diego Pacheco&#x27;s Software Architecture Library</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Diego Pacheco&#x27;s Software Architecture Library</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/diegopacheco/diegopacheco-architecture-library" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="diego-pachecos-software-architecture-library"><a class="header" href="#diego-pachecos-software-architecture-library">Diego Pacheco's Software Architecture Library</a></h1>
+<p>This repository contains a curated collection of concepts, guidance about Software Architecture by Diego Pacheco.</p>
+<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
+<p>Philosophy:</p>
+<ul>
+<li><a href="philosofy/CRYSTAL_BALL.html">Crystall Ball</a> - Think about future changes</li>
+<li><a href="philosofy/DEFENSIVE.html">Defensive Programming</a> - Anticipating and handling errors</li>
+<li><a href="philosofy/DOING_HARD_THINGS.html">Doing Hard Things</a> - Tackling complex problems head-on</li>
+<li><a href="philosofy/FRONTEND_VS_BACKEND.html">Frontend vs Backend</a> - Design philosophy differences</li>
+<li><a href="philosofy/OSS.html">Open Source First</a> - Favor open source solutions always</li>
+<li><a href="philosofy/SO.html">Service Orientation</a> - Services as first-class citizens</li>
+</ul>
+<p>Pratices:</p>
+<ul>
+<li><a href="pratices/ATTENTION_TO_DETAIL.html">Attention to Detail</a> - Architect with precision and care</li>
+<li><a href="pratices/ARCH_REVIEW.html">Architecture Review</a> - Documenting architecture for communication and improvements</li>
+<li><a href="pratices/DESIGN_FIRST.html">Design First</a> - Think first, act later</li>
+<li><a href="pratices/OWNERSHIP.html">Ownership</a> - Extreme ownership and proactive behavior for architects</li>
+<li><a href="pratices/READING_CODE.html">Reading Code</a> - Importance of reading code as an architect</li>
+<li><a href="pratices/MONTHLY_REVIEW.html">Monthly Review</a> - See the whole picture.</li>
+<li><a href="pratices/WORKING_ON_TRENCHES.html">Working on Trenches</a> - Hands-on, front-line work with the team.</li>
+</ul>
+<p>Concepts and Patterns:</p>
+<ul>
+<li><a href="concepts/ACID.html">ACID</a> - Relational database transaction properties</li>
+<li><a href="concepts/API_GATEWAY.html">API Gateway</a> - Single entry point for microservices</li>
+<li><a href="concepts/AUTHENT.html">Authentication &amp; Authorization</a> - Identity verification and access control</li>
+<li><a href="concepts/BASE.html">BASE</a> - NoSQL consistency model</li>
+<li><a href="concepts/BFF_PATTERN.html">BFF Pattern</a> - Backend for Frontend pattern</li>
+<li><a href="concepts/CACHE.html">Cache</a> - Data storage for faster access</li>
+<li><a href="concepts/CONNECTION_POOL.html">Connection Pool</a> - Database connection reuse</li>
+<li><a href="concepts/FEATURE_FLAGS.html">Feature Flags</a> - Runtime configuration and gradual rollouts</li>
+<li><a href="concepts/IDEMPOTENCY.html">Idempotency</a> - Safe operation repetition</li>
+<li><a href="concepts/LB.html">Load Balancer</a> - Traffic distribution across servers</li>
+<li><a href="concepts/MESSAGE_PATTERNS.html">Message Patterns</a> - Publish/Subscribe, Point-to-Point messaging</li>
+<li><a href="concepts/MESSAGE_ID.html">Message Id</a> - Unique identifier for tracing requests</li>
+<li><a href="concepts/OPLOCKING.html">Optimistic vs Pessimistic Locking</a> - Concurrency control strategies</li>
+<li><a href="concepts/PAGINATION.html">Pagination</a> - Breaking large datasets into pages</li>
+<li><a href="concepts/PARTITION.html">Partition</a> - Data distribution strategies</li>
+<li><a href="concepts/QUEUE.html">Queue</a> - Asynchronous message processing</li>
+<li><a href="concepts/RETRY.html">Retry</a> - Handling transient failures with retry strategies</li>
+<li><a href="concepts/SCHEMA_EVOLUTION.html">Schema Evolution</a> - Forward/backward compatibility for APIs</li>
+<li><a href="concepts/SOURCE_OF_TRUTH.html">Source of Truth</a> - Authoritative data source</li>
+<li><a href="concepts/STATELESS_VS_STATEFULL_SVC.html">Stateless vs Stateful Services</a> - Service state management</li>
+<li><a href="concepts/WEB_HOOK.html">Web Hook</a> - Event-driven HTTP callbacks</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="crystal-ball"><a class="header" href="#crystal-ball">Crystal Ball</a></h1>
+<p>Architects must have a good crystal ball. Requirements change, a requirement change can break completely the architecture if it was not designed to accommodate change. So thinking ahead it's a great pratice because allow you to predict the next moves, meaning you think big and ahead but execute small.</p>
+<p>Code can and should be refactored. Refactoring should happpen all the time and continously. However there are people who are alergic to refactoring and that is a recice to great disasters. Thinking ahead allow you to be prepared when you need it. Think about fire drills, you pratice how to handle fire, so when you need it you are ready.</p>
+<p>Think big execute small.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="defensive-programing"><a class="header" href="#defensive-programing">Defensive Programing</a></h1>
+<p>Defensive programming is a design approach that emphasizes anticipating and handling potential errors or unexpected inputs in software development. For instance you always:</p>
+<ul>
+<li>Validate inputs to ensure they meet expected formats and constraints.</li>
+<li>Handle exceptions gracefully to prevent crashes and provide meaningful error messages.</li>
+<li>Design functions and methods to be robust against invalid or unexpected inputs.</li>
+</ul>
+<p>Your code should be resilient. It should not break that easily.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="doing-hard-things"><a class="header" href="#doing-hard-things">Doing Hard Things</a></h1>
+<p>Proper software is hard. It's a never ending war. Doing the right things means, teaching, socializing, influencing, enforcing, convicing, pushing back, standing your ground, and give all sweat and blood to make the right things to hapen.</p>
+<p>The best things in sofware are HARD:</p>
+<ul>
+<li>Doing the right design</li>
+<li>Keeping discipline to wreite tests and have high diversity and coverage</li>
+<li>Calling out and teaching team members with poor pratices and worng belifs.</li>
+<li>Pushing back poorly written tickets and requirements</li>
+<li>Saying NO to "false shortcuts" (that lead to anti-patterns and tech debt)</li>
+<li>Doing the write things everyday (invisible ant work)</li>
+</ul>
+<p>Architects must do HARD THINGS all the times.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frontend-vs-backend"><a class="header" href="#frontend-vs-backend">Frontend VS Backend</a></h1>
+<p>Frontend by nature it's spesific. One react component, one page, one feature. Backend by nature it's generic. One api endpoint, serves manny features, many pages.</p>
+<h2 id="frontend-thinking"><a class="header" href="#frontend-thinking">Frontend Thinking</a></h2>
+<p>Tends to think 1:1. One component, one feature, one page. Which might be fine for frontend but not for backend.</p>
+<h2 id="backend-thinking"><a class="header" href="#backend-thinking">Backend Thinking</a></h2>
+<p>Tends to think 1:many. One api endpoint, serves many features, many pages. Which might be fine for backend but not for frontend. By default backend services should be generic and reusable.</p>
+<p>It's okay yo have many pages or many components but is not okay to have that many services. They should be generic, more centralizers, reusable by design.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="open-source-first"><a class="header" href="#open-source-first">Open Source First</a></h1>
+<p>Open Sorce must be the default. Avoid proprietary software. Do not build wrappers for open source libraries. Use Open Source software directly.Building internal shared libraries is a liability and will create many issues like security vulnerabilities, maintenance burden, and lack of community support / documentation. Thefore creating internal shared libraries must be a very consicous choise and must be well justified.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="service-orientatation"><a class="header" href="#service-orientatation">Service Orientatation</a></h1>
+<p>Service Oriented Architecture (SOA) it's a big deal. SOA should be the default way or thinking and operating services in modern software architecture. Service Orientation should be the default choise for solutions. Services are more important and better than internal libraries.</p>
+<p>Services allow Isolation, Independence and Flexibility. When services are done right, with proper contracts, refactor can happen under the hood. Services allow different stacks and technology.</p>
+<p>Services sohuld be Capability oriented. Services should be as generic as possible and it's okay to have more granularity and more code in a service. Services does not need to be micro(Micro Services).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="attention-to-detail"><a class="header" href="#attention-to-detail">Attention to Detail</a></h1>
+<p>Architects must be meticulous in their work, ensuring that every aspect of a design is carefully considered and executed. Attention to detail is crucial for creating functional, safe, and aesthetically pleasing structures. Here are some key areas where attention to detail is essential.</p>
+<p>Architects pays close attention to:</p>
+<ul>
+<li>Code: Classes, Internal design, contracts, patterns/anti-patterns</li>
+<li>Tests: Are they passing?, how good they are? do we have good diversity? coverage?</li>
+<li>Production Logs: Are there any errors? warnings? anomalies?</li>
+<li>Production Dashboards: Are all metrics within expected ranges?</li>
+<li>Error Tracking: Are there any new issues? recurring issues? We should have ZERO EXCEPTIONS.</li>
+<li>Performance Metrics: Are we meeting our performance goals? any regressions?</li>
+<li>Security Audits: Are there any vulnerabilities? are we compliant with security standards?</li>
+<li>Requirements: Are we meeting all specified requirements? any missing features?</li>
+</ul>
+<p>Architects are critical and detail-oriented when it comes to every since tech detail.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="architecture-review"><a class="header" href="#architecture-review">Architecture Review</a></h1>
+<p>IF you dont have anything written, how can we review it? How can you comunicate with the engineering team? How can you onboard new team members?</p>
+<p>Architecture must be written down, at the minimum:</p>
+<ul>
+<li>Overall Architecture Diagram</li>
+<li>Key Decisions (with rationale)</li>
+<li>Important Trade-offs</li>
+</ul>
+<p>Arch documentation can be done with a markdown file, here is a good template: https://github.com/diegopacheco/tech-resources/blob/master/arch-doc-template.md</p>
+<p>When you write down, principles, decisions, guidance, and trade-offs become explicit, easier to communicate, and easier to review. Diagrams help a lot, specially overal architecture diagram, class diagram are very useful.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="design-first"><a class="header" href="#design-first">Design First</a></h1>
+<p>Architects must think. They must produce the design before the implementation. Howeever that's only possible if the architect master the problem domain and the technology being used. If that does not happen, Proof of Concepts (PoCs) are a great way to explore the problem and the technology before the design is produced.</p>
+<p>Writting down the design is also a great way to communicate it to the team and get feedback. The design should be a living document that evolves with the project. IF you jump executing all times you are doing just tatical programing(Philosophy of software design).</p>
+<p>If you move before you think, tech debt will happen, bad decisions will happen.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ownership"><a class="header" href="#ownership">Ownership</a></h1>
+<p>Architects must have extreme ownership. They are responsible for the success and failure of the architecture they design. This includes:</p>
+<ul>
+<li>Ensuring the architecture meets business requirements.</li>
+<li>Continuously evaluating and improving the architecture.</li>
+<li>Collaborating with development teams to ensure proper implementation.</li>
+<li>Staying updated with industry trends and best practices.</li>
+<li>Documenting architectural decisions and their rationale.</li>
+<li>Advocating for the architecture within the organization.</li>
+</ul>
+<p>Architects must be proatice. Architects are always:</p>
+<ul>
+<li>Thinking: Thinking ahead about future changes and how the architecture can accommodate them.</li>
+<li>Performing Research: Researching new technologies and patterns that can improve the architecture.</li>
+<li>Socializing: Communicating, educating, influencing effectively with stakeholders to ensure alignment and understanding of the architecture.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reading-code"><a class="header" href="#reading-code">Reading Code</a></h1>
+<p>I know this might sound silly. But Architects need to read the code, they should co download the code and read it. Reading the code allow the architect to:</p>
+<ul>
+<li>Understand the complexity of the system</li>
+<li>See the anti-patterns on the code</li>
+<li>Understand what the system does</li>
+</ul>
+<p>Many meetings can be saved if people just read the code. Architects must be Hackers, they need to read the code. Read the system code, read the libraries code, read the frameworks code. Reading code is not a one time thing, is a everyday thing.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="monthly-review"><a class="header" href="#monthly-review">Monthly Review</a></h1>
+<p>Code review is great. Architects should do Code review. However code review is pretty much focused on deltas. Which is not the whole story.</p>
+<p>Code review happens in-clycle, meaning every week, every day, or pretty much every time a ticket/PR is done. We also need a off-cycle review.</p>
+<p>As an architect, 1x per month or at least 1x per quarter you should look the whole codebase. Why? Beause them you are not looking the detlas, you are lookign the whole picture.</p>
+<p>Such pratice is important to see:</p>
+<ul>
+<li>Architectural concept drift: Are we still following the intended architecture? Are there parts of the code that have diverged from the original design principles?</li>
+<li>Code quality trends: Is the overall code quality improving or deteriorating? Are there areas that need refactoring or technical debt reduction?</li>
+<li>Consistency: Are coding standards and best practices being followed consistently across the codebase?</li>
+<li>New patterns and anti-patterns: Are there new design patterns emerging that could be beneficial? Are there anti-patterns that need to be addressed?</li>
+<li>Testing Diversity: Is the test coverage adequate? Are there areas that lack sufficient testing? Do we need new forms of testing and induction?</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="working-on-trenches"><a class="header" href="#working-on-trenches">Working on Trenches</a></h1>
+<p>Lean has this principle of "Gemba" which means "the real place" in Japanese. It emphasizes the importance of going to the actual place where work is done to understand processes and identify opportunities for improvement.</p>
+<p>Software is a war that never ends. Architects need to be on the battle front, on the trenches with engineers. Architects should not fix all the problems and code all the stories. However they need to code, they need to help the team to deal with complex problems. Architects goin there and helping the team is away to prevent a timeline disruption.</p>
+<p>Architects on the frontend is also how they can understand the real problems the team is facing. Architects cannot be hands off.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="acid"><a class="header" href="#acid">ACID</a></h1>
+<p>it's a property of database transactions intended to guarantee validity even in the event of errors, power failures. It's a RELATIONAL database concept.</p>
+<h2 id="a--atomicity"><a class="header" href="#a--atomicity">A == Atomicity</a></h2>
+<p>Atomicity ensures that a transaction is treated as a single unit, which either completely succeeds or completely fails.</p>
+<p>If any part of the transaction fails, the entire transaction is rolled back, and the database remains unchanged.</p>
+<h2 id="c--consistency"><a class="header" href="#c--consistency">C == Consistency</a></h2>
+<p>Consistency ensures that a transaction brings the database from one valid state to another valid state, maintaining all predefined rules, such as constraints, cascades, and triggers.</p>
+<h2 id="i--isolation"><a class="header" href="#i--isolation">I == Isolation</a></h2>
+<p>Isolation ensures that concurrent transactions do not interfere with each other. The intermediate state of a transaction is invisible to other transactions until the transaction is committed.</p>
+<p>This prevents transactions from reading uncommitted data from other transactions, which could lead to inconsistencies.</p>
+<h2 id="d--durability"><a class="header" href="#d--durability">D == Durability</a></h2>
+<p>Durability guarantees that once a transaction has been committed, it will remain so, even in the event of a system failure. Committed data is saved to non-volatile storage, ensuring that it is not lost. Usualy using a WAL (Write Ahead Log) to achieve this.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="api-gateway"><a class="header" href="#api-gateway">API GATEWAY</a></h1>
+<p>It's a architecture pattern that acts as a single entry point for a set of microservices, handling requests by routing them to the appropriate service, aggregating responses, and performing cross-cutting tasks such as authentication, logging, and rate limiting.</p>
+<h2 id="api-gateway-vs-load-balancer"><a class="header" href="#api-gateway-vs-load-balancer">API Gateway vs Load Balancer</a></h2>
+<p>An API Gateway and a Load Balancer serve different purposes in a microservices architecture:</p>
+<ul>
+<li>
+<p><strong>API Gateway</strong>: Primarily focuses on managing and routing API requests. It handles tasks such as request transformation, response aggregation, authentication, and rate limiting. It operates at the application layer (Layer 7) of the OSI model.</p>
+</li>
+<li>
+<p><strong>Load Balancer</strong>: Primarily focuses on distributing incoming network traffic across multiple servers to ensure high availability and reliability. It operates at both the transport layer (Layer 4) and application layer (Layer 7) of the OSI model, depending on the type of load balancer used.</p>
+</li>
+</ul>
+<h2 id="key-features"><a class="header" href="#key-features">Key Features</a></h2>
+<ul>
+<li><strong>Request Routing</strong>: Directs incoming requests to the appropriate microservice based on the request path, method, or other criteria.</li>
+<li><strong>Response Aggregation</strong>: Combines responses from multiple microservices into a single response to the client.</li>
+<li><strong>Cross-Cutting Concerns</strong>: Manages common functionalities such as authentication, logging, rate limiting, and caching.</li>
+<li><strong>Protocol Translation</strong>: Converts requests and responses between different protocols (e.g., HTTP to WebSocket).</li>
+<li><strong>Load Balancing</strong>: Distributes incoming requests across multiple instances of a microservice to ensure high availability and reliability.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="authentication--authorization--entitlements"><a class="header" href="#authentication--authorization--entitlements">Authentication &amp; Authorization &amp; Entitlements</a></h1>
+<h2 id="authentication"><a class="header" href="#authentication">Authentication</a></h2>
+<p>Authentication is the process of verifying the identity of a user or system. It ensures that the entity requesting access is who they claim to be. Common methods of authentication include:</p>
+<ul>
+<li>Passwords (very bad)</li>
+<li>Multi-factor authentication (MFA)</li>
+<li>Biometric verification</li>
+<li>OAuth tokens</li>
+<li>API keys</li>
+<li>Single Sign-On (SSO)</li>
+</ul>
+<h2 id="authorization"><a class="header" href="#authorization">Authorization</a></h2>
+<p>Authorization is the process of determining what an authenticated user or system is allowed to do. It defines the permissions and access levels for different resources. Common authorization models include:</p>
+<ul>
+<li>Access Control Lists (ACLs)</li>
+<li>Role-Based Access Control (RBAC)</li>
+<li>IAM (Identity and Access Management) systems</li>
+<li>Policy-Based Access Control (PBAC)</li>
+<li>Policy as Code</li>
+</ul>
+<h2 id="entitlements"><a class="header" href="#entitlements">Entitlements</a></h2>
+<p>Entitlements refer to the specific rights or privileges granted to a user or system after authentication and authorization. They define what actions can be performed on specific resources. Examples of entitlements include:</p>
+<ul>
+<li>Access a product catalog (invisible by default)</li>
+<li>See premium content</li>
+<li>See premium features</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="base"><a class="header" href="#base">BASE</a></h1>
+<p>A concept from NOSQL databases.
+BASE systems prioritize availability instead of immediate consistency.</p>
+<h2 id="base-properties"><a class="header" href="#base-properties">BASE Properties</a></h2>
+<p>BASE is an acronym that describes the consistency model used by many NoSQL systems. It stands for:</p>
+<p>BA == Basically Available</p>
+<p>The system guarantees availability - it will always respond to requests, even if the response contains stale or inconsistent data. The database remains operational even when parts of the system fail.</p>
+<p>S == Soft state
+The state of the system may change over time, even without new input, due to eventual consistency. Data doesn't have to be immediately consistent across all nodes.</p>
+<p>E == Eventual consistency
+Given enough time without new updates, all replicas will eventually converge to the same value. The system doesn't guarantee immediate consistency but promises that consistency will be achieved eventually.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="backend-for-frontend-pattern"><a class="header" href="#backend-for-frontend-pattern">Backend for Frontend Pattern</a></h1>
+<p>The Backend for Frontend pattern involves creating separate backend services tailored to the specific needs of different frontend applications. Usually written in a language that is common for the frontend team, meaning: NodeJS with JS ot Typescript.</p>
+<p>BFFs should have <code>Rendering Logic</code> and should NEVER have <code>Business Logic</code> because that should be encapsulated in the core backend services.</p>
+<h2 id="bffs-are"><a class="header" href="#bffs-are">BFFs Are</a></h2>
+<ul>
+<li><strong>Frontend-Specific</strong>: Each BFF is designed and optimized for a specific frontend application.</li>
+<li><strong>Team Ownership</strong>: The team that builds the frontend typically owns and maintains its BFF.</li>
+<li><strong>Aggregation Layer</strong>: BFFs aggregate data from multiple downstream services.</li>
+<li><strong>Tailored Responses</strong>: Returns only the data the frontend needs in the format it expects.</li>
+</ul>
+<h2 id="bff-vs-api-gateway"><a class="header" href="#bff-vs-api-gateway">BFF vs API Gateway</a></h2>
+<p>While both BFF and API Gateway sit between frontends and backend services, they serve different purposes:</p>
+<p><strong>API Gateway</strong>: Provides common functionality like authentication, rate limiting, and routing. It serves all clients with the same generic interface.</p>
+<p><strong>BFF</strong>: Tailors the API specifically to each frontend's needs. It aggregates, transforms, and optimizes responses for a specific client type. Rendering logic is part of the BFF.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cache"><a class="header" href="#cache">CACHE</a></h1>
+<p>A cache is a software component that stores data so that future requests for that data can be served faster. Caches are commonly used to improve performance and reduce latency in various applications, including web browsers, databases, and operating systems.</p>
+<h2 id="types-of-caches"><a class="header" href="#types-of-caches">Types of Caches</a></h2>
+<ol>
+<li><strong>Memory Cache</strong>: Stores frequently accessed data in RAM for quick retrieval.</li>
+<li><strong>Disk Cache</strong>: Stores data on a hard drive or SSD to reduce access times for frequently used files.</li>
+<li><strong>Web Cache</strong>: Stores web pages and resources to reduce bandwidth usage and load times</li>
+<li><strong>Database Cache</strong>: Caches query results to speed up database access.</li>
+<li><strong>CPU Cache</strong>: A small-sized type of volatile memory that provides high-speed data access to the processor.</li>
+</ol>
+<h2 id="cache-strategies"><a class="header" href="#cache-strategies">Cache Strategies</a></h2>
+<ol>
+<li><strong>Write-Through Cache</strong>: Data is written to both the cache and the underlying storage simultaneously.</li>
+<li><strong>Write-Back Cache</strong>: Data is written to the cache first and then to the underlying storage at a later time.</li>
+<li><strong>Least Recently Used (LRU)</strong>: Evicts the least recently accessed items when the cache is full.</li>
+<li><strong>First In First Out (FIFO)</strong>: Evicts the oldest items first when the cache is full.</li>
+<li><strong>Time-to-Live (TTL)</strong>: Items in the cache are assigned a lifespan, after which they are automatically removed.</li>
+</ol>
+<h2 id="cache-invalidation"><a class="header" href="#cache-invalidation">Cache Invalidation</a></h2>
+<p>Cache invalidation is the process of removing or updating cached data when it becomes stale or outdated. Common strategies include:</p>
+<ol>
+<li><strong>Manual Invalidation</strong>: Explicitly removing or updating cache entries.</li>
+<li><strong>Automatic Invalidation</strong>: Using TTL or other mechanisms to automatically remove stale data.</li>
+<li><strong>Event-Driven Invalidation</strong>: Invalidating cache entries based on specific events, such as data updates.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="connection-pool"><a class="header" href="#connection-pool">Connection Pool</a></h1>
+<p>A connection pool is a cache of database connections maintained so that the connections can be reused when future requests to the database are required. Connection pools are used to enhance the performance of executing commands on a database. Opening and maintaining a database connection for each user, especially requests made to a dynamic database-driven website application, is costly and wastes resources.</p>
+<p>It's expensive to open and close connections to the database all the time. That's why this objects are created as the application bootup and they are borrowed and returned to the pool as needed.</p>
+<p>Java has a great connection pooling libraries like HikariCP.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="feature-flags"><a class="header" href="#feature-flags">Feature Flags</a></h1>
+<p>Feature flags are runtime configuration switches that enable or disable functionality without deploying new code. They decouple deployment from release, allowing gradual rollouts and instant rollbacks, migrations and A/B testing.</p>
+<h2 id="strategies"><a class="header" href="#strategies">Strategies</a></h2>
+<p><strong>Environment Variables</strong>: Simplest approach. Requires restart to change. Good for operational flags.</p>
+<p><strong>Configuration Files</strong>: Load from files on startup or reload periodically. No restart needed if hot-reloaded.</p>
+<p><strong>Database or Cache</strong>: Dynamic flags stored in database or distributed cache. Change instantly across all instances.</p>
+<p><strong>Feature Flag Services</strong>: Dedicated systems like LaunchDarkly, Split, or Unleash. Advanced targeting and analytics.</p>
+<h2 id="targeting-and-segmentation"><a class="header" href="#targeting-and-segmentation">Targeting and Segmentation</a></h2>
+<p>Flags can target based on:</p>
+<ul>
+<li>User ID or email for specific users</li>
+<li>Percentage rollout for gradual releases</li>
+<li>Geographic region or data center</li>
+<li>User attributes like subscription tier</li>
+<li>Environment like staging vs production</li>
+<li>Random sampling for experiments</li>
+</ul>
+<h2 id="anti-patterns"><a class="header" href="#anti-patterns">Anti-Patterns</a></h2>
+<p><strong>Long-Lived Release Flags</strong>: Release flags should be temporary. Remove after release complete.</p>
+<p><strong>Nested Flags</strong>: Flags inside flags create exponential complexity. Avoid deeply nested conditions.</p>
+<p><strong>Flag Proliferation</strong>: Too many flags make system hard to reason about. Be selective.</p>
+<p><strong>Using Flags for Configuration</strong>: Feature flags are not general configuration. Use proper config systems for that.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="idepotency"><a class="header" href="#idepotency">IDEPOTENCY</a></h1>
+<p>It's a interesting property that allow the same operation to be performed multiple times without changing the result beyond the initial application.</p>
+<p>In REST APIs, idempotency is an important concept, especially for HTTP methods. Here are some common HTTP methods like GET, HEAD, OPTIONS, TRACE, PUT.</p>
+<ul>
+<li><strong>GET</strong>: The most famous and common Idempotent. Retrieving a resource multiple times does not change its state.</li>
+</ul>
+<p>Idepotency it's important because if the same request arrives twice(there is not side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences or just re-process the samething again without issues.</p>
+<p>Such principle keep us from writing complex software. For instance if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.</p>
+<p>So we want honor the idempotency principle to keep our software simple and predictable.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="load-balancer"><a class="header" href="#load-balancer">Load Balancer</a></h1>
+<p>It's a service that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed, improving application availability and responsiveness.</p>
+<p>Load balancers can operate at different layers of the OSI model, such as Layer 4 (Transport Layer) and Layer 7 (Application Layer), providing various features like SSL termination, session persistence, and health monitoring of backend servers.</p>
+<h2 id="common-load-balancing-algorithms"><a class="header" href="#common-load-balancing-algorithms">Common Load Balancing Algorithms</a></h2>
+<ol>
+<li><strong>Round Robin</strong>: Distributes requests sequentially across the servers.</li>
+<li><strong>Least Connections</strong>: Directs traffic to the server with the fewest active connections.</li>
+<li><strong>IP Hash</strong>: Uses the client's IP address to determine which server will handle the request.</li>
+<li><strong>Weighted Round Robin</strong>: Similar to Round Robin but allows assigning weights to servers based on their capacity.</li>
+<li><strong>Random</strong>: Distributes requests randomly across the servers.</li>
+<li><strong>Metric-Based</strong>: Uses specific metrics (like response time or server load) to make load balancing decisions.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="message-patterns"><a class="header" href="#message-patterns">Message Patterns</a></h1>
+<p>There are different ways to structure message communication between systems.</p>
+<h2 id="publishsubscribe-pattern"><a class="header" href="#publishsubscribe-pattern">Publish/Subscribe Pattern</a></h2>
+<p>Publishers send messages to a topic or channel without knowing who will receive them. Subscribers express interest in specific topics and receive all messages published to those topics.</p>
+<p>Pub/Sub Nature:</p>
+<ul>
+<li><strong>One-to-Many</strong>: A single message can be delivered to multiple subscribers.</li>
+<li><strong>Decoupling</strong>: Publishers and subscribers don't need to know about each other.</li>
+<li><strong>Dynamic Subscription</strong>: Subscribers can join or leave at any time.</li>
+<li><strong>Topic-Based</strong>: Messages are organized by topics or channels.</li>
+</ul>
+<p>Pub/Sub Use cases:</p>
+<ul>
+<li>Real-time notifications across multiple services</li>
+<li>Event-driven architectures where multiple consumers need the same data</li>
+<li>Log aggregation and monitoring systems</li>
+</ul>
+<h2 id="point-to-point-pattern"><a class="header" href="#point-to-point-pattern">Point-to-Point Pattern</a></h2>
+<p>Messages are sent directly from one sender to one specific receiver. Messages are typically placed in a queue where they are consumed by a single consumer.</p>
+<p>P2P:</p>
+<ul>
+<li><strong>One-to-One</strong>: Each message is consumed by exactly one receiver.</li>
+<li><strong>Message Ordering</strong>: Messages are typically processed in the order they arrive.</li>
+<li><strong>Load Distribution</strong>: Multiple consumers can read from the same queue for load balancing.</li>
+<li><strong>Guaranteed Delivery</strong>: Messages remain in the queue until successfully processed.</li>
+</ul>
+<p>P2P Use cases:</p>
+<ul>
+<li>Task distribution among worker nodes</li>
+<li>Request-response communication between services</li>
+<li>Sequential processing of transactions</li>
+<li>Background job processing</li>
+</ul>
+<h2 id="request-reply-pattern"><a class="header" href="#request-reply-pattern">Request-Reply Pattern</a></h2>
+<p>A pattern where a sender sends a message and waits for a response from the receiver. The sender includes a reply-to address in the message so the receiver knows where to send the response.
+This pattern combines aspects of both synchronous and asynchronous communication, allowing for non-blocking request-response interactions.</p>
+<h2 id="message-ordering"><a class="header" href="#message-ordering">Message Ordering</a></h2>
+<p>Message ordering guarantees vary by pattern and implementation:</p>
+<ul>
+<li><strong>FIFO Ordering</strong>: Messages are processed in the order they are sent.</li>
+<li><strong>Partition Ordering</strong>: Messages within the same partition maintain order.</li>
+<li><strong>No Ordering</strong>: Messages may be processed in any order for maximum throughput.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="message-id"><a class="header" href="#message-id">Message Id</a></h1>
+<p>Also know as CORRELATION_ID. The idea that each message or request must have a uniqui id, and you will pass down such id into the dowstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID.</p>
+<p>Why this is important?</p>
+<ul>
+<li>Traceability: When you have a unique MESSAGE_ID for each request, you can trace the entire lifecycle of that request across multiple services. This is especially useful in microservices architectures where a single user action may trigger multiple service calls.</li>
+<li>Debugging: If an error occurs, having a MESSAGE_ID allows you to quickly locate all logs and events related to that specific request. This can significantly speed up the debugging process.</li>
+<li>Monitoring: MESSAGE_IDs can be used to monitor the performance of requests as they pass through</li>
+</ul>
+<p>without a MESSAGE_ID, it because impossible to debug distrubuted systems.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pessimistic-vs-optimistc-locking"><a class="header" href="#pessimistic-vs-optimistc-locking">Pessimistic vs Optimistc Locking</a></h1>
+<p>When dealing with concurrent access to shared resources, two primary locking strategies can be employed: pessimistic locking and optimistic locking.</p>
+<p><strong>Pessimistic locking</strong>: assumes that conflicts will occur and therefore locks the resource for exclusive access when a transaction begins. This approach is suitable for environments with high contention, as it prevents other transactions from modifying the resource until the lock is released. However, it can lead to reduced concurrency and potential deadlocks.</p>
+<p><strong>Optimistic locking</strong>: assumes that conflicts are rare and allows multiple transactions to access the resource concurrently. Instead of locking the resource, it checks for conflicts only when a transaction attempts to commit changes. If a conflict is detected, the transaction is rolled back and can be retried. This approach is more efficient in low-contention environments, as it maximizes concurrency and minimizes locking overhead.</p>
+<p>Optimistic locking is often implemented using versioning, where each resource has a version number that is checked and updated during transactions. If the version number has changed since the transaction began, it indicates a conflict.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pagination"><a class="header" href="#pagination">Pagination</a></h1>
+<p>When you have a endpoint that returns a large list of items, it is often useful to paginate the results. This means breaking the results into smaller chunks, or "pages", that can be retrieved one at a time.</p>
+<p>Basic benefit here is to reduce the amount of data transferred in a single request, which can improve performance and reduce load on the server. Less latency and more responsive applications are the end result.</p>
+<h2 id="pagination-strategies"><a class="header" href="#pagination-strategies">Pagination Strategies</a></h2>
+<ol>
+<li><strong>Offset-Based Pagination</strong>: This is the most common method, where the client specifies an offset (the starting point) and a limit (the number of items to return). For example, <code>GET /items?offset=20&amp;limit=10</code> would return items 21-30.</li>
+<li><strong>Cursor-Based Pagination</strong>: Instead of using an offset, this method uses a cursor (a unique identifier for a specific item) to mark the starting point for the next page of results. For example, <code>GET /items?cursor=abc123&amp;limit=10</code> would return the next 10 items after the item with the cursor <code>abc123</code>.</li>
+<li><strong>Page Number Pagination</strong>: This method uses page numbers to specify which page of results to return. For example, <code>GET /items?page=2&amp;limit=10</code> would return the second page of results, with 10 items per page.</li>
+<li><strong>Keyset Pagination</strong>: This method uses the values of the last item in the current page to determine the starting point for the next page. For example, if the last item on the current page has an ID of 50, the next request might be <code>GET /items?after_id=50&amp;limit=10</code>.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="partition"><a class="header" href="#partition">Partition</a></h1>
+<p>A <strong>partition</strong> of a set is a way of dividing the data set into subsets such that every element in the original set is included in exactly one of the subsets. In other words, a partition breaks down a set into distinct parts where no part shares any elements with another, and all parts together cover the entire original set.</p>
+<p>Partition by:</p>
+<ul>
+<li>A specific column or set of columns</li>
+<li>A specific number of partitions</li>
+<li>A specific size of each partition</li>
+<li>A specific percentage of data in each partition</li>
+<li>A specific condition or rule</li>
+<li>A random distribution of data into partitions</li>
+<li>Consistent hashing for distributed systems</li>
+</ul>
+<p>Partitions matter because they can significantly impact the performance and efficiency of data processing tasks. Proper partitioning can lead to faster query execution, reduced data shuffling, and improved resource utilization in distributed computing environments.</p>
+<p>When designing partitions, consider factors such as data distribution, query patterns, and the underlying storage system to ensure optimal performance.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="queue"><a class="header" href="#queue">Queue</a></h1>
+<p>Queue it's a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front.</p>
+<p>In distributed systems, queues are often used to manage tasks, messages, or data that need to be processed asynchronously. They help in decoupling different parts of a system, allowing for better scalability and fault tolerance.</p>
+<p>Queues use cases are:</p>
+<ul>
+<li><strong>Asynchronous processing</strong>: Tasks can be added to a queue and processed by worker nodes at their own pace.</li>
+<li><strong>Load balancing</strong>: Distributing tasks across multiple workers to ensure no single worker is overwhelmed.</li>
+<li><strong>Message brokering</strong>: Facilitating communication between different services or components in a system.</li>
+<li><strong>Rate limiting</strong>: Controlling the rate at which tasks are processed to avoid overwhelming downstream systems.</li>
+<li><strong>Event sourcing</strong>: Storing a sequence of events that can be processed later to reconstruct the state of a system.</li>
+</ul>
+<p>Common Issues with Queues:</p>
+<ul>
+<li><strong>Message loss</strong>: If a queue is not properly configured, messages may be lost during transmission or processing.</li>
+<li><strong>Duplicate messages</strong>: In some cases, messages may be delivered more than once, leading to redundant processing.</li>
+<li><strong>Latency</strong>: Queues can introduce delays in processing, especially if they become overloaded.</li>
+<li><strong>Backpressure</strong>: If the rate of incoming messages exceeds the processing capacity, it can lead to increased latency and potential message loss.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="retry"><a class="header" href="#retry">Retry</a></h1>
+<p>Retry is a technique used in distributed systems to handle transient failures by attempting an operation multiple times before giving up. This approach is particularly useful in distributed systems, where network issues or temporary unavailability of services can lead to failures that may be resolved with subsequent attempts.</p>
+<h2 id="timeouts"><a class="header" href="#timeouts">Timeouts</a></h2>
+<p>When implementing retries, it is important to set appropriate timeouts for each attempt. A timeout defines how long the system should wait for a response before considering the attempt a failure. Setting too short a timeout may lead to unnecessary retries, while too long a timeout can delay the overall operation.</p>
+<h2 id="progressive-backoff"><a class="header" href="#progressive-backoff">Progressive Backoff</a></h2>
+<p>Progressive backoff is a strategy used to increase the wait time between successive retry attempts. This approach helps to reduce the load on the system and increases the chances of success in subsequent attempts. Common backoff strategies include:</p>
+<ul>
+<li><strong>Fixed Backoff</strong>: A constant wait time between retries.</li>
+<li><strong>Exponential Backoff</strong>: The wait time increases exponentially with each retry attempt.</li>
+<li><strong>Jitter</strong>: Adding randomness to the wait time to prevent synchronized retries from multiple clients.</li>
+</ul>
+<h2 id="thumdering-herd-problem"><a class="header" href="#thumdering-herd-problem">Thumdering Herd Problem</a></h2>
+<p>The thundering herd problem occurs when multiple clients simultaneously retry an operation after a failure, leading to a sudden surge in requests that can overwhelm the system. To mitigate this issue, techniques such as jitter in backoff strategies and limiting the number of concurrent retries can be employed.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="schema-evolution"><a class="header" href="#schema-evolution">Schema Evolution</a></h1>
+<p>Schema evolution is the practice of changing data structures, API contracts, or message formats over time while maintaining compatibility with existing clients and services. This is critical for zero-downtime deployments in distributed systems.</p>
+<h2 id="forward-compatibility"><a class="header" href="#forward-compatibility">Forward Compatibility</a></h2>
+<p>Forward compatibility means that old code can read data written by new code. The old system can safely ignore new fields it doesn't understand.</p>
+<p>When adding new fields to a schema:</p>
+<ul>
+<li>New fields should be optional with sensible defaults</li>
+<li>Old services can process new messages by ignoring unknown fields</li>
+<li>Allows deploying new producers before updating consumers</li>
+</ul>
+<h2 id="backward-compatibility"><a class="header" href="#backward-compatibility">Backward Compatibility</a></h2>
+<p>Backward compatibility means that new code can read data written by old code. The new system must handle the absence of fields that didn't exist in older versions.</p>
+<p>When reading old data:</p>
+<ul>
+<li>New code must provide defaults for missing fields</li>
+<li>New services can process old messages correctly</li>
+<li>Allows deploying new consumers before updating producers</li>
+</ul>
+<h2 id="breaking-changes"><a class="header" href="#breaking-changes">Breaking Changes</a></h2>
+<p>Breaking changes destroy compatibility and require coordinated deployments. Avoid these whenever possible:</p>
+<ul>
+<li>Removing required fields</li>
+<li>Changing field types</li>
+<li>Renaming fields without aliasing</li>
+<li>Changing field semantics</li>
+<li>Making optional fields required</li>
+</ul>
+<h2 id="safe-schema-changes"><a class="header" href="#safe-schema-changes">Safe Schema Changes</a></h2>
+<p>Safe changes maintain compatibility:</p>
+<ul>
+<li>Adding optional fields with defaults</li>
+<li>Removing optional fields</li>
+<li>Adding new enum values at the end</li>
+<li>Adding new message types</li>
+<li>Deprecating fields instead of removing them</li>
+</ul>
+<h2 id="versioning-strategies"><a class="header" href="#versioning-strategies">Versioning Strategies</a></h2>
+<p><strong>URL Versioning</strong>: Different versions in the URL path like <code>/api/v1/users</code> and <code>/api/v2/users</code></p>
+<p><strong>Header Versioning</strong>: Version specified in request headers like <code>Accept: application/vnd.api.v2+json</code></p>
+<p><strong>Content Negotiation</strong>: Different media types for different versions</p>
+<p><strong>No Versioning</strong>: Evolve schema compatibly without explicit versions. Requires discipline but provides best flexibility.</p>
+<h2 id="migration-strategies"><a class="header" href="#migration-strategies">Migration Strategies</a></h2>
+<p><strong>Expand-Contract Pattern</strong>: Three-phase deployment for breaking changes:</p>
+<ol>
+<li>Expand: Add new field alongside old field</li>
+<li>Migrate: Update all services to use new field</li>
+<li>Contract: Remove old field after migration complete</li>
+</ol>
+<p><strong>Shadow Reading</strong>: New code reads both old and new formats, writes only new format</p>
+<p><strong>Feature Flags</strong>: Toggle between old and new behavior at runtime</p>
+<h2 id="database-schema-evolution"><a class="header" href="#database-schema-evolution">Database Schema Evolution</a></h2>
+<p>Database schemas require special care because data persists:</p>
+<ul>
+<li>Use migrations that can run without downtime</li>
+<li>Add columns as nullable first, backfill data, then make required</li>
+<li>Drop columns in separate deployment after code stops using them</li>
+<li>Use views or aliases to maintain old column names during transitions</li>
+</ul>
+<p>Schema evolution is not optional in production systems. Every change must consider compatibility to avoid outages during deployments.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="source-of-truth"><a class="header" href="#source-of-truth">SOURCE OF TRUTH</a></h1>
+<p>It's concept that means what database or system is considered the authoritative source for a particular piece of information. It's comon in distributed systems to have multiple databases or even systems that store the same data. In such cases, it's crucial to designate one of these as the "source of truth" to ensure consistency and reliability of the data across the entire system.</p>
+<p>The same concept is used in migrations. While you are migrating from System A to System B, System A is the source of truth until the migration is complete and verified. After that, System B becomes the new source of truth.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stateless-vs-stateful-services"><a class="header" href="#stateless-vs-stateful-services">Stateless vs Stateful Services</a></h1>
+<p>When designing services, one of the key architectural decisions is whether to implement them as stateless or stateful. Stales teless services do not retain any information about previous interactions, while stateful services maintain state information across multiple requests.</p>
+<p>It's much easier to work with stateless services because they can scale more easily, recover from failures faster, and are generally simpler to manage. However, there are scenarios where stateful services are necessary, such as when maintaining user sessions or handling transactions.</p>
+<p>Staless does not means that the service cannot use state at all; rather, it means that the service itself does not store state between requests. Instead, any necessary state can be stored in external systems like databases or caches. Stateful service are more complex.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="web-hook"><a class="header" href="#web-hook">Web hook</a></h1>
+<p>A web hook it's just a endpoint in an API or REST server. A web hook is used to notify internal/external services when certain events happen.</p>
+<p>When an event occurs, the server makes an HTTP request (usually a POST request) to the specified URL of the web hook, sending relevant data about the event.</p>
+<p>Web hooks are commonly used for:</p>
+<ul>
+<li>
+<p><strong>Real-time notifications</strong>: Informing external systems about events as they happen.</p>
+</li>
+<li>
+<p><strong>Data synchronization</strong>: Keeping data in sync between different systems.</p>
+</li>
+<li>
+<p><strong>Integrations</strong>: Connecting different services and automating workflows.</p>
+</li>
+<li>
+<p><strong>Event-driven architectures</strong>: Triggering actions in response to specific events.</p>
+</li>
+</ul>
+<p>Webhooks dont require special technology, you can apply with any backend technology that can handle HTTP requests.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
