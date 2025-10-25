@@ -151,3 +151,6 @@ Choosing the best and latest solutions
 - [Diagraming Tools](tools/DIAGRAMING.md) - Visualizing architecture with diagrams
 - [Writing Tools](tools/WRITING.md) - Documenting architecture effectively
 - [Thinking Tools](tools/THINKING.md) - Tools for structured thinking and exploration.
+
+9. Chapter 9 - Epilogue
+- [Epilogue](epilogue/IN_THE_END.md) - Final thoughts and next steps
