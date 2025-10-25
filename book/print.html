@@ -183,7 +183,7 @@
                         <h1 id="diego-pachecos-software-architecture-library"><a class="header" href="#diego-pachecos-software-architecture-library">Diego Pacheco's Software Architecture Library</a></h1>
 <img src="cover.png" width="400">
 <p>This repository contains a curated collection of concepts, guidance about Software Architecture by Diego Pacheco.</p>
-<p>I wrote this book because I'm doing sfotware srchitecture for more than 20+ yearrs and I want to share with other architects and wanna-be architects my philosophy, pratices, and import concepts and patterns you sohuld know. This also it's an experiment. It's a live piece of advices that I want to improve over time.</p>
+<p>I wrote this book because I'm doing software architecture for more than 20+ years and I want to share with other architects and wanna-be architects my philosophy, practices, and important concepts and patterns you should know. This also is an experiment. It's a live piece of advice that I want to improve over time.</p>
 <h2 id="what-to-expect"><a class="header" href="#what-to-expect">What to Expect</a></h2>
 <ul>
 <li>Honest and direct advice</li>
@@ -296,11 +296,11 @@ Strategies for architects to safeguard time for deep work</li>
 Choosing the best and latest solutions</li>
 <li><a href="properties/SCALABILITY.html">Scalability</a> - Designing for growth and load</li>
 <li><a href="properties/OBSERVABLE.html">Observability</a> - Monitoring and understanding system behavior</li>
-<li><a href="properties/STABILITY.html">Stability</a> - Ensuring stable daily pratices.</li>
-<li><a href="properties/SECURE.html">Secure</a> - Embeding security in architecture</li>
+<li><a href="properties/STABILITY.html">Stability</a> - Ensuring stable daily practices.</li>
+<li><a href="properties/SECURE.html">Secure</a> - Embedding security in architecture</li>
 </ul>
 <ol start="5">
-<li>Chapter 5 - Pratices</li>
+<li>Chapter 5 - Practices</li>
 </ol>
 <ul>
 <li><a href="pratices/WHY.html">Why</a></li>
@@ -368,8 +368,8 @@ Choosing the best and latest solutions</li>
 <p>How we do things matters. There are many ways to do something wrong, but not as many ways to do it right. Philosofy is "ways of thinking", or "how approach" problems, day-by-day life, difficult situations, decisions, trade-offs.</p>
 <p>Without a philosofy, we are likely to fall bad into bad habits, poor decisions, and unexamined beliefs. A well-defined philosofy helps us navigate life's complexities with clarity and purpose.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="crystal-ball"><a class="header" href="#crystal-ball">Crystal Ball</a></h1>
-<p>Architects must have a good crystal ball. Requirements change, a requirement change can break completely the architecture if it was not designed to accommodate change. So thinking ahead it's a great pratice because allow you to predict the next moves, meaning you think big and ahead but execute small.</p>
-<p>Code can and should be refactored. Refactoring should happpen all the time and continously. However there are people who are alergic to refactoring and that is a recice to great disasters. Thinking ahead allow you to be prepared when you need it. Think about fire drills, you pratice how to handle fire, so when you need it you are ready.</p>
+<p>Architects must have a good crystal ball. Requirements change, a requirement change can break completely the architecture if it was not designed to accommodate change. So thinking ahead is a great practice because it allows you to predict the next moves, meaning you think big and ahead but execute small.</p>
+<p>Code can and should be refactored. Refactoring should happen all the time and continuously. However there are people who are allergic to refactoring and that is a recipe for great disasters. Thinking ahead allows you to be prepared when you need it. Think about fire drills, you practice how to handle fire, so when you need it you are ready.</p>
 <p>Think big execute small.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="defensive-programing"><a class="header" href="#defensive-programing">Defensive Programing</a></h1>
 <p>Defensive programming is a design approach that emphasizes anticipating and handling potential errors or unexpected inputs in software development. For instance you always:</p>
@@ -380,17 +380,17 @@ Choosing the best and latest solutions</li>
 </ul>
 <p>Your code should be resilient. It should not break that easily.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="doing-hard-things"><a class="header" href="#doing-hard-things">Doing Hard Things</a></h1>
-<p>Proper software is hard. It's a never ending war. Doing the right things means, teaching, socializing, influencing, enforcing, convicing, pushing back, standing your ground, and give all sweat and blood to make the right things to hapen.</p>
-<p>The best things in sofware are HARD:</p>
+<p>Proper software is hard. It's a never ending war. Doing the right things means, teaching, socializing, influencing, enforcing, convincing, pushing back, standing your ground, and giving all sweat and blood to make the right things happen.</p>
+<p>The best things in software are HARD:</p>
 <ul>
 <li>Doing the right design</li>
-<li>Keeping discipline to wreite tests and have high diversity and coverage</li>
-<li>Calling out and teaching team members with poor pratices and worng belifs.</li>
+<li>Keeping discipline to write tests and have high diversity and coverage</li>
+<li>Calling out and teaching team members with poor practices and wrong beliefs.</li>
 <li>Pushing back poorly written tickets and requirements</li>
 <li>Saying NO to "false shortcuts" (that lead to anti-patterns and tech debt)</li>
-<li>Doing the write things everyday (invisible ant work)</li>
+<li>Doing the right things everyday (invisible ant work)</li>
 </ul>
-<p>Architects must do HARD THINGS all the times.</p>
+<p>Architects must do HARD THINGS all the time.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="frontend-vs-backend"><a class="header" href="#frontend-vs-backend">Frontend VS Backend</a></h1>
 <p>Frontend by nature it's spesific. One react component, one page, one feature. Backend by nature it's generic. One api endpoint, serves manny features, many pages.</p>
 <h2 id="frontend-thinking"><a class="header" href="#frontend-thinking">Frontend Thinking</a></h2>
@@ -399,11 +399,11 @@ Choosing the best and latest solutions</li>
 <p>Tends to think 1:many. One api endpoint, serves many features, many pages. Which might be fine for backend but not for frontend. By default backend services should be generic and reusable.</p>
 <p>It's okay yo have many pages or many components but is not okay to have that many services. They should be generic, more centralizers, reusable by design.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="open-source-first"><a class="header" href="#open-source-first">Open Source First</a></h1>
-<p>Open Sorce must be the default. Avoid proprietary software. Do not build wrappers for open source libraries. Use Open Source software directly.Building internal shared libraries is a liability and will create many issues like security vulnerabilities, maintenance burden, and lack of community support / documentation. Thefore creating internal shared libraries must be a very consicous choise and must be well justified.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="service-orientatation"><a class="header" href="#service-orientatation">Service Orientatation</a></h1>
-<p>Service Oriented Architecture (SOA) it's a big deal. SOA should be the default way or thinking and operating services in modern software architecture. Service Orientation should be the default choise for solutions. Services are more important and better than internal libraries.</p>
+<p>Open Source must be the default. Avoid proprietary software. Do not build wrappers for open source libraries. Use Open Source software directly. Building internal shared libraries is a liability and will create many issues like security vulnerabilities, maintenance burden, and lack of community support / documentation. Therefore creating internal shared libraries must be a very conscious choice and must be well justified.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="service-orientation"><a class="header" href="#service-orientation">Service Orientation</a></h1>
+<p>Service Oriented Architecture (SOA) is a big deal. SOA should be the default way of thinking and operating services in modern software architecture. Service Orientation should be the default choice for solutions. Services are more important and better than internal libraries.</p>
 <p>Services allow Isolation, Independence and Flexibility. When services are done right, with proper contracts, refactor can happen under the hood. Services allow different stacks and technology.</p>
-<p>Services sohuld be Capability oriented. Services should be as generic as possible and it's okay to have more granularity and more code in a service. Services does not need to be micro(Micro Services).</p>
+<p>Services should be Capability oriented. Services should be as generic as possible and it's okay to have more granularity and more code in a service. Services do not need to be micro(Micro Services).</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="protect-your-time"><a class="header" href="#protect-your-time">Protect Your Time</a></h1>
 <p>It's very easy to be consumed with meetings 100% of the time. However the architect must protect his time in order to do deep work. Research, Monthly Reviews, Crystall Balling, thinking about trade-offs, evaluating solutions and reading code.</p>
 <p>At minimun you should book at least 3x per week 3-6h to do deep work. Does not matter if is in the morning or aftermoon, whatever is easier. Hold your ground, push back, and protect that time. Architects must think.</p>
@@ -413,45 +413,45 @@ Choosing the best and latest solutions</li>
 <p>Some anti-patterns are obvious and related to technology, but many anti-patterns are related to people, process, culture and how you work as a team. Also there are anti-patterns related to how architects behave or how they do not behave(and should behave).</p>
 <p>It's important to know that is wrong, so you can avoid doing it.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tech-debt-plague"><a class="header" href="#tech-debt-plague">Tech Debt Plague</a></h1>
-<p>Tech debt is a plague. It's something that all companies super. It's normal to have tech debt. What is not correct is architects not fight tech debt. Tech debt must be fight all times. Either by simplifying requirements to avoid feature bloat, or by making better decisions that lead to better systems.</p>
-<p>When I was thinking about this section, I was thinking on the terms of "Tech Debt First". Becuase often I see tech debt being the "defacto choise", which it's an anti-pattern. Some technical principles should be non-negociable.</p>
-<p>Imagine you are building a house, pretty sure the buyer does not expect the house to collapse 6 months later after buying it. So to cut corners you dont decide to use paper for walls, styrofoam for the roof and direct sunlight for electricity. However when we build software, bad management, bad architects and bad developers decide to cut corners to the point of making the software collapse after few months of being in production.</p>
-<p>One classical example is skiping tests. Tests are not a nice to have, they are a must have. If you dont have tests, you are building a house without a foundation. You can build it fast, but sooner or later it will collapse. How you will do refactoring without tests?</p>
-<p>You must figtht the war, manage complexity by doing improvements with the engineering team everyweek rather than "creating a jira ticket" that will never ever be addressed.</p>
+<p>Tech debt is a plague. It's something that all companies suffer. It's normal to have tech debt. What is not correct is architects not fighting tech debt. Tech debt must be fought all the time. Either by simplifying requirements to avoid feature bloat, or by making better decisions that lead to better systems.</p>
+<p>When I was thinking about this section, I was thinking on the terms of "Tech Debt First". Because often I see tech debt being the "default choice", which is an anti-pattern. Some technical principles should be non-negotiable.</p>
+<p>Imagine you are building a house, pretty sure the buyer does not expect the house to collapse 6 months later after buying it. So to cut corners you don't decide to use paper for walls, styrofoam for the roof and direct sunlight for electricity. However when we build software, bad management, bad architects and bad developers decide to cut corners to the point of making the software collapse after few months of being in production.</p>
+<p>One classical example is skipping tests. Tests are not a nice to have, they are a must have. If you don't have tests, you are building a house without a foundation. You can build it fast, but sooner or later it will collapse. How will you do refactoring without tests?</p>
+<p>You must fight the war, manage complexity by doing improvements with the engineering team every week rather than "creating a jira ticket" that will never ever be addressed.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignore-culture"><a class="header" href="#ignore-culture">Ignore Culture</a></h1>
-<p>If something is wrong. Say something, do something. When you ignore problems consistenly over a long period of time, you end up developing this anti-pattern, which I called "Ignore Culture".</p>
+<p>If something is wrong. Say something, do something. When you ignore problems consistently over a long period of time, you end up developing this anti-pattern, which I called "Ignore Culture".</p>
 <p>When you ignore warnings in the build, when you ignore old versions of libraries, when you ignore anti-patterns on the code. When you ignore production monitoring. When you ignore requirements that make no sense.</p>
-<p>Does not matter if you was the one who did the code or not. You must take ownsership and under your watch you should ignore nothing.</p>
-<p>Ignoring can be a culture because managers can easily do this. Engineers, often pressure by managers also can ignore several wrong things. Whats wrong should not be ignore it sohuld be fight and push back.</p>
-<p>Lack of fithing for whats it's right is imaturity.As an arhitect you must not ignore whats wrong. Do not let this become a culture. Ignore culture can happen so easily people "It's not my job", or "It's not my code" or "It's not my project" or "It's not my resposability", the extreme lack of ownership can lead to ignore culture.</p>
-<p>When you are ignoring problem you are makign fertile ground for anti-patterns to grow. Tech debt plague requires ignore culture to thrive.</p>
+<p>Does not matter if you were the one who did the code or not. You must take ownership and under your watch you should ignore nothing.</p>
+<p>Ignoring can become a culture because managers can easily do this. Engineers, often pressured by managers also can ignore several wrong things. What's wrong should not be ignored, it should be fought and pushed back.</p>
+<p>Lack of fighting for what is right is immaturity. As an architect you must not ignore what's wrong. Do not let this become a culture. Ignore culture can happen so easily when people say "It's not my job", or "It's not my code" or "It's not my project" or "It's not my responsibility", the extreme lack of ownership can lead to ignore culture.</p>
+<p>When you are ignoring problems you are making fertile ground for anti-patterns to grow. Tech debt plague requires ignore culture to thrive.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="stagnation"><a class="header" href="#stagnation">Stagnation</a></h1>
-<p>Architects must be like the Rolling Stones, they dont gatter moss. Architects must be in a constant state of learning, alwayd reading books, always reading papers, alwayd reading code, always ahead of the curve.</p>
-<p>IF an architect stops learning, they stagnate, and stagnation is the death of architecture. Think about a coin, a coin that has no circulation is a worthless coin. An architect that has no new knowledge is a worthless architect.</p>
-<p>As architect you cannot become old school. You must be always looking for new ideas, new technologies, new patterns, new anti-patterns, new ways of doing the old things. Being stuck on the past has terrible consequences. The architect is the most influencial person or it should be. So what are you influencing?</p>
+<p>Architects must be like the Rolling Stones, they don't gather moss. Architects must be in a constant state of learning, always reading books, always reading papers, always reading code, always ahead of the curve.</p>
+<p>If an architect stops learning, they stagnate, and stagnation is the death of architecture. Think about a coin, a coin that has no circulation is a worthless coin. An architect that has no new knowledge is a worthless architect.</p>
+<p>As architect you cannot become old school. You must be always looking for new ideas, new technologies, new patterns, new anti-patterns, new ways of doing the old things. Being stuck on the past has terrible consequences. The architect is the most influential person or it should be. So what are you influencing?</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="requirements"><a class="header" href="#requirements">Requirements</a></h1>
-<p>Mind Blow by me saying "Requirements" is an anti-pattern? Lean belives that requirements are just a decision that somebody made. Now  what you need to ask your self is, how good is this decision? Architecture is the art of making good decisions. Bad decisios COST a lot, not only money but also time, effort and frustration.</p>
-<p>Architects <code>MUST</code> make good decisions. Good decisions are made when you have the right information, the right context and the right experience. You must be prepared to make right decisions. In the begining you will make mistakes, which is okay if you learn from them and that's why you need Architecture Review.</p>
-<p>Not all Requirements are anti-patterns, but seeing them as "requiremenrts" it's an anti-patter per se. The word requirements, and often how people take it is that, implies that something is fixed, immutable and unchangeable. In reality, requirements are always changing, evolving and adapting to new circumstances. Good architects embrace change and adapt their decisions accordingly.</p>
-<p>When a project starts, or when you start a task, it's very common that product did not tought a lot about the consequences, trade-offs, corner cases, implications and or even what the engineering team needs to get it done. The most common anti-pattern is empty jira tickets and tons of meetings to push the "discovery work" to engineering.</p>
-<p>There is nothing wrong in engineering colaborating with product, as long as we mark that as "Discovery work". The issue is, product push "not ready" tickets to development and ask: "Why is this not done yet?" them corners are cut, quality is compromised and technical debt is added. Remeber the Tech Debt Plague and Ignoring culture, they are all connected.</p>
-<p>You need see requirements are "Temporary decisions", not as martial law. You need develier requirements, but you must challenge them, you must question them and you must validate them. If you don't, you are just a delivery team, not an engineering team.</p>
+<p>Mind blown by me saying "Requirements" is an anti-pattern? Lean believes that requirements are just a decision that somebody made. Now what you need to ask yourself is, how good is this decision? Architecture is the art of making good decisions. Bad decisions COST a lot, not only money but also time, effort and frustration.</p>
+<p>Architects <code>MUST</code> make good decisions. Good decisions are made when you have the right information, the right context and the right experience. You must be prepared to make right decisions. In the beginning you will make mistakes, which is okay if you learn from them and that's why you need Architecture Review.</p>
+<p>Not all Requirements are anti-patterns, but seeing them as "requirements" is an anti-pattern per se. The word requirements, and often how people take it, implies that something is fixed, immutable and unchangeable. In reality, requirements are always changing, evolving and adapting to new circumstances. Good architects embrace change and adapt their decisions accordingly.</p>
+<p>When a project starts, or when you start a task, it's very common that product did not think a lot about the consequences, trade-offs, corner cases, implications and or even what the engineering team needs to get it done. The most common anti-pattern is empty jira tickets and tons of meetings to push the "discovery work" to engineering.</p>
+<p>There is nothing wrong with engineering collaborating with product, as long as we mark that as "Discovery work". The issue is, product pushes "not ready" tickets to development and asks: "Why is this not done yet?" then corners are cut, quality is compromised and technical debt is added. Remember the Tech Debt Plague and Ignoring culture, they are all connected.</p>
+<p>You need to see requirements as "Temporary decisions", not as martial law. You need to deliver requirements, but you must challenge them, you must question them and you must validate them. If you don't, you are just a delivery team, not an engineering team.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-dilemmas"><a class="header" href="#why-dilemmas">Why Dilemmas?</a></h1>
 <p>Dilemma is a situation where a difficult choice has to be made between two or more alternatives, especially ones that are equally undesirable. Dilemmas often arise in various aspects of architecture like decision-making, and problem-solving.</p>
 <p>Every single architect will face dilemmas, some dillamas are very common and part of any system or software developement. It's important to talk about dilemmas because no one talks about them.</p>
 <p>Having good perspectived allow you to make informed and balanced decisions. Consider this as a compass to navigate dilemmas.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="discovery-vs-delivery"><a class="header" href="#discovery-vs-delivery">Discovery Vs Delivery</a></h1>
-<p>Discovery it's the moment where you are trying to figure out what to build in order to solve a problem for your users. Discovery it's heavily around product and user research, prototyping, testing ideas and validating assumptions.</p>
-<p>However it's also necessary have someone from technology doing discovery otherwise you transfer slowness, confusion and risk even to be attempting to build something that is not pheasable or too complex to deliver.</p>
-<p>Delivery should be focusing on engineering and once we know what to build(often capture as requirements and figma prototypes for the frontend) we can start building it. The question is how I build it right. Sounds simple right? But here we have one of the biggest dilemmas in software development.</p>
-<p>IF you just go from discovery to delivery you very likely is working in a waterfall fashion. So this is not linear, but (I consider an anti-pattern), but happens all the time, the moment you touch discovery, people assume discovery is done or correct and them you only care aboud shipping it fast.</p>
-<p>You need speed, but is not just speed of delivery but actually speed of learning. The goal is to learn fast. sometimes you can learn before production but often times you can only goto production to learn.</p>
-<p>If you need goto production fast to learn, should we embrace the <code>Tech Debt plague</code> and be <code>Tech Debt First</code>? No. Because you might learn what the users want or don't want, you might find what can bring revenue to the compamny but the code is there(likely forever) and we need balance this. So you can't just <code>pick a side</code> you need to balance both sides.</p>
+<p>Discovery is the moment where you are trying to figure out what to build in order to solve a problem for your users. Discovery is heavily around product and user research, prototyping, testing ideas and validating assumptions.</p>
+<p>However it's also necessary to have someone from technology doing discovery otherwise you transfer slowness, confusion and risk even to be attempting to build something that is not feasible or too complex to deliver.</p>
+<p>Delivery should be focusing on engineering and once we know what to build(often captured as requirements and figma prototypes for the frontend) we can start building it. The question is how do I build it right. Sounds simple right? But here we have one of the biggest dilemmas in software development.</p>
+<p>If you just go from discovery to delivery you are very likely working in a waterfall fashion. So this is not linear, but (which I consider an anti-pattern), happens all the time, the moment you touch discovery, people assume discovery is done or correct and then you only care about shipping it fast.</p>
+<p>You need speed, but it's not just speed of delivery but actually speed of learning. The goal is to learn fast. Sometimes you can learn before production but often times you can only go to production to learn.</p>
+<p>If you need to go to production fast to learn, should we embrace the <code>Tech Debt plague</code> and be <code>Tech Debt First</code>? No. Because you might learn what the users want or don't want, you might find what can bring revenue to the company but the code is there(likely forever) and we need to balance this. So you can't just <code>pick a side</code> you need to balance both sides.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="move-it-fast-or-do-it-right"><a class="header" href="#move-it-fast-or-do-it-right">Move it Fast or Do it Right?</a></h1>
-<p>Facebook and silicon valey culture often emphasize speed and rapid iteration in product development. The mantra "Move Fast and Break Things" encapsulates this ethos, encouraging teams to prioritize quick delivery and innovation over meticulous planning and perfection.</p>
-<p>However even face book admited that they need to shift to a more balanced approach where they move fast but with stable infrastructure. It's important to do it right, in engineering, however if you build it right the <code>wrong product</code>, the produt people dont care, them you are wasting your time and money.</p>
-<p>However it's not as simple as, them build it all fast, and all expedient, and pile up tech debt like the Tech debt plague. You will get the right product, but a proor experience, because it will be slow, full of bugs, and unreliable.</p>
-<p>Again this refer to the the dilemma of Discovery vs Delivery. You need to find the right balance between moving fast to discover what works and doing it right to ensure quality and reliability.</p>
+<p>Facebook and silicon valley culture often emphasize speed and rapid iteration in product development. The mantra "Move Fast and Break Things" encapsulates this ethos, encouraging teams to prioritize quick delivery and innovation over meticulous planning and perfection.</p>
+<p>However even Facebook admitted that they need to shift to a more balanced approach where they move fast but with stable infrastructure. It's important to do it right, in engineering, however if you build right the <code>wrong product</code>, the product people don't care, then you are wasting your time and money.</p>
+<p>However it's not as simple as, then build it all fast, and all expedient, and pile up tech debt like the Tech debt plague. You will get the right product, but a poor experience, because it will be slow, full of bugs, and unreliable.</p>
+<p>Again this refers to the dilemma of Discovery vs Delivery. You need to find the right balance between moving fast to discover what works and doing it right to ensure quality and reliability.</p>
 <p>In theory you could "just move fast" but the issue is, lots of companies are allergic to refactoring and they never pay the price to improve the code. Mostly because tech leadership is bad and or immature. But either way, you need to pay the price at some point. If you never pay the price, you end up with a big ball of mud that is hard to maintain and evolve.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="build-vs-buy"><a class="header" href="#build-vs-buy">Build vs Buy</a></h1>
 <p>Which one is best, build or buy? Well, it depends. Build is important when is your core domain and is how your companies makes money and differentiates from the competition. If all the companies by the same core business, how are they different? They are not.</p>

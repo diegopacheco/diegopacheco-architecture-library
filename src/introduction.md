@@ -4,7 +4,7 @@
 
 This repository contains a curated collection of concepts, guidance about Software Architecture by Diego Pacheco.
 
-I wrote this book because I'm doing sfotware srchitecture for more than 20+ yearrs and I want to share with other architects and wanna-be architects my philosophy, pratices, and import concepts and patterns you sohuld know. This also it's an experiment. It's a live piece of advices that I want to improve over time.
+I wrote this book because I'm doing software architecture for more than 20+ years and I want to share with other architects and wanna-be architects my philosophy, practices, and important concepts and patterns you should know. This also is an experiment. It's a live piece of advice that I want to improve over time.
 
 ## What to Expect
 
@@ -108,10 +108,10 @@ Strategies for architects to safeguard time for deep work
 Choosing the best and latest solutions
 - [Scalability](properties/SCALABILITY.md) - Designing for growth and load
 - [Observability](properties/OBSERVABLE.md) - Monitoring and understanding system behavior
-- [Stability](properties/STABILITY.md) - Ensuring stable daily pratices.
-- [Secure](properties/SECURE.md) - Embeding security in architecture
+- [Stability](properties/STABILITY.md) - Ensuring stable daily practices.
+- [Secure](properties/SECURE.md) - Embedding security in architecture
 
-5. Chapter 5 - Pratices
+5. Chapter 5 - Practices
 - [Why](pratices/WHY.md)
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care
 - [Architecture Review](pratices/ARCH_REVIEW.md) - Documenting architecture for communication and improvements
