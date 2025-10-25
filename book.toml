@@ -6,6 +6,6 @@ multilingual = false
 src = "src"
 
 [output.html]
-default-theme = "light"
+default-theme = "rust"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/diegopacheco/diegopacheco-architecture-library"
