@@ -48,7 +48,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 ## Table of Contents
 
 0. Chapter 0 - Zero
-- [Why Zero?](src/zero/WHY.md) - Doing what's right
+- [Why](src/zero/WHY.md) - Doing what's right
 
 1. Chapter 1 - Philosophy:
 - [Why](src/philosofy/WHY.md)
