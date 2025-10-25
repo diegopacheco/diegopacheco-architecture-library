@@ -197,7 +197,7 @@
 </ul>
 <h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
 <ol>
-<li>Philosophy:</li>
+<li>Chapter 1 - Philosophy:</li>
 </ol>
 <ul>
 <li><a href="philosofy/CRYSTAL_BALL.html">Crystall Ball</a> - Think about future changes</li>
@@ -210,7 +210,7 @@
 Strategies for architects to safeguard time for deep work</li>
 </ul>
 <ol start="2">
-<li>Anti-Patterns:</li>
+<li>Chapter 2 - Anti-Patterns:</li>
 </ol>
 <ul>
 <li><a href="anti-patterns/TECH_DEBT_PLAGUE.html">Tech Debt Plague</a> - Fighting technical debt constantly</li>
@@ -218,7 +218,16 @@ Strategies for architects to safeguard time for deep work</li>
 <li><a href="anti-patterns/STAGNATION.html">Stagnation</a> - Constant learning to avoid stagnation</li>
 </ul>
 <ol start="3">
-<li>Pratices:</li>
+<li>Chapter 3 - Properties:</li>
+</ol>
+<ul>
+<li><a href="properties/STATE-OF-THE-ART.html">State of the Art</a> -
+Choosing the best and latest solutions</li>
+<li><a href="properties/SCALABILITY.html">Scalability</a> - Designing for growth and load</li>
+<li><a href="properties/OBSERVABLE.html">Observability</a> - Monitoring and understanding system behavior</li>
+</ul>
+<ol start="4">
+<li>Chapter 4 - Pratices:</li>
 </ol>
 <ul>
 <li><a href="pratices/ATTENTION_TO_DETAIL.html">Attention to Detail</a> - Architect with precision and care</li>
@@ -229,8 +238,8 @@ Strategies for architects to safeguard time for deep work</li>
 <li><a href="pratices/MONTHLY_REVIEW.html">Monthly Review</a> - See the whole picture.</li>
 <li><a href="pratices/WORKING_ON_TRENCHES.html">Working on Trenches</a> - Hands-on, front-line work with the team.</li>
 </ul>
-<ol start="4">
-<li>Concepts:</li>
+<ol start="5">
+<li>Chapter 5 - Concepts:</li>
 </ol>
 <ul>
 <li><a href="concepts/ACID.html">ACID</a> - Relational database transaction properties</li>
@@ -243,8 +252,8 @@ Strategies for architects to safeguard time for deep work</li>
 <li><a href="concepts/SOURCE_OF_TRUTH.html">Source of Truth</a> - Authoritative data source</li>
 <li><a href="concepts/STATELESS_VS_STATEFULL_SVC.html">Stateless vs Stateful Services</a> - Service state management</li>
 </ul>
-<ol start="5">
-<li>Patterns:</li>
+<ol start="6">
+<li>Chapter 6 - Patterns:</li>
 </ol>
 <ul>
 <li><a href="patterns/API_GATEWAY.html">API Gateway</a> - Single entry point for microservices</li>
@@ -317,6 +326,27 @@ Strategies for architects to safeguard time for deep work</li>
 <p>Architects must be like the Rolling Stones, they dont gatter moss. Architects must be in a constant state of learning, alwayd reading books, always reading papers, alwayd reading code, always ahead of the curve.</p>
 <p>IF an architect stops learning, they stagnate, and stagnation is the death of architecture. Think about a coin, a coin that has no circulation is a worthless coin. An architect that has no new knowledge is a worthless architect.</p>
 <p>As architect you cannot become old school. You must be always looking for new ideas, new technologies, new patterns, new anti-patterns, new ways of doing the old things. Being stuck on the past has terrible consequences. The architect is the most influencial person or it should be. So what are you influencing?</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="state-of-the-art"><a class="header" href="#state-of-the-art">State of the Art</a></h1>
+<p>If you will be building something. Why start with something deprecated? Why not use the latest versions? State of the art is not about just using the latest and greates versions but also picking the best solutions.</p>
+<p>Why not pick the best database? why not pick the best language? why not pick the best framework? why not pick the best architecture?</p>
+<p>We should be creating the best architecture and the best solitions, just going with the "standards" is a path to stagnation.</p>
+<p>This might sound impossible, but it's nt. It just requires more research and more effort. But is 100% doable and should be done.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="scalability"><a class="header" href="#scalability">Scalability</a></h1>
+<p>A good architect, produce good architecture. Architecture is embedided in code. Good code is scalable code.</p>
+<p>Scalability it's not only for systems, it's also for engineering teams. A good architecture allows teams to work in parallel without stepping on each other's toes.</p>
+<p>Good Structure, good design, allow engineers to be more productive, and focus on delivering value, instead of fighting with the codebase. You want the architects you produce to have this properties.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="observable"><a class="header" href="#observable">Observable</a></h1>
+<p>As architect, the systems you produce must have the ability to be observable. Such property is very important. Consider observability a sub-set of testing which happens in production.</p>
+<p>IF you dont know whats going on you are driving into the dark. You want to be able to understand how your system behaves in production, and be able to detect issues before they become problems for your users.</p>
+<p>Without such understanding, you are not doing the whole cycle correctly. Building something following a design is not enought. You need to observe the final product in production, and be able to learn from it and improve it.</p>
+<p>Making Observable systems, imply in having:</p>
+<ul>
+<li>Proper Logging</li>
+<li>Exposing custom application metrics</li>
+<li>Have latency distribution metrics for upstream and doewnstream dependencies.</li>
+<li>Having proper Message Ids.</li>
+<li>Having the pratice of look the production monitoring dashboards and logs as part of your daily routine and retrofit the learnings to the engineering team.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="attention-to-detail"><a class="header" href="#attention-to-detail">Attention to Detail</a></h1>
 <p>Architects must be meticulous in their work, ensuring that every aspect of a design is carefully considered and executed. Attention to detail is crucial for creating functional, safe, and aesthetically pleasing structures. Here are some key areas where attention to detail is essential.</p>
 <p>Architects pays close attention to:</p>
