@@ -70,6 +70,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Discovery vs Delivery](src/dilemmas/DISCOVERY_VS_DELIVERY.md) - Balancing exploration and execution
 - [Move Fast vs Do it Right](src/dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) - Speed vs Quality
 - [Build vs Buy](src/dilemmas/BUILD_VS_BUY.md) - When to build in-house vs buy and integrate
+- [Decide or Wait](src/dilemmas/DECIDE_OR_WAIT.md) - Making timely decisions vs delaying for more info
 
 4. Chapter 4 - Properties:
 - [Why](src/properties/WHY.md)
