@@ -60,6 +60,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Stagnation](src/anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
 
 3. Chapter 3 - Properties:
+- [Anti-Fragility](src/properties/ANTI-FRAGILITY.md) - Systems Thriving on Failure
 - [State of the Art](src/properties/STATE-OF-THE-ART.md) -
 Choosing the best and latest solutions
 - [Scalability](src/properties/SCALABILITY.md) - Designing for growth and load

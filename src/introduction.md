@@ -35,6 +35,7 @@ Strategies for architects to safeguard time for deep work
 - [Stagnation](anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
 
 3. Chapter 3 - Properties:
+- [Anti-Fragility](properties/ANTI-FRAGILITY.md) - Systems Thriving on Failure
 - [State of the Art](properties/STATE-OF-THE-ART.md) -
 Choosing the best and latest solutions
 - [Scalability](properties/SCALABILITY.md) - Designing for growth and load
