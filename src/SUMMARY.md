@@ -2,7 +2,7 @@
 
 [Introduction](introduction.md)
 
-# Philosophy
+# 1. Philosophy
 
 - [Crystall Ball](philosofy/CRYSTAL_BALL.md)
 - [Defensive Programming](philosofy/DEFENSIVE.md)
@@ -12,7 +12,10 @@
 - [Service Orientation](philosofy/SO.md)
 - [Protect Your Time](philosofy/PROTECT_YOUR_TIME.md)
 
-# Pratices
+# 2. Anti-Patterns:
+- [Tech Debt Plague](src/anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
+
+# 3. Pratices
 
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md)
 - [Architecture Review](pratices/ARCH_REVIEW.md)
@@ -22,7 +25,7 @@
 - [Monthly Review](pratices/MONTHLY_REVIEW.md)
 - [Working on Trenches](pratices/WORKING_ON_TRENCHES.md)
 
-# Concepts and Patterns
+# 4. Concepts and Patterns
 
 - [ACID](concepts/ACID.md)
 - [API Gateway](concepts/API_GATEWAY.md)

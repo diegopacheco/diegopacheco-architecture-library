@@ -45,7 +45,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 
 ## Table of Contents
 
-Philosophy:
+1. Philosophy:
 - [Crystall Ball](src/philosofy/CRYSTAL_BALL.md) - Think about future changes
 - [Defensive Programming](src/philosofy/DEFENSIVE.md) - Anticipating and handling errors
 - [Doing Hard Things](src/philosofy/DOING_HARD_THINGS.md) - Tackling complex problems head-on
@@ -54,7 +54,10 @@ Philosophy:
 - [Service Orientation](src/philosofy/SO.md) - Services as first-class citizens
 - [Protect Your Time](src/philosofy/PROTECT_YOUR_TIME.md) - Strategies for architects to safeguard time for deep work
 
-Pratices:
+2. Anti-Patterns:
+- [Tech Debt Plague](src/anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
+
+3. Pratices:
 - [Attention to Detail](src/pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care
 - [Architecture Review](src/pratices/ARCH_REVIEW.md) - Documenting architecture for communication and improvements
 - [Design First](src/pratices/DESIGN_FIRST.md) - Think first, act later
@@ -63,7 +66,7 @@ Pratices:
 - [Monthly Review](src/pratices/MONTHLY_REVIEW.md) - See the whole picture.
 - [Working on Trenches](src/pratices/WORKING_ON_TRENCHES.md) - Hands-on, front-line work with the team.
 
-Concepts and Patterns:
+4. Concepts and Patterns:
 - [ACID](src/concepts/ACID.md) - Relational database transaction properties
 - [API Gateway](src/concepts/API_GATEWAY.md) - Single entry point for microservices
 - [Authentication & Authorization](src/concepts/AUTHENT.md) - Identity verification and access control
@@ -85,3 +88,4 @@ Concepts and Patterns:
 - [Source of Truth](src/concepts/SOURCE_OF_TRUTH.md) - Authoritative data source
 - [Stateless vs Stateful Services](src/concepts/STATELESS_VS_STATEFULL_SVC.md) - Service state management
 - [Web Hook](src/concepts/WEB_HOOK.md) - Event-driven HTTP callbacks
+

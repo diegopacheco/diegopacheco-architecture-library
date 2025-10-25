@@ -19,7 +19,7 @@ I wrote this book because I'm doing sfotware srchitecture for more than 20+ year
 
 ## Table of Contents
 
-Philosophy:
+1. Philosophy:
 - [Crystall Ball](philosofy/CRYSTAL_BALL.md) - Think about future changes
 - [Defensive Programming](philosofy/DEFENSIVE.md) - Anticipating and handling errors
 - [Doing Hard Things](philosofy/DOING_HARD_THINGS.md) - Tackling complex problems head-on
@@ -29,7 +29,10 @@ Philosophy:
 - [Protect Your Time](philosofy/PROTECT_YOUR_TIME.md) -
 Strategies for architects to safeguard time for deep work
 
-Pratices:
+2. Anti-Patterns:
+- [Tech Debt Plague](src/anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
+
+3. Pratices:
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care
 - [Architecture Review](pratices/ARCH_REVIEW.md) - Documenting architecture for communication and improvements
 - [Design First](pratices/DESIGN_FIRST.md) - Think first, act later
@@ -38,7 +41,7 @@ Pratices:
 - [Monthly Review](pratices/MONTHLY_REVIEW.md) - See the whole picture.
 - [Working on Trenches](pratices/WORKING_ON_TRENCHES.md) - Hands-on, front-line work with the team.
 
-Concepts and Patterns:
+4. Concepts and Patterns:
 - [ACID](concepts/ACID.md) - Relational database transaction properties
 - [API Gateway](concepts/API_GATEWAY.md) - Single entry point for microservices
 - [Authentication & Authorization](concepts/AUTHENT.md) - Identity verification and access control
