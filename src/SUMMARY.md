@@ -17,6 +17,7 @@
 - [Tech Debt Plague](anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
 - [Ignore Culture](anti-patterns/IGNORE_CULTURE.md) - Addressing ignored problems proactively
 - [Stagnation](anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
+- [Requirements](anti-patterns/REQUIREMENTS.md) - Challenging and validating decisions
 
 # 3. Chapter 3 - Properties:
 

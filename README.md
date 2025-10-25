@@ -58,6 +58,8 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Tech Debt Plague](src/anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
 - [Ignore Culture](src/anti-patterns/IGNORE_CULTURE.md) - Addressing ignored problems proactively
 - [Stagnation](src/anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
+- [Requirements](src/anti-patterns/REQUIREMENTS.md) - Challenging and validating decisions
+
 
 3. Chapter 3 - Properties:
 - [Anti-Fragility](src/properties/ANTI-FRAGILITY.md) - Systems Thriving on Failure
