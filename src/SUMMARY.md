@@ -13,7 +13,7 @@
 - [Service Orientation](philosofy/SO.md)
 - [Protect Your Time](philosofy/PROTECT_YOUR_TIME.md)
 
-# 2. Chapter 2 - Anti-Patterns:
+# 2. Chapter 2 - Anti-Patterns
 
 - [Why](anti-patterns/WHY.md)
 - [Tech Debt Plague](anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
@@ -21,14 +21,14 @@
 - [Stagnation](anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
 - [Requirements](anti-patterns/REQUIREMENTS.md) - Challenging and validating decisions
 
-# 3. Chapter 3 - Dilemmas:
+# 3. Chapter 3 - Dilemmas
 - [Why](dilemmas/WHY.md)
 - [Discovery vs Delivery](dilemmas/DISCOVERY_VS_DELIVERY.md) - Balancing exploration and execution
 - [Move Fast vs Do it Right](dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) - Speed vs Quality
 - [Build vs Buy](dilemmas/BUILD_VS_BUY.md) - When to build in-house vs buy and integrate
 - [Decide or Wait](dilemmas/DECIDE_OR_WAIT.md) - Making timely decisions vs delaying for more info
 
-# 4. Chapter 4 - Properties:
+# 4. Chapter 4 - Properties
 
 - [Why](properties/WHY.md)
 - [Anti-Fragility](properties/ANTI-FRAGILITY.md) - Systems Thriving on Failure
@@ -79,7 +79,7 @@ Choosing the best and latest solutions
 - [Retry](patterns/RETRY.md)
 - [Web Hook](patterns/WEB_HOOK.md)
 
-# 8. Chapter 8 - Tools:
+# 8. Chapter 8 - Tools
 
 - [Why](tools/WHY.md)
 - [Diagraming Tools](tools/DIAGRAMING.md) - Visualizing architecture with diagrams
@@ -87,4 +87,5 @@ Choosing the best and latest solutions
 - [Thinking Tools](tools/THINKING.md) - Tools for structured thinking and exploration.
 
 # 9. Chapter 9 - Epilogue
+- [Resources](epilogue/RESOURCES.md) - Additional reading and references
 - [Epilogue](epilogue/IN_THE_END.md) - Final thoughts and next steps

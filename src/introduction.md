@@ -72,7 +72,7 @@ Hire, develop, retain, and truly grow talent at scale
 
 ## Table of Contents
 
-1. Chapter 1 - Philosophy:
+1. Chapter 1 - Philosophy
 - [Why](philosofy/WHY.md)
 - [Crystall Ball](philosofy/CRYSTAL_BALL.md) - Think about future changes
 - [Defensive Programming](philosofy/DEFENSIVE.md) - Anticipating and handling errors
@@ -83,7 +83,7 @@ Hire, develop, retain, and truly grow talent at scale
 - [Protect Your Time](philosofy/PROTECT_YOUR_TIME.md) -
 Strategies for architects to safeguard time for deep work
 
-2. Chapter 2 - Anti-Patterns:
+2. Chapter 2 - Anti-Patterns
 - [Why](anti-patterns/WHY.md)
 - [Tech Debt Plague](anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
 - [Ignore Culture](anti-patterns/IGNORE_CULTURE.md) - Addressing ignored problems proactively
@@ -91,14 +91,14 @@ Strategies for architects to safeguard time for deep work
 - [Requirements](anti-patterns/REQUIREMENTS.md) - Challenging and validating decisions
 
 
-3. Chapter 3 - Dilemmas:
+3. Chapter 3 - Dilemmas
 - [Why](dilemmas/WHY.md)
 - [Discovery vs Delivery](dilemmas/DISCOVERY_VS_DELIVERY.md) - Balancing exploration and execution
 - [Move Fast vs Do it Right](dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) - Speed vs Quality
 - [Build vs Buy](dilemmas/BUILD_VS_BUY.md) - When to build in-house vs buy and integrate
 - [Decide or Wait](dilemmas/DECIDE_OR_WAIT.md) - Making timely decisions vs delaying for more info
 
-4. Chapter 4 - Properties:
+4. Chapter 4 - Properties
 - [Why](properties/WHY.md)
 - [Anti-Fragility](properties/ANTI-FRAGILITY.md) - Systems Thriving on Failure
 - [State of the Art](properties/STATE-OF-THE-ART.md) -
@@ -108,7 +108,7 @@ Choosing the best and latest solutions
 - [Stability](properties/STABILITY.md) - Ensuring stable daily pratices.
 - [Secure](properties/SECURE.md) - Embeding security in architecture
 
-5. Chapter 5 - Pratices:
+5. Chapter 5 - Pratices
 - [Why](pratices/WHY.md)
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care
 - [Architecture Review](pratices/ARCH_REVIEW.md) - Documenting architecture for communication and improvements
@@ -118,7 +118,7 @@ Choosing the best and latest solutions
 - [Monthly Review](pratices/MONTHLY_REVIEW.md) - See the whole picture.
 - [Working on Trenches](pratices/WORKING_ON_TRENCHES.md) - Hands-on, front-line work with the team.
 
-6. Chapter 6 - Concepts:
+6. Chapter 6 - Concepts
 - [Why](concepts/WHY.md)
 - [ACID](concepts/ACID.md) - Relational database transaction properties
 - [Authentication & Authorization](concepts/AUTHENT.md) - Identity verification and access control
@@ -130,7 +130,7 @@ Choosing the best and latest solutions
 - [Source of Truth](concepts/SOURCE_OF_TRUTH.md) - Authoritative data source
 - [Stateless vs Stateful Services](concepts/STATELESS_VS_STATEFULL_SVC.md) - Service state management
 
-7. Chapter 7 - Patterns:
+7. Chapter 7 - Patterns
 - [Why](patterns/WHY.md)
 - [API Gateway](patterns/API_GATEWAY.md) - Single entry point for microservices
 - [BFF Pattern](patterns/BFF_PATTERN.md) - Backend for Frontend pattern
@@ -145,7 +145,7 @@ Choosing the best and latest solutions
 - [Retry](patterns/RETRY.md) - Handling transient failures with retry strategies
 - [Web Hook](patterns/WEB_HOOK.md) - Event-driven HTTP callbacks
 
-8. Chapter 8 - Tools:
+8. Chapter 8 - Tools
 
 - [Why](tools/WHY.md)
 - [Diagraming Tools](tools/DIAGRAMING.md) - Visualizing architecture with diagrams
@@ -153,4 +153,5 @@ Choosing the best and latest solutions
 - [Thinking Tools](tools/THINKING.md) - Tools for structured thinking and exploration.
 
 9. Chapter 9 - Epilogue
+- [Resources](epilogue/RESOURCES.md) - Additional reading and references
 - [Epilogue](epilogue/IN_THE_END.md) - Final thoughts and next steps
