@@ -230,30 +230,35 @@ Strategies for architects to safeguard time for deep work</li>
 <li><a href="pratices/WORKING_ON_TRENCHES.html">Working on Trenches</a> - Hands-on, front-line work with the team.</li>
 </ul>
 <ol start="4">
-<li>Concepts and Patterns:</li>
+<li>Concepts:</li>
 </ol>
 <ul>
 <li><a href="concepts/ACID.html">ACID</a> - Relational database transaction properties</li>
-<li><a href="concepts/API_GATEWAY.html">API Gateway</a> - Single entry point for microservices</li>
 <li><a href="concepts/AUTHENT.html">Authentication &amp; Authorization</a> - Identity verification and access control</li>
 <li><a href="concepts/BASE.html">BASE</a> - NoSQL consistency model</li>
-<li><a href="concepts/BFF_PATTERN.html">BFF Pattern</a> - Backend for Frontend pattern</li>
-<li><a href="concepts/CACHE.html">Cache</a> - Data storage for faster access</li>
-<li><a href="concepts/CONNECTION_POOL.html">Connection Pool</a> - Database connection reuse</li>
-<li><a href="concepts/FEATURE_FLAGS.html">Feature Flags</a> - Runtime configuration and gradual rollouts</li>
 <li><a href="concepts/IDEMPOTENCY.html">Idempotency</a> - Safe operation repetition</li>
-<li><a href="concepts/LB.html">Load Balancer</a> - Traffic distribution across servers</li>
-<li><a href="concepts/MESSAGE_PATTERNS.html">Message Patterns</a> - Publish/Subscribe, Point-to-Point messaging</li>
-<li><a href="concepts/MESSAGE_ID.html">Message Id</a> - Unique identifier for tracing requests</li>
 <li><a href="concepts/OPLOCKING.html">Optimistic vs Pessimistic Locking</a> - Concurrency control strategies</li>
-<li><a href="concepts/PAGINATION.html">Pagination</a> - Breaking large datasets into pages</li>
 <li><a href="concepts/PARTITION.html">Partition</a> - Data distribution strategies</li>
-<li><a href="concepts/QUEUE.html">Queue</a> - Asynchronous message processing</li>
-<li><a href="concepts/RETRY.html">Retry</a> - Handling transient failures with retry strategies</li>
 <li><a href="concepts/SCHEMA_EVOLUTION.html">Schema Evolution</a> - Forward/backward compatibility for APIs</li>
 <li><a href="concepts/SOURCE_OF_TRUTH.html">Source of Truth</a> - Authoritative data source</li>
 <li><a href="concepts/STATELESS_VS_STATEFULL_SVC.html">Stateless vs Stateful Services</a> - Service state management</li>
-<li><a href="concepts/WEB_HOOK.html">Web Hook</a> - Event-driven HTTP callbacks</li>
+</ul>
+<ol start="5">
+<li>Patterns:</li>
+</ol>
+<ul>
+<li><a href="patterns/API_GATEWAY.html">API Gateway</a> - Single entry point for microservices</li>
+<li><a href="patterns/BFF_PATTERN.html">BFF Pattern</a> - Backend for Frontend pattern</li>
+<li><a href="patterns/CACHE.html">Cache</a> - Data storage for faster access</li>
+<li><a href="patterns/CONNECTION_POOL.html">Connection Pool</a> - Database connection reuse</li>
+<li><a href="patterns/FEATURE_FLAGS.html">Feature Flags</a> - Runtime configuration and gradual rollouts</li>
+<li><a href="patterns/LB.html">Load Balancer</a> - Traffic distribution across servers</li>
+<li><a href="patterns/MESSAGE_PATTERNS.html">Message Patterns</a> - Publish/Subscribe, Point-to-Point messaging</li>
+<li><a href="patterns/MESSAGE_ID.html">Message Id</a> - Unique identifier for tracing requests</li>
+<li><a href="patterns/PAGINATION.html">Pagination</a> - Breaking large datasets into pages</li>
+<li><a href="patterns/QUEUE.html">Queue</a> - Asynchronous message processing</li>
+<li><a href="patterns/RETRY.html">Retry</a> - Handling transient failures with retry strategies</li>
+<li><a href="patterns/WEB_HOOK.html">Web Hook</a> - Event-driven HTTP callbacks</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="crystal-ball"><a class="header" href="#crystal-ball">Crystal Ball</a></h1>
 <p>Architects must have a good crystal ball. Requirements change, a requirement change can break completely the architecture if it was not designed to accommodate change. So thinking ahead it's a great pratice because allow you to predict the next moves, meaning you think big and ahead but execute small.</p>
@@ -392,26 +397,6 @@ Strategies for architects to safeguard time for deep work</li>
 <p>This prevents transactions from reading uncommitted data from other transactions, which could lead to inconsistencies.</p>
 <h2 id="d--durability"><a class="header" href="#d--durability">D == Durability</a></h2>
 <p>Durability guarantees that once a transaction has been committed, it will remain so, even in the event of a system failure. Committed data is saved to non-volatile storage, ensuring that it is not lost. Usualy using a WAL (Write Ahead Log) to achieve this.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="api-gateway"><a class="header" href="#api-gateway">API GATEWAY</a></h1>
-<p>It's a architecture pattern that acts as a single entry point for a set of microservices, handling requests by routing them to the appropriate service, aggregating responses, and performing cross-cutting tasks such as authentication, logging, and rate limiting.</p>
-<h2 id="api-gateway-vs-load-balancer"><a class="header" href="#api-gateway-vs-load-balancer">API Gateway vs Load Balancer</a></h2>
-<p>An API Gateway and a Load Balancer serve different purposes in a microservices architecture:</p>
-<ul>
-<li>
-<p><strong>API Gateway</strong>: Primarily focuses on managing and routing API requests. It handles tasks such as request transformation, response aggregation, authentication, and rate limiting. It operates at the application layer (Layer 7) of the OSI model.</p>
-</li>
-<li>
-<p><strong>Load Balancer</strong>: Primarily focuses on distributing incoming network traffic across multiple servers to ensure high availability and reliability. It operates at both the transport layer (Layer 4) and application layer (Layer 7) of the OSI model, depending on the type of load balancer used.</p>
-</li>
-</ul>
-<h2 id="key-features"><a class="header" href="#key-features">Key Features</a></h2>
-<ul>
-<li><strong>Request Routing</strong>: Directs incoming requests to the appropriate microservice based on the request path, method, or other criteria.</li>
-<li><strong>Response Aggregation</strong>: Combines responses from multiple microservices into a single response to the client.</li>
-<li><strong>Cross-Cutting Concerns</strong>: Manages common functionalities such as authentication, logging, rate limiting, and caching.</li>
-<li><strong>Protocol Translation</strong>: Converts requests and responses between different protocols (e.g., HTTP to WebSocket).</li>
-<li><strong>Load Balancing</strong>: Distributes incoming requests across multiple instances of a microservice to ensure high availability and reliability.</li>
-</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="authentication--authorization--entitlements"><a class="header" href="#authentication--authorization--entitlements">Authentication &amp; Authorization &amp; Entitlements</a></h1>
 <h2 id="authentication"><a class="header" href="#authentication">Authentication</a></h2>
 <p>Authentication is the process of verifying the identity of a user or system. It ensures that the entity requesting access is who they claim to be. Common methods of authentication include:</p>
@@ -450,71 +435,6 @@ BASE systems prioritize availability instead of immediate consistency.</p>
 The state of the system may change over time, even without new input, due to eventual consistency. Data doesn't have to be immediately consistent across all nodes.</p>
 <p>E == Eventual consistency
 Given enough time without new updates, all replicas will eventually converge to the same value. The system doesn't guarantee immediate consistency but promises that consistency will be achieved eventually.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="backend-for-frontend-pattern"><a class="header" href="#backend-for-frontend-pattern">Backend for Frontend Pattern</a></h1>
-<p>The Backend for Frontend pattern involves creating separate backend services tailored to the specific needs of different frontend applications. Usually written in a language that is common for the frontend team, meaning: NodeJS with JS ot Typescript.</p>
-<p>BFFs should have <code>Rendering Logic</code> and should NEVER have <code>Business Logic</code> because that should be encapsulated in the core backend services.</p>
-<h2 id="bffs-are"><a class="header" href="#bffs-are">BFFs Are</a></h2>
-<ul>
-<li><strong>Frontend-Specific</strong>: Each BFF is designed and optimized for a specific frontend application.</li>
-<li><strong>Team Ownership</strong>: The team that builds the frontend typically owns and maintains its BFF.</li>
-<li><strong>Aggregation Layer</strong>: BFFs aggregate data from multiple downstream services.</li>
-<li><strong>Tailored Responses</strong>: Returns only the data the frontend needs in the format it expects.</li>
-</ul>
-<h2 id="bff-vs-api-gateway"><a class="header" href="#bff-vs-api-gateway">BFF vs API Gateway</a></h2>
-<p>While both BFF and API Gateway sit between frontends and backend services, they serve different purposes:</p>
-<p><strong>API Gateway</strong>: Provides common functionality like authentication, rate limiting, and routing. It serves all clients with the same generic interface.</p>
-<p><strong>BFF</strong>: Tailors the API specifically to each frontend's needs. It aggregates, transforms, and optimizes responses for a specific client type. Rendering logic is part of the BFF.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="cache"><a class="header" href="#cache">CACHE</a></h1>
-<p>A cache is a software component that stores data so that future requests for that data can be served faster. Caches are commonly used to improve performance and reduce latency in various applications, including web browsers, databases, and operating systems.</p>
-<h2 id="types-of-caches"><a class="header" href="#types-of-caches">Types of Caches</a></h2>
-<ol>
-<li><strong>Memory Cache</strong>: Stores frequently accessed data in RAM for quick retrieval.</li>
-<li><strong>Disk Cache</strong>: Stores data on a hard drive or SSD to reduce access times for frequently used files.</li>
-<li><strong>Web Cache</strong>: Stores web pages and resources to reduce bandwidth usage and load times</li>
-<li><strong>Database Cache</strong>: Caches query results to speed up database access.</li>
-<li><strong>CPU Cache</strong>: A small-sized type of volatile memory that provides high-speed data access to the processor.</li>
-</ol>
-<h2 id="cache-strategies"><a class="header" href="#cache-strategies">Cache Strategies</a></h2>
-<ol>
-<li><strong>Write-Through Cache</strong>: Data is written to both the cache and the underlying storage simultaneously.</li>
-<li><strong>Write-Back Cache</strong>: Data is written to the cache first and then to the underlying storage at a later time.</li>
-<li><strong>Least Recently Used (LRU)</strong>: Evicts the least recently accessed items when the cache is full.</li>
-<li><strong>First In First Out (FIFO)</strong>: Evicts the oldest items first when the cache is full.</li>
-<li><strong>Time-to-Live (TTL)</strong>: Items in the cache are assigned a lifespan, after which they are automatically removed.</li>
-</ol>
-<h2 id="cache-invalidation"><a class="header" href="#cache-invalidation">Cache Invalidation</a></h2>
-<p>Cache invalidation is the process of removing or updating cached data when it becomes stale or outdated. Common strategies include:</p>
-<ol>
-<li><strong>Manual Invalidation</strong>: Explicitly removing or updating cache entries.</li>
-<li><strong>Automatic Invalidation</strong>: Using TTL or other mechanisms to automatically remove stale data.</li>
-<li><strong>Event-Driven Invalidation</strong>: Invalidating cache entries based on specific events, such as data updates.</li>
-</ol>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="connection-pool"><a class="header" href="#connection-pool">Connection Pool</a></h1>
-<p>A connection pool is a cache of database connections maintained so that the connections can be reused when future requests to the database are required. Connection pools are used to enhance the performance of executing commands on a database. Opening and maintaining a database connection for each user, especially requests made to a dynamic database-driven website application, is costly and wastes resources.</p>
-<p>It's expensive to open and close connections to the database all the time. That's why this objects are created as the application bootup and they are borrowed and returned to the pool as needed.</p>
-<p>Java has a great connection pooling libraries like HikariCP.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="feature-flags"><a class="header" href="#feature-flags">Feature Flags</a></h1>
-<p>Feature flags are runtime configuration switches that enable or disable functionality without deploying new code. They decouple deployment from release, allowing gradual rollouts and instant rollbacks, migrations and A/B testing.</p>
-<h2 id="strategies"><a class="header" href="#strategies">Strategies</a></h2>
-<p><strong>Environment Variables</strong>: Simplest approach. Requires restart to change. Good for operational flags.</p>
-<p><strong>Configuration Files</strong>: Load from files on startup or reload periodically. No restart needed if hot-reloaded.</p>
-<p><strong>Database or Cache</strong>: Dynamic flags stored in database or distributed cache. Change instantly across all instances.</p>
-<p><strong>Feature Flag Services</strong>: Dedicated systems like LaunchDarkly, Split, or Unleash. Advanced targeting and analytics.</p>
-<h2 id="targeting-and-segmentation"><a class="header" href="#targeting-and-segmentation">Targeting and Segmentation</a></h2>
-<p>Flags can target based on:</p>
-<ul>
-<li>User ID or email for specific users</li>
-<li>Percentage rollout for gradual releases</li>
-<li>Geographic region or data center</li>
-<li>User attributes like subscription tier</li>
-<li>Environment like staging vs production</li>
-<li>Random sampling for experiments</li>
-</ul>
-<h2 id="anti-patterns"><a class="header" href="#anti-patterns">Anti-Patterns</a></h2>
-<p><strong>Long-Lived Release Flags</strong>: Release flags should be temporary. Remove after release complete.</p>
-<p><strong>Nested Flags</strong>: Flags inside flags create exponential complexity. Avoid deeply nested conditions.</p>
-<p><strong>Flag Proliferation</strong>: Too many flags make system hard to reason about. Be selective.</p>
-<p><strong>Using Flags for Configuration</strong>: Feature flags are not general configuration. Use proper config systems for that.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="idepotency"><a class="header" href="#idepotency">IDEPOTENCY</a></h1>
 <p>It's a interesting property that allow the same operation to be performed multiple times without changing the result beyond the initial application.</p>
 <p>In REST APIs, idempotency is an important concept, especially for HTTP methods. Here are some common HTTP methods like GET, HEAD, OPTIONS, TRACE, PUT.</p>
@@ -524,85 +444,11 @@ Given enough time without new updates, all replicas will eventually converge to 
 <p>Idepotency it's important because if the same request arrives twice(there is not side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences or just re-process the samething again without issues.</p>
 <p>Such principle keep us from writing complex software. For instance if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.</p>
 <p>So we want honor the idempotency principle to keep our software simple and predictable.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="load-balancer"><a class="header" href="#load-balancer">Load Balancer</a></h1>
-<p>It's a service that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed, improving application availability and responsiveness.</p>
-<p>Load balancers can operate at different layers of the OSI model, such as Layer 4 (Transport Layer) and Layer 7 (Application Layer), providing various features like SSL termination, session persistence, and health monitoring of backend servers.</p>
-<h2 id="common-load-balancing-algorithms"><a class="header" href="#common-load-balancing-algorithms">Common Load Balancing Algorithms</a></h2>
-<ol>
-<li><strong>Round Robin</strong>: Distributes requests sequentially across the servers.</li>
-<li><strong>Least Connections</strong>: Directs traffic to the server with the fewest active connections.</li>
-<li><strong>IP Hash</strong>: Uses the client's IP address to determine which server will handle the request.</li>
-<li><strong>Weighted Round Robin</strong>: Similar to Round Robin but allows assigning weights to servers based on their capacity.</li>
-<li><strong>Random</strong>: Distributes requests randomly across the servers.</li>
-<li><strong>Metric-Based</strong>: Uses specific metrics (like response time or server load) to make load balancing decisions.</li>
-</ol>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="message-patterns"><a class="header" href="#message-patterns">Message Patterns</a></h1>
-<p>There are different ways to structure message communication between systems.</p>
-<h2 id="publishsubscribe-pattern"><a class="header" href="#publishsubscribe-pattern">Publish/Subscribe Pattern</a></h2>
-<p>Publishers send messages to a topic or channel without knowing who will receive them. Subscribers express interest in specific topics and receive all messages published to those topics.</p>
-<p>Pub/Sub Nature:</p>
-<ul>
-<li><strong>One-to-Many</strong>: A single message can be delivered to multiple subscribers.</li>
-<li><strong>Decoupling</strong>: Publishers and subscribers don't need to know about each other.</li>
-<li><strong>Dynamic Subscription</strong>: Subscribers can join or leave at any time.</li>
-<li><strong>Topic-Based</strong>: Messages are organized by topics or channels.</li>
-</ul>
-<p>Pub/Sub Use cases:</p>
-<ul>
-<li>Real-time notifications across multiple services</li>
-<li>Event-driven architectures where multiple consumers need the same data</li>
-<li>Log aggregation and monitoring systems</li>
-</ul>
-<h2 id="point-to-point-pattern"><a class="header" href="#point-to-point-pattern">Point-to-Point Pattern</a></h2>
-<p>Messages are sent directly from one sender to one specific receiver. Messages are typically placed in a queue where they are consumed by a single consumer.</p>
-<p>P2P:</p>
-<ul>
-<li><strong>One-to-One</strong>: Each message is consumed by exactly one receiver.</li>
-<li><strong>Message Ordering</strong>: Messages are typically processed in the order they arrive.</li>
-<li><strong>Load Distribution</strong>: Multiple consumers can read from the same queue for load balancing.</li>
-<li><strong>Guaranteed Delivery</strong>: Messages remain in the queue until successfully processed.</li>
-</ul>
-<p>P2P Use cases:</p>
-<ul>
-<li>Task distribution among worker nodes</li>
-<li>Request-response communication between services</li>
-<li>Sequential processing of transactions</li>
-<li>Background job processing</li>
-</ul>
-<h2 id="request-reply-pattern"><a class="header" href="#request-reply-pattern">Request-Reply Pattern</a></h2>
-<p>A pattern where a sender sends a message and waits for a response from the receiver. The sender includes a reply-to address in the message so the receiver knows where to send the response.
-This pattern combines aspects of both synchronous and asynchronous communication, allowing for non-blocking request-response interactions.</p>
-<h2 id="message-ordering"><a class="header" href="#message-ordering">Message Ordering</a></h2>
-<p>Message ordering guarantees vary by pattern and implementation:</p>
-<ul>
-<li><strong>FIFO Ordering</strong>: Messages are processed in the order they are sent.</li>
-<li><strong>Partition Ordering</strong>: Messages within the same partition maintain order.</li>
-<li><strong>No Ordering</strong>: Messages may be processed in any order for maximum throughput.</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="message-id"><a class="header" href="#message-id">Message Id</a></h1>
-<p>Also know as CORRELATION_ID. The idea that each message or request must have a uniqui id, and you will pass down such id into the dowstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID.</p>
-<p>Why this is important?</p>
-<ul>
-<li>Traceability: When you have a unique MESSAGE_ID for each request, you can trace the entire lifecycle of that request across multiple services. This is especially useful in microservices architectures where a single user action may trigger multiple service calls.</li>
-<li>Debugging: If an error occurs, having a MESSAGE_ID allows you to quickly locate all logs and events related to that specific request. This can significantly speed up the debugging process.</li>
-<li>Monitoring: MESSAGE_IDs can be used to monitor the performance of requests as they pass through</li>
-</ul>
-<p>without a MESSAGE_ID, it because impossible to debug distrubuted systems.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pessimistic-vs-optimistc-locking"><a class="header" href="#pessimistic-vs-optimistc-locking">Pessimistic vs Optimistc Locking</a></h1>
 <p>When dealing with concurrent access to shared resources, two primary locking strategies can be employed: pessimistic locking and optimistic locking.</p>
 <p><strong>Pessimistic locking</strong>: assumes that conflicts will occur and therefore locks the resource for exclusive access when a transaction begins. This approach is suitable for environments with high contention, as it prevents other transactions from modifying the resource until the lock is released. However, it can lead to reduced concurrency and potential deadlocks.</p>
 <p><strong>Optimistic locking</strong>: assumes that conflicts are rare and allows multiple transactions to access the resource concurrently. Instead of locking the resource, it checks for conflicts only when a transaction attempts to commit changes. If a conflict is detected, the transaction is rolled back and can be retried. This approach is more efficient in low-contention environments, as it maximizes concurrency and minimizes locking overhead.</p>
 <p>Optimistic locking is often implemented using versioning, where each resource has a version number that is checked and updated during transactions. If the version number has changed since the transaction began, it indicates a conflict.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="pagination"><a class="header" href="#pagination">Pagination</a></h1>
-<p>When you have a endpoint that returns a large list of items, it is often useful to paginate the results. This means breaking the results into smaller chunks, or "pages", that can be retrieved one at a time.</p>
-<p>Basic benefit here is to reduce the amount of data transferred in a single request, which can improve performance and reduce load on the server. Less latency and more responsive applications are the end result.</p>
-<h2 id="pagination-strategies"><a class="header" href="#pagination-strategies">Pagination Strategies</a></h2>
-<ol>
-<li><strong>Offset-Based Pagination</strong>: This is the most common method, where the client specifies an offset (the starting point) and a limit (the number of items to return). For example, <code>GET /items?offset=20&amp;limit=10</code> would return items 21-30.</li>
-<li><strong>Cursor-Based Pagination</strong>: Instead of using an offset, this method uses a cursor (a unique identifier for a specific item) to mark the starting point for the next page of results. For example, <code>GET /items?cursor=abc123&amp;limit=10</code> would return the next 10 items after the item with the cursor <code>abc123</code>.</li>
-<li><strong>Page Number Pagination</strong>: This method uses page numbers to specify which page of results to return. For example, <code>GET /items?page=2&amp;limit=10</code> would return the second page of results, with 10 items per page.</li>
-<li><strong>Keyset Pagination</strong>: This method uses the values of the last item in the current page to determine the starting point for the next page. For example, if the last item on the current page has an ID of 50, the next request might be <code>GET /items?after_id=50&amp;limit=10</code>.</li>
-</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="partition"><a class="header" href="#partition">Partition</a></h1>
 <p>A <strong>partition</strong> of a set is a way of dividing the data set into subsets such that every element in the original set is included in exactly one of the subsets. In other words, a partition breaks down a set into distinct parts where no part shares any elements with another, and all parts together cover the entire original set.</p>
 <p>Partition by:</p>
@@ -617,37 +463,6 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </ul>
 <p>Partitions matter because they can significantly impact the performance and efficiency of data processing tasks. Proper partitioning can lead to faster query execution, reduced data shuffling, and improved resource utilization in distributed computing environments.</p>
 <p>When designing partitions, consider factors such as data distribution, query patterns, and the underlying storage system to ensure optimal performance.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="queue"><a class="header" href="#queue">Queue</a></h1>
-<p>Queue it's a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front.</p>
-<p>In distributed systems, queues are often used to manage tasks, messages, or data that need to be processed asynchronously. They help in decoupling different parts of a system, allowing for better scalability and fault tolerance.</p>
-<p>Queues use cases are:</p>
-<ul>
-<li><strong>Asynchronous processing</strong>: Tasks can be added to a queue and processed by worker nodes at their own pace.</li>
-<li><strong>Load balancing</strong>: Distributing tasks across multiple workers to ensure no single worker is overwhelmed.</li>
-<li><strong>Message brokering</strong>: Facilitating communication between different services or components in a system.</li>
-<li><strong>Rate limiting</strong>: Controlling the rate at which tasks are processed to avoid overwhelming downstream systems.</li>
-<li><strong>Event sourcing</strong>: Storing a sequence of events that can be processed later to reconstruct the state of a system.</li>
-</ul>
-<p>Common Issues with Queues:</p>
-<ul>
-<li><strong>Message loss</strong>: If a queue is not properly configured, messages may be lost during transmission or processing.</li>
-<li><strong>Duplicate messages</strong>: In some cases, messages may be delivered more than once, leading to redundant processing.</li>
-<li><strong>Latency</strong>: Queues can introduce delays in processing, especially if they become overloaded.</li>
-<li><strong>Backpressure</strong>: If the rate of incoming messages exceeds the processing capacity, it can lead to increased latency and potential message loss.</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="retry"><a class="header" href="#retry">Retry</a></h1>
-<p>Retry is a technique used in distributed systems to handle transient failures by attempting an operation multiple times before giving up. This approach is particularly useful in distributed systems, where network issues or temporary unavailability of services can lead to failures that may be resolved with subsequent attempts.</p>
-<h2 id="timeouts"><a class="header" href="#timeouts">Timeouts</a></h2>
-<p>When implementing retries, it is important to set appropriate timeouts for each attempt. A timeout defines how long the system should wait for a response before considering the attempt a failure. Setting too short a timeout may lead to unnecessary retries, while too long a timeout can delay the overall operation.</p>
-<h2 id="progressive-backoff"><a class="header" href="#progressive-backoff">Progressive Backoff</a></h2>
-<p>Progressive backoff is a strategy used to increase the wait time between successive retry attempts. This approach helps to reduce the load on the system and increases the chances of success in subsequent attempts. Common backoff strategies include:</p>
-<ul>
-<li><strong>Fixed Backoff</strong>: A constant wait time between retries.</li>
-<li><strong>Exponential Backoff</strong>: The wait time increases exponentially with each retry attempt.</li>
-<li><strong>Jitter</strong>: Adding randomness to the wait time to prevent synchronized retries from multiple clients.</li>
-</ul>
-<h2 id="thumdering-herd-problem"><a class="header" href="#thumdering-herd-problem">Thumdering Herd Problem</a></h2>
-<p>The thundering herd problem occurs when multiple clients simultaneously retry an operation after a failure, leading to a sudden surge in requests that can overwhelm the system. To mitigate this issue, techniques such as jitter in backoff strategies and limiting the number of concurrent retries can be employed.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="schema-evolution"><a class="header" href="#schema-evolution">Schema Evolution</a></h1>
 <p>Schema evolution is the practice of changing data structures, API contracts, or message formats over time while maintaining compatibility with existing clients and services. This is critical for zero-downtime deployments in distributed systems.</p>
 <h2 id="forward-compatibility"><a class="header" href="#forward-compatibility">Forward Compatibility</a></h2>
@@ -714,6 +529,196 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <p>When designing services, one of the key architectural decisions is whether to implement them as stateless or stateful. Stales teless services do not retain any information about previous interactions, while stateful services maintain state information across multiple requests.</p>
 <p>It's much easier to work with stateless services because they can scale more easily, recover from failures faster, and are generally simpler to manage. However, there are scenarios where stateful services are necessary, such as when maintaining user sessions or handling transactions.</p>
 <p>Staless does not means that the service cannot use state at all; rather, it means that the service itself does not store state between requests. Instead, any necessary state can be stored in external systems like databases or caches. Stateful service are more complex.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="api-gateway"><a class="header" href="#api-gateway">API GATEWAY</a></h1>
+<p>It's a architecture pattern that acts as a single entry point for a set of microservices, handling requests by routing them to the appropriate service, aggregating responses, and performing cross-cutting tasks such as authentication, logging, and rate limiting.</p>
+<h2 id="api-gateway-vs-load-balancer"><a class="header" href="#api-gateway-vs-load-balancer">API Gateway vs Load Balancer</a></h2>
+<p>An API Gateway and a Load Balancer serve different purposes in a microservices architecture:</p>
+<ul>
+<li>
+<p><strong>API Gateway</strong>: Primarily focuses on managing and routing API requests. It handles tasks such as request transformation, response aggregation, authentication, and rate limiting. It operates at the application layer (Layer 7) of the OSI model.</p>
+</li>
+<li>
+<p><strong>Load Balancer</strong>: Primarily focuses on distributing incoming network traffic across multiple servers to ensure high availability and reliability. It operates at both the transport layer (Layer 4) and application layer (Layer 7) of the OSI model, depending on the type of load balancer used.</p>
+</li>
+</ul>
+<h2 id="key-features"><a class="header" href="#key-features">Key Features</a></h2>
+<ul>
+<li><strong>Request Routing</strong>: Directs incoming requests to the appropriate microservice based on the request path, method, or other criteria.</li>
+<li><strong>Response Aggregation</strong>: Combines responses from multiple microservices into a single response to the client.</li>
+<li><strong>Cross-Cutting Concerns</strong>: Manages common functionalities such as authentication, logging, rate limiting, and caching.</li>
+<li><strong>Protocol Translation</strong>: Converts requests and responses between different protocols (e.g., HTTP to WebSocket).</li>
+<li><strong>Load Balancing</strong>: Distributes incoming requests across multiple instances of a microservice to ensure high availability and reliability.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="backend-for-frontend-pattern"><a class="header" href="#backend-for-frontend-pattern">Backend for Frontend Pattern</a></h1>
+<p>The Backend for Frontend pattern involves creating separate backend services tailored to the specific needs of different frontend applications. Usually written in a language that is common for the frontend team, meaning: NodeJS with JS ot Typescript.</p>
+<p>BFFs should have <code>Rendering Logic</code> and should NEVER have <code>Business Logic</code> because that should be encapsulated in the core backend services.</p>
+<h2 id="bffs-are"><a class="header" href="#bffs-are">BFFs Are</a></h2>
+<ul>
+<li><strong>Frontend-Specific</strong>: Each BFF is designed and optimized for a specific frontend application.</li>
+<li><strong>Team Ownership</strong>: The team that builds the frontend typically owns and maintains its BFF.</li>
+<li><strong>Aggregation Layer</strong>: BFFs aggregate data from multiple downstream services.</li>
+<li><strong>Tailored Responses</strong>: Returns only the data the frontend needs in the format it expects.</li>
+</ul>
+<h2 id="bff-vs-api-gateway"><a class="header" href="#bff-vs-api-gateway">BFF vs API Gateway</a></h2>
+<p>While both BFF and API Gateway sit between frontends and backend services, they serve different purposes:</p>
+<p><strong>API Gateway</strong>: Provides common functionality like authentication, rate limiting, and routing. It serves all clients with the same generic interface.</p>
+<p><strong>BFF</strong>: Tailors the API specifically to each frontend's needs. It aggregates, transforms, and optimizes responses for a specific client type. Rendering logic is part of the BFF.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cache"><a class="header" href="#cache">CACHE</a></h1>
+<p>A cache is a software component that stores data so that future requests for that data can be served faster. Caches are commonly used to improve performance and reduce latency in various applications, including web browsers, databases, and operating systems.</p>
+<h2 id="types-of-caches"><a class="header" href="#types-of-caches">Types of Caches</a></h2>
+<ol>
+<li><strong>Memory Cache</strong>: Stores frequently accessed data in RAM for quick retrieval.</li>
+<li><strong>Disk Cache</strong>: Stores data on a hard drive or SSD to reduce access times for frequently used files.</li>
+<li><strong>Web Cache</strong>: Stores web pages and resources to reduce bandwidth usage and load times</li>
+<li><strong>Database Cache</strong>: Caches query results to speed up database access.</li>
+<li><strong>CPU Cache</strong>: A small-sized type of volatile memory that provides high-speed data access to the processor.</li>
+</ol>
+<h2 id="cache-strategies"><a class="header" href="#cache-strategies">Cache Strategies</a></h2>
+<ol>
+<li><strong>Write-Through Cache</strong>: Data is written to both the cache and the underlying storage simultaneously.</li>
+<li><strong>Write-Back Cache</strong>: Data is written to the cache first and then to the underlying storage at a later time.</li>
+<li><strong>Least Recently Used (LRU)</strong>: Evicts the least recently accessed items when the cache is full.</li>
+<li><strong>First In First Out (FIFO)</strong>: Evicts the oldest items first when the cache is full.</li>
+<li><strong>Time-to-Live (TTL)</strong>: Items in the cache are assigned a lifespan, after which they are automatically removed.</li>
+</ol>
+<h2 id="cache-invalidation"><a class="header" href="#cache-invalidation">Cache Invalidation</a></h2>
+<p>Cache invalidation is the process of removing or updating cached data when it becomes stale or outdated. Common strategies include:</p>
+<ol>
+<li><strong>Manual Invalidation</strong>: Explicitly removing or updating cache entries.</li>
+<li><strong>Automatic Invalidation</strong>: Using TTL or other mechanisms to automatically remove stale data.</li>
+<li><strong>Event-Driven Invalidation</strong>: Invalidating cache entries based on specific events, such as data updates.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="connection-pool"><a class="header" href="#connection-pool">Connection Pool</a></h1>
+<p>A connection pool is a cache of database connections maintained so that the connections can be reused when future requests to the database are required. Connection pools are used to enhance the performance of executing commands on a database. Opening and maintaining a database connection for each user, especially requests made to a dynamic database-driven website application, is costly and wastes resources.</p>
+<p>It's expensive to open and close connections to the database all the time. That's why this objects are created as the application bootup and they are borrowed and returned to the pool as needed.</p>
+<p>Java has a great connection pooling libraries like HikariCP.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="feature-flags"><a class="header" href="#feature-flags">Feature Flags</a></h1>
+<p>Feature flags are runtime configuration switches that enable or disable functionality without deploying new code. They decouple deployment from release, allowing gradual rollouts and instant rollbacks, migrations and A/B testing.</p>
+<h2 id="strategies"><a class="header" href="#strategies">Strategies</a></h2>
+<p><strong>Environment Variables</strong>: Simplest approach. Requires restart to change. Good for operational flags.</p>
+<p><strong>Configuration Files</strong>: Load from files on startup or reload periodically. No restart needed if hot-reloaded.</p>
+<p><strong>Database or Cache</strong>: Dynamic flags stored in database or distributed cache. Change instantly across all instances.</p>
+<p><strong>Feature Flag Services</strong>: Dedicated systems like LaunchDarkly, Split, or Unleash. Advanced targeting and analytics.</p>
+<h2 id="targeting-and-segmentation"><a class="header" href="#targeting-and-segmentation">Targeting and Segmentation</a></h2>
+<p>Flags can target based on:</p>
+<ul>
+<li>User ID or email for specific users</li>
+<li>Percentage rollout for gradual releases</li>
+<li>Geographic region or data center</li>
+<li>User attributes like subscription tier</li>
+<li>Environment like staging vs production</li>
+<li>Random sampling for experiments</li>
+</ul>
+<h2 id="anti-patterns"><a class="header" href="#anti-patterns">Anti-Patterns</a></h2>
+<p><strong>Long-Lived Release Flags</strong>: Release flags should be temporary. Remove after release complete.</p>
+<p><strong>Nested Flags</strong>: Flags inside flags create exponential complexity. Avoid deeply nested conditions.</p>
+<p><strong>Flag Proliferation</strong>: Too many flags make system hard to reason about. Be selective.</p>
+<p><strong>Using Flags for Configuration</strong>: Feature flags are not general configuration. Use proper config systems for that.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="load-balancer"><a class="header" href="#load-balancer">Load Balancer</a></h1>
+<p>It's a service that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed, improving application availability and responsiveness.</p>
+<p>Load balancers can operate at different layers of the OSI model, such as Layer 4 (Transport Layer) and Layer 7 (Application Layer), providing various features like SSL termination, session persistence, and health monitoring of backend servers.</p>
+<h2 id="common-load-balancing-algorithms"><a class="header" href="#common-load-balancing-algorithms">Common Load Balancing Algorithms</a></h2>
+<ol>
+<li><strong>Round Robin</strong>: Distributes requests sequentially across the servers.</li>
+<li><strong>Least Connections</strong>: Directs traffic to the server with the fewest active connections.</li>
+<li><strong>IP Hash</strong>: Uses the client's IP address to determine which server will handle the request.</li>
+<li><strong>Weighted Round Robin</strong>: Similar to Round Robin but allows assigning weights to servers based on their capacity.</li>
+<li><strong>Random</strong>: Distributes requests randomly across the servers.</li>
+<li><strong>Metric-Based</strong>: Uses specific metrics (like response time or server load) to make load balancing decisions.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="message-patterns"><a class="header" href="#message-patterns">Message Patterns</a></h1>
+<p>There are different ways to structure message communication between systems.</p>
+<h2 id="publishsubscribe-pattern"><a class="header" href="#publishsubscribe-pattern">Publish/Subscribe Pattern</a></h2>
+<p>Publishers send messages to a topic or channel without knowing who will receive them. Subscribers express interest in specific topics and receive all messages published to those topics.</p>
+<p>Pub/Sub Nature:</p>
+<ul>
+<li><strong>One-to-Many</strong>: A single message can be delivered to multiple subscribers.</li>
+<li><strong>Decoupling</strong>: Publishers and subscribers don't need to know about each other.</li>
+<li><strong>Dynamic Subscription</strong>: Subscribers can join or leave at any time.</li>
+<li><strong>Topic-Based</strong>: Messages are organized by topics or channels.</li>
+</ul>
+<p>Pub/Sub Use cases:</p>
+<ul>
+<li>Real-time notifications across multiple services</li>
+<li>Event-driven architectures where multiple consumers need the same data</li>
+<li>Log aggregation and monitoring systems</li>
+</ul>
+<h2 id="point-to-point-pattern"><a class="header" href="#point-to-point-pattern">Point-to-Point Pattern</a></h2>
+<p>Messages are sent directly from one sender to one specific receiver. Messages are typically placed in a queue where they are consumed by a single consumer.</p>
+<p>P2P:</p>
+<ul>
+<li><strong>One-to-One</strong>: Each message is consumed by exactly one receiver.</li>
+<li><strong>Message Ordering</strong>: Messages are typically processed in the order they arrive.</li>
+<li><strong>Load Distribution</strong>: Multiple consumers can read from the same queue for load balancing.</li>
+<li><strong>Guaranteed Delivery</strong>: Messages remain in the queue until successfully processed.</li>
+</ul>
+<p>P2P Use cases:</p>
+<ul>
+<li>Task distribution among worker nodes</li>
+<li>Request-response communication between services</li>
+<li>Sequential processing of transactions</li>
+<li>Background job processing</li>
+</ul>
+<h2 id="request-reply-pattern"><a class="header" href="#request-reply-pattern">Request-Reply Pattern</a></h2>
+<p>A pattern where a sender sends a message and waits for a response from the receiver. The sender includes a reply-to address in the message so the receiver knows where to send the response.
+This pattern combines aspects of both synchronous and asynchronous communication, allowing for non-blocking request-response interactions.</p>
+<h2 id="message-ordering"><a class="header" href="#message-ordering">Message Ordering</a></h2>
+<p>Message ordering guarantees vary by pattern and implementation:</p>
+<ul>
+<li><strong>FIFO Ordering</strong>: Messages are processed in the order they are sent.</li>
+<li><strong>Partition Ordering</strong>: Messages within the same partition maintain order.</li>
+<li><strong>No Ordering</strong>: Messages may be processed in any order for maximum throughput.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="message-id"><a class="header" href="#message-id">Message Id</a></h1>
+<p>Also know as CORRELATION_ID. The idea that each message or request must have a uniqui id, and you will pass down such id into the dowstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID.</p>
+<p>Why this is important?</p>
+<ul>
+<li>Traceability: When you have a unique MESSAGE_ID for each request, you can trace the entire lifecycle of that request across multiple services. This is especially useful in microservices architectures where a single user action may trigger multiple service calls.</li>
+<li>Debugging: If an error occurs, having a MESSAGE_ID allows you to quickly locate all logs and events related to that specific request. This can significantly speed up the debugging process.</li>
+<li>Monitoring: MESSAGE_IDs can be used to monitor the performance of requests as they pass through</li>
+</ul>
+<p>without a MESSAGE_ID, it because impossible to debug distrubuted systems.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pagination"><a class="header" href="#pagination">Pagination</a></h1>
+<p>When you have a endpoint that returns a large list of items, it is often useful to paginate the results. This means breaking the results into smaller chunks, or "pages", that can be retrieved one at a time.</p>
+<p>Basic benefit here is to reduce the amount of data transferred in a single request, which can improve performance and reduce load on the server. Less latency and more responsive applications are the end result.</p>
+<h2 id="pagination-strategies"><a class="header" href="#pagination-strategies">Pagination Strategies</a></h2>
+<ol>
+<li><strong>Offset-Based Pagination</strong>: This is the most common method, where the client specifies an offset (the starting point) and a limit (the number of items to return). For example, <code>GET /items?offset=20&amp;limit=10</code> would return items 21-30.</li>
+<li><strong>Cursor-Based Pagination</strong>: Instead of using an offset, this method uses a cursor (a unique identifier for a specific item) to mark the starting point for the next page of results. For example, <code>GET /items?cursor=abc123&amp;limit=10</code> would return the next 10 items after the item with the cursor <code>abc123</code>.</li>
+<li><strong>Page Number Pagination</strong>: This method uses page numbers to specify which page of results to return. For example, <code>GET /items?page=2&amp;limit=10</code> would return the second page of results, with 10 items per page.</li>
+<li><strong>Keyset Pagination</strong>: This method uses the values of the last item in the current page to determine the starting point for the next page. For example, if the last item on the current page has an ID of 50, the next request might be <code>GET /items?after_id=50&amp;limit=10</code>.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="queue"><a class="header" href="#queue">Queue</a></h1>
+<p>Queue it's a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front.</p>
+<p>In distributed systems, queues are often used to manage tasks, messages, or data that need to be processed asynchronously. They help in decoupling different parts of a system, allowing for better scalability and fault tolerance.</p>
+<p>Queues use cases are:</p>
+<ul>
+<li><strong>Asynchronous processing</strong>: Tasks can be added to a queue and processed by worker nodes at their own pace.</li>
+<li><strong>Load balancing</strong>: Distributing tasks across multiple workers to ensure no single worker is overwhelmed.</li>
+<li><strong>Message brokering</strong>: Facilitating communication between different services or components in a system.</li>
+<li><strong>Rate limiting</strong>: Controlling the rate at which tasks are processed to avoid overwhelming downstream systems.</li>
+<li><strong>Event sourcing</strong>: Storing a sequence of events that can be processed later to reconstruct the state of a system.</li>
+</ul>
+<p>Common Issues with Queues:</p>
+<ul>
+<li><strong>Message loss</strong>: If a queue is not properly configured, messages may be lost during transmission or processing.</li>
+<li><strong>Duplicate messages</strong>: In some cases, messages may be delivered more than once, leading to redundant processing.</li>
+<li><strong>Latency</strong>: Queues can introduce delays in processing, especially if they become overloaded.</li>
+<li><strong>Backpressure</strong>: If the rate of incoming messages exceeds the processing capacity, it can lead to increased latency and potential message loss.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="retry"><a class="header" href="#retry">Retry</a></h1>
+<p>Retry is a technique used in distributed systems to handle transient failures by attempting an operation multiple times before giving up. This approach is particularly useful in distributed systems, where network issues or temporary unavailability of services can lead to failures that may be resolved with subsequent attempts.</p>
+<h2 id="timeouts"><a class="header" href="#timeouts">Timeouts</a></h2>
+<p>When implementing retries, it is important to set appropriate timeouts for each attempt. A timeout defines how long the system should wait for a response before considering the attempt a failure. Setting too short a timeout may lead to unnecessary retries, while too long a timeout can delay the overall operation.</p>
+<h2 id="progressive-backoff"><a class="header" href="#progressive-backoff">Progressive Backoff</a></h2>
+<p>Progressive backoff is a strategy used to increase the wait time between successive retry attempts. This approach helps to reduce the load on the system and increases the chances of success in subsequent attempts. Common backoff strategies include:</p>
+<ul>
+<li><strong>Fixed Backoff</strong>: A constant wait time between retries.</li>
+<li><strong>Exponential Backoff</strong>: The wait time increases exponentially with each retry attempt.</li>
+<li><strong>Jitter</strong>: Adding randomness to the wait time to prevent synchronized retries from multiple clients.</li>
+</ul>
+<h2 id="thumdering-herd-problem"><a class="header" href="#thumdering-herd-problem">Thumdering Herd Problem</a></h2>
+<p>The thundering herd problem occurs when multiple clients simultaneously retry an operation after a failure, leading to a sudden surge in requests that can overwhelm the system. To mitigate this issue, techniques such as jitter in backoff strategies and limiting the number of concurrent retries can be employed.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="web-hook"><a class="header" href="#web-hook">Web hook</a></h1>
 <p>A web hook it's just a endpoint in an API or REST server. A web hook is used to notify internal/external services when certain events happen.</p>
 <p>When an event occurs, the server makes an HTTP request (usually a POST request) to the specified URL of the web hook, sending relevant data about the event.</p>

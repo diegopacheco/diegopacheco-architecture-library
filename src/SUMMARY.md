@@ -27,26 +27,29 @@
 - [Monthly Review](pratices/MONTHLY_REVIEW.md)
 - [Working on Trenches](pratices/WORKING_ON_TRENCHES.md)
 
-# 4. Concepts and Patterns
+# 4. Concepts
 
 - [ACID](concepts/ACID.md)
-- [API Gateway](concepts/API_GATEWAY.md)
 - [Authentication & Authorization](concepts/AUTHENT.md)
 - [BASE](concepts/BASE.md)
-- [BFF Pattern](concepts/BFF_PATTERN.md)
-- [Cache](concepts/CACHE.md)
-- [Connection Pool](concepts/CONNECTION_POOL.md)
-- [Feature Flags](concepts/FEATURE_FLAGS.md)
 - [Idempotency](concepts/IDEMPOTENCY.md)
-- [Load Balancer](concepts/LB.md)
-- [Message Patterns](concepts/MESSAGE_PATTERNS.md)
-- [Message Id](concepts/MESSAGE_ID.md)
 - [Optimistic vs Pessimistic Locking](concepts/OPLOCKING.md)
-- [Pagination](concepts/PAGINATION.md)
 - [Partition](concepts/PARTITION.md)
-- [Queue](concepts/QUEUE.md)
-- [Retry](concepts/RETRY.md)
 - [Schema Evolution](concepts/SCHEMA_EVOLUTION.md)
 - [Source of Truth](concepts/SOURCE_OF_TRUTH.md)
 - [Stateless vs Stateful Services](concepts/STATELESS_VS_STATEFULL_SVC.md)
-- [Web Hook](concepts/WEB_HOOK.md)
+
+# 5. Patterns
+
+- [API Gateway](patterns/API_GATEWAY.md)
+- [BFF Pattern](patterns/BFF_PATTERN.md)
+- [Cache](patterns/CACHE.md)
+- [Connection Pool](patterns/CONNECTION_POOL.md)
+- [Feature Flags](patterns/FEATURE_FLAGS.md)
+- [Load Balancer](patterns/LB.md)
+- [Message Patterns](patterns/MESSAGE_PATTERNS.md)
+- [Message Id](patterns/MESSAGE_ID.md)
+- [Pagination](patterns/PAGINATION.md)
+- [Queue](patterns/QUEUE.md)
+- [Retry](patterns/RETRY.md)
+- [Web Hook](patterns/WEB_HOOK.md)

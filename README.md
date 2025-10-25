@@ -68,26 +68,28 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Monthly Review](src/pratices/MONTHLY_REVIEW.md) - See the whole picture.
 - [Working on Trenches](src/pratices/WORKING_ON_TRENCHES.md) - Hands-on, front-line work with the team.
 
-4. Concepts and Patterns:
+4. Concepts:
 - [ACID](src/concepts/ACID.md) - Relational database transaction properties
-- [API Gateway](src/concepts/API_GATEWAY.md) - Single entry point for microservices
 - [Authentication & Authorization](src/concepts/AUTHENT.md) - Identity verification and access control
 - [BASE](src/concepts/BASE.md) - NoSQL consistency model
-- [BFF Pattern](src/concepts/BFF_PATTERN.md) - Backend for Frontend pattern
-- [Cache](src/concepts/CACHE.md) - Data storage for faster access
-- [Connection Pool](src/concepts/CONNECTION_POOL.md) - Database connection reuse
-- [Feature Flags](src/concepts/FEATURE_FLAGS.md) - Runtime configuration and gradual rollouts
 - [Idempotency](src/concepts/IDEMPOTENCY.md) - Safe operation repetition
-- [Load Balancer](src/concepts/LB.md) - Traffic distribution across servers
-- [Message Patterns](src/concepts/MESSAGE_PATTERNS.md) - Publish/Subscribe, Point-to-Point messaging
-- [Message Id](src/concepts/MESSAGE_ID.md) - Unique identifier for tracing requests
 - [Optimistic vs Pessimistic Locking](src/concepts/OPLOCKING.md) - Concurrency control strategies
-- [Pagination](src/concepts/PAGINATION.md) - Breaking large datasets into pages
 - [Partition](src/concepts/PARTITION.md) - Data distribution strategies
-- [Queue](src/concepts/QUEUE.md) - Asynchronous message processing
-- [Retry](src/concepts/RETRY.md) - Handling transient failures with retry strategies
 - [Schema Evolution](src/concepts/SCHEMA_EVOLUTION.md) - Forward/backward compatibility for APIs
 - [Source of Truth](src/concepts/SOURCE_OF_TRUTH.md) - Authoritative data source
 - [Stateless vs Stateful Services](src/concepts/STATELESS_VS_STATEFULL_SVC.md) - Service state management
-- [Web Hook](src/concepts/WEB_HOOK.md) - Event-driven HTTP callbacks
+
+5. Patterns:
+- [API Gateway](src/patterns/API_GATEWAY.md) - Single entry point for microservices
+- [BFF Pattern](src/patterns/BFF_PATTERN.md) - Backend for Frontend pattern
+- [Cache](src/patterns/CACHE.md) - Data storage for faster access
+- [Connection Pool](src/patterns/CONNECTION_POOL.md) - Database connection reuse
+- [Feature Flags](src/patterns/FEATURE_FLAGS.md) - Runtime configuration and gradual rollouts
+- [Load Balancer](src/patterns/LB.md) - Traffic distribution across servers
+- [Message Patterns](src/patterns/MESSAGE_PATTERNS.md) - Publish/Subscribe, Point-to-Point messaging
+- [Message Id](src/patterns/MESSAGE_ID.md) - Unique identifier for tracing requests
+- [Pagination](src/patterns/PAGINATION.md) - Breaking large datasets into pages
+- [Queue](src/patterns/QUEUE.md) - Asynchronous message processing
+- [Retry](src/patterns/RETRY.md) - Handling transient failures with retry strategies
+- [Web Hook](src/patterns/WEB_HOOK.md) - Event-driven HTTP callbacks
 
