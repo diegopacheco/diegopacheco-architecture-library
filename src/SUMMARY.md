@@ -14,6 +14,7 @@
 
 # 2. Anti-Patterns:
 - [Tech Debt Plague](anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
+- [Stagnation](anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
 
 # 3. Pratices
 

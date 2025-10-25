@@ -56,6 +56,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 
 2. Anti-Patterns:
 - [Tech Debt Plague](src/anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
+- [Stagnation](src/anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
 
 3. Pratices:
 - [Attention to Detail](src/pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care
