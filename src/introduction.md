@@ -40,6 +40,7 @@ Choosing the best and latest solutions
 - [Scalability](properties/SCALABILITY.md) - Designing for growth and load
 - [Observability](properties/OBSERVABLE.md) - Monitoring and understanding system behavior
 - [Stability](properties/STABILITY.md) - Ensuring stable daily pratices.
+- [Secure](properties/SECURE.md) - Embeding security in architecture
 
 4. Chapter 4 - Pratices:
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care

@@ -65,6 +65,7 @@ Choosing the best and latest solutions
 - [Scalability](src/properties/SCALABILITY.md) - Designing for growth and load
 - [Observability](src/properties/OBSERVABLE.md) - Monitoring and understanding system behavior
 - [Stability](src/properties/STABILITY.md) - Ensuring stable daily pratices.
+- [Secure](src/properties/SECURE.md) - Embeding security in architecture
 
 
 3. Chapter 4 - Pratices:
