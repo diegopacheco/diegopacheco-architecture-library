@@ -227,6 +227,7 @@ Strategies for architects to safeguard time for deep work</li>
 <li><a href="dilemmas/WHY.html">Why</a></li>
 <li><a href="dilemmas/DISCOVERY_VS_DELIVERY.html">Discovery vs Delivery</a> - Balancing exploration and execution</li>
 <li><a href="dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.html">Move Fast vs Do it Right</a> - Speed vs Quality</li>
+<li><a href="dilemmas/BUILD_VS_BUY.html">Build vs Buy</a> - When to build in-house vs buy and integrate</li>
 </ul>
 <ol start="4">
 <li>Chapter 4 - Properties:</li>
@@ -377,6 +378,18 @@ Choosing the best and latest solutions</li>
 <p>However it's not as simple as, them build it all fast, and all expedient, and pile up tech debt like the Tech debt plague. You will get the right product, but a proor experience, because it will be slow, full of bugs, and unreliable.</p>
 <p>Again this refer to the the dilemma of Discovery vs Delivery. You need to find the right balance between moving fast to discover what works and doing it right to ensure quality and reliability.</p>
 <p>In theory you could "just move fast" but the issue is, lots of companies are allergic to refactoring and they never pay the price to improve the code. Mostly because tech leadership is bad and or immature. But either way, you need to pay the price at some point. If you never pay the price, you end up with a big ball of mud that is hard to maintain and evolve.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="build-vs-buy"><a class="header" href="#build-vs-buy">Build vs Buy</a></h1>
+<p>Which one is best, build or buy? Well, it depends. Build is important when is your core domain and is how your companies makes money and differentiates from the competition. If all the companies by the same core business, how are they different? They are not.</p>
+<p>However when is not your core business, buy makes a lot of sense, because is freeing time for you to focus on what matters, your core business. Howeber this is a big mistake here. There is no buy without build. Because even if you buy you will need integrate with your existing systems. Just because your buy does not means is perfect, does not means it fixes all your problems. It's also comon when you buy solution that same solutions introduce problems that you did not have before.</p>
+<p>When buying it's important to observe:</p>
+<ul>
+<li>Make sure there are APIs</li>
+<li>Evaluate the APIs before buying</li>
+<li>Buy the code (when possible)</li>
+<li>Consider integration as part of the cost</li>
+<li>Consider troubleshooting, debugging, observability as part of the cost</li>
+</ul>
+<p>If I use an AWS service, vs building in house is cheaper? Well dependends where you want put the money. In the beginning buying might sound cheaper, but you will pay AWS forever. When you build you might have a better solution(if executed right) but you now need pay people to mantaining it forever. So where you want the money goes, your people or vendors? The question here is how good you are in execution inside of the house. If your execution is terrible, go buy.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-properties"><a class="header" href="#why-properties">Why Properties?</a></h1>
 <p>Properties are characteristics or attributes that define or describe an object, system, or concept. Properties give us benefits. Without architecture properties, we would be lost in a sea of ambiguity and confusion.</p>
 <p>Properties are things you really want for your architecture and systems. Think about a kid, you want your son or daughter to have good properties like honesty, kindness, and respectfulness. Similarly, in architecture and systems, we want properties that ensure scalability, security, and observability.</p>
