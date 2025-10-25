@@ -2,6 +2,13 @@
 
 This repository contains a curated collection of concepts, guidance about Software Architecture by Diego Pacheco.
 
+## Installing mdBook
+
+Install mdBook using cargo:
+```bash
+cargo install mdbook
+```
+
 ## Building the Book
 
 This repository uses mdBook to generate a browsable book format.
