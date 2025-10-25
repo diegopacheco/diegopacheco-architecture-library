@@ -74,6 +74,7 @@ Hire, develop, retain, and truly grow talent at scale
 
 0. Chapter 0 - Zero
 - [Why](zero/WHY.md) - Doing what's right
+- [Rationale](zero/RATIONALE.md) - The reasoning behind this book
 
 1. Chapter 1 - Philosophy
 - [Why](philosofy/WHY.md)
