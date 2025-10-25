@@ -65,7 +65,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Requirements](src/anti-patterns/REQUIREMENTS.md) - Challenging and validating decisions
 
 
-# 3. Chapter 3 - Dilemmas:
+3. Chapter 3 - Dilemmas:
 - [Why](src/dilemmas/WHY.md)
 - [Discovery vs Delivery](src/dilemmas/DISCOVERY_VS_DELIVERY.md) - Balancing exploration and execution
 - [Move Fast vs Do it Right](src/dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) - Speed vs Quality
