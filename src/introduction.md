@@ -1,6 +1,6 @@
 # Diego Pacheco's Software Architecture Library
 
-![Cover](../cover.png)
+<img src="cover.png" width="400">
 
 This repository contains a curated collection of concepts, guidance about Software Architecture by Diego Pacheco.
 
