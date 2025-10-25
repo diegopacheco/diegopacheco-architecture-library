@@ -4,6 +4,7 @@
 
 # 1. Chapter 1 - Philosophy
 
+- [Why](philosofy/WHY.md)
 - [Crystall Ball](philosofy/CRYSTAL_BALL.md)
 - [Defensive Programming](philosofy/DEFENSIVE.md)
 - [Doing Hard Things](philosofy/DOING_HARD_THINGS.md)
@@ -14,6 +15,7 @@
 
 # 2. Chapter 2 - Anti-Patterns:
 
+- [Why](anti-patterns/WHY.md)
 - [Tech Debt Plague](anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
 - [Ignore Culture](anti-patterns/IGNORE_CULTURE.md) - Addressing ignored problems proactively
 - [Stagnation](anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
@@ -21,6 +23,7 @@
 
 # 3. Chapter 3 - Properties:
 
+- [Why](properties/WHY.md)
 - [Anti-Fragility](properties/ANTI-FRAGILITY.md) - Systems Thriving on Failure
 - [State of the Art](properties/STATE-OF-THE-ART.md) -
 Choosing the best and latest solutions
@@ -31,6 +34,7 @@ Choosing the best and latest solutions
 
 # Chapter 4 - Pratices
 
+- [Why](pratices/WHY.md)
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md)
 - [Architecture Review](pratices/ARCH_REVIEW.md)
 - [Design First](pratices/DESIGN_FIRST.md)
@@ -41,6 +45,7 @@ Choosing the best and latest solutions
 
 # Chapter 5 - Concepts
 
+- [Why](concepts/WHY.md)
 - [ACID](concepts/ACID.md)
 - [Authentication & Authorization](concepts/AUTHENT.md)
 - [BASE](concepts/BASE.md)
@@ -53,6 +58,7 @@ Choosing the best and latest solutions
 
 # Chapter 6 - Patterns
 
+- [Why](patterns/WHY.md)
 - [API Gateway](patterns/API_GATEWAY.md)
 - [BFF Pattern](patterns/BFF_PATTERN.md)
 - [Cache](patterns/CACHE.md)

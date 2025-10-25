@@ -46,6 +46,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 ## Table of Contents
 
 1. Chapter 1 - Philosophy:
+- [Why](src/philosofy/WHY.md)
 - [Crystall Ball](src/philosofy/CRYSTAL_BALL.md) - Think about future changes
 - [Defensive Programming](src/philosofy/DEFENSIVE.md) - Anticipating and handling errors
 - [Doing Hard Things](src/philosofy/DOING_HARD_THINGS.md) - Tackling complex problems head-on
@@ -55,6 +56,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 - [Protect Your Time](src/philosofy/PROTECT_YOUR_TIME.md) - Strategies for architects to safeguard time for deep work
 
 2. Chapter 2 - Anti-Patterns:
+- [Why](src/anti-patterns/WHY.md)
 - [Tech Debt Plague](src/anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
 - [Ignore Culture](src/anti-patterns/IGNORE_CULTURE.md) - Addressing ignored problems proactively
 - [Stagnation](src/anti-patterns/STAGNATION.md) - Constant learning to avoid stagnation
@@ -62,6 +64,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 
 
 3. Chapter 3 - Properties:
+- [Why](src/properties/WHY.md)
 - [Anti-Fragility](src/properties/ANTI-FRAGILITY.md) - Systems Thriving on Failure
 - [State of the Art](src/properties/STATE-OF-THE-ART.md) -
 Choosing the best and latest solutions
@@ -71,7 +74,8 @@ Choosing the best and latest solutions
 - [Secure](src/properties/SECURE.md) - Embeding security in architecture
 
 
-3. Chapter 4 - Pratices:
+4. Chapter 4 - Pratices:
+- [Why](src/pratices/WHY.md)
 - [Attention to Detail](src/pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care
 - [Architecture Review](src/pratices/ARCH_REVIEW.md) - Documenting architecture for communication and improvements
 - [Design First](src/pratices/DESIGN_FIRST.md) - Think first, act later
@@ -81,6 +85,7 @@ Choosing the best and latest solutions
 - [Working on Trenches](src/pratices/WORKING_ON_TRENCHES.md) - Hands-on, front-line work with the team.
 
 5. Chapter 5 - Concepts:
+- [Why](src/concepts/WHY.md)
 - [ACID](src/concepts/ACID.md) - Relational database transaction properties
 - [Authentication & Authorization](src/concepts/AUTHENT.md) - Identity verification and access control
 - [BASE](src/concepts/BASE.md) - NoSQL consistency model
@@ -92,6 +97,7 @@ Choosing the best and latest solutions
 - [Stateless vs Stateful Services](src/concepts/STATELESS_VS_STATEFULL_SVC.md) - Service state management
 
 6. Chapter 6 - Patterns:
+- [Why](src/patterns/WHY.md)
 - [API Gateway](src/patterns/API_GATEWAY.md) - Single entry point for microservices
 - [BFF Pattern](src/patterns/BFF_PATTERN.md) - Backend for Frontend pattern
 - [Cache](src/patterns/CACHE.md) - Data storage for faster access
