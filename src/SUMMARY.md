@@ -78,3 +78,10 @@ Choosing the best and latest solutions
 - [Queue](patterns/QUEUE.md)
 - [Retry](patterns/RETRY.md)
 - [Web Hook](patterns/WEB_HOOK.md)
+
+# 8. Chapter 8 - Tools:
+
+- [Why](tools/WHY.md)
+- [Diagraming Tools](tools/DIAGRAMING.md) - Visualizing architecture with diagrams
+- [Writing Tools](tools/WRITING.md) - Documenting architecture effectively
+- [Thinking Tools](tools/THINKING.md) - Tools for structured thinking and exploration.

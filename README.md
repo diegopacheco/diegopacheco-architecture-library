@@ -119,3 +119,10 @@ Choosing the best and latest solutions
 - [Queue](src/patterns/QUEUE.md) - Asynchronous message processing
 - [Retry](src/patterns/RETRY.md) - Handling transient failures with retry strategies
 - [Web Hook](src/patterns/WEB_HOOK.md) - Event-driven HTTP callbacks
+
+8. Chapter 8 - Tools:
+
+- [Why](src/tools/WHY.md)
+- [Diagraming Tools](src/tools/DIAGRAMING.md) - Visualizing architecture with diagrams
+- [Writing Tools](src/tools/WRITING.md) - Documenting architecture effectively
+- [Thinking Tools](src/tools/THINKING.md) - Tools for structured thinking and exploration.

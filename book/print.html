@@ -339,6 +339,15 @@ Choosing the best and latest solutions</li>
 <li><a href="patterns/RETRY.html">Retry</a> - Handling transient failures with retry strategies</li>
 <li><a href="patterns/WEB_HOOK.html">Web Hook</a> - Event-driven HTTP callbacks</li>
 </ul>
+<ol start="8">
+<li>Chapter 8 - Tools:</li>
+</ol>
+<ul>
+<li><a href="tools/WHY.html">Why</a></li>
+<li><a href="tools/DIAGRAMING.html">Diagraming Tools</a> - Visualizing architecture with diagrams</li>
+<li><a href="tools/WRITING.html">Writing Tools</a> - Documenting architecture effectively</li>
+<li><a href="tools/THINKING.html">Thinking Tools</a> - Tools for structured thinking and exploration.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-philosofy"><a class="header" href="#why-philosofy">Why Philosofy?</a></h1>
 <p>Philosofy means "love of wisdom," and this project is dedicated to exploring and sharing philosophical ideas in an accessible way. The goal is to foster critical thinking, encourage open dialogue, and promote a deeper understanding of the world around us.</p>
 <p>How we do things matters. There are many ways to do something wrong, but not as many ways to do it right. Philosofy is "ways of thinking", or "how approach" problems, day-by-day life, difficult situations, decisions, trade-offs.</p>
@@ -943,6 +952,37 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </li>
 </ul>
 <p>Webhooks dont require special technology, you can apply with any backend technology that can handle HTTP requests.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="why-tools"><a class="header" href="#why-tools">Why Tools?</a></h1>
+<p>A architect need a couple of tools. I tought a lot about writting this section because this can easily get deprecated. Since tools keep evolving, but them I decided to talk about the essensnce of tools we need and give some currenr recommendations.</p>
+<p>An architect does not need many tools, but for engineering than we need lots of tools. For architecture we need a couple of tools for:</p>
+<ul>
+<li>Diagramming</li>
+<li>Documentation</li>
+<li>Thinking</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="diagraming"><a class="header" href="#diagraming">Diagraming</a></h1>
+<p>Architecture must be visual, it's important to have visual diagrams. IMHO there are least 3 diagrams that are very, very useful for architects:</p>
+<ul>
+<li>Overall Architecture Diagram: You can see the big pucture, you see how services talk to each other, you see the main components.</li>
+<li>Class Diagram: Can be useful for 2 common scenarios. A) Internal modeling of a system or B) Modeling tables in a database.</li>
+<li>Sequence/state diagrams: Useful to understand how a system works internally, how data flows through the system. I would not have hundreds of theese, the goal here is not have one per UI. The goal is to have for the most important and most complex things.</li>
+</ul>
+<p>The best paid diagram tool is <a href="https://www.lucidchart.com/">LucidCHART</a>. The best free diagram tool is <a href="https://app.diagrams.net/">Diagrams.net</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="writing"><a class="header" href="#writing">Writing</a></h1>
+<p>Architects must right. I used a variaety of tools to write like Evernote, Grammarly, Google docs, Markdown files, MS word, and many others. Today I'm the best tool for me is Markdown files.</p>
+<p>Markdown are simple and lightweight, they word with any AI Grammar tool. They are also universal and portable. IMHO I dont have the perfect writting tool ANY, I might need build mine one day but I think less is more. You need focus on your ideas, so less distractions is the key.</p>
+<p>Architects needs to write:</p>
+<ul>
+<li>Principles</li>
+<li>Guidelines</li>
+<li>Trade-offs</li>
+<li>Decisions</li>
+</ul>
+<p>When you write something down, you are dumping ytour brain and therefore doing the same as a engineer when they fire up a PR. You are allowing other to review. Written documents scale, because many people can read, they might be forever.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="thinking"><a class="header" href="#thinking">Thinking</a></h1>
+<p>An architect needs a thinking toolbox. IMHO you can use the same tool you use for <code>Diagramming</code> and <code>Writting</code>. POC's are a great laboratory for thinking as well. I used a lot of mind-maps in the past, but I find that nowadays I prefer to use plain text files with a good structure (headings, lists, code blocks, etc).</p>
+<p>Markdowns can be a great tool for thinking too, but you need a diagram tool to sketch some boxes and arrows. Without coding and experimentation, thinking is just an abstract exercise. When you know the systems, and know what they can do them you can think about alternatives IMHO thinking is about exploring alternatives, exploring different trade-offs and different ways to solve or model a problem. Thinking is about being creative and open-minded.</p>
+<p>There is a different when you are documenting what you solved already and that's for review or for engineers to implement. Versus thinking about how to solve a problem that is not solved yet. In the first case you are more focused on clarity and precision, in the second case you are more focused on exploration and creativity.</p>
 
                     </main>
 

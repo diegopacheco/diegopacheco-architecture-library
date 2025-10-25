@@ -1,4 +1,4 @@
-# Writting
+# Writing
 
 Architects must right. I used a variaety of tools to write like Evernote, Grammarly, Google docs, Markdown files, MS word, and many others. Today I'm the best tool for me is Markdown files.
 
