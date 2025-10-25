@@ -30,7 +30,7 @@ I wrote this book because I'm doing sfotware srchitecture for more than 20+ year
 Strategies for architects to safeguard time for deep work
 
 2. Anti-Patterns:
-- [Tech Debt Plague](src/anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
+- [Tech Debt Plague](anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
 
 3. Pratices:
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care

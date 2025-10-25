@@ -13,7 +13,7 @@
 - [Protect Your Time](philosofy/PROTECT_YOUR_TIME.md)
 
 # 2. Anti-Patterns:
-- [Tech Debt Plague](src/anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
+- [Tech Debt Plague](anti-patterns/TECH_DEBT_PLAGUE.md) - Fighting technical debt constantly
 
 # 3. Pratices
 
