@@ -377,6 +377,14 @@ Choosing the best and latest solutions</li>
 <p>Architects must have a good crystal ball. Requirements change, a requirement change can break completely the architecture if it was not designed to accommodate change. So thinking ahead is a great practice because it allows you to predict the next moves, meaning you think big and ahead but execute small.</p>
 <p>Code can and should be refactored. Refactoring should happen all the time and continuously. However there are people who are allergic to refactoring and that is a recipe for great disasters. Thinking ahead allows you to be prepared when you need it. Think about fire drills, you practice how to handle fire, so when you need it you are ready.</p>
 <p>Think big execute small.</p>
+<h3 id="how-to-train-your-crystall-ball-skills"><a class="header" href="#how-to-train-your-crystall-ball-skills">How to Train your Crystall Ball skills?</a></h3>
+<p>One simple way is paying attention on the industry and trends. You can learn from errors of others. Sometimes is not that technology or concept is bad but people apply it wrong and if they apply if wrong dependeding of the case can be a huge distaster like <a href="https://diego-pacheco.blogspot.com/2020/05/the-death-of-microservices-distributed.html">Microservices when done wrong</a>.</p>
+<p>Another form of crystall balling is to predict the next step, this one might sound harder but is not. Let me give you 3 examples:</p>
+<ol>
+<li><strong>You application has a product catalog</strong>: For sure you can start with simple exact math on the database. But if you grow and have hundreds of products you will need Full Text Search, so something like OpenSearch or ElasticSearch. So you can start thinking on how to integrate that in the future. You dont need it now, but you can get familir with, you can search the solution space, you can even get ready. When you need you are much better equiped to deal with.</li>
+<li><strong>You have updates for the user</strong>: Which happen based on backend events, it's okay to use a old school polling mechanism, but if you think ahead you can start thinking on WebSockets or Server Sent Events. You can start learning how to implement that, so when you need it you are ready.</li>
+<li><strong>You need to store files</strong>: You can start with relational database and store in a table(it's a anti-pattern), but if you think ahead you can start learning how to use S3 or MinIO. You can start learning how to integrate that, so when you need it you are ready.</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="defensive-programing"><a class="header" href="#defensive-programing">Defensive Programing</a></h1>
 <p><a href="https://en.wikipedia.org/wiki/Defensive_programming">Defensive programming</a> is a design approach that emphasizes anticipating and handling potential errors or unexpected inputs in software development. For instance you always:</p>
 <ul>
@@ -1052,22 +1060,6 @@ This pattern combines aspects of both synchronous and asynchronous communication
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
