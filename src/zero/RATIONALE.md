@@ -12,7 +12,7 @@ This is a way for me to give it back. For free . I hope you enjoy it.
 
 A software architct is a person that makes desicions or influence decisions about the software structure, the technologies to be used, the patterns to be followed and the practices to be adopted. A software architect is responsible for the overall design and quality of the software system. A software architect code, does code review, mentors developers, leads technical discussions, defines standards and guidelines, evaluates technologies, and ensures that the software meets the requirements and goals of the business.
 
-I like to think about a software architect as a [Monk and Rockstar](https://diego-pacheco.blogspot.com/2025/02/the-monk-and-rockstar.html). 
+I like to think about a software architect as a [Monk and Rockstar](https://diego-pacheco.blogspot.com/2025/02/the-monk-and-rockstar.html). An architect also goes [DEEP](https://diego-pacheco.blogspot.com/2023/08/shallow-vs-deep-mindset.html) in the technology, understand the details, the trade offs, the pros and cons of different approaches. An architect also goes WIDE in the technology landscape, understand the trends, the best practices, the patterns, the anti-patterns, the tools and frameworks available.
 
 ## What is Architecture?
 

@@ -1,6 +1,6 @@
 # Observable
 
-As architect, the systems you produce must have the ability to be observable. Such property is very important. Consider [observability](https://diego-pacheco.blogspot.com/2020/04/observability-domain-observability-from.html) a sub-set of testing which happens in production. 
+As architect, the systems you produce must have the ability to be observable. Such property is very important. Consider [observability](https://diego-pacheco.blogspot.com/2020/04/observability-domain-observability-from.html) a sub-set of [testing](https://diego-pacheco.blogspot.com/2020/02/going-faster-with-testing.html) which happens in production. 
 
 IF you dont know whats going on you are driving into the dark. You want to be able to understand how your system behaves in production, and be able to detect issues before they become problems for your users.
 

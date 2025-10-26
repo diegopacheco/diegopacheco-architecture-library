@@ -57,6 +57,9 @@ Here is a curated list of books that will help you become a better architect.
 **Architecture Documentation**
 * [Architecture Doc Template](https://github.com/diegopacheco/tech-resources/blob/master/arch-doc-template.md)
 
+**Patterns & Best Practices**
+* [BFF Dilemma](https://diego-pacheco.blogspot.com/2020/08/bff-dilema.html)
+
 **Core Architecture Principles**
 * [Design is Not Subjective](https://diego-pacheco.blogspot.com/2021/04/design-is-not-subjective.html)
 * [Architecture 101: Thinking About Design](https://diego-pacheco.blogspot.com/2020/04/architecture-101-thinking-about-design.html)

@@ -8,4 +8,4 @@ However it's not as simple as, then build it all fast, and all expedient, and pi
 
 Again this refers to the dilemma of Discovery vs Delivery. You need to find the right balance between moving fast to discover what works and doing it right to ensure quality and reliability.
 
-In theory you could "just move fast" but the issue is, lots of companies are allergic to refactoring and they never pay the price to improve the code. Mostly because tech leadership is bad and or immature. But either way, you need to pay the price at some point. If you never pay the price, you end up with a big ball of mud that is hard to maintain and evolve.
+In theory you could "just move fast" but the issue is, lots of companies are allergic to [refactoring](https://diego-pacheco.blogspot.com/2023/11/continuous-refactoring.html) and they never pay the price to improve the code. Mostly because tech leadership is bad and or immature. But either way, you need to pay the price at some point. If you never pay the price, you end up with a big ball of mud that is hard to maintain and evolve.

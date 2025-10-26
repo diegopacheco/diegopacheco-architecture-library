@@ -373,7 +373,7 @@ Choosing the best and latest solutions</li>
 <p>This is a way for me to give it back. For free . I hope you enjoy it.</p>
 <h2 id="what-is-a-software-architect"><a class="header" href="#what-is-a-software-architect">What is a Software Architect?</a></h2>
 <p>A software architct is a person that makes desicions or influence decisions about the software structure, the technologies to be used, the patterns to be followed and the practices to be adopted. A software architect is responsible for the overall design and quality of the software system. A software architect code, does code review, mentors developers, leads technical discussions, defines standards and guidelines, evaluates technologies, and ensures that the software meets the requirements and goals of the business.</p>
-<p>I like to think about a software architect as a <a href="https://diego-pacheco.blogspot.com/2025/02/the-monk-and-rockstar.html">Monk and Rockstar</a>.</p>
+<p>I like to think about a software architect as a <a href="https://diego-pacheco.blogspot.com/2025/02/the-monk-and-rockstar.html">Monk and Rockstar</a>. An architect also goes <a href="https://diego-pacheco.blogspot.com/2023/08/shallow-vs-deep-mindset.html">DEEP</a> in the technology, understand the details, the trade offs, the pros and cons of different approaches. An architect also goes WIDE in the technology landscape, understand the trends, the best practices, the patterns, the anti-patterns, the tools and frameworks available.</p>
 <h2 id="what-is-architecture"><a class="header" href="#what-is-architecture">What is Architecture?</a></h2>
 <p>Software architecture is the high-level structure and organization of a software system. It defines the components, modules, and their interactions, as well as the principles and guidelines that govern the design and development of the software. Software architecture encompasses both the technical and non-technical aspects of the system, including performance, scalability, security, maintainability, and usability.</p>
 <p>In other words, software architrecture is code. But not only code, but the decision on what to do and what not do. Software architecture is about making choices that will impact the software system in the long term.</p>
@@ -462,9 +462,10 @@ Choosing the best and latest solutions</li>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="service-orientation"><a class="header" href="#service-orientation">Service Orientation</a></h1>
 <p><a href="https://diego-pacheco.blogspot.com/2014/11/soa-micro-services-and-isolation.html">Service Oriented Architecture (SOA)</a> is a big deal. <a href="https://diego-pacheco.blogspot.com/2020/07/double-down-on-service-orientation.html">SOA</a> should be the default way of thinking and operating services in modern software architecture. Service Orientation should be the default choice for solutions. Services are more important and better than internal libraries.</p>
 <p>Services allow Isolation, Independence and Flexibility. When services are done right, with proper contracts, refactor can happen under the hood. Services allow different stacks and technology.</p>
-<p>Services should be Capability oriented. Services should be as generic as possible and it's okay to have more granularity and more code in a service. Services do not need to be micro(Micro Services).</p>
+<p><a href="https://diego-pacheco.blogspot.com/2024/12/services.html">Services</a> should be Capability oriented. Services should be as generic as possible and it's okay to have more granularity and more code in a service. Services do not need to be micro(Micro Services).</p>
 <p>The most important part of services is the contract. The contract is the API. The API should be as stable as possible. The API should be backward compatible as much as possible. The API should be well documented and versioned.</p>
 <p><a href="https://diego-pacheco.blogspot.com/2021/04/its-all-about-contracts.html">Contracts</a> must be well designed and reviewed carefully, it's not difficult to make <a href="https://diego-pacheco.blogspot.com/2024/12/leaky-contracts.html">poor contracts</a> because engineers and even more frontend engineers are just thinking on what needs to change, and are no thinking if is the right place to make the change or if sohuld be that way at all.</p>
+<p>Services require a <a href="https://diego-pacheco.blogspot.com/2024/05/service-chain.html">lot of thinking</a>, they are not a panacea.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="protect-your-time"><a class="header" href="#protect-your-time">Protect Your Time</a></h1>
 <p>It's very easy to be consumed with meetings 100% of the time. However the architect must protect his time in order to do deep work. Research, Monthly Reviews, Crystall Balling, thinking about trade-offs, evaluating solutions and reading code.</p>
 <p>At minimun you should book at least 3x per week 3-6h to do deep work. Does not matter if is in the morning or aftermoon, whatever is easier. Hold your ground, push back, and protect that time. Architects must think.</p>
@@ -513,7 +514,7 @@ Choosing the best and latest solutions</li>
 <p>However even Facebook admitted that they need to shift to a more balanced approach where they move fast but with stable infrastructure. It's important to do it right, in engineering, however if you build right the <code>wrong product</code>, the product people don't care, then you are wasting your time and money.</p>
 <p>However it's not as simple as, then build it all fast, and all expedient, and pile up tech debt like the Tech debt plague. You will get the right product, but a poor experience, because it will be slow, full of bugs, and unreliable.</p>
 <p>Again this refers to the dilemma of Discovery vs Delivery. You need to find the right balance between moving fast to discover what works and doing it right to ensure quality and reliability.</p>
-<p>In theory you could "just move fast" but the issue is, lots of companies are allergic to refactoring and they never pay the price to improve the code. Mostly because tech leadership is bad and or immature. But either way, you need to pay the price at some point. If you never pay the price, you end up with a big ball of mud that is hard to maintain and evolve.</p>
+<p>In theory you could "just move fast" but the issue is, lots of companies are allergic to <a href="https://diego-pacheco.blogspot.com/2023/11/continuous-refactoring.html">refactoring</a> and they never pay the price to improve the code. Mostly because tech leadership is bad and or immature. But either way, you need to pay the price at some point. If you never pay the price, you end up with a big ball of mud that is hard to maintain and evolve.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="build-vs-buy"><a class="header" href="#build-vs-buy">Build vs Buy</a></h1>
 <p>Which one is best, build or buy? Well, it depends. Build is important when is your core domain and is how your companies makes money and differentiates from the competition. If all the companies by the same core business, how are they different? They are not.</p>
 <p>However when is not your core business, buy makes a lot of sense, because is freeing time for you to focus on what matters, your core business. Howeber this is a big mistake here. There is no buy without build. Because even if you buy you will need integrate with your existing systems. Just because your <a href="https://diego-pacheco.blogspot.com/2024/12/proprietary-systems-and-distributed.html">buy does not means is perfect</a>, does not means it fixes all your problems. It's also comon when you buy solution that same solutions introduce problems that you did not have before. Buy has <a href="https://diego-pacheco.blogspot.com/2020/06/software-architecture-hidden-costs.html">hidden costs</a>.</p>
@@ -527,7 +528,7 @@ Choosing the best and latest solutions</li>
 </ul>
 <p>If I use an AWS service, vs building in house is cheaper? Well dependends where you want put the money. In the beginning buying might sound cheaper, but you will pay AWS forever. When you build you might have a better solution(if executed right) but you now need pay people to mantaining it forever. So where you want the money goes, your people or vendors? The question here is how good you are in execution inside of the house. If your execution is terrible, go buy.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="decide-or-wait"><a class="header" href="#decide-or-wait">Decide or Wait</a></h1>
-<p><a href="https://diego-pacheco.blogspot.com/2015/04/lean-deming-the-new-culture.html">Lean</a> belive that late decisions are often better than rushed ones. However, waiting too long can lead to missed opportunities. As time pass, you will be more equiped about whatt's best, thay it's always easier to refactor later(If the cost is not too high).</p>
+<p><a href="https://diego-pacheco.blogspot.com/2015/04/lean-deming-the-new-culture.html">Lean</a> belive that late decisions are often better than rushed ones. However, waiting too long can lead to missed opportunities. As time pass, you will be more equiped about whatt's best, thay it's always easier to <a href="https://diego-pacheco.blogspot.com/2024/01/refactoring-making-sense-of-invisible.html">refactor</a> later(If the cost is not too high).</p>
 <p>Decisions are process, they they should not be written on the stone. Deciding something is process, it allow us to move on, however we should be challenging our past decisions, that's why time to reflect and think is importat. Architects need protect they time to have time to think. Engineering teams must have retrospectives to reflect on past decisions.</p>
 <p>Sometimes is too soon to decide, you might not have data or not be sure. You must balance the cost of waiting vs the cost of deciding now. Lean has a tool to deal with this called <code>cost of delay</code>. If the cost of delay is low, you can wait more, if it's high you must decide now.</p>
 <p>Experimentation is a good way to make temporary decisions, and them figureout what stick and what does not stick. You can try A/B testing, feature flags, or prototypes to gather data and make informed decisions later. Deciding and waiting are not mutually exclusive, they require balance.</p>
@@ -550,7 +551,7 @@ Choosing the best and latest solutions</li>
 <p>Scalability it's not only for systems, it's also for engineering teams. A good architecture allows teams to work in parallel without stepping on each other's toes.</p>
 <p>Good Structure, good design, allow engineers to be more productive, and focus on delivering value, instead of fighting with the codebase. You want the architects you produce to have this properties.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="observable"><a class="header" href="#observable">Observable</a></h1>
-<p>As architect, the systems you produce must have the ability to be observable. Such property is very important. Consider <a href="https://diego-pacheco.blogspot.com/2020/04/observability-domain-observability-from.html">observability</a> a sub-set of testing which happens in production.</p>
+<p>As architect, the systems you produce must have the ability to be observable. Such property is very important. Consider <a href="https://diego-pacheco.blogspot.com/2020/04/observability-domain-observability-from.html">observability</a> a sub-set of <a href="https://diego-pacheco.blogspot.com/2020/02/going-faster-with-testing.html">testing</a> which happens in production.</p>
 <p>IF you dont know whats going on you are driving into the dark. You want to be able to understand how your system behaves in production, and be able to detect issues before they become problems for your users.</p>
 <p>Without such understanding, you are not doing the whole cycle correctly. Building something following a design is not enought. You need to observe the final product in production, and be able to learn from it and improve it.</p>
 <p>Making Observable systems, imply in having:</p>
@@ -816,7 +817,7 @@ Given enough time without new updates, all replicas will eventually converge to 
 <p>It's much easier to work with stateless services because they can scale more easily, recover from failures faster, and are generally simpler to manage. However, there are scenarios where stateful services are necessary, such as when maintaining user sessions or handling transactions.</p>
 <p>Staless does not means that the service cannot use state at all; rather, it means that the service itself does not store state between requests. Instead, any necessary state can be stored in external systems like databases or caches. Stateful service are more complex.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-patterns"><a class="header" href="#why-patterns">Why Patterns?</a></h1>
-<p>Patterns are common "Recipies" to solve recurring problems. They are proven solutions that have been tested and refined over time.</p>
+<p><a href="https://diego-pacheco.blogspot.com/2023/09/design-patterns.html">Patterns</a> are common "Recipies" to solve recurring problems. They are proven solutions that have been tested and refined over time.</p>
 <p>Pratterns allow us to save time, because if someone knows the pattern, them you dont need to explain. If everything in the universe must be explained, you endup with slow progress.</p>
 <p>There are many patterns out there, some a better than wothers, some are very spesific to a domain or problem. Other patterns are like a swiss army knife that can be applied in many different situations.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="api-gateway"><a class="header" href="#api-gateway">API GATEWAY</a></h1>
@@ -1134,6 +1135,10 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <ul>
 <li><a href="https://github.com/diegopacheco/tech-resources/blob/master/arch-doc-template.md">Architecture Doc Template</a></li>
 </ul>
+<p><strong>Patterns &amp; Best Practices</strong></p>
+<ul>
+<li><a href="https://diego-pacheco.blogspot.com/2020/08/bff-dilema.html">BFF Dilemma</a></li>
+</ul>
 <p><strong>Core Architecture Principles</strong></p>
 <ul>
 <li><a href="https://diego-pacheco.blogspot.com/2021/04/design-is-not-subjective.html">Design is Not Subjective</a></li>
@@ -1336,6 +1341,8 @@ A practice where architects take complete responsibility for the success and fai
 Runtime configuration switches that enable or disable functionality without deploying new code, decoupling deployment from release.</p>
 <p><strong>FIFO Ordering</strong>
 A message ordering guarantee where messages are processed in the order they were sent.</p>
+<p><strong>Figma</strong>
+A collaborative design tool used for creating user interface designs, prototypes, and design systems in a browser-based environment.</p>
 <p><strong>Forward Compatibility</strong>
 When old code can read data written by new code, allowing old services to safely ignore new fields they don't understand.</p>
 <p><strong>Full Text Search</strong>
@@ -1389,6 +1396,8 @@ A unique identifier for each message or request that is passed through downstrea
 A load balancing algorithm that distributes traffic based on real-time metrics like CPU usage, memory consumption, or response times.</p>
 <p><strong>Microservices (Pattern)</strong>
 An architectural pattern dividing systems into small, independently deployable services.</p>
+<p><strong>MinIO</strong>
+An open-source object storage system compatible with Amazon S3 API, often used as a self-hosted alternative to AWS S3.</p>
 <p><strong>Multi-Track Agile</strong>
 An agile development approach that runs multiple parallel tracks for different types of work, balancing discovery, delivery, and technical excellence.</p>
 <p><strong>Monthly Review</strong>

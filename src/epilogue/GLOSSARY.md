@@ -143,6 +143,9 @@ Runtime configuration switches that enable or disable functionality without depl
 **FIFO Ordering**
 A message ordering guarantee where messages are processed in the order they were sent.
 
+**Figma**
+A collaborative design tool used for creating user interface designs, prototypes, and design systems in a browser-based environment.
+
 **Forward Compatibility**
 When old code can read data written by new code, allowing old services to safely ignore new fields they don't understand.
 
@@ -225,6 +228,9 @@ A load balancing algorithm that distributes traffic based on real-time metrics l
 
 **Microservices (Pattern)**
 An architectural pattern dividing systems into small, independently deployable services.
+
+**MinIO**
+An open-source object storage system compatible with Amazon S3 API, often used as a self-hosted alternative to AWS S3.
 
 **Multi-Track Agile**
 An agile development approach that runs multiple parallel tracks for different types of work, balancing discovery, delivery, and technical excellence.

@@ -1,6 +1,6 @@
 # Why Patterns?
 
-Patterns are common "Recipies" to solve recurring problems. They are proven solutions that have been tested and refined over time.
+[Patterns](https://diego-pacheco.blogspot.com/2023/09/design-patterns.html) are common "Recipies" to solve recurring problems. They are proven solutions that have been tested and refined over time.
 
 Pratterns allow us to save time, because if someone knows the pattern, them you dont need to explain. If everything in the universe must be explained, you endup with slow progress.
 

@@ -1,6 +1,6 @@
 # Decide or Wait
 
-[Lean](https://diego-pacheco.blogspot.com/2015/04/lean-deming-the-new-culture.html) belive that late decisions are often better than rushed ones. However, waiting too long can lead to missed opportunities. As time pass, you will be more equiped about whatt's best, thay it's always easier to refactor later(If the cost is not too high).
+[Lean](https://diego-pacheco.blogspot.com/2015/04/lean-deming-the-new-culture.html) belive that late decisions are often better than rushed ones. However, waiting too long can lead to missed opportunities. As time pass, you will be more equiped about whatt's best, thay it's always easier to [refactor](https://diego-pacheco.blogspot.com/2024/01/refactoring-making-sense-of-invisible.html) later(If the cost is not too high).
 
 Decisions are process, they they should not be written on the stone. Deciding something is process, it allow us to move on, however we should be challenging our past decisions, that's why time to reflect and think is importat. Architects need protect they time to have time to think. Engineering teams must have retrospectives to reflect on past decisions.
 
