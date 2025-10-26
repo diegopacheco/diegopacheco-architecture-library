@@ -6,7 +6,7 @@ When you ignore warnings in the build, when you ignore old versions of libraries
 
 Does not matter if you were the one who did the code or not. You must take ownership and under your watch you should ignore nothing.
 
-Ignoring can become a culture because managers can easily do this. Engineers, often pressured by managers also can ignore several wrong things. What's wrong should not be ignored, it should be fought and pushed back.
+[Ignoring can become a culture](https://diego-pacheco.blogspot.com/2024/03/ignoring-culture.html) because managers can easily do this. Engineers, often pressured by managers also can ignore several wrong things. What's wrong should not be ignored, it should be fought and pushed back.
 
 Lack of fighting for what is right is immaturity. As an architect you must not ignore what's wrong. Do not let this become a culture. Ignore culture can happen so easily when people say "It's not my job", or "It's not my code" or "It's not my project" or "It's not my responsibility", the extreme lack of ownership can lead to ignore culture.
 
