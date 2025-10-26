@@ -1,6 +1,6 @@
 # ACID
 
-[ACID(https://en.wikipedia.org/wiki/ACID)] it's a property of database transactions intended to guarantee validity even in the event of errors, power failures. It's a RELATIONAL database concept.
+[ACID](https://en.wikipedia.org/wiki/ACID) it's a property of database transactions intended to guarantee validity even in the event of errors, power failures. It's a RELATIONAL database concept.
 
 ## A == Atomicity
 
