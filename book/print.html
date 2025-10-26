@@ -371,6 +371,12 @@ Choosing the best and latest solutions</li>
 <p>The tool I'm using here is very nice, it allow to search the whole book, in any page just type <code>/</code> in your keyboard and start typing what you want to search for. also because this book is written based on <code>markdown</code> it's very easy to link any page because you have a link per page.</p>
 <p>Because I'm using git, I have history of all changes. Because this is made with software, I can update the book, so the book is versioned. Look on the footer of every page and you will see the version of the book.</p>
 <p>This is a way for me to give it back. For free . I hope you enjoy it.</p>
+<h2 id="what-is-a-software-architect"><a class="header" href="#what-is-a-software-architect">What is a Software Architect?</a></h2>
+<p>A software architct is a person that makes desicions or influence decisions about the software structure, the technologies to be used, the patterns to be followed and the practices to be adopted. A software architect is responsible for the overall design and quality of the software system. A software architect code, does code review, mentors developers, leads technical discussions, defines standards and guidelines, evaluates technologies, and ensures that the software meets the requirements and goals of the business.</p>
+<p>I like to think about a software architect as a <a href="https://diego-pacheco.blogspot.com/2025/02/the-monk-and-rockstar.html">Monk and Rockstar</a>.</p>
+<h2 id="what-is-architecture"><a class="header" href="#what-is-architecture">What is Architecture?</a></h2>
+<p>Software architecture is the high-level structure and organization of a software system. It defines the components, modules, and their interactions, as well as the principles and guidelines that govern the design and development of the software. Software architecture encompasses both the technical and non-technical aspects of the system, including performance, scalability, security, maintainability, and usability.</p>
+<p>In other words, software architrecture is code. But not only code, but the decision on what to do and what not do. Software architecture is about making choices that will impact the software system in the long term.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-philosofy"><a class="header" href="#why-philosofy">Why Philosofy?</a></h1>
 <p>Philosofy means "love of wisdom," and this project is dedicated to exploring and sharing philosophical ideas in an accessible way. The goal is to foster critical thinking, encourage open dialogue, and promote a deeper understanding of the world around us.</p>
 <p>How we do things matters. There are many ways to do something wrong, but not as many ways to do it right. Philosofy is "ways of thinking", or "how approach" problems, day-by-day life, difficult situations, decisions, trade-offs.</p>
@@ -1814,22 +1820,6 @@ A deployment strategy enabling schema changes without service interruption.</p>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
