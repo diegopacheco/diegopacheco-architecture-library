@@ -59,6 +59,7 @@ Here is a curated list of books that will help you become a better architect.
 
 **Patterns & Best Practices**
 * [BFF Dilemma](https://diego-pacheco.blogspot.com/2020/08/bff-dilema.html)
+* [Design Patterns](https://diego-pacheco.blogspot.com/2023/09/design-patterns.html)
 
 **Core Architecture Principles**
 * [Design is Not Subjective](https://diego-pacheco.blogspot.com/2021/04/design-is-not-subjective.html)
@@ -77,6 +78,10 @@ Here is a curated list of books that will help you become a better architect.
 * [DevOps Monolith](https://diego-pacheco.blogspot.com/2017/11/devops-monolith.html)
 * [S3 Next Distributed Monolith](https://diego-pacheco.blogspot.com/2023/07/s3-next-distributed-monolith.html)
 * [Trade-offs in Architecture](https://diego-pacheco.blogspot.com/2023/07/tradeoffs.html)
+* [State](https://diego-pacheco.blogspot.com/2024/12/state.html)
+* [Services](https://diego-pacheco.blogspot.com/2024/12/services.html)
+* [Service Chain](https://diego-pacheco.blogspot.com/2024/05/service-chain.html)
+* [Embedded Mocks and Hidden Contracts](https://diego-pacheco.blogspot.com/2023/08/embedded-mocks-and-hidden-contracts.html)
 
 **Properties & Quality Attributes**
 * [The Stability Mindset](https://diego-pacheco.blogspot.com/2017/09/the-stability-mindset.html)
@@ -106,6 +111,8 @@ Here is a curated list of books that will help you become a better architect.
 * [Ignoring Culture](https://diego-pacheco.blogspot.com/2024/03/ignoring-culture.html)
 * [Requirements Are Dangerous](https://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html)
 * [Fighting Complexity](https://diego-pacheco.blogspot.com/2023/08/fighting-complexity.html)
+* [Continuous Refactoring](https://diego-pacheco.blogspot.com/2023/11/continuous-refactoring.html)
+* [Refactoring: Making Sense of Invisible Changes](https://diego-pacheco.blogspot.com/2024/01/refactoring-making-sense-of-invisible.html)
 
 ### Practices & Decision Making
 
@@ -117,6 +124,9 @@ Here is a curated list of books that will help you become a better architect.
 * [Extreme Ownership & Expectations](https://diego-pacheco.blogspot.com/2024/11/expectations.html)
 * [It's All About Attention (Detail)](https://diego-pacheco.blogspot.com/2025/10/its-all-about-attention.html)
 * [Why Writing Matters](https://diego-pacheco.blogspot.com/2020/01/why-writing-matters.html)
+* [Going Faster with Testing](https://diego-pacheco.blogspot.com/2020/02/going-faster-with-testing.html)
+* [The Monk and Rockstar](https://diego-pacheco.blogspot.com/2025/02/the-monk-and-rockstar.html)
+* [Shallow vs Deep Mindset](https://diego-pacheco.blogspot.com/2023/08/shallow-vs-deep-mindset.html)
 
 ### Build vs Buy
 

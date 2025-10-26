@@ -1138,6 +1138,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <p><strong>Patterns &amp; Best Practices</strong></p>
 <ul>
 <li><a href="https://diego-pacheco.blogspot.com/2020/08/bff-dilema.html">BFF Dilemma</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2023/09/design-patterns.html">Design Patterns</a></li>
 </ul>
 <p><strong>Core Architecture Principles</strong></p>
 <ul>
@@ -1157,6 +1158,10 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><a href="https://diego-pacheco.blogspot.com/2017/11/devops-monolith.html">DevOps Monolith</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2023/07/s3-next-distributed-monolith.html">S3 Next Distributed Monolith</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2023/07/tradeoffs.html">Trade-offs in Architecture</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2024/12/state.html">State</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2024/12/services.html">Services</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2024/05/service-chain.html">Service Chain</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2023/08/embedded-mocks-and-hidden-contracts.html">Embedded Mocks and Hidden Contracts</a></li>
 </ul>
 <p><strong>Properties &amp; Quality Attributes</strong></p>
 <ul>
@@ -1187,6 +1192,8 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><a href="https://diego-pacheco.blogspot.com/2024/03/ignoring-culture.html">Ignoring Culture</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html">Requirements Are Dangerous</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2023/08/fighting-complexity.html">Fighting Complexity</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2023/11/continuous-refactoring.html">Continuous Refactoring</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2024/01/refactoring-making-sense-of-invisible.html">Refactoring: Making Sense of Invisible Changes</a></li>
 </ul>
 <h3 id="practices--decision-making"><a class="header" href="#practices--decision-making">Practices &amp; Decision Making</a></h3>
 <ul>
@@ -1198,6 +1205,9 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><a href="https://diego-pacheco.blogspot.com/2024/11/expectations.html">Extreme Ownership &amp; Expectations</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2025/10/its-all-about-attention.html">It's All About Attention (Detail)</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2020/01/why-writing-matters.html">Why Writing Matters</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2020/02/going-faster-with-testing.html">Going Faster with Testing</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2025/02/the-monk-and-rockstar.html">The Monk and Rockstar</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2023/08/shallow-vs-deep-mindset.html">Shallow vs Deep Mindset</a></li>
 </ul>
 <h3 id="build-vs-buy-1"><a class="header" href="#build-vs-buy-1">Build vs Buy</a></h3>
 <ul>
@@ -1829,6 +1839,22 @@ A deployment strategy enabling schema changes without service interruption.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
