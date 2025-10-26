@@ -338,3 +338,4 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 * [Glossary](GLOSSARY.md)
 * [Resources](RESOURCES.md)
 * [Epilogue](IN_THE_END.md)
+* [Index](INDEX.md)

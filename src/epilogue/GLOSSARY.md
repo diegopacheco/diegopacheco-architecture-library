@@ -19,6 +19,9 @@ A system property where systems not only withstand shocks and stressors but also
 **API Gateway**
 A pattern that acts as a single entry point for microservices, handling request routing, response aggregation, authentication, logging, and rate limiting.
 
+**API Keys**
+An authentication method where a unique key is assigned to clients for identifying and authenticating API requests.
+
 **Architecture Review**
 The practice of documenting architecture decisions, trade-offs, and principles for communication and improvement.
 
@@ -45,6 +48,12 @@ Basically Available, Soft state, Eventually consistent - a consistency model use
 **Backend for Frontend (BFF)**
 A pattern creating separate backend services tailored to specific frontend applications' needs, typically containing rendering logic.
 
+**Big Ball of Mud**
+An anti-pattern where a system has no recognizable architecture, with haphazardly structured code that is difficult to maintain and extend.
+
+**Biometric Verification**
+An authentication method using unique biological characteristics such as fingerprints, facial recognition, or iris scans to verify identity.
+
 **Build vs Buy Dilemma**
 The decision between building solutions in-house for core business advantages or buying external solutions.
 
@@ -53,8 +62,17 @@ The decision between building solutions in-house for core business advantages or
 **Cache**
 A software component storing data for faster future access, commonly used in web browsers, databases, and operating systems.
 
+**Capability Oriented Services**
+A principle that services should be organized around business capabilities rather than technical layers, promoting better alignment with business goals.
+
 **Chaos Engineering**
 A practice of inducing and provoking failure in systems and infrastructure to prove system tolerance and recovery.
+
+**Conceptual Drift**
+An anti-pattern where systems gradually deviate from the intended architecture over time, losing coherence and consistency.
+
+**Conceptual Integrity**
+A principle emphasizing consistency and coherence in system design, ensuring all parts work together harmoniously under a unified vision.
 
 **Class Diagram**
 A UML diagram useful for internal system design modeling or database table modeling.
@@ -91,6 +109,9 @@ A practice of producing the design before implementation, documented and communi
 **Discovery vs Delivery Dilemma**
 The balance between exploring what to build (discovery) and executing the build (delivery).
 
+**Distributed Systems**
+Computer systems where components are located on different networked computers that communicate and coordinate to achieve a common goal, presenting unique challenges in consistency, availability, and partition tolerance.
+
 ## E
 
 **Encryption (In Transit and At Rest)**
@@ -125,7 +146,21 @@ When old code can read data written by new code, allowing old services to safely
 **Full Text Search**
 A search capability like OpenSearch or Elasticsearch for searching large product catalogs.
 
+## G
+
+**Gatekeeping**
+An anti-pattern where architects act as bottlenecks by requiring approval for all decisions, reducing team autonomy and slowing delivery.
+
+**Guard-rails**
+Safety mechanisms put in place to allow experimentation and testing in production while minimizing risk to users and systems.
+
 ## I
+
+**Implicit Contract**
+The hidden expectations and assumptions in API contracts that aren't explicitly documented but can break integration when changed.
+
+**Internal Shared Libraries**
+Reusable code libraries developed and maintained within an organization to promote consistency and reduce duplication across projects.
 
 **Identity and Access Management (IAM)**
 A comprehensive system for managing user identities and controlling access to resources across an organization.
@@ -154,6 +189,9 @@ A pagination method using values of the last item in the current page to determi
 **Latency Distribution Metrics**
 Metrics measuring response time distribution for upstream and downstream dependencies.
 
+**Leaky Contracts**
+An anti-pattern where service contracts expose internal implementation details, making it difficult to evolve services without breaking clients.
+
 **Least Connections (Load Balancing)**
 An algorithm that directs traffic to the server with the fewest active connections.
 
@@ -168,8 +206,14 @@ A service that distributes incoming network traffic across multiple servers to e
 **Message ID (Correlation ID)**
 A unique identifier for each message or request that is passed through downstream services to enable traceability and debugging.
 
+**Metric-Based Load Balancing**
+A load balancing algorithm that distributes traffic based on real-time metrics like CPU usage, memory consumption, or response times.
+
 **Microservices (Pattern)**
 An architectural pattern dividing systems into small, independently deployable services.
+
+**Multi-Track Agile**
+An agile development approach that runs multiple parallel tracks for different types of work, balancing discovery, delivery, and technical excellence.
 
 **Monthly Review**
 A practice of reviewing the entire codebase monthly to understand architectural concepts, code quality trends, and patterns.
@@ -180,7 +224,15 @@ The tension between rapid iteration and delivery versus quality and stability.
 **Multi-Factor Authentication (MFA)**
 An authentication method requiring multiple verification factors.
 
+## N
+
+**Null Validations**
+A defensive programming practice of checking for null or undefined values before accessing or manipulating data to prevent runtime errors.
+
 ## O
+
+**OAuth Tokens**
+Security tokens used in OAuth protocol for authorization, allowing applications to access resources on behalf of users without exposing credentials.
 
 **Observability**
 A system property enabling understanding of how a system behaves in production and detecting issues before they impact users.
@@ -233,8 +285,17 @@ A data structure following First In First Out (FIFO) principle used in distribut
 
 ## R
 
+**Random Load Balancing**
+A load balancing algorithm that randomly selects a server for each request, providing simple distribution without state tracking.
+
 **Rate Limiting**
 A technique controlling the rate at which requests are processed to avoid overwhelming systems.
+
+**Rendering Logic**
+Application logic that prepares and formats data for presentation to specific clients, often placed in BFF layers to keep backends generic.
+
+**Retrospectives**
+A practice where teams regularly reflect on their processes and performance to identify improvements and celebrate successes.
 
 **Reading Code**
 A practice where architects regularly read and analyze system code, library code, and framework code.
@@ -267,6 +328,9 @@ The practice of changing data structures, API contracts, or message formats over
 
 **Security**
 Implementation of measures to protect systems from threats such as unauthorized access and data breaches.
+
+**Shadow Reading**
+A migration strategy where new systems read and process data in parallel with old systems without affecting production, allowing validation before cutover.
 
 **Sequence/State Diagrams**
 UML diagrams useful for understanding how a system works internally and how data flows through it.
@@ -306,8 +370,17 @@ Services that do not retain information about previous interactions; any necessa
 
 ## T
 
+**Tactical Programming**
+A short-term focused programming approach prioritizing immediate features over long-term design quality, often leading to technical debt.
+
 **Tech Debt First**
 An anti-pattern where bad decisions are made as the default choice instead of maintaining technical principles.
+
+**Technical Principles**
+Non-negotiable architectural standards and guidelines that define acceptable approaches to system design and implementation.
+
+**Testing in Production**
+A practice of validating system behavior and performance with real production traffic and data, using techniques like canary releases and feature flags.
 
 **Tech Debt Plague**
 An anti-pattern where technical debt accumulates unchecked and architects fail to fight technical debt continuously.
@@ -320,11 +393,17 @@ A cache management technique where items are assigned a lifespan after which the
 
 ## W
 
+**Weighted Round Robin**
+A load balancing algorithm variant that distributes requests based on assigned weights, directing more traffic to more powerful servers.
+
 **Webhook**
 An HTTP endpoint used to notify internal/external services when certain events occur.
 
 **WebSockets**
 A technology for real-time bidirectional communication between client and server.
+
+**Write Ahead Log (WAL)**
+A database durability technique where changes are first written to a sequential log before being applied to the database, ensuring recoverability.
 
 **Working in the Trenches (Gemba)**
 A practice based on the Lean principle of "going to the real place" where work is done to understand processes and identify improvements.

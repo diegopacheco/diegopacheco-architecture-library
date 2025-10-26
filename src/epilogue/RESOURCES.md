@@ -111,6 +111,9 @@ Here is a curated list of books that will help you become a better architect.
 
 ### Reference Documentation
 
+**C2 Wiki**
+* [Conceptual Integrity](https://wiki.c2.com/?ConceptualIntegrity)
+
 **Wikipedia**
 * [ACID](https://en.wikipedia.org/wiki/ACID)
 * [Authentication](https://en.wikipedia.org/wiki/Authentication)

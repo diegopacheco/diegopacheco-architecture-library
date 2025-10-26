@@ -391,8 +391,9 @@ Choosing the best and latest solutions</li>
 <p><a href="https://en.wikipedia.org/wiki/Defensive_programming">Defensive programming</a> is a design approach that emphasizes anticipating and handling potential errors or unexpected inputs in software development. For instance you always:</p>
 <ul>
 <li>Validate inputs to ensure they meet expected formats and constraints.</li>
-<li>Handle exceptions gracefully to prevent crashes and provide meaningful error messages.</li>
+<li>Handle <a href="https://diego-pacheco.blogspot.com/2024/09/proper-error-handling.html">exceptions gracefully</a> to prevent crashes and provide meaningful error messages.</li>
 <li>Design functions and methods to be robust against invalid or unexpected inputs.</li>
+<li>Avoid <a href="https://diego-pacheco.blogspot.com/2020/08/null-validations-and-exceptions.html">nulls</a> at all cost.</li>
 </ul>
 <p>Your code should be resilient. It should not break that easily.</p>
 <p>Considering the following sudo-code with Scala 3x:</p>
@@ -437,21 +438,23 @@ Choosing the best and latest solutions</li>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="frontend-vs-backend"><a class="header" href="#frontend-vs-backend">Frontend VS Backend</a></h1>
 <p>Frontend by nature it's spesific. One react component, one page, one feature. Backend by nature it's generic. One api endpoint, serves manny features, many pages.</p>
 <h2 id="frontend-thinking"><a class="header" href="#frontend-thinking">Frontend Thinking</a></h2>
-<p>Tends to think 1:1. One component, one feature, one page. Which might be fine for frontend but not for backend.</p>
+<p>Tends to think 1:1. One component, one feature, one page. Which might be fine for frontend but not for backend. It's common to frontend engineers think that every single <code>fetch</code> they need todo should be a separate api endpoint(which leads to <a href="https://wiki.c2.com/?ConceptualIntegrity">lack of conceptual integrity</a>).</p>
 <h2 id="backend-thinking"><a class="header" href="#backend-thinking">Backend Thinking</a></h2>
 <p>Tends to think 1:many. One api endpoint, serves many features, many pages. Which might be fine for backend but not for frontend. By default backend services should be generic and reusable.</p>
 <p>It's okay yo have many pages or many components but is not okay to have that many services. They should be generic, more centralizers, reusable by design.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="open-source-first"><a class="header" href="#open-source-first">Open Source First</a></h1>
 <p>Open Source must be the default. Avoid proprietary software. Do not build wrappers for open source libraries. Use Open Source software directly. Building internal shared libraries is a liability and will create many issues like security vulnerabilities, maintenance burden, and lack of community support / documentation. Therefore creating internal shared libraries must be a very conscious choice and must be well justified.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="service-orientation"><a class="header" href="#service-orientation">Service Orientation</a></h1>
-<p><a href="https://diego-pacheco.blogspot.com/2014/11/soa-micro-services-and-isolation.html">Service Oriented Architecture (SOA)</a> is a big deal. SOA should be the default way of thinking and operating services in modern software architecture. Service Orientation should be the default choice for solutions. Services are more important and better than internal libraries.</p>
+<p><a href="https://diego-pacheco.blogspot.com/2014/11/soa-micro-services-and-isolation.html">Service Oriented Architecture (SOA)</a> is a big deal. <a href="https://diego-pacheco.blogspot.com/2020/07/double-down-on-service-orientation.html">SOA</a> should be the default way of thinking and operating services in modern software architecture. Service Orientation should be the default choice for solutions. Services are more important and better than internal libraries.</p>
 <p>Services allow Isolation, Independence and Flexibility. When services are done right, with proper contracts, refactor can happen under the hood. Services allow different stacks and technology.</p>
 <p>Services should be Capability oriented. Services should be as generic as possible and it's okay to have more granularity and more code in a service. Services do not need to be micro(Micro Services).</p>
+<p>The most important part of services is the contract. The contract is the API. The API should be as stable as possible. The API should be backward compatible as much as possible. The API should be well documented and versioned.</p>
+<p><a href="https://diego-pacheco.blogspot.com/2021/04/its-all-about-contracts.html">Contracts</a> must be well designed and reviewed carefully, it's not difficult to make <a href="https://diego-pacheco.blogspot.com/2024/12/leaky-contracts.html">poor contracts</a> because engineers and even more frontend engineers are just thinking on what needs to change, and are no thinking if is the right place to make the change or if sohuld be that way at all.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="protect-your-time"><a class="header" href="#protect-your-time">Protect Your Time</a></h1>
 <p>It's very easy to be consumed with meetings 100% of the time. However the architect must protect his time in order to do deep work. Research, Monthly Reviews, Crystall Balling, thinking about trade-offs, evaluating solutions and reading code.</p>
 <p>At minimun you should book at least 3x per week 3-6h to do deep work. Does not matter if is in the morning or aftermoon, whatever is easier. Hold your ground, push back, and protect that time. Architects must think.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-anti-patterns"><a class="header" href="#why-anti-patterns">Why Anti-Patterns?</a></h1>
-<p>Everyboddy talks about patternws. Everything on the internet is "Best Prarctices". But people don't undersnd principles correctely, people think they understand when they actually don't.</p>
+<p>Everyboddy talks about patterns. Everything on the internet is "Best Prarctices". But people don't undersnd principles correctely, people think they understand when they actually don't.</p>
 <p>I saw that lack of "proper application" happen over and over the years, with Agile, with Microservices, With DevOps, with Docker. If you dont understand the principles behind those "practices" you will end up doing anti-patterns.</p>
 <p>Some anti-patterns are obvious and related to technology, but many anti-patterns are related to people, process, culture and how you work as a team. Also there are anti-patterns related to how architects behave or how they do not behave(and should behave).</p>
 <p>It's important to know that is wrong, so you can avoid doing it.</p>
@@ -561,7 +564,7 @@ Choosing the best and latest solutions</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="secure"><a class="header" href="#secure">Secure</a></h1>
 <p>Software must be secure. Architects should prioritize security in their designs to protect data and maintain user trust. Lack of security runs brands, trust is damaged, and legal consequences may arise.</p>
-<p>Security means implementing measures to protect systems from threats such as unauthorized access, data breaches, and cyber-attacks. This includes practices like <a href="https://diego-pacheco.blogspot.com/2020/11/why-encryption-is-so-hard.html">encryption</a>, authentication, authorization, and regular security audits.</p>
+<p>Security means implementing measures to protect systems from threats such as unauthorized access, data breaches, and cyber-attacks. This includes practices like <a href="https://diego-pacheco.blogspot.com/2020/11/why-encryption-is-so-hard.html">encryption</a>, authentication, authorization, <a href="https://diego-pacheco.blogspot.com/2023/08/tokenization-encryption-and.html">tokenization</a> and regular security audits.</p>
 <p>Common considerations for secure architecture:</p>
 <ul>
 <li><strong>Data Protection</strong>: Ensure sensitive data is encrypted both in transit and at rest.</li>
@@ -1171,6 +1174,10 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><a href="https://diego-pacheco.blogspot.com/2020/06/software-architecture-hidden-costs.html">Software Architecture: Hidden Costs</a></li>
 </ul>
 <h3 id="reference-documentation"><a class="header" href="#reference-documentation">Reference Documentation</a></h3>
+<p><strong>C2 Wiki</strong></p>
+<ul>
+<li><a href="https://wiki.c2.com/?ConceptualIntegrity">Conceptual Integrity</a></li>
+</ul>
 <p><strong>Wikipedia</strong></p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/ACID">ACID</a></li>
@@ -1222,6 +1229,8 @@ Atomicity, Consistency, Isolation, Durability - a set of properties that guarant
 A system property where systems not only withstand shocks and stressors but also improve and grow stronger as a result of them.</p>
 <p><strong>API Gateway</strong>
 A pattern that acts as a single entry point for microservices, handling request routing, response aggregation, authentication, logging, and rate limiting.</p>
+<p><strong>API Keys</strong>
+An authentication method where a unique key is assigned to clients for identifying and authenticating API requests.</p>
 <p><strong>Architecture Review</strong>
 The practice of documenting architecture decisions, trade-offs, and principles for communication and improvement.</p>
 <p><strong>Attention to Detail</strong>
@@ -1239,13 +1248,23 @@ When new code can read data written by old code, requiring new services to provi
 Basically Available, Soft state, Eventually consistent - a consistency model used by many NoSQL databases that prioritizes availability over immediate consistency.</p>
 <p><strong>Backend for Frontend (BFF)</strong>
 A pattern creating separate backend services tailored to specific frontend applications' needs, typically containing rendering logic.</p>
+<p><strong>Big Ball of Mud</strong>
+An anti-pattern where a system has no recognizable architecture, with haphazardly structured code that is difficult to maintain and extend.</p>
+<p><strong>Biometric Verification</strong>
+An authentication method using unique biological characteristics such as fingerprints, facial recognition, or iris scans to verify identity.</p>
 <p><strong>Build vs Buy Dilemma</strong>
 The decision between building solutions in-house for core business advantages or buying external solutions.</p>
 <h2 id="c"><a class="header" href="#c">C</a></h2>
 <p><strong>Cache</strong>
 A software component storing data for faster future access, commonly used in web browsers, databases, and operating systems.</p>
+<p><strong>Capability Oriented Services</strong>
+A principle that services should be organized around business capabilities rather than technical layers, promoting better alignment with business goals.</p>
 <p><strong>Chaos Engineering</strong>
 A practice of inducing and provoking failure in systems and infrastructure to prove system tolerance and recovery.</p>
+<p><strong>Conceptual Drift</strong>
+An anti-pattern where systems gradually deviate from the intended architecture over time, losing coherence and consistency.</p>
+<p><strong>Conceptual Integrity</strong>
+A principle emphasizing consistency and coherence in system design, ensuring all parts work together harmoniously under a unified vision.</p>
 <p><strong>Class Diagram</strong>
 A UML diagram useful for internal system design modeling or database table modeling.</p>
 <p><strong>Connection Pool</strong>
@@ -1269,6 +1288,8 @@ A design approach emphasizing anticipating and handling potential errors or unex
 A practice of producing the design before implementation, documented and communicated to the team.</p>
 <p><strong>Discovery vs Delivery Dilemma</strong>
 The balance between exploring what to build (discovery) and executing the build (delivery).</p>
+<p><strong>Distributed Systems</strong>
+Computer systems where components are located on different networked computers that communicate and coordinate to achieve a common goal, presenting unique challenges in consistency, availability, and partition tolerance.</p>
 <h2 id="e"><a class="header" href="#e">E</a></h2>
 <p><strong>Encryption (In Transit and At Rest)</strong>
 Security measures to protect data during transmission and while stored.</p>
@@ -1291,7 +1312,16 @@ A message ordering guarantee where messages are processed in the order they were
 When old code can read data written by new code, allowing old services to safely ignore new fields they don't understand.</p>
 <p><strong>Full Text Search</strong>
 A search capability like OpenSearch or Elasticsearch for searching large product catalogs.</p>
+<h2 id="g"><a class="header" href="#g">G</a></h2>
+<p><strong>Gatekeeping</strong>
+An anti-pattern where architects act as bottlenecks by requiring approval for all decisions, reducing team autonomy and slowing delivery.</p>
+<p><strong>Guard-rails</strong>
+Safety mechanisms put in place to allow experimentation and testing in production while minimizing risk to users and systems.</p>
 <h2 id="i"><a class="header" href="#i">I</a></h2>
+<p><strong>Implicit Contract</strong>
+The hidden expectations and assumptions in API contracts that aren't explicitly documented but can break integration when changed.</p>
+<p><strong>Internal Shared Libraries</strong>
+Reusable code libraries developed and maintained within an organization to promote consistency and reduce duplication across projects.</p>
 <p><strong>Identity and Access Management (IAM)</strong>
 A comprehensive system for managing user identities and controlling access to resources across an organization.</p>
 <p><strong>Idempotency</strong>
@@ -1309,6 +1339,8 @@ A pagination method using values of the last item in the current page to determi
 <h2 id="l"><a class="header" href="#l">L</a></h2>
 <p><strong>Latency Distribution Metrics</strong>
 Metrics measuring response time distribution for upstream and downstream dependencies.</p>
+<p><strong>Leaky Contracts</strong>
+An anti-pattern where service contracts expose internal implementation details, making it difficult to evolve services without breaking clients.</p>
 <p><strong>Least Connections (Load Balancing)</strong>
 An algorithm that directs traffic to the server with the fewest active connections.</p>
 <p><strong>Least Recently Used (LRU)</strong>
@@ -1318,15 +1350,24 @@ A service that distributes incoming network traffic across multiple servers to e
 <h2 id="m"><a class="header" href="#m">M</a></h2>
 <p><strong>Message ID (Correlation ID)</strong>
 A unique identifier for each message or request that is passed through downstream services to enable traceability and debugging.</p>
+<p><strong>Metric-Based Load Balancing</strong>
+A load balancing algorithm that distributes traffic based on real-time metrics like CPU usage, memory consumption, or response times.</p>
 <p><strong>Microservices (Pattern)</strong>
 An architectural pattern dividing systems into small, independently deployable services.</p>
+<p><strong>Multi-Track Agile</strong>
+An agile development approach that runs multiple parallel tracks for different types of work, balancing discovery, delivery, and technical excellence.</p>
 <p><strong>Monthly Review</strong>
 A practice of reviewing the entire codebase monthly to understand architectural concepts, code quality trends, and patterns.</p>
 <p><strong>Move Fast vs Do It Right Dilemma</strong>
 The tension between rapid iteration and delivery versus quality and stability.</p>
 <p><strong>Multi-Factor Authentication (MFA)</strong>
 An authentication method requiring multiple verification factors.</p>
+<h2 id="n"><a class="header" href="#n">N</a></h2>
+<p><strong>Null Validations</strong>
+A defensive programming practice of checking for null or undefined values before accessing or manipulating data to prevent runtime errors.</p>
 <h2 id="o"><a class="header" href="#o">O</a></h2>
+<p><strong>OAuth Tokens</strong>
+Security tokens used in OAuth protocol for authorization, allowing applications to access resources on behalf of users without exposing credentials.</p>
 <p><strong>Observability</strong>
 A system property enabling understanding of how a system behaves in production and detecting issues before they impact users.</p>
 <p><strong>Offset-Based Pagination</strong>
@@ -1360,8 +1401,14 @@ A messaging pattern where publishers send messages to topics and subscribers exp
 <p><strong>Queue</strong>
 A data structure following First In First Out (FIFO) principle used in distributed systems for asynchronous processing and load balancing.</p>
 <h2 id="r"><a class="header" href="#r">R</a></h2>
+<p><strong>Random Load Balancing</strong>
+A load balancing algorithm that randomly selects a server for each request, providing simple distribution without state tracking.</p>
 <p><strong>Rate Limiting</strong>
 A technique controlling the rate at which requests are processed to avoid overwhelming systems.</p>
+<p><strong>Rendering Logic</strong>
+Application logic that prepares and formats data for presentation to specific clients, often placed in BFF layers to keep backends generic.</p>
+<p><strong>Retrospectives</strong>
+A practice where teams regularly reflect on their processes and performance to identify improvements and celebrate successes.</p>
 <p><strong>Reading Code</strong>
 A practice where architects regularly read and analyze system code, library code, and framework code.</p>
 <p><strong>Refactoring</strong>
@@ -1383,6 +1430,8 @@ A property enabling systems to handle growth and load efficiently, also applies 
 The practice of changing data structures, API contracts, or message formats over time while maintaining compatibility with existing clients and services.</p>
 <p><strong>Security</strong>
 Implementation of measures to protect systems from threats such as unauthorized access and data breaches.</p>
+<p><strong>Shadow Reading</strong>
+A migration strategy where new systems read and process data in parallel with old systems without affecting production, allowing validation before cutover.</p>
 <p><strong>Sequence/State Diagrams</strong>
 UML diagrams useful for understanding how a system works internally and how data flows through it.</p>
 <p><strong>Server Sent Events (SSE)</strong>
@@ -1408,8 +1457,14 @@ Services that maintain state information across multiple requests, more complex 
 <p><strong>Stateless Services</strong>
 Services that do not retain information about previous interactions; any necessary state is stored in external systems like databases or caches.</p>
 <h2 id="t"><a class="header" href="#t">T</a></h2>
+<p><strong>Tactical Programming</strong>
+A short-term focused programming approach prioritizing immediate features over long-term design quality, often leading to technical debt.</p>
 <p><strong>Tech Debt First</strong>
 An anti-pattern where bad decisions are made as the default choice instead of maintaining technical principles.</p>
+<p><strong>Technical Principles</strong>
+Non-negotiable architectural standards and guidelines that define acceptable approaches to system design and implementation.</p>
+<p><strong>Testing in Production</strong>
+A practice of validating system behavior and performance with real production traffic and data, using techniques like canary releases and feature flags.</p>
 <p><strong>Tech Debt Plague</strong>
 An anti-pattern where technical debt accumulates unchecked and architects fail to fight technical debt continuously.</p>
 <p><strong>Thundering Herd Problem</strong>
@@ -1417,10 +1472,14 @@ A situation where multiple clients simultaneously retry an operation, causing a 
 <p><strong>Time-to-Live (TTL)</strong>
 A cache management technique where items are assigned a lifespan after which they are automatically removed.</p>
 <h2 id="w"><a class="header" href="#w">W</a></h2>
+<p><strong>Weighted Round Robin</strong>
+A load balancing algorithm variant that distributes requests based on assigned weights, directing more traffic to more powerful servers.</p>
 <p><strong>Webhook</strong>
 An HTTP endpoint used to notify internal/external services when certain events occur.</p>
 <p><strong>WebSockets</strong>
 A technology for real-time bidirectional communication between client and server.</p>
+<p><strong>Write Ahead Log (WAL)</strong>
+A database durability technique where changes are first written to a sequential log before being applied to the database, ensuring recoverability.</p>
 <p><strong>Working in the Trenches (Gemba)</strong>
 A practice based on the Lean principle of "going to the real place" where work is done to understand processes and identify improvements.</p>
 <p><strong>Write-Back Cache</strong>
@@ -1697,6 +1756,7 @@ A deployment strategy enabling schema changes without service interruption.</p>
 <li><a href="epilogue/GLOSSARY.html">Glossary</a></li>
 <li><a href="epilogue/RESOURCES.html">Resources</a></li>
 <li><a href="epilogue/IN_THE_END.html">Epilogue</a></li>
+<li><a href="epilogue/INDEX.html">Index</a></li>
 </ul>
 
                     </main>

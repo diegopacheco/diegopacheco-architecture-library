@@ -8,4 +8,4 @@ Services should be Capability oriented. Services should be as generic as possibl
 
 The most important part of services is the contract. The contract is the API. The API should be as stable as possible. The API should be backward compatible as much as possible. The API should be well documented and versioned.
 
-Contracts must be well designed and reviewed carefully, it's not difficult to make [poor contracts](https://diego-pacheco.blogspot.com/2024/12/leaky-contracts.html) because engineers and even more frontend engineers are just thinking on what needs to change, and are no thinking if is the right place to make the change or if sohuld be that way at all.
+[Contracts](https://diego-pacheco.blogspot.com/2021/04/its-all-about-contracts.html) must be well designed and reviewed carefully, it's not difficult to make [poor contracts](https://diego-pacheco.blogspot.com/2024/12/leaky-contracts.html) because engineers and even more frontend engineers are just thinking on what needs to change, and are no thinking if is the right place to make the change or if sohuld be that way at all.
