@@ -132,5 +132,7 @@ Choosing the best and latest solutions
 - [Thinking Tools](src/tools/THINKING.md) - Tools for structured thinking and exploration.
 
 9. Chapter 9 - Epilogue
-- [Resources](src/epilogue/RESOURCES.md) - Additional reading and references
 - [Epilogue](src/epilogue/IN_THE_END.md) - Final thoughts and next steps
+- [Resources](src/epilogue/RESOURCES.md) - Additional reading and references
+- [Glossary](src/epilogue/GLOSSARY.md) - Definitions of key terms used in the book
+- [Index](src/epilogue/INDEX.md) - Complete index of topics covered in the book
