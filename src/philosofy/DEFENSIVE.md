@@ -6,3 +6,34 @@
 * Design functions and methods to be robust against invalid or unexpected inputs.
 
 Your code should be resilient. It should not break that easily.
+
+Considering the following sudo-code with Scala 3x:
+
+```scala
+class ProducService(
+    @Autowired productRepository: ProductRepository,
+    @Autowired logger: Logger
+){
+    def saveProduct(val product: Product, ctx: Context): Either[String, Product] = {
+        val messageId = ctx.getMessageId()
+        if(product.price < 0){
+            val errorMsg = "Product price cannot be negative"
+            logger.warn(s"[MessageId: $messageId] $errorMsg. Product: ${product.id}")
+            return Left(s"$errorMsg [MessageId: $messageId]")
+        }
+        if (isBannedProduct(product)){
+            val errorMsg = "This product is banned"
+            logger.warn(s"[MessageId: $messageId] $errorMsg. Product: ${product.id}")
+            return Left(s"$errorMsg [MessageId: $messageId]")
+        }
+        if (!isLegalProduct(product)){
+            val errorMsg = "This product is not legal in your country"
+            logger.warn(s"[MessageId: $messageId] $errorMsg. Product: ${product.id}")
+            return Left(s"$errorMsg [MessageId: $messageId]")
+        }
+        Right(productRepository.save(product))
+    }
+}
+```
+
+You see that there is validations. We dont blindly trust the input. We check if the price is negative. If it is, we throw an exception. This is defensive programming in action.
