@@ -1,6 +1,6 @@
 # Partition
 
-A **partition** of a set is a way of dividing the data set into subsets such that every element in the original set is included in exactly one of the subsets. In other words, a partition breaks down a set into distinct parts where no part shares any elements with another, and all parts together cover the entire original set.
+A **partition** of a set is a way of dividing the data set into subsets such that every element in the original set is included in exactly one of the subsets. In other words, a [partition](https://en.wikipedia.org/wiki/Partition_(database)) breaks down a set into distinct parts where no part shares any elements with another, and all parts together cover the entire original set.
 
 Partition by:
 * A specific column or set of columns

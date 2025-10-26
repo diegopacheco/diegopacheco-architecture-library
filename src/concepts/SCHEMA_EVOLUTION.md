@@ -1,6 +1,6 @@
 # Schema Evolution
 
-Schema evolution is the practice of changing data structures, API contracts, or message formats over time while maintaining compatibility with existing clients and services. This is critical for zero-downtime deployments in distributed systems.
+[Schema evolution](https://en.wikipedia.org/wiki/Schema_evolution) is the practice of changing data structures, API contracts, or message formats over time while maintaining compatibility with existing clients and services. This is critical for zero-downtime deployments in distributed systems.
 
 ## Forward Compatibility
 

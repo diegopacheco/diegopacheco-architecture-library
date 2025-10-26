@@ -1,7 +1,7 @@
 # BASE 
 
 A concept from NOSQL databases.
-BASE systems prioritize availability instead of immediate consistency.
+[BASE](https://aws.amazon.com/compare/the-difference-between-acid-and-base-database/) systems prioritize availability instead of immediate consistency.
 
 ## BASE Properties
 

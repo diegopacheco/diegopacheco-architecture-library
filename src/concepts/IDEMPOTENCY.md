@@ -6,7 +6,7 @@ In REST APIs, idempotency is an important concept, especially for HTTP methods. 
 
 - **GET**: The most famous and common Idempotent. Retrieving a resource multiple times does not change its state.
 
-Idepotency it's important because if the same request arrives twice(there is not side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences or just re-process the samething again without issues.
+[Idepotency](https://en.wikipedia.org/wiki/Idempotence) it's important because if the same request arrives twice(there is not side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences or just re-process the samething again without issues.
 
 Such principle keep us from writing complex software. For instance if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.
 
