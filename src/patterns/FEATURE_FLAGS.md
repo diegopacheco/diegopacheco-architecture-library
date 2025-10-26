@@ -1,6 +1,6 @@
 # Feature Flags
 
-Feature flags are runtime configuration switches that enable or disable functionality without deploying new code. They decouple deployment from release, allowing gradual rollouts and instant rollbacks, migrations and A/B testing.
+[Feature flags](https://en.wikipedia.org/wiki/Feature_toggle) are runtime configuration switches that enable or disable functionality without deploying new code. They decouple deployment from release, allowing gradual rollouts and instant rollbacks, migrations and A/B testing.
 
 ## Strategies
 

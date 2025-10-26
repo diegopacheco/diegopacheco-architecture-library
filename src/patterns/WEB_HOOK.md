@@ -1,6 +1,6 @@
-# Web hook
+# Webhook
 
-A web hook it's just a endpoint in an API or REST server. A web hook is used to notify internal/external services when certain events happen. 
+A [webhook](https://en.wikipedia.org/wiki/Webhook) it's just a endpoint in an API or REST server. A web hook is used to notify internal/external services when certain events happen. 
 
 When an event occurs, the server makes an HTTP request (usually a POST request) to the specified URL of the web hook, sending relevant data about the event.
 

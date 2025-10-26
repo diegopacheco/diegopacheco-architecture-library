@@ -1,6 +1,6 @@
-# CACHE
+# Cache
 
-A cache is a software component that stores data so that future requests for that data can be served faster. Caches are commonly used to improve performance and reduce latency in various applications, including web browsers, databases, and operating systems.
+A [cache](https://en.wikipedia.org/wiki/Cache_(computing)) is a software component that stores data so that future requests for that data can be served faster. Caches are commonly used to improve performance and reduce latency in various applications, including web browsers, databases, and operating systems.
 
 ## Types of Caches
 

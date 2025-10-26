@@ -1,6 +1,6 @@
 # Message Id
 
-Also know as CORRELATION_ID. The idea that each message or request must have a uniqui id, and you will pass down such id into the dowstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID. 
+[Message ID](https://en.wikipedia.org/wiki/Message-ID) Also know as CORRELATION_ID. The idea that each message or request must have a uniqui id, and you will pass down such id into the dowstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID. 
 
 Why this is important?
 

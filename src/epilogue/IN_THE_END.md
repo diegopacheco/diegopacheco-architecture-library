@@ -15,7 +15,7 @@ Teaching it's all that matters, the more people know, the less bad decisions are
 
 ## Final Thoughts
 
-Architecture it's hard. It's a battle it must be fight everyday. There is no done, there is not resting, so you can't do all thst without love. If you dont have love and passion for learning and teaching you can't be a good architect.
+Architecture it's hard. It's a battle it must be [fight](https://diego-pacheco.blogspot.com/2023/08/fighting-complexity.html) everyday. There is no done, there is not resting, so you can't do all thst without love. If you dont have love and passion for learning and teaching you can't be a good architect.
 
 The good news is that you can be inspired and you can be a different person tomorrow. To create better architecture you must become a better architect. Thinking is cheap but is hard at the same time. So spead more time thinking and experimenting.
 

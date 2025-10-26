@@ -1,6 +1,6 @@
 # Message Patterns
 
-There are different ways to structure message communication between systems.
+There are [different](https://en.wikipedia.org/wiki/Messaging_pattern) ways to structure message communication between systems.
 
 ## Publish/Subscribe Pattern
 

@@ -1,6 +1,6 @@
 # Pagination
 
-When you have a endpoint that returns a large list of items, it is often useful to paginate the results. This means breaking the results into smaller chunks, or "pages", that can be retrieved one at a time.
+When you have a endpoint that returns a large list of items, it is often useful to [paginate](https://www.merge.dev/blog/rest-api-pagination) the results. This means breaking the results into smaller chunks, or "pages", that can be retrieved one at a time.
 
 Basic benefit here is to reduce the amount of data transferred in a single request, which can improve performance and reduce load on the server. Less latency and more responsive applications are the end result.
 

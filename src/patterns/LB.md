@@ -1,6 +1,6 @@
 # Load Balancer
 
-It's a service that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed, improving application availability and responsiveness.
+[LB](https://en.wikipedia.org/wiki/Load_balancing_(computing)) It's a service that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed, improving application availability and responsiveness.
 
 Load balancers can operate at different layers of the OSI model, such as Layer 4 (Transport Layer) and Layer 7 (Application Layer), providing various features like SSL termination, session persistence, and health monitoring of backend servers. 
 

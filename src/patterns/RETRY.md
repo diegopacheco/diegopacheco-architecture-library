@@ -1,6 +1,6 @@
 # Retry
 
-Retry is a technique used in distributed systems to handle transient failures by attempting an operation multiple times before giving up. This approach is particularly useful in distributed systems, where network issues or temporary unavailability of services can lead to failures that may be resolved with subsequent attempts.
+[Retry](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/) is a technique used in distributed systems to handle transient failures by attempting an operation multiple times before giving up. This approach is particularly useful in distributed systems, where network issues or temporary unavailability of services can lead to failures that may be resolved with subsequent attempts.
 
 ## Timeouts
 

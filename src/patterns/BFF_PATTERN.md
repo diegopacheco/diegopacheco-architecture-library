@@ -1,6 +1,6 @@
 # Backend for Frontend Pattern
 
-The Backend for Frontend pattern involves creating separate backend services tailored to the specific needs of different frontend applications. Usually written in a language that is common for the frontend team, meaning: NodeJS with JS ot Typescript.
+The [Backend for Frontend(BFF)](https://diego-pacheco.blogspot.com/2020/08/bff-dilema.html) pattern involves creating separate backend services tailored to the specific needs of different frontend applications. Usually written in a language that is common for the frontend team, meaning: NodeJS with JS ot Typescript.
 
 BFFs should have `Rendering Logic` and should NEVER have `Business Logic` because that should be encapsulated in the core backend services.
 
