@@ -64,14 +64,25 @@ Here is a curated list of books that will help you become a better architect.
 * [Internal System Design (Forgotten Art)](https://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html)
 * [UML Hidden Gems](https://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html)
 * [SOA, Microservices, and Isolation](https://diego-pacheco.blogspot.com/2014/11/soa-micro-services-and-isolation.html)
+* [Double Down on Service Orientation](https://diego-pacheco.blogspot.com/2020/07/double-down-on-service-orientation.html)
+* [It's All About Contracts](https://diego-pacheco.blogspot.com/2021/04/its-all-about-contracts.html)
+* [Leaky Contracts](https://diego-pacheco.blogspot.com/2024/12/leaky-contracts.html)
 * [The Death of Microservices (Distributed Systems)](https://diego-pacheco.blogspot.com/2020/05/the-death-of-microservices-distributed.html)
+* [Distributed Monolith](https://diego-pacheco.blogspot.com/2023/07/distributed-monolith.html)
+* [Frontend Backend Distributed Monolith](https://diego-pacheco.blogspot.com/2024/06/frontend-backend-distributed-monolith.html)
+* [Legacy Systems and Distributed Monoliths](https://diego-pacheco.blogspot.com/2024/08/legacy-systems-and-distributed-monoliths.html)
+* [DevOps Monolith](https://diego-pacheco.blogspot.com/2017/11/devops-monolith.html)
+* [S3 Next Distributed Monolith](https://diego-pacheco.blogspot.com/2023/07/s3-next-distributed-monolith.html)
 * [Trade-offs in Architecture](https://diego-pacheco.blogspot.com/2023/07/tradeoffs.html)
 
 **Properties & Quality Attributes**
 * [The Stability Mindset](https://diego-pacheco.blogspot.com/2017/09/the-stability-mindset.html)
 * [DevOps is About Anti-Fragility (Not Only)](https://diego-pacheco.blogspot.com/2015/09/devops-is-about-anti-fragility-not-only.html)
 * [Observability: Domain, Observability from Code](https://diego-pacheco.blogspot.com/2020/04/observability-domain-observability-from.html)
+* [Proper Error Handling](https://diego-pacheco.blogspot.com/2024/09/proper-error-handling.html)
+* [Null Validations and Exceptions](https://diego-pacheco.blogspot.com/2020/08/null-validations-and-exceptions.html)
 * [Why Encryption is So Hard](https://diego-pacheco.blogspot.com/2020/11/why-encryption-is-so-hard.html)
+* [Tokenization, Encryption and Security](https://diego-pacheco.blogspot.com/2023/08/tokenization-encryption-and.html)
 
 ### Code Review & Analysis
 

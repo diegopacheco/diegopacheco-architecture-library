@@ -109,6 +109,9 @@ A practice of producing the design before implementation, documented and communi
 **Discovery vs Delivery Dilemma**
 The balance between exploring what to build (discovery) and executing the build (delivery).
 
+**Distributed Monolith**
+An anti-pattern where a system is decomposed into services but remains tightly coupled, losing the benefits of distributed architecture while gaining its complexity.
+
 **Distributed Systems**
 Computer systems where components are located on different networked computers that communicate and coordinate to achieve a common goal, presenting unique challenges in consistency, availability, and partition tolerance.
 
@@ -154,6 +157,14 @@ An anti-pattern where architects act as bottlenecks by requiring approval for al
 **Guard-rails**
 Safety mechanisms put in place to allow experimentation and testing in production while minimizing risk to users and systems.
 
+## H
+
+**HikariCP**
+A high-performance JDBC connection pool library for Java, known for being lightweight and fast.
+
+**HTTP Methods (GET, PUT, POST, DELETE)**
+Standard HTTP request methods used in REST APIs, with GET and PUT being idempotent while POST is typically not.
+
 ## I
 
 **Implicit Contract**
@@ -188,6 +199,9 @@ A pagination method using values of the last item in the current page to determi
 
 **Latency Distribution Metrics**
 Metrics measuring response time distribution for upstream and downstream dependencies.
+
+**LaunchDarkly**
+A commercial feature flag management service providing advanced targeting and experimentation capabilities.
 
 **Leaky Contracts**
 An anti-pattern where service contracts expose internal implementation details, making it difficult to evolve services without breaking clients.
@@ -347,6 +361,12 @@ A load balancer feature ensuring a client's requests go to the same backend serv
 **Single Sign-On (SSO)**
 An authentication method allowing users to access multiple systems with one login.
 
+**Split**
+A commercial feature flag and experimentation platform for controlled feature rollouts and A/B testing.
+
+**S3 (Amazon Simple Storage Service)**
+AWS object storage service, sometimes used as an anti-pattern when treated as a distributed monolith for all data storage needs.
+
 **Single Source of Truth (SSOT)**
 The concept of designating one authoritative database or system as the definitive source for a particular piece of information in distributed systems.
 
@@ -390,6 +410,14 @@ A situation where multiple clients simultaneously retry an operation, causing a 
 
 **Time-to-Live (TTL)**
 A cache management technique where items are assigned a lifespan after which they are automatically removed.
+
+**Tokenization**
+A security technique that replaces sensitive data with non-sensitive tokens, reducing the risk of data exposure while maintaining data utility.
+
+## U
+
+**Unleash**
+An open-source feature flag management platform providing feature toggle capabilities and gradual rollouts.
 
 ## W
 

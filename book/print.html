@@ -1136,7 +1136,15 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><a href="https://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html">Internal System Design (Forgotten Art)</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html">UML Hidden Gems</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2014/11/soa-micro-services-and-isolation.html">SOA, Microservices, and Isolation</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2020/07/double-down-on-service-orientation.html">Double Down on Service Orientation</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2021/04/its-all-about-contracts.html">It's All About Contracts</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2024/12/leaky-contracts.html">Leaky Contracts</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2020/05/the-death-of-microservices-distributed.html">The Death of Microservices (Distributed Systems)</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2023/07/distributed-monolith.html">Distributed Monolith</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2024/06/frontend-backend-distributed-monolith.html">Frontend Backend Distributed Monolith</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2024/08/legacy-systems-and-distributed-monoliths.html">Legacy Systems and Distributed Monoliths</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2017/11/devops-monolith.html">DevOps Monolith</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2023/07/s3-next-distributed-monolith.html">S3 Next Distributed Monolith</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2023/07/tradeoffs.html">Trade-offs in Architecture</a></li>
 </ul>
 <p><strong>Properties &amp; Quality Attributes</strong></p>
@@ -1144,7 +1152,10 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><a href="https://diego-pacheco.blogspot.com/2017/09/the-stability-mindset.html">The Stability Mindset</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2015/09/devops-is-about-anti-fragility-not-only.html">DevOps is About Anti-Fragility (Not Only)</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2020/04/observability-domain-observability-from.html">Observability: Domain, Observability from Code</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2024/09/proper-error-handling.html">Proper Error Handling</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2020/08/null-validations-and-exceptions.html">Null Validations and Exceptions</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2020/11/why-encryption-is-so-hard.html">Why Encryption is So Hard</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2023/08/tokenization-encryption-and.html">Tokenization, Encryption and Security</a></li>
 </ul>
 <h3 id="code-review--analysis"><a class="header" href="#code-review--analysis">Code Review &amp; Analysis</a></h3>
 <ul>
@@ -1297,6 +1308,8 @@ A design approach emphasizing anticipating and handling potential errors or unex
 A practice of producing the design before implementation, documented and communicated to the team.</p>
 <p><strong>Discovery vs Delivery Dilemma</strong>
 The balance between exploring what to build (discovery) and executing the build (delivery).</p>
+<p><strong>Distributed Monolith</strong>
+An anti-pattern where a system is decomposed into services but remains tightly coupled, losing the benefits of distributed architecture while gaining its complexity.</p>
 <p><strong>Distributed Systems</strong>
 Computer systems where components are located on different networked computers that communicate and coordinate to achieve a common goal, presenting unique challenges in consistency, availability, and partition tolerance.</p>
 <h2 id="e"><a class="header" href="#e">E</a></h2>
@@ -1326,6 +1339,11 @@ A search capability like OpenSearch or Elasticsearch for searching large product
 An anti-pattern where architects act as bottlenecks by requiring approval for all decisions, reducing team autonomy and slowing delivery.</p>
 <p><strong>Guard-rails</strong>
 Safety mechanisms put in place to allow experimentation and testing in production while minimizing risk to users and systems.</p>
+<h2 id="h"><a class="header" href="#h">H</a></h2>
+<p><strong>HikariCP</strong>
+A high-performance JDBC connection pool library for Java, known for being lightweight and fast.</p>
+<p><strong>HTTP Methods (GET, PUT, POST, DELETE)</strong>
+Standard HTTP request methods used in REST APIs, with GET and PUT being idempotent while POST is typically not.</p>
 <h2 id="i"><a class="header" href="#i">I</a></h2>
 <p><strong>Implicit Contract</strong>
 The hidden expectations and assumptions in API contracts that aren't explicitly documented but can break integration when changed.</p>
@@ -1348,6 +1366,8 @@ A pagination method using values of the last item in the current page to determi
 <h2 id="l"><a class="header" href="#l">L</a></h2>
 <p><strong>Latency Distribution Metrics</strong>
 Metrics measuring response time distribution for upstream and downstream dependencies.</p>
+<p><strong>LaunchDarkly</strong>
+A commercial feature flag management service providing advanced targeting and experimentation capabilities.</p>
 <p><strong>Leaky Contracts</strong>
 An anti-pattern where service contracts expose internal implementation details, making it difficult to evolve services without breaking clients.</p>
 <p><strong>Least Connections (Load Balancing)</strong>
@@ -1451,6 +1471,10 @@ A architectural approach treating services as first-class citizens, enabling iso
 A load balancer feature ensuring a client's requests go to the same backend server.</p>
 <p><strong>Single Sign-On (SSO)</strong>
 An authentication method allowing users to access multiple systems with one login.</p>
+<p><strong>Split</strong>
+A commercial feature flag and experimentation platform for controlled feature rollouts and A/B testing.</p>
+<p><strong>S3 (Amazon Simple Storage Service)</strong>
+AWS object storage service, sometimes used as an anti-pattern when treated as a distributed monolith for all data storage needs.</p>
 <p><strong>Single Source of Truth (SSOT)</strong>
 The concept of designating one authoritative database or system as the definitive source for a particular piece of information in distributed systems.</p>
 <p><strong>SSL Termination</strong>
@@ -1480,6 +1504,11 @@ An anti-pattern where technical debt accumulates unchecked and architects fail t
 A situation where multiple clients simultaneously retry an operation, causing a sudden surge in requests that overwhelms the system.</p>
 <p><strong>Time-to-Live (TTL)</strong>
 A cache management technique where items are assigned a lifespan after which they are automatically removed.</p>
+<p><strong>Tokenization</strong>
+A security technique that replaces sensitive data with non-sensitive tokens, reducing the risk of data exposure while maintaining data utility.</p>
+<h2 id="u"><a class="header" href="#u">U</a></h2>
+<p><strong>Unleash</strong>
+An open-source feature flag management platform providing feature toggle capabilities and gradual rollouts.</p>
 <h2 id="w"><a class="header" href="#w">W</a></h2>
 <p><strong>Weighted Round Robin</strong>
 A load balancing algorithm variant that distributes requests based on assigned weights, directing more traffic to more powerful servers.</p>
