@@ -1,6 +1,6 @@
 # Writing
 
-Architects must right. I used a variaety of tools to write like Evernote, Grammarly, Google docs, Markdown files, MS word, and many others. Today I'm the best tool for me is Markdown files.
+Architects must [write](https://diego-pacheco.blogspot.com/2020/01/why-writing-matters.html). I used a variaety of tools to write like Evernote, Grammarly, Google docs, Markdown files, MS word, and many others. Today I'm the best tool for me is Markdown files.
 
 Markdown are simple and lightweight, they word with any AI Grammar tool. They are also universal and portable. IMHO I dont have the perfect writting tool ANY, I might need build mine one day but I think less is more. You need focus on your ideas, so less distractions is the key.
 
