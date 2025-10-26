@@ -1,6 +1,6 @@
 # Requirements
 
-Mind blown by me saying "Requirements" is an anti-pattern? Lean believes that requirements are just a decision that somebody made. Now what you need to ask yourself is, how good is this decision? Architecture is the art of making good decisions. Bad decisions COST a lot, not only money but also time, effort and frustration.
+Mind blown by me saying ["Requirements"](https://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html) is an anti-pattern? Lean believes that requirements are just a decision that somebody made. Now what you need to ask yourself is, how good is this decision? Architecture is the art of making good decisions. Bad decisions COST a lot, not only money but also time, effort and frustration.
 
 Architects `MUST` make good decisions. Good decisions are made when you have the right information, the right context and the right experience. You must be prepared to make right decisions. In the beginning you will make mistakes, which is okay if you learn from them and that's why you need Architecture Review.
 

@@ -1,6 +1,6 @@
 # Stagnation
 
-Architects must be like the Rolling Stones, they don't gather moss. Architects must be in a constant state of learning, always reading books, always reading papers, always reading code, always ahead of the curve.
+Architects must be like the Rolling Stones, they don't gather moss. Architects must be [active](https://diego-pacheco.blogspot.com/2015/11/being-active-architect.html) in a constant state of learning, always reading books, always reading papers, always reading code, always ahead of the curve.
 
 If an architect stops learning, they stagnate, and stagnation is the death of architecture. Think about a coin, a coin that has no circulation is a worthless coin. An architect that has no new knowledge is a worthless architect.
 
