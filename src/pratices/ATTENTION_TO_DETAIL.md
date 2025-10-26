@@ -1,6 +1,6 @@
 # Attention to Detail
 
-Architects must be meticulous in their work, ensuring that every aspect of a design is carefully considered and executed. Attention to detail is crucial for creating functional, safe, and aesthetically pleasing structures. Here are some key areas where attention to detail is essential.
+Architects must be meticulous in their work, ensuring that every aspect of a design is carefully considered and executed. [Attention to detail](https://diego-pacheco.blogspot.com/2025/10/its-all-about-attention.html) is crucial for creating functional, safe, and aesthetically pleasing structures. Here are some key areas where attention to detail is essential.
 
 Architects pays close attention to:
 * Code: Classes, Internal design, contracts, patterns/anti-patterns

@@ -378,7 +378,7 @@ Choosing the best and latest solutions</li>
 <p>Code can and should be refactored. Refactoring should happen all the time and continuously. However there are people who are allergic to refactoring and that is a recipe for great disasters. Thinking ahead allows you to be prepared when you need it. Think about fire drills, you practice how to handle fire, so when you need it you are ready.</p>
 <p>Think big execute small.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="defensive-programing"><a class="header" href="#defensive-programing">Defensive Programing</a></h1>
-<p>Defensive programming is a design approach that emphasizes anticipating and handling potential errors or unexpected inputs in software development. For instance you always:</p>
+<p><a href="https://en.wikipedia.org/wiki/Defensive_programming">Defensive programming</a> is a design approach that emphasizes anticipating and handling potential errors or unexpected inputs in software development. For instance you always:</p>
 <ul>
 <li>Validate inputs to ensure they meet expected formats and constraints.</li>
 <li>Handle exceptions gracefully to prevent crashes and provide meaningful error messages.</li>
@@ -481,7 +481,7 @@ Choosing the best and latest solutions</li>
 <p>Properties are things you really want for your architecture and systems. Think about a kid, you want your son or daughter to have good properties like honesty, kindness, and respectfulness. Similarly, in architecture and systems, we want properties that ensure scalability, security, and observability.</p>
 <p>Some properties are obvious, others are non-obvious. But if you know they exist you can make explict work to make sure theu are present in your architecture and systems.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="anti-fragility"><a class="header" href="#anti-fragility">Anti-Fragility</a></h1>
-<p>Anti-fragility is a property of systems that not only withstand shocks and stressors but also improve and grow stronger as a result of them. Unlike resilience, which focuses on maintaining stability in the face of adversity, anti-fragile systems thrive on volatility and uncertainty.</p>
+<p><a href="https://diego-pacheco.blogspot.com/2015/09/devops-is-about-anti-fragility-not-only.html">Anti-fragility</a> is a property of systems that not only withstand shocks and stressors but also improve and grow stronger as a result of them. Unlike resilience, which focuses on maintaining stability in the face of adversity, anti-fragile systems thrive on volatility and uncertainty.</p>
 <p>In order to achive anti-fragility you need Defensive Programing and Chaos Engineering. You must test that your system is tolerant and can recover from failure. So you induce and provoke failure in your system and infrastrcuture to proove when necessary.</p>
 <p>You do not want discover in production if the system can recover from failure, you want to know before hand. You want to know that your system is anti-fragile. Testing in production is not the same as discovering in production. Testing in production means, guard-rails and testing in production environment but without impacting real users.</p>
 <p>Your systems must be anti-fragile. You architevture must be anti-fragile. Your infrastructure must be anti-fragile. To be anti-fragile you need lots of hypotethesis and experiments to proove your system is anti-fragile. Anti-fragility requires <code>science</code> and <code>creativity</code>.</p>
@@ -495,7 +495,7 @@ Choosing the best and latest solutions</li>
 <p>Scalability it's not only for systems, it's also for engineering teams. A good architecture allows teams to work in parallel without stepping on each other's toes.</p>
 <p>Good Structure, good design, allow engineers to be more productive, and focus on delivering value, instead of fighting with the codebase. You want the architects you produce to have this properties.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="observable"><a class="header" href="#observable">Observable</a></h1>
-<p>As architect, the systems you produce must have the ability to be observable. Such property is very important. Consider observability a sub-set of testing which happens in production.</p>
+<p>As architect, the systems you produce must have the ability to be observable. Such property is very important. Consider <a href="https://diego-pacheco.blogspot.com/2020/04/observability-domain-observability-from.html">observability</a> a sub-set of testing which happens in production.</p>
 <p>IF you dont know whats going on you are driving into the dark. You want to be able to understand how your system behaves in production, and be able to detect issues before they become problems for your users.</p>
 <p>Without such understanding, you are not doing the whole cycle correctly. Building something following a design is not enought. You need to observe the final product in production, and be able to learn from it and improve it.</p>
 <p>Making Observable systems, imply in having:</p>
@@ -524,7 +524,7 @@ Choosing the best and latest solutions</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="secure"><a class="header" href="#secure">Secure</a></h1>
 <p>Software must be secure. Architects should prioritize security in their designs to protect data and maintain user trust. Lack of security runs brands, trust is damaged, and legal consequences may arise.</p>
-<p>Security means implementing measures to protect systems from threats such as unauthorized access, data breaches, and cyber-attacks. This includes practices like encryption, authentication, authorization, and regular security audits.</p>
+<p>Security means implementing measures to protect systems from threats such as unauthorized access, data breaches, and cyber-attacks. This includes practices like <a href="https://diego-pacheco.blogspot.com/2020/11/why-encryption-is-so-hard.html">encryption</a>, authentication, authorization, and regular security audits.</p>
 <p>Common considerations for secure architecture:</p>
 <ul>
 <li><strong>Data Protection</strong>: Ensure sensitive data is encrypted both in transit and at rest.</li>
@@ -538,7 +538,7 @@ Choosing the best and latest solutions</li>
 <p>The way you work matter, what you do and what you dont do(conciously) also matter.</p>
 <p>Pratices are about "how you do things", the way you approach problems, day-by-day life, difficult situations, decisions, trade-offs.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="attention-to-detail"><a class="header" href="#attention-to-detail">Attention to Detail</a></h1>
-<p>Architects must be meticulous in their work, ensuring that every aspect of a design is carefully considered and executed. Attention to detail is crucial for creating functional, safe, and aesthetically pleasing structures. Here are some key areas where attention to detail is essential.</p>
+<p>Architects must be meticulous in their work, ensuring that every aspect of a design is carefully considered and executed. <a href="https://diego-pacheco.blogspot.com/2025/10/its-all-about-attention.html">Attention to detail</a> is crucial for creating functional, safe, and aesthetically pleasing structures. Here are some key areas where attention to detail is essential.</p>
 <p>Architects pays close attention to:</p>
 <ul>
 <li>Code: Classes, Internal design, contracts, patterns/anti-patterns</li>
@@ -557,7 +557,7 @@ Choosing the best and latest solutions</li>
 <ul>
 <li>Overall Architecture Diagram</li>
 <li>Key Decisions (with rationale)</li>
-<li>Important Trade-offs</li>
+<li>Important <a href="https://diego-pacheco.blogspot.com/2023/07/tradeoffs.html">Trade-offs</a></li>
 </ul>
 <p>Arch documentation can be done with a markdown file, here is a good template: https://github.com/diegopacheco/tech-resources/blob/master/arch-doc-template.md</p>
 <p>When you write down, principles, decisions, guidance, and trade-offs become explicit, easier to communicate, and easier to review. Diagrams help a lot, specially overal architecture diagram, class diagram are very useful.</p>

@@ -5,7 +5,7 @@ IF you dont have anything written, how can we review it? How can you comunicate 
 Architecture must be written down, at the minimum:
 * Overall Architecture Diagram
 * Key Decisions (with rationale)
-* Important Trade-offs
+* Important [Trade-offs](https://diego-pacheco.blogspot.com/2023/07/tradeoffs.html)
 
 Arch documentation can be done with a markdown file, here is a good template: https://github.com/diegopacheco/tech-resources/blob/master/arch-doc-template.md
 

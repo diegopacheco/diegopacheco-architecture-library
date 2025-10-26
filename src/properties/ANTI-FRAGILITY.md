@@ -1,6 +1,6 @@
 # Anti-Fragility
 
-Anti-fragility is a property of systems that not only withstand shocks and stressors but also improve and grow stronger as a result of them. Unlike resilience, which focuses on maintaining stability in the face of adversity, anti-fragile systems thrive on volatility and uncertainty.
+[Anti-fragility](https://diego-pacheco.blogspot.com/2015/09/devops-is-about-anti-fragility-not-only.html) is a property of systems that not only withstand shocks and stressors but also improve and grow stronger as a result of them. Unlike resilience, which focuses on maintaining stability in the face of adversity, anti-fragile systems thrive on volatility and uncertainty.
 
 In order to achive anti-fragility you need Defensive Programing and Chaos Engineering. You must test that your system is tolerant and can recover from failure. So you induce and provoke failure in your system and infrastrcuture to proove when necessary.
 
