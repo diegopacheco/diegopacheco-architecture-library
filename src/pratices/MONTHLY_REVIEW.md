@@ -1,10 +1,10 @@
 # Monthly Review
 
-Code review is great. Architects should do Code review. However code review is pretty much focused on deltas. Which is not the whole story.
+[Code review](https://diego-pacheco.blogspot.com/2019/11/getting-best-out-github-with-remote.html) is great. Architects should do [Code review](https://diego-pacheco.blogspot.com/2018/07/lessons-learned-and-experiences-doing.html). However code review is pretty much focused on deltas. Which is not the whole story.
 
 Code review happens in-clycle, meaning every week, every day, or pretty much every time a ticket/PR is done. We also need a off-cycle review. 
 
-As an architect, 1x per month or at least 1x per quarter you should look the whole codebase. Why? Beause them you are not looking the detlas, you are lookign the whole picture.
+As an architect, 1x per month or at least 1x per quarter you should look the whole codebase. Why? Beause them you are not looking the [detlas](https://diego-pacheco.blogspot.com/2022/12/beyond-code-deltas.html), you are lookign the whole picture and seeing the [design](https://diego-pacheco.blogspot.com/2011/04/team-code-review-design-sessions.html).
 
 Such pratice is important to see:
 * Architectural concept drift: Are we still following the intended architecture? Are there parts of the code that have diverged from the original design principles?

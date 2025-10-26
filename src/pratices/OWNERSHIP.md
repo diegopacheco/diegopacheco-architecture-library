@@ -1,6 +1,6 @@
 # Ownership
 
-Architects must have extreme ownership. They are responsible for the success and failure of the architecture they design. This includes:
+Architects must have [extreme ownership](https://diego-pacheco.blogspot.com/2024/11/expectations.html). They are responsible for the success and failure of the architecture they design. This includes:
 * Ensuring the architecture meets business requirements.
 * Continuously evaluating and improving the architecture.
 * Collaborating with development teams to ensure proper implementation.
