@@ -1,6 +1,6 @@
 # Stateless vs Stateful Services
 
-When [designing services](https://en.wikipedia.org/wiki/Service_statelessness_principle), one of the key architectural decisions is whether to implement them as stateless or stateful. Stales teless services do not retain any information about previous interactions, while stateful services maintain state information across multiple requests.
+When [designing services](https://en.wikipedia.org/wiki/Service_statelessness_principle), one of the key architectural decisions is whether to implement them as stateless or stateful. [State](https://diego-pacheco.blogspot.com/2024/12/state.html) is a big thing. Stateless services do not retain any information about previous interactions, while stateful services maintain state information across multiple requests.
 
 It's much easier to work with stateless services because they can scale more easily, recover from failures faster, and are generally simpler to manage. However, there are scenarios where stateful services are necessary, such as when maintaining user sessions or handling transactions.
 
