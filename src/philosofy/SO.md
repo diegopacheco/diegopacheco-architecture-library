@@ -4,7 +4,7 @@
 
 Services allow Isolation, Independence and Flexibility. When services are done right, with proper contracts, refactor can happen under the hood. Services allow different stacks and technology.
 
-Services should be Capability oriented. Services should be as generic as possible and it's okay to have more granularity and more code in a service. Services do not need to be micro(Micro Services).
+[Services](https://diego-pacheco.blogspot.com/2024/12/services.html) should be Capability oriented. Services should be as generic as possible and it's okay to have more granularity and more code in a service. Services do not need to be micro(Micro Services).
 
 The most important part of services is the contract. The contract is the API. The API should be as stable as possible. The API should be backward compatible as much as possible. The API should be well documented and versioned.
 
