@@ -2,7 +2,7 @@
 
 Which one is best, build or buy? Well, it depends. Build is important when is your core domain and is how your companies makes money and differentiates from the competition. If all the companies by the same core business, how are they different? They are not. 
 
-However when is not your core business, buy makes a lot of sense, because is freeing time for you to focus on what matters, your core business. Howeber this is a big mistake here. There is no buy without build. Because even if you buy you will need integrate with your existing systems. Just because your buy does not means is perfect, does not means it fixes all your problems. It's also comon when you buy solution that same solutions introduce problems that you did not have before. 
+However when is not your core business, buy makes a lot of sense, because is freeing time for you to focus on what matters, your core business. Howeber this is a big mistake here. There is no buy without build. Because even if you buy you will need integrate with your existing systems. Just because your [buy does not means is perfect](https://diego-pacheco.blogspot.com/2024/12/proprietary-systems-and-distributed.html), does not means it fixes all your problems. It's also comon when you buy solution that same solutions introduce problems that you did not have before. Buy has [hidden costs](https://diego-pacheco.blogspot.com/2020/06/software-architecture-hidden-costs.html).
 
 When buying it's important to observe:
 * Make sure there are APIs

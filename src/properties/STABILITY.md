@@ -1,6 +1,6 @@
 # Stability
 
-Not only your architecture but your systems must be stable. Being stable is a state, which means they are not broken all the time. Systems should not be broken. It's impossible not never break the system, after all we are only humans. However this is not an excuse for lack of attention, carelessness or poor practices.
+Not only your architecture but your systems must be stable. Being [stable is a state](https://diego-pacheco.blogspot.com/2017/09/the-stability-mindset.html), which means they are not broken all the time. Systems should not be broken. It's impossible not never break the system, after all we are only humans. However this is not an excuse for lack of attention, carelessness or poor practices.
 
 A stable system is one where, whre most of times:
 * Build is passing

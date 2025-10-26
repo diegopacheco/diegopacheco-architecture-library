@@ -8,4 +8,4 @@ Imagine you are building a house, pretty sure the buyer does not expect the hous
 
 One classical example is skipping tests. Tests are not a nice to have, they are a must have. If you don't have tests, you are building a house without a foundation. You can build it fast, but sooner or later it will collapse. How will you do refactoring without tests? Management often push for such bad pratices but [even architects(the bad ones)](https://diego-pacheco.blogspot.com/2020/06/dont-outsmart-hard-chooses-why.html) push for that. Tests are non-negotiable.
 
-You must fight the war, manage complexity by doing improvements with the engineering team every week rather than "creating a jira ticket" that will never ever be addressed.
+You must fight the war, [manage](https://diego-pacheco.blogspot.com/2025/01/quality-needs-to-be-managed.html) [complexity](https://diego-pacheco.blogspot.com/2021/06/thoughts-on-internal-complexity.html) by doing improvements with the engineering team every week rather than "creating a jira ticket" that will never ever be addressed.
