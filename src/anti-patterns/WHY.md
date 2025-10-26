@@ -1,6 +1,6 @@
 # Why Anti-Patterns?
 
-Everyboddy talks about patternws. Everything on the internet is "Best Prarctices". But people don't undersnd principles correctely, people think they understand when they actually don't.
+Everyboddy talks about patterns. Everything on the internet is "Best Prarctices". But people don't undersnd principles correctely, people think they understand when they actually don't.
 
 I saw that lack of "proper application" happen over and over the years, with Agile, with Microservices, With DevOps, with Docker. If you dont understand the principles behind those "practices" you will end up doing anti-patterns.
 

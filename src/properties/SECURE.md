@@ -2,7 +2,7 @@
 
 Software must be secure. Architects should prioritize security in their designs to protect data and maintain user trust. Lack of security runs brands, trust is damaged, and legal consequences may arise.
 
-Security means implementing measures to protect systems from threats such as unauthorized access, data breaches, and cyber-attacks. This includes practices like [encryption](https://diego-pacheco.blogspot.com/2020/11/why-encryption-is-so-hard.html), authentication, authorization, and regular security audits.
+Security means implementing measures to protect systems from threats such as unauthorized access, data breaches, and cyber-attacks. This includes practices like [encryption](https://diego-pacheco.blogspot.com/2020/11/why-encryption-is-so-hard.html), authentication, authorization, [tokenization](https://diego-pacheco.blogspot.com/2023/08/tokenization-encryption-and.html) and regular security audits.
 
 Common considerations for secure architecture:
 - **Data Protection**: Ensure sensitive data is encrypted both in transit and at rest.
