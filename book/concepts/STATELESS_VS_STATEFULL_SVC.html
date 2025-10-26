@@ -180,7 +180,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="stateless-vs-stateful-services"><a class="header" href="#stateless-vs-stateful-services">Stateless vs Stateful Services</a></h1>
-<p>When designing services, one of the key architectural decisions is whether to implement them as stateless or stateful. Stales teless services do not retain any information about previous interactions, while stateful services maintain state information across multiple requests.</p>
+<p>When <a href="https://en.wikipedia.org/wiki/Service_statelessness_principle">designing services</a>, one of the key architectural decisions is whether to implement them as stateless or stateful. Stales teless services do not retain any information about previous interactions, while stateful services maintain state information across multiple requests.</p>
 <p>It's much easier to work with stateless services because they can scale more easily, recover from failures faster, and are generally simpler to manage. However, there are scenarios where stateful services are necessary, such as when maintaining user sessions or handling transactions.</p>
 <p>Staless does not means that the service cannot use state at all; rather, it means that the service itself does not store state between requests. Instead, any necessary state can be stored in external systems like databases or caches. Stateful service are more complex.</p>
 
@@ -213,22 +213,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

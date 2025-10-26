@@ -419,24 +419,24 @@ Choosing the best and latest solutions</li>
 <p>Some anti-patterns are obvious and related to technology, but many anti-patterns are related to people, process, culture and how you work as a team. Also there are anti-patterns related to how architects behave or how they do not behave(and should behave).</p>
 <p>It's important to know that is wrong, so you can avoid doing it.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tech-debt-plague"><a class="header" href="#tech-debt-plague">Tech Debt Plague</a></h1>
-<p>Tech debt is a plague. It's something that all companies suffer. It's normal to have tech debt. What is not correct is architects not fighting tech debt. Tech debt must be fought all the time. Either by simplifying requirements to avoid feature bloat, or by making better decisions that lead to better systems.</p>
-<p>When I was thinking about this section, I was thinking on the terms of "Tech Debt First". Because often I see tech debt being the "default choice", which is an anti-pattern. Some technical principles should be non-negotiable.</p>
+<p>Tech debt is a <a href="https://diego-pacheco.blogspot.com/2020/01/breaking-debt-cycle.html">plague</a>. It's something that all companies suffer. It's normal to have tech debt. What is not correct is architects not fighting tech debt. Tech debt must be fought all the time. Either by simplifying requirements to avoid feature bloat, or by making better decisions that lead to better systems.</p>
+<p>When I was thinking about this section, I was thinking on the terms of <a href="https://diego-pacheco.blogspot.com/2024/04/tech-debt-first.html">"Tech Debt First"</a>. Because often I see tech debt being the "default choice", which is an anti-pattern. Some technical principles should be non-negotiable.</p>
 <p>Imagine you are building a house, pretty sure the buyer does not expect the house to collapse 6 months later after buying it. So to cut corners you don't decide to use paper for walls, styrofoam for the roof and direct sunlight for electricity. However when we build software, bad management, bad architects and bad developers decide to cut corners to the point of making the software collapse after few months of being in production.</p>
-<p>One classical example is skipping tests. Tests are not a nice to have, they are a must have. If you don't have tests, you are building a house without a foundation. You can build it fast, but sooner or later it will collapse. How will you do refactoring without tests?</p>
-<p>You must fight the war, manage complexity by doing improvements with the engineering team every week rather than "creating a jira ticket" that will never ever be addressed.</p>
+<p>One classical example is skipping tests. Tests are not a nice to have, they are a must have. If you don't have tests, you are building a house without a foundation. You can build it fast, but sooner or later it will collapse. How will you do refactoring without tests? Management often push for such bad pratices but <a href="https://diego-pacheco.blogspot.com/2020/06/dont-outsmart-hard-chooses-why.html">even architects(the bad ones)</a> push for that. Tests are non-negotiable.</p>
+<p>You must fight the war, <a href="https://diego-pacheco.blogspot.com/2025/01/quality-needs-to-be-managed.html">manage</a> <a href="https://diego-pacheco.blogspot.com/2021/06/thoughts-on-internal-complexity.html">complexity</a> by doing improvements with the engineering team every week rather than "creating a jira ticket" that will never ever be addressed.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignore-culture"><a class="header" href="#ignore-culture">Ignore Culture</a></h1>
 <p>If something is wrong. Say something, do something. When you ignore problems consistently over a long period of time, you end up developing this anti-pattern, which I called "Ignore Culture".</p>
 <p>When you ignore warnings in the build, when you ignore old versions of libraries, when you ignore anti-patterns on the code. When you ignore production monitoring. When you ignore requirements that make no sense.</p>
 <p>Does not matter if you were the one who did the code or not. You must take ownership and under your watch you should ignore nothing.</p>
-<p>Ignoring can become a culture because managers can easily do this. Engineers, often pressured by managers also can ignore several wrong things. What's wrong should not be ignored, it should be fought and pushed back.</p>
+<p><a href="https://diego-pacheco.blogspot.com/2024/03/ignoring-culture.html">Ignoring can become a culture</a> because managers can easily do this. Engineers, often pressured by managers also can ignore several wrong things. What's wrong should not be ignored, it should be fought and pushed back.</p>
 <p>Lack of fighting for what is right is immaturity. As an architect you must not ignore what's wrong. Do not let this become a culture. Ignore culture can happen so easily when people say "It's not my job", or "It's not my code" or "It's not my project" or "It's not my responsibility", the extreme lack of ownership can lead to ignore culture.</p>
 <p>When you are ignoring problems you are making fertile ground for anti-patterns to grow. Tech debt plague requires ignore culture to thrive.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="stagnation"><a class="header" href="#stagnation">Stagnation</a></h1>
-<p>Architects must be like the Rolling Stones, they don't gather moss. Architects must be in a constant state of learning, always reading books, always reading papers, always reading code, always ahead of the curve.</p>
+<p>Architects must be like the Rolling Stones, they don't gather moss. Architects must be <a href="https://diego-pacheco.blogspot.com/2015/11/being-active-architect.html">active</a> in a constant state of learning, always reading books, always reading papers, always reading code, always ahead of the curve.</p>
 <p>If an architect stops learning, they stagnate, and stagnation is the death of architecture. Think about a coin, a coin that has no circulation is a worthless coin. An architect that has no new knowledge is a worthless architect.</p>
 <p>As architect you cannot become old school. You must be always looking for new ideas, new technologies, new patterns, new anti-patterns, new ways of doing the old things. Being stuck on the past has terrible consequences. The architect is the most influential person or it should be. So what are you influencing?</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="requirements"><a class="header" href="#requirements">Requirements</a></h1>
-<p>Mind blown by me saying "Requirements" is an anti-pattern? Lean believes that requirements are just a decision that somebody made. Now what you need to ask yourself is, how good is this decision? Architecture is the art of making good decisions. Bad decisions COST a lot, not only money but also time, effort and frustration.</p>
+<p>Mind blown by me saying <a href="https://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html">"Requirements"</a> is an anti-pattern? Lean believes that requirements are just a decision that somebody made. Now what you need to ask yourself is, how good is this decision? Architecture is the art of making good decisions. Bad decisions COST a lot, not only money but also time, effort and frustration.</p>
 <p>Architects <code>MUST</code> make good decisions. Good decisions are made when you have the right information, the right context and the right experience. You must be prepared to make right decisions. In the beginning you will make mistakes, which is okay if you learn from them and that's why you need Architecture Review.</p>
 <p>Not all Requirements are anti-patterns, but seeing them as "requirements" is an anti-pattern per se. The word requirements, and often how people take it, implies that something is fixed, immutable and unchangeable. In reality, requirements are always changing, evolving and adapting to new circumstances. Good architects embrace change and adapt their decisions accordingly.</p>
 <p>When a project starts, or when you start a task, it's very common that product did not think a lot about the consequences, trade-offs, corner cases, implications and or even what the engineering team needs to get it done. The most common anti-pattern is empty jira tickets and tons of meetings to push the "discovery work" to engineering.</p>
@@ -449,10 +449,10 @@ Choosing the best and latest solutions</li>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="discovery-vs-delivery"><a class="header" href="#discovery-vs-delivery">Discovery Vs Delivery</a></h1>
 <p>Discovery is the moment where you are trying to figure out what to build in order to solve a problem for your users. Discovery is heavily around product and user research, prototyping, testing ideas and validating assumptions.</p>
 <p>However it's also necessary to have someone from technology doing discovery otherwise you transfer slowness, confusion and risk even to be attempting to build something that is not feasible or too complex to deliver.</p>
-<p>Delivery should be focusing on engineering and once we know what to build(often captured as requirements and figma prototypes for the frontend) we can start building it. The question is how do I build it right. Sounds simple right? But here we have one of the biggest dilemmas in software development.</p>
+<p><a href="https://diego-pacheco.blogspot.com/2020/02/multi-track-agile-with-tta.html">Delivery</a> should be focusing on engineering and once we know what to build(often captured as requirements and figma prototypes for the frontend) we can start building it. The question is how do I build it right. Sounds simple right? But here we have one of the biggest dilemmas in software development.</p>
 <p>If you just go from discovery to delivery you are very likely working in a waterfall fashion. So this is not linear, but (which I consider an anti-pattern), happens all the time, the moment you touch discovery, people assume discovery is done or correct and then you only care about shipping it fast.</p>
 <p>You need speed, but it's not just speed of delivery but actually speed of learning. The goal is to learn fast. Sometimes you can learn before production but often times you can only go to production to learn.</p>
-<p>If you need to go to production fast to learn, should we embrace the <code>Tech Debt plague</code> and be <code>Tech Debt First</code>? No. Because you might learn what the users want or don't want, you might find what can bring revenue to the company but the code is there(likely forever) and we need to balance this. So you can't just <code>pick a side</code> you need to balance both sides.</p>
+<p>If you need to go to production fast to learn, should we embrace the <code>Tech Debt plague</code> and be <code>Tech Debt First</code>? No. Because you might learn what the users want or don't want, you might find what can bring revenue to the company but the code is there(likely forever) and we need to <a href="https://diego-pacheco.blogspot.com/2025/03/the-roads-approach.html">balance</a> this. So you can't just <code>pick a side</code> you need to balance both sides.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="move-it-fast-or-do-it-right"><a class="header" href="#move-it-fast-or-do-it-right">Move it Fast or Do it Right?</a></h1>
 <p>Facebook and silicon valley culture often emphasize speed and rapid iteration in product development. The mantra "Move Fast and Break Things" encapsulates this ethos, encouraging teams to prioritize quick delivery and innovation over meticulous planning and perfection.</p>
 <p>However even Facebook admitted that they need to shift to a more balanced approach where they move fast but with stable infrastructure. It's important to do it right, in engineering, however if you build right the <code>wrong product</code>, the product people don't care, then you are wasting your time and money.</p>
@@ -461,7 +461,7 @@ Choosing the best and latest solutions</li>
 <p>In theory you could "just move fast" but the issue is, lots of companies are allergic to refactoring and they never pay the price to improve the code. Mostly because tech leadership is bad and or immature. But either way, you need to pay the price at some point. If you never pay the price, you end up with a big ball of mud that is hard to maintain and evolve.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="build-vs-buy"><a class="header" href="#build-vs-buy">Build vs Buy</a></h1>
 <p>Which one is best, build or buy? Well, it depends. Build is important when is your core domain and is how your companies makes money and differentiates from the competition. If all the companies by the same core business, how are they different? They are not.</p>
-<p>However when is not your core business, buy makes a lot of sense, because is freeing time for you to focus on what matters, your core business. Howeber this is a big mistake here. There is no buy without build. Because even if you buy you will need integrate with your existing systems. Just because your buy does not means is perfect, does not means it fixes all your problems. It's also comon when you buy solution that same solutions introduce problems that you did not have before.</p>
+<p>However when is not your core business, buy makes a lot of sense, because is freeing time for you to focus on what matters, your core business. Howeber this is a big mistake here. There is no buy without build. Because even if you buy you will need integrate with your existing systems. Just because your <a href="https://diego-pacheco.blogspot.com/2024/12/proprietary-systems-and-distributed.html">buy does not means is perfect</a>, does not means it fixes all your problems. It's also comon when you buy solution that same solutions introduce problems that you did not have before. Buy has <a href="https://diego-pacheco.blogspot.com/2020/06/software-architecture-hidden-costs.html">hidden costs</a>.</p>
 <p>When buying it's important to observe:</p>
 <ul>
 <li>Make sure there are APIs</li>
@@ -472,7 +472,7 @@ Choosing the best and latest solutions</li>
 </ul>
 <p>If I use an AWS service, vs building in house is cheaper? Well dependends where you want put the money. In the beginning buying might sound cheaper, but you will pay AWS forever. When you build you might have a better solution(if executed right) but you now need pay people to mantaining it forever. So where you want the money goes, your people or vendors? The question here is how good you are in execution inside of the house. If your execution is terrible, go buy.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="decide-or-wait"><a class="header" href="#decide-or-wait">Decide or Wait</a></h1>
-<p>Lean belive that late decisions are often better than rushed ones. However, waiting too long can lead to missed opportunities. As time pass, you will be more equiped about whatt's best, thay it's always easier to refactor later(If the cost is not too high).</p>
+<p><a href="https://diego-pacheco.blogspot.com/2015/04/lean-deming-the-new-culture.html">Lean</a> belive that late decisions are often better than rushed ones. However, waiting too long can lead to missed opportunities. As time pass, you will be more equiped about whatt's best, thay it's always easier to refactor later(If the cost is not too high).</p>
 <p>Decisions are process, they they should not be written on the stone. Deciding something is process, it allow us to move on, however we should be challenging our past decisions, that's why time to reflect and think is importat. Architects need protect they time to have time to think. Engineering teams must have retrospectives to reflect on past decisions.</p>
 <p>Sometimes is too soon to decide, you might not have data or not be sure. You must balance the cost of waiting vs the cost of deciding now. Lean has a tool to deal with this called <code>cost of delay</code>. If the cost of delay is low, you can wait more, if it's high you must decide now.</p>
 <p>Experimentation is a good way to make temporary decisions, and them figureout what stick and what does not stick. You can try A/B testing, feature flags, or prototypes to gather data and make informed decisions later. Deciding and waiting are not mutually exclusive, they require balance.</p>
@@ -507,7 +507,7 @@ Choosing the best and latest solutions</li>
 <li>Having the pratice of look the production monitoring dashboards and logs as part of your daily routine and retrofit the learnings to the engineering team.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="stability"><a class="header" href="#stability">Stability</a></h1>
-<p>Not only your architecture but your systems must be stable. Being stable is a state, which means they are not broken all the time. Systems should not be broken. It's impossible not never break the system, after all we are only humans. However this is not an excuse for lack of attention, carelessness or poor practices.</p>
+<p>Not only your architecture but your systems must be stable. Being <a href="https://diego-pacheco.blogspot.com/2017/09/the-stability-mindset.html">stable is a state</a>, which means they are not broken all the time. Systems should not be broken. It's impossible not never break the system, after all we are only humans. However this is not an excuse for lack of attention, carelessness or poor practices.</p>
 <p>A stable system is one where, whre most of times:</p>
 <ul>
 <li>Build is passing</li>
@@ -617,7 +617,7 @@ Choosing the best and latest solutions</li>
 <li>Communicate ideas clearly</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="acid"><a class="header" href="#acid">ACID</a></h1>
-<p>it's a property of database transactions intended to guarantee validity even in the event of errors, power failures. It's a RELATIONAL database concept.</p>
+<p>[ACID(https://en.wikipedia.org/wiki/ACID)] it's a property of database transactions intended to guarantee validity even in the event of errors, power failures. It's a RELATIONAL database concept.</p>
 <h2 id="a--atomicity"><a class="header" href="#a--atomicity">A == Atomicity</a></h2>
 <p>Atomicity ensures that a transaction is treated as a single unit, which either completely succeeds or completely fails.</p>
 <p>If any part of the transaction fails, the entire transaction is rolled back, and the database remains unchanged.</p>
@@ -630,7 +630,7 @@ Choosing the best and latest solutions</li>
 <p>Durability guarantees that once a transaction has been committed, it will remain so, even in the event of a system failure. Committed data is saved to non-volatile storage, ensuring that it is not lost. Usualy using a WAL (Write Ahead Log) to achieve this.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="authentication--authorization--entitlements"><a class="header" href="#authentication--authorization--entitlements">Authentication &amp; Authorization &amp; Entitlements</a></h1>
 <h2 id="authentication"><a class="header" href="#authentication">Authentication</a></h2>
-<p>Authentication is the process of verifying the identity of a user or system. It ensures that the entity requesting access is who they claim to be. Common methods of authentication include:</p>
+<p><a href="https://en.wikipedia.org/wiki/Authentication">Authentication</a> is the process of verifying the identity of a user or system. It ensures that the entity requesting access is who they claim to be. Common methods of authentication include:</p>
 <ul>
 <li>Passwords (very bad)</li>
 <li>Multi-factor authentication (MFA)</li>
@@ -640,7 +640,7 @@ Choosing the best and latest solutions</li>
 <li>Single Sign-On (SSO)</li>
 </ul>
 <h2 id="authorization"><a class="header" href="#authorization">Authorization</a></h2>
-<p>Authorization is the process of determining what an authenticated user or system is allowed to do. It defines the permissions and access levels for different resources. Common authorization models include:</p>
+<p><a href="https://en.wikipedia.org/wiki/Authorization">Authorization</a> is the process of determining what an authenticated user or system is allowed to do. It defines the permissions and access levels for different resources. Common authorization models include:</p>
 <ul>
 <li>Access Control Lists (ACLs)</li>
 <li>Role-Based Access Control (RBAC)</li>
@@ -657,7 +657,7 @@ Choosing the best and latest solutions</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="base"><a class="header" href="#base">BASE</a></h1>
 <p>A concept from NOSQL databases.
-BASE systems prioritize availability instead of immediate consistency.</p>
+<a href="https://aws.amazon.com/compare/the-difference-between-acid-and-base-database/">BASE</a> systems prioritize availability instead of immediate consistency.</p>
 <h2 id="base-properties"><a class="header" href="#base-properties">BASE Properties</a></h2>
 <p>BASE is an acronym that describes the consistency model used by many NoSQL systems. It stands for:</p>
 <p>BA == Basically Available</p>
@@ -672,16 +672,16 @@ Given enough time without new updates, all replicas will eventually converge to 
 <ul>
 <li><strong>GET</strong>: The most famous and common Idempotent. Retrieving a resource multiple times does not change its state.</li>
 </ul>
-<p>Idepotency it's important because if the same request arrives twice(there is not side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences or just re-process the samething again without issues.</p>
+<p><a href="https://en.wikipedia.org/wiki/Idempotence">Idepotency</a> it's important because if the same request arrives twice(there is not side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences or just re-process the samething again without issues.</p>
 <p>Such principle keep us from writing complex software. For instance if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.</p>
 <p>So we want honor the idempotency principle to keep our software simple and predictable.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pessimistic-vs-optimistc-locking"><a class="header" href="#pessimistic-vs-optimistc-locking">Pessimistic vs Optimistc Locking</a></h1>
-<p>When dealing with concurrent access to shared resources, two primary locking strategies can be employed: pessimistic locking and optimistic locking.</p>
+<p>When dealing with concurrent access to shared resources, two primary locking strategies can be employed: <a href="https://en.wikipedia.org/wiki/Lock_(computer_science)">pessimistic locking</a> and <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic locking</a>.</p>
 <p><strong>Pessimistic locking</strong>: assumes that conflicts will occur and therefore locks the resource for exclusive access when a transaction begins. This approach is suitable for environments with high contention, as it prevents other transactions from modifying the resource until the lock is released. However, it can lead to reduced concurrency and potential deadlocks.</p>
 <p><strong>Optimistic locking</strong>: assumes that conflicts are rare and allows multiple transactions to access the resource concurrently. Instead of locking the resource, it checks for conflicts only when a transaction attempts to commit changes. If a conflict is detected, the transaction is rolled back and can be retried. This approach is more efficient in low-contention environments, as it maximizes concurrency and minimizes locking overhead.</p>
 <p>Optimistic locking is often implemented using versioning, where each resource has a version number that is checked and updated during transactions. If the version number has changed since the transaction began, it indicates a conflict.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="partition"><a class="header" href="#partition">Partition</a></h1>
-<p>A <strong>partition</strong> of a set is a way of dividing the data set into subsets such that every element in the original set is included in exactly one of the subsets. In other words, a partition breaks down a set into distinct parts where no part shares any elements with another, and all parts together cover the entire original set.</p>
+<p>A <strong>partition</strong> of a set is a way of dividing the data set into subsets such that every element in the original set is included in exactly one of the subsets. In other words, a <a href="https://en.wikipedia.org/wiki/Partition_(database)">partition</a> breaks down a set into distinct parts where no part shares any elements with another, and all parts together cover the entire original set.</p>
 <p>Partition by:</p>
 <ul>
 <li>A specific column or set of columns</li>
@@ -695,7 +695,7 @@ Given enough time without new updates, all replicas will eventually converge to 
 <p>Partitions matter because they can significantly impact the performance and efficiency of data processing tasks. Proper partitioning can lead to faster query execution, reduced data shuffling, and improved resource utilization in distributed computing environments.</p>
 <p>When designing partitions, consider factors such as data distribution, query patterns, and the underlying storage system to ensure optimal performance.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="schema-evolution"><a class="header" href="#schema-evolution">Schema Evolution</a></h1>
-<p>Schema evolution is the practice of changing data structures, API contracts, or message formats over time while maintaining compatibility with existing clients and services. This is critical for zero-downtime deployments in distributed systems.</p>
+<p><a href="https://en.wikipedia.org/wiki/Schema_evolution">Schema evolution</a> is the practice of changing data structures, API contracts, or message formats over time while maintaining compatibility with existing clients and services. This is critical for zero-downtime deployments in distributed systems.</p>
 <h2 id="forward-compatibility"><a class="header" href="#forward-compatibility">Forward Compatibility</a></h2>
 <p>Forward compatibility means that old code can read data written by new code. The old system can safely ignore new fields it doesn't understand.</p>
 <p>When adding new fields to a schema:</p>
@@ -754,10 +754,10 @@ Given enough time without new updates, all replicas will eventually converge to 
 </ul>
 <p>Schema evolution is not optional in production systems. Every change must consider compatibility to avoid outages during deployments.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="source-of-truth"><a class="header" href="#source-of-truth">SOURCE OF TRUTH</a></h1>
-<p>It's concept that means what database or system is considered the authoritative source for a particular piece of information. It's comon in distributed systems to have multiple databases or even systems that store the same data. In such cases, it's crucial to designate one of these as the "source of truth" to ensure consistency and reliability of the data across the entire system.</p>
+<p>It's concept that means what database or system is considered the authoritative source for a particular piece of information. It's comon in distributed systems to have multiple databases or even systems that store the same data. In such cases, it's crucial to designate one of these as the <a href="https://en.wikipedia.org/wiki/Single_source_of_truth">"source of truth"</a> to ensure consistency and reliability of the data across the entire system.</p>
 <p>The same concept is used in migrations. While you are migrating from System A to System B, System A is the source of truth until the migration is complete and verified. After that, System B becomes the new source of truth.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="stateless-vs-stateful-services"><a class="header" href="#stateless-vs-stateful-services">Stateless vs Stateful Services</a></h1>
-<p>When designing services, one of the key architectural decisions is whether to implement them as stateless or stateful. Stales teless services do not retain any information about previous interactions, while stateful services maintain state information across multiple requests.</p>
+<p>When <a href="https://en.wikipedia.org/wiki/Service_statelessness_principle">designing services</a>, one of the key architectural decisions is whether to implement them as stateless or stateful. Stales teless services do not retain any information about previous interactions, while stateful services maintain state information across multiple requests.</p>
 <p>It's much easier to work with stateless services because they can scale more easily, recover from failures faster, and are generally simpler to manage. However, there are scenarios where stateful services are necessary, such as when maintaining user sessions or handling transactions.</p>
 <p>Staless does not means that the service cannot use state at all; rather, it means that the service itself does not store state between requests. Instead, any necessary state can be stored in external systems like databases or caches. Stateful service are more complex.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-patterns"><a class="header" href="#why-patterns">Why Patterns?</a></h1>
@@ -767,7 +767,7 @@ Given enough time without new updates, all replicas will eventually converge to 
 <div style="break-before: page; page-break-before: always;"></div><h1 id="api-gateway"><a class="header" href="#api-gateway">API GATEWAY</a></h1>
 <p>It's a architecture pattern that acts as a single entry point for a set of microservices, handling requests by routing them to the appropriate service, aggregating responses, and performing cross-cutting tasks such as authentication, logging, and rate limiting.</p>
 <h2 id="api-gateway-vs-load-balancer"><a class="header" href="#api-gateway-vs-load-balancer">API Gateway vs Load Balancer</a></h2>
-<p>An API Gateway and a Load Balancer serve different purposes in a microservices architecture:</p>
+<p>An <a href="https://en.wikipedia.org/wiki/API_management">API Gateway</a> and a Load Balancer serve different purposes in a microservices architecture:</p>
 <ul>
 <li>
 <p><strong>API Gateway</strong>: Primarily focuses on managing and routing API requests. It handles tasks such as request transformation, response aggregation, authentication, and rate limiting. It operates at the application layer (Layer 7) of the OSI model.</p>
@@ -785,7 +785,7 @@ Given enough time without new updates, all replicas will eventually converge to 
 <li><strong>Load Balancing</strong>: Distributes incoming requests across multiple instances of a microservice to ensure high availability and reliability.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="backend-for-frontend-pattern"><a class="header" href="#backend-for-frontend-pattern">Backend for Frontend Pattern</a></h1>
-<p>The Backend for Frontend pattern involves creating separate backend services tailored to the specific needs of different frontend applications. Usually written in a language that is common for the frontend team, meaning: NodeJS with JS ot Typescript.</p>
+<p>The <a href="https://diego-pacheco.blogspot.com/2020/08/bff-dilema.html">Backend for Frontend(BFF)</a> pattern involves creating separate backend services tailored to the specific needs of different frontend applications. Usually written in a language that is common for the frontend team, meaning: NodeJS with JS ot Typescript.</p>
 <p>BFFs should have <code>Rendering Logic</code> and should NEVER have <code>Business Logic</code> because that should be encapsulated in the core backend services.</p>
 <h2 id="bffs-are"><a class="header" href="#bffs-are">BFFs Are</a></h2>
 <ul>
@@ -798,8 +798,8 @@ Given enough time without new updates, all replicas will eventually converge to 
 <p>While both BFF and API Gateway sit between frontends and backend services, they serve different purposes:</p>
 <p><strong>API Gateway</strong>: Provides common functionality like authentication, rate limiting, and routing. It serves all clients with the same generic interface.</p>
 <p><strong>BFF</strong>: Tailors the API specifically to each frontend's needs. It aggregates, transforms, and optimizes responses for a specific client type. Rendering logic is part of the BFF.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="cache"><a class="header" href="#cache">CACHE</a></h1>
-<p>A cache is a software component that stores data so that future requests for that data can be served faster. Caches are commonly used to improve performance and reduce latency in various applications, including web browsers, databases, and operating systems.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cache"><a class="header" href="#cache">Cache</a></h1>
+<p>A <a href="https://en.wikipedia.org/wiki/Cache_(computing)">cache</a> is a software component that stores data so that future requests for that data can be served faster. Caches are commonly used to improve performance and reduce latency in various applications, including web browsers, databases, and operating systems.</p>
 <h2 id="types-of-caches"><a class="header" href="#types-of-caches">Types of Caches</a></h2>
 <ol>
 <li><strong>Memory Cache</strong>: Stores frequently accessed data in RAM for quick retrieval.</li>
@@ -824,11 +824,11 @@ Given enough time without new updates, all replicas will eventually converge to 
 <li><strong>Event-Driven Invalidation</strong>: Invalidating cache entries based on specific events, such as data updates.</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="connection-pool"><a class="header" href="#connection-pool">Connection Pool</a></h1>
-<p>A connection pool is a cache of database connections maintained so that the connections can be reused when future requests to the database are required. Connection pools are used to enhance the performance of executing commands on a database. Opening and maintaining a database connection for each user, especially requests made to a dynamic database-driven website application, is costly and wastes resources.</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Connection_pool">connection pool</a> is a cache of database connections maintained so that the connections can be reused when future requests to the database are required. Connection pools are used to enhance the performance of executing commands on a database. Opening and maintaining a database connection for each user, especially requests made to a dynamic database-driven website application, is costly and wastes resources.</p>
 <p>It's expensive to open and close connections to the database all the time. That's why this objects are created as the application bootup and they are borrowed and returned to the pool as needed.</p>
 <p>Java has a great connection pooling libraries like HikariCP.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="feature-flags"><a class="header" href="#feature-flags">Feature Flags</a></h1>
-<p>Feature flags are runtime configuration switches that enable or disable functionality without deploying new code. They decouple deployment from release, allowing gradual rollouts and instant rollbacks, migrations and A/B testing.</p>
+<p><a href="https://en.wikipedia.org/wiki/Feature_toggle">Feature flags</a> are runtime configuration switches that enable or disable functionality without deploying new code. They decouple deployment from release, allowing gradual rollouts and instant rollbacks, migrations and A/B testing.</p>
 <h2 id="strategies"><a class="header" href="#strategies">Strategies</a></h2>
 <p><strong>Environment Variables</strong>: Simplest approach. Requires restart to change. Good for operational flags.</p>
 <p><strong>Configuration Files</strong>: Load from files on startup or reload periodically. No restart needed if hot-reloaded.</p>
@@ -850,7 +850,7 @@ Given enough time without new updates, all replicas will eventually converge to 
 <p><strong>Flag Proliferation</strong>: Too many flags make system hard to reason about. Be selective.</p>
 <p><strong>Using Flags for Configuration</strong>: Feature flags are not general configuration. Use proper config systems for that.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="load-balancer"><a class="header" href="#load-balancer">Load Balancer</a></h1>
-<p>It's a service that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed, improving application availability and responsiveness.</p>
+<p><a href="https://en.wikipedia.org/wiki/Load_balancing_(computing)">LB</a> It's a service that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed, improving application availability and responsiveness.</p>
 <p>Load balancers can operate at different layers of the OSI model, such as Layer 4 (Transport Layer) and Layer 7 (Application Layer), providing various features like SSL termination, session persistence, and health monitoring of backend servers.</p>
 <h2 id="common-load-balancing-algorithms"><a class="header" href="#common-load-balancing-algorithms">Common Load Balancing Algorithms</a></h2>
 <ol>
@@ -862,7 +862,7 @@ Given enough time without new updates, all replicas will eventually converge to 
 <li><strong>Metric-Based</strong>: Uses specific metrics (like response time or server load) to make load balancing decisions.</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="message-patterns"><a class="header" href="#message-patterns">Message Patterns</a></h1>
-<p>There are different ways to structure message communication between systems.</p>
+<p>There are <a href="https://en.wikipedia.org/wiki/Messaging_pattern">different</a> ways to structure message communication between systems.</p>
 <h2 id="publishsubscribe-pattern"><a class="header" href="#publishsubscribe-pattern">Publish/Subscribe Pattern</a></h2>
 <p>Publishers send messages to a topic or channel without knowing who will receive them. Subscribers express interest in specific topics and receive all messages published to those topics.</p>
 <p>Pub/Sub Nature:</p>
@@ -905,7 +905,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><strong>No Ordering</strong>: Messages may be processed in any order for maximum throughput.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="message-id"><a class="header" href="#message-id">Message Id</a></h1>
-<p>Also know as CORRELATION_ID. The idea that each message or request must have a uniqui id, and you will pass down such id into the dowstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID.</p>
+<p><a href="https://en.wikipedia.org/wiki/Message-ID">Message ID</a> Also know as CORRELATION_ID. The idea that each message or request must have a uniqui id, and you will pass down such id into the dowstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID.</p>
 <p>Why this is important?</p>
 <ul>
 <li>Traceability: When you have a unique MESSAGE_ID for each request, you can trace the entire lifecycle of that request across multiple services. This is especially useful in microservices architectures where a single user action may trigger multiple service calls.</li>
@@ -914,7 +914,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </ul>
 <p>without a MESSAGE_ID, it because impossible to debug distrubuted systems.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pagination"><a class="header" href="#pagination">Pagination</a></h1>
-<p>When you have a endpoint that returns a large list of items, it is often useful to paginate the results. This means breaking the results into smaller chunks, or "pages", that can be retrieved one at a time.</p>
+<p>When you have a endpoint that returns a large list of items, it is often useful to <a href="https://www.merge.dev/blog/rest-api-pagination">paginate</a> the results. This means breaking the results into smaller chunks, or "pages", that can be retrieved one at a time.</p>
 <p>Basic benefit here is to reduce the amount of data transferred in a single request, which can improve performance and reduce load on the server. Less latency and more responsive applications are the end result.</p>
 <h2 id="pagination-strategies"><a class="header" href="#pagination-strategies">Pagination Strategies</a></h2>
 <ol>
@@ -924,7 +924,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><strong>Keyset Pagination</strong>: This method uses the values of the last item in the current page to determine the starting point for the next page. For example, if the last item on the current page has an ID of 50, the next request might be <code>GET /items?after_id=50&amp;limit=10</code>.</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="queue"><a class="header" href="#queue">Queue</a></h1>
-<p>Queue it's a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front.</p>
+<p><a href="https://en.wikipedia.org/wiki/Message_queue">Queue</a> it's a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front.</p>
 <p>In distributed systems, queues are often used to manage tasks, messages, or data that need to be processed asynchronously. They help in decoupling different parts of a system, allowing for better scalability and fault tolerance.</p>
 <p>Queues use cases are:</p>
 <ul>
@@ -942,7 +942,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><strong>Backpressure</strong>: If the rate of incoming messages exceeds the processing capacity, it can lead to increased latency and potential message loss.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="retry"><a class="header" href="#retry">Retry</a></h1>
-<p>Retry is a technique used in distributed systems to handle transient failures by attempting an operation multiple times before giving up. This approach is particularly useful in distributed systems, where network issues or temporary unavailability of services can lead to failures that may be resolved with subsequent attempts.</p>
+<p><a href="https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/">Retry</a> is a technique used in distributed systems to handle transient failures by attempting an operation multiple times before giving up. This approach is particularly useful in distributed systems, where network issues or temporary unavailability of services can lead to failures that may be resolved with subsequent attempts.</p>
 <h2 id="timeouts"><a class="header" href="#timeouts">Timeouts</a></h2>
 <p>When implementing retries, it is important to set appropriate timeouts for each attempt. A timeout defines how long the system should wait for a response before considering the attempt a failure. Setting too short a timeout may lead to unnecessary retries, while too long a timeout can delay the overall operation.</p>
 <h2 id="progressive-backoff"><a class="header" href="#progressive-backoff">Progressive Backoff</a></h2>
@@ -954,8 +954,8 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </ul>
 <h2 id="thumdering-herd-problem"><a class="header" href="#thumdering-herd-problem">Thumdering Herd Problem</a></h2>
 <p>The thundering herd problem occurs when multiple clients simultaneously retry an operation after a failure, leading to a sudden surge in requests that can overwhelm the system. To mitigate this issue, techniques such as jitter in backoff strategies and limiting the number of concurrent retries can be employed.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="web-hook"><a class="header" href="#web-hook">Web hook</a></h1>
-<p>A web hook it's just a endpoint in an API or REST server. A web hook is used to notify internal/external services when certain events happen.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="webhook"><a class="header" href="#webhook">Webhook</a></h1>
+<p>A <a href="https://en.wikipedia.org/wiki/Webhook">webhook</a> it's just a endpoint in an API or REST server. A web hook is used to notify internal/external services when certain events happen.</p>
 <p>When an event occurs, the server makes an HTTP request (usually a POST request) to the specified URL of the web hook, sending relevant data about the event.</p>
 <p>Web hooks are commonly used for:</p>
 <ul>
@@ -985,7 +985,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <p>Architecture must be visual, it's important to have visual diagrams. IMHO there are least 3 diagrams that are very, very useful for architects:</p>
 <ul>
 <li>Overall Architecture Diagram: You can see the big pucture, you see how services talk to each other, you see the main components.</li>
-<li>Class Diagram: Can be useful for 2 common scenarios. A) Internal modeling of a system or B) Modeling tables in a database.</li>
+<li>Class Diagram: Can be useful for 2 common scenarios. A) <a href="https://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html">Internal modeling</a> of a system or B) Modeling tables in a database.</li>
 <li>Sequence/state diagrams: Useful to understand how a system works internally, how data flows through the system. I would not have hundreds of theese, the goal here is not have one per UI. The goal is to have for the most important and most complex things.</li>
 </ul>
 <p>The best paid diagram tool is <a href="https://www.lucidchart.com/">LucidCHART</a>. The best free diagram tool is <a href="https://app.diagrams.net/">Diagrams.net</a>.</p>
@@ -1030,7 +1030,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Socialize with other architects, share experiences, ask for feedback.</li>
 </ol>
 <h2 id="final-thoughts"><a class="header" href="#final-thoughts">Final Thoughts</a></h2>
-<p>Architecture it's hard. It's a battle it must be fight everyday. There is no done, there is not resting, so you can't do all thst without love. If you dont have love and passion for learning and teaching you can't be a good architect.</p>
+<p>Architecture it's hard. It's a battle it must be <a href="https://diego-pacheco.blogspot.com/2023/08/fighting-complexity.html">fight</a> everyday. There is no done, there is not resting, so you can't do all thst without love. If you dont have love and passion for learning and teaching you can't be a good architect.</p>
 <p>The good news is that you can be inspired and you can be a different person tomorrow. To create better architecture you must become a better architect. Thinking is cheap but is hard at the same time. So spead more time thinking and experimenting.</p>
 <p>One last advice, do not forget about output. If you just read, that's not good enought you need put it out, so other can review, so you can see if you really know and if is really good.</p>
 <p>Architecture is all about decisions, it's all about trade-offs, so you need to be sure that you are making the right decisions. The only way to be sure is to keep learning and teaching.</p>
@@ -1052,22 +1052,6 @@ This pattern combines aspects of both synchronous and asynchronous communication
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

@@ -181,7 +181,7 @@
                     <main>
                         <h1 id="authentication--authorization--entitlements"><a class="header" href="#authentication--authorization--entitlements">Authentication &amp; Authorization &amp; Entitlements</a></h1>
 <h2 id="authentication"><a class="header" href="#authentication">Authentication</a></h2>
-<p>Authentication is the process of verifying the identity of a user or system. It ensures that the entity requesting access is who they claim to be. Common methods of authentication include:</p>
+<p><a href="https://en.wikipedia.org/wiki/Authentication">Authentication</a> is the process of verifying the identity of a user or system. It ensures that the entity requesting access is who they claim to be. Common methods of authentication include:</p>
 <ul>
 <li>Passwords (very bad)</li>
 <li>Multi-factor authentication (MFA)</li>
@@ -191,7 +191,7 @@
 <li>Single Sign-On (SSO)</li>
 </ul>
 <h2 id="authorization"><a class="header" href="#authorization">Authorization</a></h2>
-<p>Authorization is the process of determining what an authenticated user or system is allowed to do. It defines the permissions and access levels for different resources. Common authorization models include:</p>
+<p><a href="https://en.wikipedia.org/wiki/Authorization">Authorization</a> is the process of determining what an authenticated user or system is allowed to do. It defines the permissions and access levels for different resources. Common authorization models include:</p>
 <ul>
 <li>Access Control Lists (ACLs)</li>
 <li>Role-Based Access Control (RBAC)</li>
@@ -236,22 +236,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
