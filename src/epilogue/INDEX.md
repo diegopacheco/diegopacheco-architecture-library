@@ -192,6 +192,9 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 **Reading Code**
 [Pratices](../pratices/READING_CODE.md)
 
+**References**
+[References](REFERENCES.md)
+
 **Requirements**
 [Anti-Patterns](../anti-patterns/REQUIREMENTS.md)
 
@@ -248,6 +251,17 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 **Web Hook**
 [Patterns](../patterns/WEB_HOOK.md)
 
+**Why Sections**
+[Why Zero?](../zero/WHY.md) |
+[Why Philosophy?](../philosofy/WHY.md) |
+[Why Anti-Patterns?](../anti-patterns/WHY.md) |
+[Why Dilemmas?](../dilemmas/WHY.md) |
+[Why Properties?](../properties/WHY.md) |
+[Why Practices?](../pratices/WHY.md) |
+[Why Concepts?](../concepts/WHY.md) |
+[Why Patterns?](../patterns/WHY.md) |
+[Why Tools?](../tools/WHY.md)
+
 **Working on Trenches**
 [Pratices](../pratices/WORKING_ON_TRENCHES.md)
 
@@ -264,9 +278,11 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 ## By Chapter
 
 ### Chapter 0 - Zero
+* [Why Zero?](../zero/WHY.md)
 * [Rationale](../zero/RATIONALE.md)
 
 ### Chapter 1 - Philosophy
+* [Why Philosophy?](../philosofy/WHY.md)
 * [Crystal Ball](../philosofy/CRYSTAL_BALL.md)
 * [Defensive Programming](../philosofy/DEFENSIVE.md)
 * [Doing Hard Things](../philosofy/DOING_HARD_THINGS.md)
@@ -276,18 +292,21 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 * [Protect Your Time](../philosofy/PROTECT_YOUR_TIME.md)
 
 ### Chapter 2 - Anti-Patterns
+* [Why Anti-Patterns?](../anti-patterns/WHY.md)
 * [Tech Debt Plague](../anti-patterns/TECH_DEBT_PLAGUE.md)
 * [Ignore Culture](../anti-patterns/IGNORE_CULTURE.md)
 * [Stagnation](../anti-patterns/STAGNATION.md)
 * [Requirements](../anti-patterns/REQUIREMENTS.md)
 
 ### Chapter 3 - Dilemmas
+* [Why Dilemmas?](../dilemmas/WHY.md)
 * [Discovery vs Delivery](../dilemmas/DISCOVERY_VS_DELIVERY.md)
 * [Move Fast vs Do it Right](../dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md)
 * [Build vs Buy](../dilemmas/BUILD_VS_BUY.md)
 * [Decide or Wait](../dilemmas/DECIDE_OR_WAIT.md)
 
 ### Chapter 4 - Properties
+* [Why Properties?](../properties/WHY.md)
 * [Anti-Fragility](../properties/ANTI-FRAGILITY.md)
 * [State of the Art](../properties/STATE-OF-THE-ART.md)
 * [Scalability](../properties/SCALABILITY.md)
@@ -296,6 +315,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 * [Secure](../properties/SECURE.md)
 
 ### Chapter 5 - Practices
+* [Why Practices?](../pratices/WHY.md)
 * [Attention to Detail](../pratices/ATTENTION_TO_DETAIL.md)
 * [Architecture Review](../pratices/ARCH_REVIEW.md)
 * [Design First](../pratices/DESIGN_FIRST.md)
@@ -305,6 +325,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 * [Working on Trenches](../pratices/WORKING_ON_TRENCHES.md)
 
 ### Chapter 6 - Concepts
+* [Why Concepts?](../concepts/WHY.md)
 * [ACID](../concepts/ACID.md)
 * [Authentication & Authorization](../concepts/AUTHENT.md)
 * [BASE](../concepts/BASE.md)
@@ -316,6 +337,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 * [Stateless vs Stateful Services](../concepts/STATELESS_VS_STATEFULL_SVC.md)
 
 ### Chapter 7 - Patterns
+* [Why Patterns?](../patterns/WHY.md)
 * [API Gateway](../patterns/API_GATEWAY.md)
 * [BFF Pattern](../patterns/BFF_PATTERN.md)
 * [Cache](../patterns/CACHE.md)
@@ -330,6 +352,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 * [Web Hook](../patterns/WEB_HOOK.md)
 
 ### Chapter 8 - Tools
+* [Why Tools?](../tools/WHY.md)
 * [Diagraming Tools](../tools/DIAGRAMING.md)
 * [Writing Tools](../tools/WRITING.md)
 * [Thinking Tools](../tools/THINKING.md)
@@ -337,5 +360,6 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 ### Chapter 9 - Epilogue
 * [Glossary](GLOSSARY.md)
 * [Resources](RESOURCES.md)
+* [References](REFERENCES.md)
 * [Epilogue](IN_THE_END.md)
 * [Index](INDEX.md)
