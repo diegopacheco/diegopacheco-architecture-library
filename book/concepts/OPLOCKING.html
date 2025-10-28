@@ -179,7 +179,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="pessimistic-vs-optimistc-locking"><a class="header" href="#pessimistic-vs-optimistc-locking">Pessimistic vs Optimistc Locking</a></h1>
+                        <h1 id="pessimistic-vs-optimistic-locking"><a class="header" href="#pessimistic-vs-optimistic-locking">Pessimistic vs Optimistic Locking</a></h1>
 <p>When dealing with concurrent access to shared resources, two primary locking strategies can be employed: <a href="https://en.wikipedia.org/wiki/Lock_(computer_science)">pessimistic locking</a> and <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic locking</a>.</p>
 <p><strong>Pessimistic locking</strong>: assumes that conflicts will occur and therefore locks the resource for exclusive access when a transaction begins. This approach is suitable for environments with high contention, as it prevents other transactions from modifying the resource until the lock is released. However, it can lead to reduced concurrency and potential deadlocks.</p>
 <p><strong>Optimistic locking</strong>: assumes that conflicts are rare and allows multiple transactions to access the resource concurrently. Instead of locking the resource, it checks for conflicts only when a transaction attempts to commit changes. If a conflict is detected, the transaction is rolled back and can be retried. This approach is more efficient in low-contention environments, as it maximizes concurrency and minimizes locking overhead.</p>

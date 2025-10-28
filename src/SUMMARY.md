@@ -9,7 +9,7 @@
 # 1. Chapter 1 - Philosophy
 
 - [Why](philosofy/WHY.md)
-- [Crystall Ball](philosofy/CRYSTAL_BALL.md)
+- [Crystal Ball](philosofy/CRYSTAL_BALL.md)
 - [Defensive Programming](philosofy/DEFENSIVE.md)
 - [Doing Hard Things](philosofy/DOING_HARD_THINGS.md)
 - [Frontend vs Backend](philosofy/FRONTEND_VS_BACKEND.md)
@@ -40,10 +40,10 @@
 Choosing the best and latest solutions
 - [Scalability](properties/SCALABILITY.md) - Designing for growth and load
 - [Observability](properties/OBSERVABLE.md) - Monitoring and understanding system behavior
-- [Stability](properties/STABILITY.md) - Ensuring stable daily pratices.
-- [Secure](properties/SECURE.md) - Embeding security in architecture
+- [Stability](properties/STABILITY.md) - Ensuring stable daily practices.
+- [Secure](properties/SECURE.md) - Embedding security in architecture
 
-# 5. Chapter 5 - Pratices
+# 5. Chapter 5 - Practices
 
 - [Why](pratices/WHY.md)
 - [Attention to Detail](pratices/ATTENTION_TO_DETAIL.md)

@@ -1,6 +1,6 @@
-# Defensive Programing
+# Defensive Programming
 
-[Defensive programming](https://en.wikipedia.org/wiki/Defensive_programming) is a design approach that emphasizes anticipating and handling potential errors or unexpected inputs in software development. For instance you always:
+[Defensive programming](https://en.wikipedia.org/wiki/Defensive_programming) is a design approach that emphasizes anticipating and handling potential errors or unexpected inputs in software development. For instance, you always:
 * Validate inputs to ensure they meet expected formats and constraints.
 * Handle [exceptions gracefully](https://diego-pacheco.blogspot.com/2024/09/proper-error-handling.html) to prevent crashes and provide meaningful error messages.
 * Design functions and methods to be robust against invalid or unexpected inputs.
@@ -8,7 +8,7 @@
 
 Your code should be resilient. It should not break that easily.
 
-Considering the following sudo-code with Scala 3x:
+Consider the following pseudo-code with Scala 3x:
 
 ```scala
 class ProducService(
@@ -37,4 +37,4 @@ class ProducService(
 }
 ```
 
-You see that there is validations. We dont blindly trust the input. We check if the price is negative. If it is, we throw an exception. This is defensive programming in action.
+You see that there are validations. We do not blindly trust the input. We check if the price is negative. If it is, we throw an exception. This is defensive programming in action.

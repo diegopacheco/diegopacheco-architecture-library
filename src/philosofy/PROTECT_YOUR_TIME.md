@@ -1,5 +1,5 @@
 # Protect Your Time
 
-It's very easy to be consumed with meetings 100% of the time. However the architect must protect his time in order to do deep work. Research, Monthly Reviews, Crystall Balling, thinking about trade-offs, evaluating solutions and reading code.
+It is very easy to be consumed with meetings 100% of the time. However, the architect must protect their time in order to do deep work: research, monthly reviews, crystal balling, thinking about trade-offs, evaluating solutions, and reading code.
 
-At minimun you should book at least 3x per week 3-6h to do deep work. Does not matter if is in the morning or aftermoon, whatever is easier. Hold your ground, push back, and protect that time. Architects must think.
+At minimum, you should book at least 3 times per week for 3-6 hours to do deep work. It does not matter if it is in the morning or afternoon, whatever is easier. Hold your ground, push back, and protect that time. Architects must think.

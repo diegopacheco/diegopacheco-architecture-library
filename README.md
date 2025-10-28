@@ -53,7 +53,7 @@ This will update both the `VERSION` file and `theme/version.js`.
 
 1. Chapter 1 - Philosophy:
 - [Why](src/philosofy/WHY.md)
-- [Crystall Ball](src/philosofy/CRYSTAL_BALL.md) - Think about future changes
+- [Crystal Ball](src/philosofy/CRYSTAL_BALL.md) - Think about future changes
 - [Defensive Programming](src/philosofy/DEFENSIVE.md) - Anticipating and handling errors
 - [Doing Hard Things](src/philosofy/DOING_HARD_THINGS.md) - Tackling complex problems head-on
 - [Frontend vs Backend](src/philosofy/FRONTEND_VS_BACKEND.md) - Design philosophy differences
@@ -83,11 +83,11 @@ This will update both the `VERSION` file and `theme/version.js`.
 Choosing the best and latest solutions
 - [Scalability](src/properties/SCALABILITY.md) - Designing for growth and load
 - [Observability](src/properties/OBSERVABLE.md) - Monitoring and understanding system behavior
-- [Stability](src/properties/STABILITY.md) - Ensuring stable daily pratices.
-- [Secure](src/properties/SECURE.md) - Embeding security in architecture
+- [Stability](src/properties/STABILITY.md) - Ensuring stable daily practices.
+- [Secure](src/properties/SECURE.md) - Embedding security in architecture
 
 
-5. Chapter 5 - Pratices:
+5. Chapter 5 - Practices:
 - [Why](src/pratices/WHY.md)
 - [Attention to Detail](src/pratices/ATTENTION_TO_DETAIL.md) - Architect with precision and care
 - [Architecture Review](src/pratices/ARCH_REVIEW.md) - Documenting architecture for communication and improvements

@@ -179,8 +179,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="defensive-programing"><a class="header" href="#defensive-programing">Defensive Programing</a></h1>
-<p><a href="https://en.wikipedia.org/wiki/Defensive_programming">Defensive programming</a> is a design approach that emphasizes anticipating and handling potential errors or unexpected inputs in software development. For instance you always:</p>
+                        <h1 id="defensive-programming"><a class="header" href="#defensive-programming">Defensive Programming</a></h1>
+<p><a href="https://en.wikipedia.org/wiki/Defensive_programming">Defensive programming</a> is a design approach that emphasizes anticipating and handling potential errors or unexpected inputs in software development. For instance, you always:</p>
 <ul>
 <li>Validate inputs to ensure they meet expected formats and constraints.</li>
 <li>Handle <a href="https://diego-pacheco.blogspot.com/2024/09/proper-error-handling.html">exceptions gracefully</a> to prevent crashes and provide meaningful error messages.</li>
@@ -188,7 +188,7 @@
 <li>Avoid <a href="https://diego-pacheco.blogspot.com/2020/08/null-validations-and-exceptions.html">nulls</a> at all cost.</li>
 </ul>
 <p>Your code should be resilient. It should not break that easily.</p>
-<p>Considering the following sudo-code with Scala 3x:</p>
+<p>Consider the following pseudo-code with Scala 3x:</p>
 <pre><code class="language-scala">class ProducService(
     @Autowired productRepository: ProductRepository,
     @Autowired logger: Logger
@@ -214,7 +214,7 @@
     }
 }
 </code></pre>
-<p>You see that there is validations. We dont blindly trust the input. We check if the price is negative. If it is, we throw an exception. This is defensive programming in action.</p>
+<p>You see that there are validations. We do not blindly trust the input. We check if the price is negative. If it is, we throw an exception. This is defensive programming in action.</p>
 
                     </main>
 

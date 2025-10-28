@@ -1,6 +1,6 @@
 # ACID
 
-[ACID](https://en.wikipedia.org/wiki/ACID) it's a property of database transactions intended to guarantee validity even in the event of errors, power failures. It's a RELATIONAL database concept.
+[ACID](https://en.wikipedia.org/wiki/ACID) is a property of database transactions intended to guarantee validity even in the event of errors or power failures. It is a RELATIONAL database concept.
 
 ## A == Atomicity
 
@@ -20,4 +20,4 @@ This prevents transactions from reading uncommitted data from other transactions
 
 ## D == Durability
 
-Durability guarantees that once a transaction has been committed, it will remain so, even in the event of a system failure. Committed data is saved to non-volatile storage, ensuring that it is not lost. Usualy using a WAL (Write Ahead Log) to achieve this.
+Durability guarantees that once a transaction has been committed, it will remain so, even in the event of a system failure. Committed data is saved to non-volatile storage, ensuring that it is not lost. Usually using a WAL (Write Ahead Log) to achieve this.

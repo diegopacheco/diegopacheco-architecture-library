@@ -181,8 +181,8 @@
                     <main>
                         <h1 id="stateless-vs-stateful-services"><a class="header" href="#stateless-vs-stateful-services">Stateless vs Stateful Services</a></h1>
 <p>When <a href="https://en.wikipedia.org/wiki/Service_statelessness_principle">designing services</a>, one of the key architectural decisions is whether to implement them as stateless or stateful. <a href="https://diego-pacheco.blogspot.com/2024/12/state.html">State</a> is a big thing. Stateless services do not retain any information about previous interactions, while stateful services maintain state information across multiple requests.</p>
-<p>It's much easier to work with stateless services because they can scale more easily, recover from failures faster, and are generally simpler to manage. However, there are scenarios where stateful services are necessary, such as when maintaining user sessions or handling transactions.</p>
-<p>Staless does not means that the service cannot use state at all; rather, it means that the service itself does not store state between requests. Instead, any necessary state can be stored in external systems like databases or caches. Stateful service are more complex.</p>
+<p>It is much easier to work with stateless services because they can scale more easily, recover from failures faster, and are generally simpler to manage. However, there are scenarios where stateful services are necessary, such as when maintaining user sessions or handling transactions.</p>
+<p>Stateless does not mean that the service cannot use state at all; rather, it means that the service itself does not store state between requests. Instead, any necessary state can be stored in external systems like databases or caches. Stateful services are more complex.</p>
 
                     </main>
 

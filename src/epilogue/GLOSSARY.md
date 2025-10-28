@@ -97,6 +97,9 @@ A pagination method using a cursor (unique identifier) to mark the starting poin
 **Data Synchronization**
 The process of keeping data consistent across multiple systems.
 
+**Deep Work**
+Focused, uninterrupted time that architects must protect for research, thinking about trade-offs, evaluating solutions, and reading code, typically 3-6 hours at least 3 times per week.
+
 **Decide or Wait Dilemma**
 The decision of whether to make timely decisions or wait for more information.
 
@@ -105,6 +108,9 @@ A design approach emphasizing anticipating and handling potential errors or unex
 
 **Design First**
 A practice of producing the design before implementation, documented and communicated to the team.
+
+**Diagrams.net**
+A free, open-source diagram tool for creating architecture diagrams, flowcharts, and technical documentation visuals.
 
 **Discovery vs Delivery Dilemma**
 The balance between exploring what to build (discovery) and executing the build (delivery).
@@ -122,6 +128,9 @@ Security measures to protect data during transmission and while stored.
 
 **Entitlements**
 Specific rights or privileges granted to a user or system after authentication and authorization, defining what actions can be performed on resources.
+
+**Evernote**
+A note-taking and organization application that can be used by architects for documenting ideas, principles, and architectural decisions.
 
 **Event Sourcing**
 A technique storing a sequence of events that can be processed later to reconstruct system state.
@@ -153,6 +162,12 @@ When old code can read data written by new code, allowing old services to safely
 A search capability like OpenSearch or Elasticsearch for searching large product catalogs.
 
 ## G
+
+**GitOps**
+A practice using Git repositories as the single source of truth for declarative infrastructure and applications, enhancing security by reducing the need to share admin credentials with developers and providing history of all changes through Git.
+
+**Grammarly**
+An AI-powered writing assistant tool that helps improve grammar, spelling, and clarity in documentation and architectural writing.
 
 **Gatekeeping**
 An anti-pattern where architects act as bottlenecks by requiring approval for all decisions, reducing team autonomy and slowing delivery.
@@ -200,6 +215,9 @@ A pagination method using values of the last item in the current page to determi
 
 ## L
 
+**LucidChart**
+A paid, professional diagramming tool for creating architecture diagrams, flowcharts, and system design visualizations.
+
 **Latency Distribution Metrics**
 Metrics measuring response time distribution for upstream and downstream dependencies.
 
@@ -220,14 +238,20 @@ A service that distributes incoming network traffic across multiple servers to e
 
 ## M
 
+**Markdown**
+A lightweight markup language used for creating formatted text using plain text, commonly used for documentation, README files, and technical writing. Simple, portable, and works well with AI grammar tools.
+
+**Mental Models**
+Structured ways of thinking and understanding concepts that help architects learn faster, understand complex topics better, make better decisions, and solve problems more effectively.
+
 **Message ID (Correlation ID)**
 A unique identifier for each message or request that is passed through downstream services to enable traceability and debugging.
 
 **Metric-Based Load Balancing**
 A load balancing algorithm that distributes traffic based on real-time metrics like CPU usage, memory consumption, or response times.
 
-**Microservices (Pattern)**
-An architectural pattern dividing systems into small, independently deployable services.
+**Mind Maps**
+A visual thinking tool that helps organize information hierarchically, useful for brainstorming and exploring architectural alternatives, though some architects prefer plain text files with good structure.
 
 **MinIO**
 An open-source object storage system compatible with Amazon S3 API, often used as a self-hosted alternative to AWS S3.
@@ -293,7 +317,10 @@ An authorization approach where policies are expressed as code.
 An authorization model that uses policies to define what users or systems can do.
 
 **Proof of Concepts (PoCs)**
-A technique to explore problems and technologies before producing the design.
+A technique to explore problems and technologies before producing the design, serving as a laboratory for thinking and experimentation.
+
+**Protect Your Time**
+A practice of safeguarding time for deep work by blocking calendar time, pushing back on excessive meetings, and maintaining focus periods for thinking and research.
 
 **Publish/Subscribe Pattern**
 A messaging pattern where publishers send messages to topics and subscribers express interest in specific topics to receive all published messages.
@@ -396,6 +423,12 @@ Services that do not retain information about previous interactions; any necessa
 
 ## T
 
+**Thinking Tools**
+Tools and techniques architects use for exploring alternatives, evaluating trade-offs, and solving problems creatively, including plain text files, markdown, diagrams, and proof of concepts.
+
+**Trade-offs**
+The balance between competing concerns in architecture decisions, such as performance versus maintainability, speed versus quality, or simplicity versus flexibility. Understanding and documenting trade-offs is essential for making informed architectural decisions.
+
 **Tactical Programming**
 A short-term focused programming approach prioritizing immediate features over long-term design quality, often leading to technical debt.
 
@@ -438,6 +471,9 @@ A technology for real-time bidirectional communication between client and server
 
 **Write Ahead Log (WAL)**
 A database durability technique where changes are first written to a sequential log before being applied to the database, ensuring recoverability.
+
+**Writing (Documentation)**
+A critical practice for architects to document principles, guidelines, trade-offs, and decisions. Writing scales communication across teams and creates lasting records that can be reviewed and improved over time.
 
 **Working in the Trenches (Gemba)**
 A practice based on the Lean principle of "going to the real place" where work is done to understand processes and identify improvements.

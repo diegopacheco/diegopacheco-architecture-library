@@ -179,15 +179,15 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="idepotency"><a class="header" href="#idepotency">IDEPOTENCY</a></h1>
-<p>It's a interesting property that allow the same operation to be performed multiple times without changing the result beyond the initial application.</p>
+                        <h1 id="idempotency"><a class="header" href="#idempotency">IDEMPOTENCY</a></h1>
+<p>It is an interesting property that allows the same operation to be performed multiple times without changing the result beyond the initial application.</p>
 <p>In REST APIs, idempotency is an important concept, especially for HTTP methods. Here are some common HTTP methods like GET, HEAD, OPTIONS, TRACE, PUT.</p>
 <ul>
 <li><strong>GET</strong>: The most famous and common Idempotent. Retrieving a resource multiple times does not change its state.</li>
 </ul>
-<p><a href="https://en.wikipedia.org/wiki/Idempotence">Idepotency</a> it's important because if the same request arrives twice(there is not side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences or just re-process the samething again without issues.</p>
-<p>Such principle keep us from writing complex software. For instance if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.</p>
-<p>So we want honor the idempotency principle to keep our software simple and predictable.</p>
+<p><a href="https://en.wikipedia.org/wiki/Idempotence">Idempotency</a> is important because if the same request arrives twice (there are no side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences, or just re-process the same thing again without issues.</p>
+<p>Such principle keeps us from writing complex software. For instance, if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.</p>
+<p>So we want to honor the idempotency principle to keep our software simple and predictable.</p>
 
                     </main>
 

@@ -4,4 +4,4 @@ Properties are characteristics or attributes that define or describe an object, 
 
 Properties are things you really want for your architecture and systems. Think about a kid, you want your son or daughter to have good properties like honesty, kindness, and respectfulness. Similarly, in architecture and systems, we want properties that ensure scalability, security, and observability.
 
-Some properties are obvious, others are non-obvious. But if you know they exist you can make explict work to make sure theu are present in your architecture and systems.
+Some properties are obvious, others are non-obvious. But if you know they exist, you can make explicit work to make sure they are present in your architecture and systems.

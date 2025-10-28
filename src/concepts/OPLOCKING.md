@@ -1,4 +1,4 @@
-# Pessimistic vs Optimistc Locking
+# Pessimistic vs Optimistic Locking
 
 When dealing with concurrent access to shared resources, two primary locking strategies can be employed: [pessimistic locking](https://en.wikipedia.org/wiki/Lock_(computer_science)) and [optimistic locking](https://en.wikipedia.org/wiki/Optimistic_concurrency_control).
 

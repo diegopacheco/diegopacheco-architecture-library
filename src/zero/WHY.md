@@ -1,3 +1,3 @@
 # Why Zero?
 
-IF you are a engineer you know we supose to start couting in ZERO. For some reason books always start on one, so I had to make this one start on `0`.
+If you are an engineer, you know we are supposed to start counting at ZERO. For some reason, books always start at one, so I had to make this one start at `0`.
