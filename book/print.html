@@ -360,6 +360,7 @@ Choosing the best and latest solutions</li>
 <ul>
 <li><a href="epilogue/IN_THE_END.html">Epilogue</a> - Final thoughts and next steps</li>
 <li><a href="epilogue/RESOURCES.html">Resources</a> - Recommended books and learning materials</li>
+<li><a href="../CHANGELOG.html">Changelog</a> - Updates and revisions to the book</li>
 <li><a href="epilogue/REFERENCES.html">References</a> - External blog posts, articles, and technical documentation</li>
 <li><a href="epilogue/GLOSSARY.html">Glossary</a> - Definitions of key terms used in the book</li>
 <li><a href="epilogue/INDEX.html">Index</a> - Complete index of topics covered in the book</li>
@@ -1133,6 +1134,69 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </ul>
 <h2 id="external-links"><a class="header" href="#external-links">External Links</a></h2>
 <p>For a comprehensive collection of blog posts, articles, technical documentation, and external resources, please see <a href="epilogue/REFERENCES.html">References</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<h2 id="102---2025-10-28"><a class="header" href="#102---2025-10-28">[1.0.2] - 2025-10-28</a></h2>
+<h3 id="changed"><a class="header" href="#changed">Changed</a></h3>
+<ul>
+<li>Enhanced ANTI-FRAGILITY.md with additional content</li>
+<li>Expanded OSS.md with more open source insights</li>
+<li>Extended PROTECT_YOUR_TIME.md with additional time management content</li>
+<li>Enhanced SO.md with more service orientation practices</li>
+<li>Updated CRYSTAL_BALL.md with additional insights</li>
+<li>Improved STAGNATION.md anti-pattern documentation</li>
+<li>Expanded GLOSSARY.md with more architectural terms</li>
+</ul>
+<h3 id="added"><a class="header" href="#added">Added</a></h3>
+<ul>
+<li>CHANGELOG.md file to track changes and updates</li>
+</ul>
+<h2 id="101---2025-10-27"><a class="header" href="#101---2025-10-27">[1.0.1] - 2025-10-27</a></h2>
+<h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
+<ul>
+<li>Chapter 0 (Zero) with rationale and reasoning behind the book</li>
+<li>Chapter 2 (Anti-Patterns): TECH_DEBT_PLAGUE, IGNORE_CULTURE, STAGNATION, REQUIREMENTS</li>
+<li>Chapter 3 (Dilemmas): DISCOVERY_VS_DELIVERY, MOVE_FAST_VS_DO_IT_RIGHT, BUILD_VS_BUY, DECIDE_OR_WAIT</li>
+<li>Chapter 4 (Properties): ANTI-FRAGILITY, STATE-OF-THE-ART, SCALABILITY, OBSERVABLE, STABILITY, SECURE</li>
+<li>Chapter 7 (Patterns) as separate section from Concepts</li>
+<li>Chapter 8 (Tools): DIAGRAMING, WRITING, THINKING</li>
+<li>Chapter 9 (Epilogue): IN_THE_END, RESOURCES, REFERENCES, GLOSSARY, INDEX</li>
+<li>CONNECTION_POOL pattern documentation</li>
+<li>WHY sections across all chapters explaining rationale</li>
+<li>GitHub Pages deployment workflow</li>
+<li>Glossary with architectural terms and definitions</li>
+<li>Index for topic navigation</li>
+<li>Resources section with books and learning materials</li>
+<li>References section with external links</li>
+</ul>
+<h3 id="changed-1"><a class="header" href="#changed-1">Changed</a></h3>
+<ul>
+<li>Reorganized book structure into numbered chapters</li>
+<li>Separated Concepts and Patterns into distinct chapters</li>
+<li>Moved pattern files from /concepts to /patterns directory</li>
+<li>Enhanced defensive programming content</li>
+<li>Expanded crystal ball philosophy</li>
+<li>Improved English grammar and readability</li>
+<li>Updated table of contents and navigation</li>
+</ul>
+<h3 id="fixed"><a class="header" href="#fixed">Fixed</a></h3>
+<ul>
+<li>Page rendering issues</li>
+<li>Documentation structure inconsistencies</li>
+</ul>
+<h2 id="100---2025-10-27"><a class="header" href="#100---2025-10-27">[1.0.0] - 2025-10-27</a></h2>
+<h3 id="added-2"><a class="header" href="#added-2">Added</a></h3>
+<ul>
+<li>Initial project setup with mdBook</li>
+<li>Introduction and cover page</li>
+<li>Philosophy section: CRYSTAL_BALL, DEFENSIVE, DOING_HARD_THINGS, FRONTEND_VS_BACKEND, OSS, SO</li>
+<li>Practices section: ATTENTION_TO_DETAIL, ARCH_REVIEW, DESIGN_FIRST, OWNERSHIP, READING_CODE, MONTHLY_REVIEW, WORKING_ON_TRENCHES</li>
+<li>Concepts and Patterns section: ACID, API_GATEWAY, AUTHENT, BASE, BFF_PATTERN, CACHE, CONNECTION_POOL, FEATURE_FLAGS, IDEMPOTENCY, LB, MESSAGE_PATTERNS, MESSAGE_ID, OPLOCKING, PAGINATION, PARTITION, QUEUE, RETRY, SCHEMA_EVOLUTION, SOURCE_OF_TRUTH, STATELESS_VS_STATEFULL_SVC, WEB_HOOK</li>
+<li>Build scripts and documentation workflow</li>
+<li>VERSION tracking system</li>
+<li>Theme customization</li>
+<li>.gitignore configuration</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="references"><a class="header" href="#references">References</a></h1>
 <p>A comprehensive collection of external references, blog posts, articles, and technical resources that support and expand upon the concepts covered in this architecture library.</p>
 <h2 id="diego-pachecos-resources"><a class="header" href="#diego-pachecos-resources">Diego Pacheco's Resources</a></h2>
@@ -2014,6 +2078,22 @@ A deployment strategy enabling schema changes without service interruption.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

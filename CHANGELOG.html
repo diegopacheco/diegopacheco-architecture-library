@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Open Source First - Diego Pacheco&#x27;s Software Architecture Library</title>
+        <title>Changelog - Diego Pacheco&#x27;s Software Architecture Library</title>
 
 
         <!-- Custom HTML head -->
@@ -12,35 +12,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
-        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
-        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../theme/custom.css">
+        <link rel="stylesheet" href="theme/custom.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "../";
+            const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex.js";
+            window.path_to_searchindex_js = "searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc.js"></script>
+        <script src="toc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -107,7 +107,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -142,7 +142,7 @@
                     <h1 class="menu-title">Diego Pacheco&#x27;s Software Architecture Library</h1>
 
                     <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         <a href="https://github.com/diegopacheco/diegopacheco-architecture-library" title="Git repository" aria-label="Git repository">
@@ -179,26 +179,79 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="open-source-first"><a class="header" href="#open-source-first">Open Source First</a></h1>
-<p><a href="https://en.wikipedia.org/wiki/Open_source">Open Source</a> must be the default. Avoid proprietary software. Do not build wrappers for open source libraries. Use Open Source software directly. Building internal shared libraries is a liability and will create many issues like security vulnerabilities, maintenance burden, and lack of community support / documentation. Therefore creating internal shared libraries must be a very conscious choice and must be well justified.</p>
-<h2 id="why-its-important"><a class="header" href="#why-its-important">Why It's important?</a></h2>
-<p>Because Open Source gives us many advantages like:</p>
+                        <h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<h2 id="102---2025-10-28"><a class="header" href="#102---2025-10-28">[1.0.2] - 2025-10-28</a></h2>
+<h3 id="changed"><a class="header" href="#changed">Changed</a></h3>
 <ul>
-<li><strong>There is a whole community behind</strong>: Maintaining, fixing bugs, improving the performance, making it better.</li>
-<li><strong>Portability</strong>: Open Source means you are not stuck with a single vendor and more likely you can run yourself or switch the vendors (this is also known as open standards like REST).</li>
-<li><strong>Documentation &amp; Training</strong>: Developers often don't like to write documentation. By using open source you can get documentation for free, you get stackoverflow threads, blog posts, books, tutorials, videos and much more. Open source also means people can be trained by the market and not by you. If you have a proprietary software that only exists in your company, you cannot use the market to train people.</li>
+<li>Enhanced ANTI-FRAGILITY.md with additional content</li>
+<li>Expanded OSS.md with more open source insights</li>
+<li>Extended PROTECT_YOUR_TIME.md with additional time management content</li>
+<li>Enhanced SO.md with more service orientation practices</li>
+<li>Updated CRYSTAL_BALL.md with additional insights</li>
+<li>Improved STAGNATION.md anti-pattern documentation</li>
+<li>Expanded GLOSSARY.md with more architectural terms</li>
 </ul>
-<p>Open source is also giving it back. Open source is giving visibility to engineers who do good work, open source is life and colaboration.</p>
+<h3 id="added"><a class="header" href="#added">Added</a></h3>
+<ul>
+<li>CHANGELOG.md file to track changes and updates</li>
+</ul>
+<h2 id="101---2025-10-27"><a class="header" href="#101---2025-10-27">[1.0.1] - 2025-10-27</a></h2>
+<h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
+<ul>
+<li>Chapter 0 (Zero) with rationale and reasoning behind the book</li>
+<li>Chapter 2 (Anti-Patterns): TECH_DEBT_PLAGUE, IGNORE_CULTURE, STAGNATION, REQUIREMENTS</li>
+<li>Chapter 3 (Dilemmas): DISCOVERY_VS_DELIVERY, MOVE_FAST_VS_DO_IT_RIGHT, BUILD_VS_BUY, DECIDE_OR_WAIT</li>
+<li>Chapter 4 (Properties): ANTI-FRAGILITY, STATE-OF-THE-ART, SCALABILITY, OBSERVABLE, STABILITY, SECURE</li>
+<li>Chapter 7 (Patterns) as separate section from Concepts</li>
+<li>Chapter 8 (Tools): DIAGRAMING, WRITING, THINKING</li>
+<li>Chapter 9 (Epilogue): IN_THE_END, RESOURCES, REFERENCES, GLOSSARY, INDEX</li>
+<li>CONNECTION_POOL pattern documentation</li>
+<li>WHY sections across all chapters explaining rationale</li>
+<li>GitHub Pages deployment workflow</li>
+<li>Glossary with architectural terms and definitions</li>
+<li>Index for topic navigation</li>
+<li>Resources section with books and learning materials</li>
+<li>References section with external links</li>
+</ul>
+<h3 id="changed-1"><a class="header" href="#changed-1">Changed</a></h3>
+<ul>
+<li>Reorganized book structure into numbered chapters</li>
+<li>Separated Concepts and Patterns into distinct chapters</li>
+<li>Moved pattern files from /concepts to /patterns directory</li>
+<li>Enhanced defensive programming content</li>
+<li>Expanded crystal ball philosophy</li>
+<li>Improved English grammar and readability</li>
+<li>Updated table of contents and navigation</li>
+</ul>
+<h3 id="fixed"><a class="header" href="#fixed">Fixed</a></h3>
+<ul>
+<li>Page rendering issues</li>
+<li>Documentation structure inconsistencies</li>
+</ul>
+<h2 id="100---2025-10-27"><a class="header" href="#100---2025-10-27">[1.0.0] - 2025-10-27</a></h2>
+<h3 id="added-2"><a class="header" href="#added-2">Added</a></h3>
+<ul>
+<li>Initial project setup with mdBook</li>
+<li>Introduction and cover page</li>
+<li>Philosophy section: CRYSTAL_BALL, DEFENSIVE, DOING_HARD_THINGS, FRONTEND_VS_BACKEND, OSS, SO</li>
+<li>Practices section: ATTENTION_TO_DETAIL, ARCH_REVIEW, DESIGN_FIRST, OWNERSHIP, READING_CODE, MONTHLY_REVIEW, WORKING_ON_TRENCHES</li>
+<li>Concepts and Patterns section: ACID, API_GATEWAY, AUTHENT, BASE, BFF_PATTERN, CACHE, CONNECTION_POOL, FEATURE_FLAGS, IDEMPOTENCY, LB, MESSAGE_PATTERNS, MESSAGE_ID, OPLOCKING, PAGINATION, PARTITION, QUEUE, RETRY, SCHEMA_EVOLUTION, SOURCE_OF_TRUTH, STATELESS_VS_STATEFULL_SVC, WEB_HOOK</li>
+<li>Build scripts and documentation workflow</li>
+<li>VERSION tracking system</li>
+<li>Theme customization</li>
+<li>.gitignore configuration</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../philosofy/FRONTEND_VS_BACKEND.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="epilogue/RESOURCES.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../philosofy/SO.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="epilogue/REFERENCES.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -208,11 +261,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../philosofy/FRONTEND_VS_BACKEND.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="epilogue/RESOURCES.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../philosofy/SO.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="epilogue/REFERENCES.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -243,16 +296,16 @@
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="../theme/version.js"></script>
+        <script src="theme/version.js"></script>
 
 
 

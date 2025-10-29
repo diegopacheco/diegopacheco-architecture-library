@@ -359,6 +359,7 @@ Choosing the best and latest solutions</li>
 <ul>
 <li><a href="epilogue/IN_THE_END.html">Epilogue</a> - Final thoughts and next steps</li>
 <li><a href="epilogue/RESOURCES.html">Resources</a> - Recommended books and learning materials</li>
+<li><a href="../CHANGELOG.html">Changelog</a> - Updates and revisions to the book</li>
 <li><a href="epilogue/REFERENCES.html">References</a> - External blog posts, articles, and technical documentation</li>
 <li><a href="epilogue/GLOSSARY.html">Glossary</a> - Definitions of key terms used in the book</li>
 <li><a href="epilogue/INDEX.html">Index</a> - Complete index of topics covered in the book</li>
@@ -387,6 +388,22 @@ Choosing the best and latest solutions</li>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

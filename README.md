@@ -134,6 +134,7 @@ Choosing the best and latest solutions
 9. Chapter 9 - Epilogue
 - [Epilogue](src/epilogue/IN_THE_END.md) - Final thoughts and next steps
 - [Resources](src/epilogue/RESOURCES.md) - Recommended books and learning materials
+- [Changelog](CHANGELOG.md) - Updates and revisions to the book
 - [References](src/epilogue/REFERENCES.md) - External blog posts, articles, and technical documentation
 - [Glossary](src/epilogue/GLOSSARY.md) - Definitions of key terms used in the book
 - [Index](src/epilogue/INDEX.md) - Complete index of topics covered in the book
