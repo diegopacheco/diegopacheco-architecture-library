@@ -12,8 +12,8 @@ The most important part of services is the contract. The contract is the API. Th
 
 Services require a [lot of thinking](https://diego-pacheco.blogspot.com/2024/05/service-chain.html), they are not a panacea.
 
-## SOA it'a big Deal
+## SOA is a big Deal
 
-Service Orientation just be the main operating model for software architecture. Services should be the default way of thinking about solutions. Services should be the default way of building solutions. Services should be the default way of operating solutions.
+Service Orientation should be the main operating model for software architecture. Services should be the default way of thinking about solutions. Services should be the default way of building solutions. Services should be the default way of operating solutions.
 
-Because services allow us to have buisness capabilitites that can be shared across different services, apllication, products and use-cases. Services also allow us to isolate and have deoupling from contract and implementation(IF done right), allowign the engineering team to improve things under the hood without breaking ot slowing down the business.
+Because services allow us to have business capabilities that can be shared across different services, applications, products and use-cases. Services also allow us to isolate and have decoupling from contract and implementation (if done right), allowing the engineering team to improve things under the hood without breaking or slowing down the business.

@@ -1,6 +1,6 @@
 # Message Id
 
-[Message ID](https://en.wikipedia.org/wiki/Message-ID) Also know as CORRELATION_ID. The idea that each message or request must have a uniqui id, and you will pass down such id into the dowstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID. 
+[Message ID](https://en.wikipedia.org/wiki/Message-ID) Also known as CORRELATION_ID. The idea that each message or request must have a unique id, and you will pass down such id into the downstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID.
 
 Why this is important?
 
@@ -8,4 +8,4 @@ Why this is important?
 * Debugging: If an error occurs, having a MESSAGE_ID allows you to quickly locate all logs and events related to that specific request. This can significantly speed up the debugging process.
 * Monitoring: MESSAGE_IDs can be used to monitor the performance of requests as they pass through
 
-without a MESSAGE_ID, it because impossible to debug distrubuted systems.
+without a MESSAGE_ID, it becomes impossible to debug distributed systems.

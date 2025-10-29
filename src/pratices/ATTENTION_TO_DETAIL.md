@@ -12,4 +12,4 @@ Architects pays close attention to:
 * Security Audits: Are there any vulnerabilities? are we compliant with security standards?
 * Requirements: Are we meeting all specified requirements? any missing features?
 
-Architects are critical and detail-oriented when it comes to every since tech detail.
+Architects are critical and detail-oriented when it comes to every single tech detail.

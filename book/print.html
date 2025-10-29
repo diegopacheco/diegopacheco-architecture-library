@@ -461,11 +461,11 @@ Choosing the best and latest solutions</li>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="open-source-first"><a class="header" href="#open-source-first">Open Source First</a></h1>
 <p><a href="https://en.wikipedia.org/wiki/Open_source">Open Source</a> must be the default. Avoid proprietary software. Do not build wrappers for open source libraries. Use Open Source software directly. Building internal shared libraries is a liability and will create many issues like security vulnerabilities, maintenance burden, and lack of community support / documentation. Therefore creating internal shared libraries must be a very conscious choice and must be well justified.</p>
 <h2 id="why-its-important"><a class="header" href="#why-its-important">Why It's important?</a></h2>
-<p>Because Open Source give us many advantages like:</p>
+<p>Because Open Source gives us many advantages like:</p>
 <ul>
-<li><strong>There is a whole comunity behind</strong>: Mantainining, fixing bugs, improving the performance, making it better.</li>
-<li><strong>Portability</strong>: Open Source, means you are not stuck with a single vendor and more likely you can run yourself or switch the vendors(this is also know as open stdatanrds like REST).</li>
-<li><strong>Documentation &amp; Training</strong>: Developers often dont like to write documentation. By uisng open source you can documentation for free, you get stackoverflow threads, blog posts, books, tutoriais, videos and much more.Open source also means people can be trained by the market and not by you. If you have a propritery software that only exist in your company, you cannot use the market to train people.</li>
+<li><strong>There is a whole community behind</strong>: Maintaining, fixing bugs, improving the performance, making it better.</li>
+<li><strong>Portability</strong>: Open Source means you are not stuck with a single vendor and more likely you can run yourself or switch the vendors (this is also known as open standards like REST).</li>
+<li><strong>Documentation &amp; Training</strong>: Developers often don't like to write documentation. By using open source you can get documentation for free, you get stackoverflow threads, blog posts, books, tutorials, videos and much more. Open source also means people can be trained by the market and not by you. If you have a proprietary software that only exists in your company, you cannot use the market to train people.</li>
 </ul>
 <p>Open source is also giving it back. Open source is giving visibility to engineers who do good work, open source is life and colaboration.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="service-orientation"><a class="header" href="#service-orientation">Service Orientation</a></h1>
@@ -475,9 +475,9 @@ Choosing the best and latest solutions</li>
 <p>The most important part of services is the contract. The contract is the API. The API should be as stable as possible. The API should be backward compatible as much as possible. The API should be well documented and versioned.</p>
 <p><a href="https://diego-pacheco.blogspot.com/2021/04/its-all-about-contracts.html">Contracts</a> must be well designed and reviewed carefully. It is not difficult to make <a href="https://diego-pacheco.blogspot.com/2024/12/leaky-contracts.html">poor contracts</a> because engineers, and even more so frontend engineers, are just thinking about what needs to change, and are not thinking if it is the right place to make the change or if it should be that way at all. Contracts must be explicit and not <a href="https://diego-pacheco.blogspot.com/2023/08/embedded-mocks-and-hidden-contracts.html">hidden</a>. The cost of refactoring a <a href="https://diego-pacheco.blogspot.com/2024/01/refactoring-making-sense-of-invisible.html">contract</a> is usually high, while refactoring the internal implementation is low, as long as you do not break the contract.</p>
 <p>Services require a <a href="https://diego-pacheco.blogspot.com/2024/05/service-chain.html">lot of thinking</a>, they are not a panacea.</p>
-<h2 id="soa-ita-big-deal"><a class="header" href="#soa-ita-big-deal">SOA it'a big Deal</a></h2>
-<p>Service Orientation just be the main operating model for software architecture. Services should be the default way of thinking about solutions. Services should be the default way of building solutions. Services should be the default way of operating solutions.</p>
-<p>Because services allow us to have buisness capabilitites that can be shared across different services, apllication, products and use-cases. Services also allow us to isolate and have deoupling from contract and implementation(IF done right), allowign the engineering team to improve things under the hood without breaking ot slowing down the business.</p>
+<h2 id="soa-is-a-big-deal"><a class="header" href="#soa-is-a-big-deal">SOA is a big Deal</a></h2>
+<p>Service Orientation should be the main operating model for software architecture. Services should be the default way of thinking about solutions. Services should be the default way of building solutions. Services should be the default way of operating solutions.</p>
+<p>Because services allow us to have business capabilities that can be shared across different services, applications, products and use-cases. Services also allow us to isolate and have decoupling from contract and implementation (if done right), allowing the engineering team to improve things under the hood without breaking or slowing down the business.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="protect-your-time"><a class="header" href="#protect-your-time">Protect Your Time</a></h1>
 <p>It is very easy to be <a href="https://diego-pacheco.blogspot.com/2023/07/meetings-cost.html">consumed with meetings</a> 100% of the time. However, the architect must protect their time in order to do deep work: research, monthly reviews, crystal balling, thinking about trade-offs, evaluating solutions, and reading code.</p>
 <p>At minimum, you should book at least 3 times per week for 3-6 hours to do deep work. It does not matter if it is in the morning or afternoon, whatever is easier. Hold your ground, push back, and protect that time. Architects must think.</p>
@@ -493,7 +493,7 @@ Choosing the best and latest solutions</li>
 <p>One classical example is skipping tests. Tests are not nice to have, they are a must have. If you do not have tests, you are building a house without a foundation. You can build it fast, but sooner or later it will collapse. How will you do refactoring without tests? Management often pushes for such bad practices, but <a href="https://diego-pacheco.blogspot.com/2020/06/dont-outsmart-hard-chooses-why.html">even architects (the bad ones)</a> push for that. Tests are non-negotiable.</p>
 <p>You must fight the war, <a href="https://diego-pacheco.blogspot.com/2025/01/quality-needs-to-be-managed.html">manage</a> <a href="https://diego-pacheco.blogspot.com/2021/06/thoughts-on-internal-complexity.html">complexity</a> by doing improvements with the engineering team every week rather than "creating a jira ticket" that will never ever be addressed.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignore-culture"><a class="header" href="#ignore-culture">Ignore Culture</a></h1>
-<p>If something is wrong. Say something, do something. When you ignore problems consistently over a long period of time, you end up developing this anti-pattern, which I called "Ignore Culture".</p>
+<p>If something is wrong. Say something, do something. When you ignore problems consistently over a long period of time, you end up developing an anti-pattern, which I call "Ignore Culture".</p>
 <p>When you ignore warnings in the build, when you ignore old versions of libraries, when you ignore anti-patterns on the code. When you ignore production monitoring. When you ignore requirements that make no sense.</p>
 <p>Does not matter if you were the one who did the code or not. You must take ownership and under your watch you should ignore nothing.</p>
 <p><a href="https://diego-pacheco.blogspot.com/2024/03/ignoring-culture.html">Ignoring can become a culture</a> because managers can easily do this. Engineers, often pressured by managers also can ignore several wrong things. What's wrong should not be ignored, it should be fought and pushed back.</p>
@@ -528,8 +528,8 @@ Choosing the best and latest solutions</li>
 <p>Again this refers to the dilemma of Discovery vs Delivery. You need to find the right balance between moving fast to discover what works and doing it right to ensure quality and reliability.</p>
 <p>In theory you could "just move fast" but the issue is, lots of companies are allergic to <a href="https://diego-pacheco.blogspot.com/2023/11/continuous-refactoring.html">refactoring</a> and they never pay the price to improve the code. Mostly because tech leadership is bad and or immature. But either way, you need to pay the price at some point. If you never pay the price, you end up with a big ball of mud that is hard to maintain and evolve.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="build-vs-buy"><a class="header" href="#build-vs-buy">Build vs Buy</a></h1>
-<p>Which one is best, build or buy? Well, it depends. Build is important when is your core domain and is how your companies makes money and differentiates from the competition. If all the companies by the same core business, how are they different? They are not.</p>
-<p>However when is not your core business, buy makes a lot of sense, because is freeing time for you to focus on what matters, your core business. Howeber this is a big mistake here. There is no buy without build. Because even if you buy you will need integrate with your existing systems. Just because your <a href="https://diego-pacheco.blogspot.com/2024/12/proprietary-systems-and-distributed.html">buy does not means is perfect</a>, does not means it fixes all your problems. It's also comon when you buy solution that same solutions introduce problems that you did not have before. Buy has <a href="https://diego-pacheco.blogspot.com/2020/06/software-architecture-hidden-costs.html">hidden costs</a>.</p>
+<p>Which one is best, build or buy? Well, it depends. Build is important when it is your core domain and is how your company makes money and differentiates from the competition. If all companies buy the same core business, how are they different? They are not.</p>
+<p>However when it is not your core business, buy makes a lot of sense, because it is freeing time for you to focus on what matters, your core business. However, this is a big mistake here. There is no buy without build. Because even if you buy you will need to integrate with your existing systems. Just because you <a href="https://diego-pacheco.blogspot.com/2024/12/proprietary-systems-and-distributed.html">buy does not mean it is perfect</a>, does not mean it fixes all your problems. It's also common when you buy a solution that same solution introduces problems that you did not have before. Buy has <a href="https://diego-pacheco.blogspot.com/2020/06/software-architecture-hidden-costs.html">hidden costs</a>.</p>
 <p>When buying it's important to observe:</p>
 <ul>
 <li>Make sure there are APIs</li>
@@ -538,7 +538,7 @@ Choosing the best and latest solutions</li>
 <li>Consider integration as part of the cost</li>
 <li>Consider troubleshooting, debugging, observability as part of the cost</li>
 </ul>
-<p>If I use an AWS service, vs building in house is cheaper? Well dependends where you want put the money. In the beginning buying might sound cheaper, but you will pay AWS forever. When you build you might have a better solution(if executed right) but you now need pay people to mantaining it forever. So where you want the money goes, your people or vendors? The question here is how good you are in execution inside of the house. If your execution is terrible, go buy.</p>
+<p>If I use an AWS service, vs building in house is cheaper? Well it depends where you want to put the money. In the beginning buying might sound cheaper, but you will pay AWS forever. When you build you might have a better solution (if executed right) but you now need to pay people to maintain it forever. So where do you want the money to go, your people or vendors? The question here is how good you are in execution inside of the house. If your execution is terrible, go buy.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="decide-or-wait"><a class="header" href="#decide-or-wait">Decide or Wait</a></h1>
 <p><a href="https://diego-pacheco.blogspot.com/2015/04/lean-deming-the-new-culture.html">Lean</a> believes that late decisions are often better than rushed ones. However, waiting too long can lead to missed opportunities. As time passes, you will be more equipped about what is best, and it is always easier to <a href="https://diego-pacheco.blogspot.com/2024/01/refactoring-making-sense-of-invisible.html">refactor</a> later (if the cost is not too high).</p>
 <p>Decisions are a process, they should not be written in stone. Deciding something is a process, it allows us to move on. However, we should be challenging our past decisions, that is why time to reflect and think is important. Architects need to protect their time to have time to think. Engineering teams must have retrospectives to reflect on past decisions.</p>
@@ -550,20 +550,20 @@ Choosing the best and latest solutions</li>
 <p>Some properties are obvious, others are non-obvious. But if you know they exist, you can make explicit work to make sure they are present in your architecture and systems.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="anti-fragility"><a class="header" href="#anti-fragility">Anti-Fragility</a></h1>
 <p><a href="https://diego-pacheco.blogspot.com/2015/09/devops-is-about-anti-fragility-not-only.html">Anti-fragility</a> is a property of systems that not only withstand shocks and stressors but also improve and grow stronger as a result of them. Unlike resilience, which focuses on maintaining stability in the face of adversity, anti-fragile systems thrive on volatility and uncertainty.</p>
-<p>In order to achive anti-fragility you need Defensive Programing and Chaos Engineering. You must test that your system is tolerant and can recover from failure. So you induce and provoke failure in your system and infrastrcuture to proove when necessary.</p>
-<p>You do not want discover in production if the system can recover from failure, you want to know before hand. You want to know that your system is anti-fragile. Testing in production is not the same as discovering in production. Testing in production means, guard-rails and testing in production environment but without impacting real users.</p>
-<p>Your systems must be anti-fragile. You architevture must be anti-fragile. Your infrastructure must be anti-fragile. To be anti-fragile you need lots of hypotethesis and experiments to proove your system is anti-fragile. Anti-fragility requires <code>science</code> and <code>creativity</code>.</p>
+<p>In order to achieve anti-fragility you need Defensive Programming and Chaos Engineering. You must test that your system is tolerant and can recover from failure. So you induce and provoke failure in your system and infrastructure to prove when necessary.</p>
+<p>You do not want to discover in production if the system can recover from failure, you want to know beforehand. You want to know that your system is anti-fragile. Testing in production is not the same as discovering in production. Testing in production means, guard-rails and testing in production environment but without impacting real users.</p>
+<p>Your systems must be anti-fragile. Your architecture must be anti-fragile. Your infrastructure must be anti-fragile. To be anti-fragile you need lots of hypotheses and experiments to prove your system is anti-fragile. Anti-fragility requires science and creativity.</p>
 <h2 id="how-to-develop-anti-fragile-systems"><a class="header" href="#how-to-develop-anti-fragile-systems">How to develop Anti-Fragile Systems?</a></h2>
 <p>Basically we need to do 2 things. First we must test our infrastructure and systems to proof they are anti-fragile. AWS is anti-fragile by nature, but you could be using it wrong, so always a good idea to test it.</p>
-<p>Seconnd, you want design with anti-fragiolity in mind. For instance we should not put all applications into a single database, we should have one database per service. Therefore we have isolation and protect agains blast radius. So you see is not just testing(which chaos engineering) but also design with anti-fragility in mind.</p>
+<p>Second, you want to design with anti-fragility in mind. For instance we should not put all applications into a single database, we should have one database per service. Therefore we have isolation and protect against blast radius. So you see it is not just testing (which is chaos engineering) but also design with anti-fragility in mind.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="state-of-the-art"><a class="header" href="#state-of-the-art">State of the Art</a></h1>
-<p>If you will be building something. Why start with something deprecated? Why not use the latest versions? State of the art is not about just using the latest and greates versions but also picking the best solutions.</p>
+<p>If you will be building something. Why start with something deprecated? Why not use the latest versions? State of the art is not about just using the latest and greatest versions but also picking the best solutions.</p>
 <p>Why not pick the best database? why not pick the best language? why not pick the best framework? why not pick the best architecture?</p>
-<p>We should be creating the best architecture and the best solitions, just going with the "standards" is a path to stagnation.</p>
-<p>This might sound impossible, but it's nt. It just requires more research and more effort. But is 100% doable and should be done.</p>
+<p>We should be creating the best architecture and the best solutions, just going with the "standards" is a path to stagnation.</p>
+<p>This might sound impossible, but it's not. It just requires more research and more effort. But is 100% doable and should be done.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="scalability"><a class="header" href="#scalability">Scalability</a></h1>
-<p>A good architect, produce good architecture. Architecture is embedided in code. Good code is scalable code.</p>
-<p>Scalability it's not only for systems, it's also for engineering teams. A good architecture allows teams to work in parallel without stepping on each other's toes.</p>
+<p>A good architect, produce good architecture. Architecture is embedded in code. Good code is scalable code.</p>
+<p>Scalability is not only for systems, it's also for engineering teams. A good architecture allows teams to work in parallel without stepping on each other's toes.</p>
 <p>Good Structure, good design, allow engineers to be more productive, and focus on delivering value, instead of fighting with the codebase. You want the architects you produce to have this properties.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="observable"><a class="header" href="#observable">Observable</a></h1>
 <p>As an architect, the systems you produce must have the ability to be observable. Such property is very important. Consider <a href="https://diego-pacheco.blogspot.com/2020/04/observability-domain-observability-from.html">observability</a> a subset of <a href="https://diego-pacheco.blogspot.com/2020/02/going-faster-with-testing.html">testing</a> which happens in production.</p>
@@ -578,8 +578,8 @@ Choosing the best and latest solutions</li>
 <li>The practice of looking at production monitoring dashboards and logs as part of your daily routine and retrofitting the learnings to the engineering team</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="stability"><a class="header" href="#stability">Stability</a></h1>
-<p>Not only your architecture but your systems must be stable. Being <a href="https://diego-pacheco.blogspot.com/2017/09/the-stability-mindset.html">stable is a state</a>, which means they are not broken all the time. Systems should not be broken. It's impossible not never break the system, after all we are only humans. However this is not an excuse for lack of attention, carelessness or poor practices.</p>
-<p>A stable system is one where, whre most of times:</p>
+<p>Not only your architecture but your systems must be stable. Being <a href="https://diego-pacheco.blogspot.com/2017/09/the-stability-mindset.html">stable is a state</a>, which means they are not broken all the time. Systems should not be broken. It's impossible to never break the system, after all we are only humans. However this is not an excuse for lack of attention, carelessness or poor practices.</p>
+<p>A stable system is one where most of the time:</p>
 <ul>
 <li>Build is passing</li>
 <li>Tests are passing, in all environments</li>
@@ -589,7 +589,7 @@ Choosing the best and latest solutions</li>
 </ul>
 <p>A stable architecture is one where:</p>
 <ul>
-<li>You can reality in concepts with confidence</li>
+<li>You can reason about concepts with confidence</li>
 <li>You can make changes without breaking things</li>
 <li>You can onboard new team members without much friction</li>
 </ul>
@@ -647,9 +647,9 @@ Choosing the best and latest solutions</li>
 <li>Security Audits: Are there any vulnerabilities? are we compliant with security standards?</li>
 <li>Requirements: Are we meeting all specified requirements? any missing features?</li>
 </ul>
-<p>Architects are critical and detail-oriented when it comes to every since tech detail.</p>
+<p>Architects are critical and detail-oriented when it comes to every single tech detail.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="architecture-review"><a class="header" href="#architecture-review">Architecture Review</a></h1>
-<p>IF you dont have anything written, how can we review it? How can you comunicate with the engineering team? How can you onboard new team members?</p>
+<p>If you don't have anything written, how can we review it? How can you communicate with the engineering team? How can you onboard new team members?</p>
 <p>Architecture must be written down, at the minimum:</p>
 <ul>
 <li>Overall Architecture Diagram</li>
@@ -657,10 +657,10 @@ Choosing the best and latest solutions</li>
 <li>Important <a href="https://diego-pacheco.blogspot.com/2023/07/tradeoffs.html">Trade-offs</a></li>
 </ul>
 <p>Arch documentation can be done with a markdown file, here is a good template: https://github.com/diegopacheco/tech-resources/blob/master/arch-doc-template.md</p>
-<p>When you write down, principles, decisions, guidance, and trade-offs become explicit, easier to communicate, and easier to review. Diagrams help a lot, specially overal architecture diagram, class diagram are very useful.</p>
+<p>When you write down, principles, decisions, guidance, and trade-offs become explicit, easier to communicate, and easier to review. Diagrams help a lot, especially overall architecture diagram, class diagram are very useful.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="design-first"><a class="header" href="#design-first">Design First</a></h1>
-<p>Architects must think. They must produce the <a href="https://diego-pacheco.blogspot.com/2021/04/design-is-not-subjective.html">design</a> before the implementation. Howeever that's only possible if the architect master the problem domain and the technology being used. If that does not happen, Proof of Concepts (PoCs) are a great way to explore the problem and the technology before the design is produced.</p>
-<p>Writting down the <a href="https://diego-pacheco.blogspot.com/2020/04/architecture-101-thinking-about-design.html">design</a> is also a great way to communicate it to the team and get feedback. The <a href="https://diego-pacheco.blogspot.com/2020/08/design-101.html">design</a> should be a living document that evolves with the project. IF you jump executing all times you are doing just tatical programing(Philosophy of software design).</p>
+<p>Architects must think. They must produce the <a href="https://diego-pacheco.blogspot.com/2021/04/design-is-not-subjective.html">design</a> before the implementation. However, that's only possible if the architect masters the problem domain and the technology being used. If that does not happen, Proof of Concepts (PoCs) are a great way to explore the problem and the technology before the design is produced.</p>
+<p>Writing down the <a href="https://diego-pacheco.blogspot.com/2020/04/architecture-101-thinking-about-design.html">design</a> is also a great way to communicate it to the team and get feedback. The <a href="https://diego-pacheco.blogspot.com/2020/08/design-101.html">design</a> should be a living document that evolves with the project. If you jump into executing all the time you are doing just tactical programming (Philosophy of software design).</p>
 <p>If you move before you think, tech debt will happen, bad decisions will happen.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ownership"><a class="header" href="#ownership">Ownership</a></h1>
 <p>Architects must have <a href="https://diego-pacheco.blogspot.com/2024/11/expectations.html">extreme ownership</a>. They are responsible for the success and failure of the architecture they design. This includes:</p>
@@ -672,7 +672,7 @@ Choosing the best and latest solutions</li>
 <li>Documenting architectural decisions and their rationale.</li>
 <li>Advocating for the architecture within the organization.</li>
 </ul>
-<p>Architects must be proatice. Architects are always:</p>
+<p>Architects must be proactive. Architects are always:</p>
 <ul>
 <li>Thinking: Thinking ahead about future changes and how the architecture can accommodate them.</li>
 <li>Performing Research: Researching new technologies and patterns that can improve the architecture.</li>
@@ -688,9 +688,9 @@ Choosing the best and latest solutions</li>
 <p>Many meetings can be saved if people just read the code. Architects must be Hackers, they need to read the code. Read the system code, read the libraries code, read the frameworks code. Reading code is not a one time thing, is a everyday thing.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="monthly-review"><a class="header" href="#monthly-review">Monthly Review</a></h1>
 <p><a href="https://diego-pacheco.blogspot.com/2019/11/getting-best-out-github-with-remote.html">Code review</a> is great. Architects should do <a href="https://diego-pacheco.blogspot.com/2018/07/lessons-learned-and-experiences-doing.html">Code review</a>. However code review is pretty much focused on deltas. Which is not the whole story.</p>
-<p>Code review happens in-clycle, meaning every week, every day, or pretty much every time a ticket/PR is done. We also need a off-cycle review.</p>
-<p>As an architect, 1x per month or at least 1x per quarter you should look the whole codebase. Why? Beause them you are not looking the <a href="https://diego-pacheco.blogspot.com/2022/12/beyond-code-deltas.html">detlas</a>, you are lookign the whole picture and seeing the <a href="https://diego-pacheco.blogspot.com/2011/04/team-code-review-design-sessions.html">design</a>.</p>
-<p>Such pratice is important to see:</p>
+<p>Code review happens in-cycle, meaning every week, every day, or pretty much every time a ticket/PR is done. We also need an off-cycle review.</p>
+<p>As an architect, 1x per month or at least 1x per quarter you should look at the whole codebase. Why? Because then you are not looking at the <a href="https://diego-pacheco.blogspot.com/2022/12/beyond-code-deltas.html">deltas</a>, you are looking at the whole picture and seeing the <a href="https://diego-pacheco.blogspot.com/2011/04/team-code-review-design-sessions.html">design</a>.</p>
+<p>Such practice is important to see:</p>
 <ul>
 <li>Architectural concept drift: Are we still following the intended architecture? Are there parts of the code that have diverged from the original design principles?</li>
 <li>Code quality trends: Is the overall code quality improving or deteriorating? Are there areas that need refactoring or technical debt reduction?</li>
@@ -882,7 +882,7 @@ Given enough time without new updates, all replicas will eventually converge to 
 <li><strong>Load Balancing</strong>: Distributes incoming requests across multiple instances of a microservice to ensure high availability and reliability.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="backend-for-frontend-pattern"><a class="header" href="#backend-for-frontend-pattern">Backend for Frontend Pattern</a></h1>
-<p>The <a href="https://diego-pacheco.blogspot.com/2020/08/bff-dilema.html">Backend for Frontend(BFF)</a> pattern involves creating separate backend services tailored to the specific needs of different frontend applications. Usually written in a language that is common for the frontend team, meaning: NodeJS with JS ot Typescript.</p>
+<p>The <a href="https://diego-pacheco.blogspot.com/2020/08/bff-dilema.html">Backend for Frontend(BFF)</a> pattern involves creating separate backend services tailored to the specific needs of different frontend applications. Usually written in a language that is common for the frontend team, meaning: NodeJS with JS or TypeScript.</p>
 <p>BFFs should have <code>Rendering Logic</code> and should NEVER have <code>Business Logic</code> because that should be encapsulated in the core backend services.</p>
 <h2 id="bffs-are"><a class="header" href="#bffs-are">BFFs Are</a></h2>
 <ul>
@@ -1002,14 +1002,14 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><strong>No Ordering</strong>: Messages may be processed in any order for maximum throughput.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="message-id"><a class="header" href="#message-id">Message Id</a></h1>
-<p><a href="https://en.wikipedia.org/wiki/Message-ID">Message ID</a> Also know as CORRELATION_ID. The idea that each message or request must have a uniqui id, and you will pass down such id into the dowstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID.</p>
+<p><a href="https://en.wikipedia.org/wiki/Message-ID">Message ID</a> Also known as CORRELATION_ID. The idea that each message or request must have a unique id, and you will pass down such id into the downstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID.</p>
 <p>Why this is important?</p>
 <ul>
 <li>Traceability: When you have a unique MESSAGE_ID for each request, you can trace the entire lifecycle of that request across multiple services. This is especially useful in microservices architectures where a single user action may trigger multiple service calls.</li>
 <li>Debugging: If an error occurs, having a MESSAGE_ID allows you to quickly locate all logs and events related to that specific request. This can significantly speed up the debugging process.</li>
 <li>Monitoring: MESSAGE_IDs can be used to monitor the performance of requests as they pass through</li>
 </ul>
-<p>without a MESSAGE_ID, it because impossible to debug distrubuted systems.</p>
+<p>without a MESSAGE_ID, it becomes impossible to debug distributed systems.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pagination"><a class="header" href="#pagination">Pagination</a></h1>
 <p>When you have a endpoint that returns a large list of items, it is often useful to <a href="https://www.merge.dev/blog/rest-api-pagination">paginate</a> the results. This means breaking the results into smaller chunks, or "pages", that can be retrieved one at a time.</p>
 <p>Basic benefit here is to reduce the amount of data transferred in a single request, which can improve performance and reduce load on the server. Less latency and more responsive applications are the end result.</p>
@@ -1079,11 +1079,11 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Thinking</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="diagraming"><a class="header" href="#diagraming">Diagraming</a></h1>
-<p>Architecture must be visual, it's important to have visual diagrams. IMHO there are least 3 diagrams that are very, very useful for architects:</p>
+<p>Architecture must be visual, it's important to have visual diagrams. IMHO there are at least 3 diagrams that are very, very useful for architects:</p>
 <ul>
-<li><a href="https://diego-pacheco.blogspot.com/2020/04/architecture-101-thinking-about-design.html">Overall Architecture</a> Diagram: You can see the big pucture, you see how services talk to each other, you see the main components.</li>
+<li><a href="https://diego-pacheco.blogspot.com/2020/04/architecture-101-thinking-about-design.html">Overall Architecture</a> Diagram: You can see the big picture, you see how services talk to each other, you see the main components.</li>
 <li><a href="https://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html">Class Diagram</a>: Can be useful for 2 common scenarios. A) <a href="https://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html">Internal modeling</a> of a system or B) Modeling tables in a database.</li>
-<li>Sequence/state diagrams: Useful to understand how a system works internally, how data flows through the system. I would not have hundreds of theese, the goal here is not have one per UI. The goal is to have for the most important and most complex things.</li>
+<li>Sequence/state diagrams: Useful to understand how a system works internally, how data flows through the system. I would not have hundreds of these, the goal here is not to have one per UI. The goal is to have them for the most important and complex things.</li>
 </ul>
 <p>The best paid diagram tool is <a href="https://www.lucidchart.com/">LucidCHART</a>. The best free diagram tool is <a href="https://app.diagrams.net/">Diagrams.net</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="writing"><a class="header" href="#writing">Writing</a></h1>
@@ -1098,8 +1098,8 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </ul>
 <p>When you write something down, you are dumping your brain and therefore doing the same as an engineer when they fire up a PR. You are allowing others to review. Written documents scale, because many people can read them, and they might last forever.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="thinking"><a class="header" href="#thinking">Thinking</a></h1>
-<p>An architect needs a thinking toolbox. IMHO you can use the same tool you use for <code>Diagramming</code> and <code>Writting</code>. POC's are a great laboratory for thinking as well. I used a lot of mind-maps in the past, but I find that nowadays I prefer to use plain text files with a good structure (headings, lists, code blocks, etc).</p>
-<p>Markdowns can be a great tool for thinking too, but you need a diagram tool to sketch some boxes and arrows. Without coding and experimentation, thinking is just an abstract exercise. When you know the systems, and know what they can do them you can think about alternatives IMHO thinking is about exploring alternatives, exploring different trade-offs and different ways to solve or model a problem. Thinking is about being creative and open-minded.</p>
+<p>An architect needs a thinking toolbox. IMHO, you can use the same tool you use for Diagramming and Writing. POC's are a great laboratory for thinking as well. I used a lot of mind-maps in the past, but I find that nowadays I prefer to use plain text files with a good structure (headings, lists, code blocks, etc).</p>
+<p>Markdowns can be a great tool for thinking too, but you need a diagram tool to sketch some boxes and arrows. Without coding and experimentation, thinking is just an abstract exercise. When you know the systems and what they can do, then you can think about alternatives. IMHO, thinking is about exploring alternatives, exploring different trade-offs and different ways to solve or model a problem. Thinking is about being creative and open-minded.</p>
 <p>There is a different when you are documenting what you solved already and that's for review or for engineers to implement. Versus thinking about how to solve a problem that is not solved yet. In the first case you are more focused on clarity and precision, in the second case you are more focused on exploration and creativity.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="in-the-end"><a class="header" href="#in-the-end">In The End</a></h1>
 <p>Great song. There is no end. Being an architect is a never-ending journey. Software never stops changing, learning never stops. As an architect, you must become a master student so you can become a master teacher.</p>

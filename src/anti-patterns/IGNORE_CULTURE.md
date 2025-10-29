@@ -1,6 +1,6 @@
 # Ignore Culture
 
-If something is wrong. Say something, do something. When you ignore problems consistently over a long period of time, you end up developing this anti-pattern, which I called "Ignore Culture".
+If something is wrong. Say something, do something. When you ignore problems consistently over a long period of time, you end up developing an anti-pattern, which I call "Ignore Culture".
 
 When you ignore warnings in the build, when you ignore old versions of libraries, when you ignore anti-patterns on the code. When you ignore production monitoring. When you ignore requirements that make no sense.
 
