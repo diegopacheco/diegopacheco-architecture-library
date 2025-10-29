@@ -11,4 +11,4 @@ Architects must have [extreme ownership](https://diego-pacheco.blogspot.com/2024
 Architects must be proactive. Architects are always:
 * Thinking: Thinking ahead about future changes and how the architecture can accommodate them.
 * Performing Research: Researching new technologies and patterns that can improve the architecture.
-* Socializing: Communicating, educating, influencing effectively with stakeholders to ensure alignment and understanding of the architecture.
+* Socializing: Effectively communicating, educating, and influencing stakeholders to ensure alignment and understanding of the architecture.

@@ -2,7 +2,7 @@
 
 It is an interesting property that allows the same operation to be performed multiple times without changing the result beyond the initial application.
 
-In REST APIs, idempotency is an important concept, especially for HTTP methods. Here are some common HTTP methods like GET, HEAD, OPTIONS, TRACE, PUT.
+In REST APIs, idempotency is an important concept, especially for HTTP methods. Common idempotent HTTP methods include GET, HEAD, OPTIONS, TRACE, and PUT.
 
 - **GET**: The most famous and common Idempotent. Retrieving a resource multiple times does not change its state.
 

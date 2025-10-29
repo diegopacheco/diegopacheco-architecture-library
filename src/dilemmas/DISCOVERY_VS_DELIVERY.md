@@ -2,7 +2,7 @@
 
 Discovery is the moment where you are trying to figure out what to build in order to solve a problem for your users. Discovery is heavily around product and user research, prototyping, testing ideas and validating assumptions.
 
-However it's also necessary to have someone from technology doing discovery otherwise you transfer slowness, confusion and risk even to be attempting to build something that is not feasible or too complex to deliver.
+However, it's also necessary to have someone from technology doing discovery; otherwise, you transfer slowness, confusion and risk even to be attempting to build something that is not feasible or too complex to deliver.
 
 [Delivery](https://diego-pacheco.blogspot.com/2020/02/multi-track-agile-with-tta.html) should be focusing on engineering and once we know what to build(often captured as requirements and figma prototypes for the frontend) we can start building it. The question is how do I build it right. Sounds simple right? But here we have one of the biggest dilemmas in software development.
 

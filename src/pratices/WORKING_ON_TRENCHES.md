@@ -2,6 +2,6 @@
 
 Lean has this principle of "Gemba" which means "the real place" in Japanese. It emphasizes the importance of going to the actual place where work is done to understand processes and identify opportunities for improvement.
 
-Software is a war that never ends. Architects need to be on the battle front, on the trenches with engineers. Architects should not fix all the problems and code all the stories. However they need to code, they need to help the team to deal with complex problems. Architects going there and helping the team is away to prevent a timeline disruption. Otherwise what [kind of architect](https://diego-pacheco.blogspot.com/2021/02/architects-as-gatekeepers.html) are you?
+Software is a war that never ends. Architects need to be on the battle front, on the trenches with engineers. Architects should not fix all the problems and code all the stories. However they need to code, they need to help the team to deal with complex problems. Architects going there and helping the team is a way to prevent a timeline disruption. Otherwise what [kind of architect](https://diego-pacheco.blogspot.com/2021/02/architects-as-gatekeepers.html) are you?
 
 Architects on the frontend is also how they can understand the real problems the team is facing. Architects cannot be hands off.

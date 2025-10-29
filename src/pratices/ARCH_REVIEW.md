@@ -9,4 +9,4 @@ Architecture must be written down, at the minimum:
 
 Arch documentation can be done with a markdown file, here is a good template: https://github.com/diegopacheco/tech-resources/blob/master/arch-doc-template.md
 
-When you write down, principles, decisions, guidance, and trade-offs become explicit, easier to communicate, and easier to review. Diagrams help a lot, especially overall architecture diagram, class diagram are very useful. 
+When you write down, principles, decisions, guidance, and trade-offs become explicit, easier to communicate, and easier to review. Diagrams help a lot, especially overall architecture diagrams and class diagrams, which are very useful. 

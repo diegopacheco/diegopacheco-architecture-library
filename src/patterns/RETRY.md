@@ -13,6 +13,6 @@ Progressive backoff is a strategy used to increase the wait time between success
 - **Exponential Backoff**: The wait time increases exponentially with each retry attempt.
 - **Jitter**: Adding randomness to the wait time to prevent synchronized retries from multiple clients.
 
-## Thumdering Herd Problem
+## Thundering Herd Problem
 
 The thundering herd problem occurs when multiple clients simultaneously retry an operation after a failure, leading to a sudden surge in requests that can overwhelm the system. To mitigate this issue, techniques such as jitter in backoff strategies and limiting the number of concurrent retries can be employed.

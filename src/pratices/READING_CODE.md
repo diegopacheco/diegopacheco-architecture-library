@@ -5,4 +5,4 @@ I know this might sound silly. But Architects need to [read the code](https://di
 * See the anti-patterns on the code
 * Understand what the system does
 
-Many meetings can be saved if people just read the code. Architects must be Hackers, they need to read the code. Read the system code, read the libraries code, read the frameworks code. Reading code is not a one time thing, is a everyday thing.
+Many meetings can be saved if people just read the code. Architects must be Hackers, they need to read the code. Read the system code, read the libraries code, read the frameworks code. Reading code is not a one-time thing; it's an everyday thing.
