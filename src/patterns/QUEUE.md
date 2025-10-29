@@ -1,6 +1,6 @@
 # Queue
 
-[Queue](https://en.wikipedia.org/wiki/Message_queue) it's a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front.
+[Queue](https://en.wikipedia.org/wiki/Message_queue) is a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front.
 
 In distributed systems, queues are often used to manage tasks, messages, or data that need to be processed asynchronously. They help in decoupling different parts of a system, allowing for better scalability and fault tolerance.
 

@@ -6,7 +6,7 @@ A [cache](https://en.wikipedia.org/wiki/Cache_(computing)) is a software compone
 
 1. **Memory Cache**: Stores frequently accessed data in RAM for quick retrieval.
 2. **Disk Cache**: Stores data on a hard drive or SSD to reduce access times for frequently used files.
-3. **Web Cache**: Stores web pages and resources to reduce bandwidth usage and load times
+3. **Web Cache**: Stores web pages and resources to reduce bandwidth usage and load times.
 4. **Database Cache**: Caches query results to speed up database access.
 5. **CPU Cache**: A small-sized type of volatile memory that provides high-speed data access to the processor.
 

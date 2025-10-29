@@ -183,7 +183,7 @@
 <p>It is an interesting property that allows the same operation to be performed multiple times without changing the result beyond the initial application.</p>
 <p>In REST APIs, idempotency is an important concept, especially for HTTP methods. Common idempotent HTTP methods include GET, HEAD, OPTIONS, TRACE, and PUT.</p>
 <ul>
-<li><strong>GET</strong>: The most famous and common Idempotent. Retrieving a resource multiple times does not change its state.</li>
+<li><strong>GET</strong>: The most famous and common idempotent method. Retrieving a resource multiple times does not change its state.</li>
 </ul>
 <p><a href="https://en.wikipedia.org/wiki/Idempotence">Idempotency</a> is important because if the same request arrives twice (there are no side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences, or just re-process the same thing again without issues.</p>
 <p>Such principle keeps us from writing complex software. For instance, if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.</p>

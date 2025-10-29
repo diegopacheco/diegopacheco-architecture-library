@@ -1,6 +1,6 @@
 # Scalability
 
-A good architect, produce good architecture. Architecture is embedded in code. Good code is scalable code.
+A good architect produces good architecture. Architecture is embedded in code. Good code is scalable code.
 
 Scalability is not only for systems, it's also for engineering teams. A good architecture allows teams to work in parallel without stepping on each other's toes.
 

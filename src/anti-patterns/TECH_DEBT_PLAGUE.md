@@ -1,6 +1,6 @@
 # Tech Debt Plague
 
-Tech debt is a [plague](https://diego-pacheco.blogspot.com/2020/01/breaking-debt-cycle.html). It is something that all companies suffer from. It is normal to have tech debt. What is not correct is architects not fighting tech debt. Tech debt must be fought all the time, either by simplifying requirements to avoid feature bloat, or by making better decisions that lead to better systems.
+Tech debt is a [plague](https://diego-pacheco.blogspot.com/2020/01/breaking-debt-cycle.html). It is something that all companies suffer from. It is normal to have tech debt. What is not correct is architects not fighting tech debt constantly. Tech debt must be fought all the time, either by simplifying requirements to avoid feature bloat, or by making better decisions that lead to better systems.
 
 When I was thinking about this section, I was thinking in terms of ["Tech Debt First"](https://diego-pacheco.blogspot.com/2024/04/tech-debt-first.html). Because often I see tech debt being the "default choice," which is an anti-pattern. Some technical principles should be non-negotiable.
 

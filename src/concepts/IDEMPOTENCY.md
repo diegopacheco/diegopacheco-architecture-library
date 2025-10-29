@@ -4,7 +4,7 @@ It is an interesting property that allows the same operation to be performed mul
 
 In REST APIs, idempotency is an important concept, especially for HTTP methods. Common idempotent HTTP methods include GET, HEAD, OPTIONS, TRACE, and PUT.
 
-- **GET**: The most famous and common Idempotent. Retrieving a resource multiple times does not change its state.
+- **GET**: The most famous and common idempotent method. Retrieving a resource multiple times does not change its state.
 
 [Idempotency](https://en.wikipedia.org/wiki/Idempotence) is important because if the same request arrives twice (there are no side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences, or just re-process the same thing again without issues.
 

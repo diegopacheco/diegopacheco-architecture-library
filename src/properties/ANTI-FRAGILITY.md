@@ -10,6 +10,6 @@ Your systems must be anti-fragile. Your architecture must be anti-fragile. Your 
 
 ## How to develop Anti-Fragile Systems?
 
-Basically we need to do 2 things. First we must test our infrastructure and systems to proof they are anti-fragile. AWS is anti-fragile by nature, but you could be using it wrong, so always a good idea to test it.
+Basically we need to do 2 things. First we must test our infrastructure and systems to prove they are anti-fragile. AWS is anti-fragile by nature, but you could be using it wrong, so always a good idea to test it.
 
 Second, you want to design with anti-fragility in mind. For instance we should not put all applications into a single database, we should have one database per service. Therefore we have isolation and protect against blast radius. So you see it is not just testing (which is chaos engineering) but also design with anti-fragility in mind.
