@@ -48,6 +48,9 @@ The process of determining what an authenticated user or system is allowed to do
 **Backpressure**
 A situation where incoming message rate exceeds processing capacity, leading to latency and potential message loss.
 
+**Blue-Green Deployment**
+A deployment strategy where two identical production environments are maintained, with traffic switched from the blue environment to the green environment, enabling instant rollback if issues occur.
+
 **Backward Compatibility**
 When new code can read data written by old code, requiring new services to provide defaults for missing fields.
 
@@ -66,7 +69,16 @@ An authentication method using unique biological characteristics such as fingerp
 **Build vs Buy Dilemma**
 The decision between building solutions in-house for core business advantages or buying external solutions.
 
+**Build Status**
+The state of the automated build process, which should consistently pass in stable systems as indicator of code quality.
+
 ## C
+
+**Canary Release**
+A deployment strategy where new code is gradually rolled out to a small percentage of users first, allowing observation of behavior and issues before full deployment. Often enabled through feature flags.
+
+**Code Review**
+A practice where engineers examine and critique code changes before they are merged, enabling knowledge sharing, quality assurance, and identification of potential issues.
 
 **Cache**
 A software component storing data for faster future access, commonly used in web browsers, databases, and operating systems.
@@ -89,8 +101,17 @@ A UML diagram useful for internal system design modeling or database table model
 **Connection Pool**
 A cache of database connections maintained so connections can be reused for future database requests, reducing the cost of opening/closing connections.
 
+**Consistency**
+The property that data in a system is in a valid state and follows all defined rules and constraints. Can be immediate as in ACID transactions or eventual as in BASE consistency model.
+
 **Consistent Hashing**
 A partitioning technique for distributed systems ensuring stable distribution when nodes are added/removed.
+
+**Continuous Refactoring**
+The ongoing process of improving code structure and design without changing external behavior, essential for maintaining code quality and preventing technical debt accumulation.
+
+**Contract-Driven Design**
+An approach where services are designed around their contracts first, ensuring well-defined boundaries and compatibility before implementation.
 
 **Cost of Delay**
 A Lean concept measuring the cost of waiting versus deciding immediately.
@@ -98,13 +119,31 @@ A Lean concept measuring the cost of waiting versus deciding immediately.
 **Crystal Ball (Foresight)**
 A practice of thinking ahead and predicting future changes to architecture, allowing preparation for upcoming needs.
 
+**Credential Rotation**
+The process of periodically changing credentials and keys to reduce the risk from long-term exposure if a credential is compromised.
+
 **Cursor-Based Pagination**
 A pagination method using a cursor (unique identifier) to mark the starting point for the next page.
 
 ## D
 
+**Database Migration**
+The process of modifying database schema to support application changes, often requiring special care to execute without downtime.
+
+**Data Migration**
+The process of transferring data from one system to another while maintaining integrity and minimizing downtime.
+
 **Data Synchronization**
 The process of keeping data consistent across multiple systems.
+
+**Deployment Strategy**
+The planned approach for releasing code to production, including methods like canary releases, blue-green deployments, and zero-downtime deployments to minimize risk.
+
+**Deployment Success**
+The rate at which deployments to production complete without errors or rollbacks, indicating system reliability and confidence in release processes.
+
+**Design Document**
+A living document that captures architectural design, including diagrams, key decisions, rationale, trade-offs, and principles. Serves as communication tool and basis for review and feedback.
 
 **Deep Work**
 Focused, uninterrupted time that architects must protect for research, thinking about trade-offs, evaluating solutions, and reading code, typically 3-6 hours at least 3 times per week.
@@ -124,8 +163,14 @@ A free, open-source diagram tool for creating architecture diagrams, flowcharts,
 **Discovery vs Delivery Dilemma**
 The balance between exploring what to build (discovery) and executing the build (delivery).
 
+**Discovery Work**
+Early phase of project work focused on understanding problems, exploring solutions, and validating assumptions through research, prototyping, and testing before committing to full implementation.
+
 **Distributed Monolith**
 An anti-pattern where a system is decomposed into services but remains tightly coupled, losing the benefits of distributed architecture while gaining its complexity.
+
+**Durability**
+The guarantee that once data is committed, it will not be lost even in case of system failures. A core component of ACID transactions, typically achieved using Write-Ahead Logs.
 
 **Distributed Systems**
 Computer systems where components are located on different networked computers that communicate and coordinate to achieve a common goal, presenting unique challenges in consistency, availability, and partition tolerance.
@@ -134,6 +179,12 @@ Computer systems where components are located on different networked computers t
 
 **Encryption (In Transit and At Rest)**
 Security measures to protect data during transmission and while stored.
+
+**Error Tracking**
+Systematic monitoring and recording of exceptions and errors in production, with goal of achieving zero exceptions. Critical for identifying and fixing issues.
+
+**Event-Driven Architecture**
+An architectural style where components communicate asynchronously through events, enabling loose coupling and supporting real-time data distribution across systems.
 
 **Entitlements**
 Specific rights or privileges granted to a user or system after authentication and authorization, defining what actions can be performed on resources.
@@ -171,6 +222,9 @@ When old code can read data written by new code, allowing old services to safely
 A search capability like OpenSearch or Elasticsearch for searching large product catalogs.
 
 ## G
+
+**Gemba**
+A Lean principle meaning the real place in Japanese, emphasizing the importance of understanding work by being present where it actually happens. Architects practice gemba by working in the trenches with engineers.
 
 **GitOps**
 A practice using Git repositories as the single source of truth for declarative infrastructure and applications, enhancing security by reducing the need to share admin credentials with developers and providing history of all changes through Git.
@@ -224,6 +278,18 @@ A pagination method using values of the last item in the current page to determi
 
 ## L
 
+**Layered Architecture**
+A traditional architectural pattern where systems are organized into horizontal layers with communication flowing through layers. Can lead to problems when services are designed 1:1 with features.
+
+**Lean Principle**
+Management and development philosophy emphasizing elimination of waste, flow efficiency, and continuous improvement. Influences architectural decisions including cost of delay and decision-making timing.
+
+**Legacy System**
+Existing system that was developed in the past, often with outdated technology or practices, requiring careful handling during modernization to maintain business continuity.
+
+**Least Privilege Principle**
+A security practice where users and services are granted only the minimum permissions required to perform their tasks, reducing the blast radius of compromised accounts.
+
 **LucidChart**
 A paid, professional diagramming tool for creating architecture diagrams, flowcharts, and system design visualizations.
 
@@ -249,6 +315,15 @@ A service that distributes incoming network traffic across multiple servers to e
 
 **Markdown**
 A lightweight markup language used for creating formatted text using plain text, commonly used for documentation, README files, and technical writing. Simple, portable, and works well with AI grammar tools.
+
+**Microservices**
+An architectural approach where a system is composed of small, independently deployable services that are loosely coupled and organized around business capabilities. When done correctly with proper contracts, microservices allow teams to work in parallel and enable technology diversity.
+
+**Monolith**
+A single, tightly integrated application where all components are bundled together. While monoliths can be well-structured initially, they often become difficult to scale and modify over time.
+
+**Monitoring Dashboard**
+Visual displays of system metrics and health indicators that architects and engineers should regularly review as part of attention to detail. Critical for understanding production behavior.
 
 **Mental Models**
 Structured ways of thinking and understanding concepts that help architects learn faster, understand complex topics better, make better decisions, and solve problems more effectively.
@@ -310,6 +385,9 @@ A visual representation showing the big picture of how services communicate and 
 **Pagination**
 A technique for breaking large datasets into smaller chunks (pages) that can be retrieved one at a time.
 
+**Performance Metrics**
+Quantified measurements of system performance including latency, throughput, response times, and resource utilization. Must be tracked and analyzed to ensure systems meet performance goals.
+
 **Partition**
 A way of dividing a dataset into subsets where every element belongs to exactly one subset, used to improve performance and efficiency in distributed computing.
 
@@ -325,8 +403,11 @@ An authorization approach where policies are expressed as code.
 **Policy-Based Access Control (PBAC)**
 An authorization model that uses policies to define what users or systems can do.
 
-**Proof of Concepts (PoCs)**
-A technique to explore problems and technologies before producing the design, serving as a laboratory for thinking and experimentation.
+**Production Logging**
+Comprehensive logging in production systems to capture application behavior, errors, and anomalies. Part of observability and attention to detail.
+
+**Proof of Concept (PoC)**
+A small experimental implementation used to explore problems, validate technologies, and make informed architectural decisions before committing to full-scale design and implementation.
 
 **Protect Your Time**
 A practice of safeguarding time for deep work by blocking calendar time, pushing back on excessive meetings, and maintaining focus periods for thinking and research.
@@ -343,6 +424,9 @@ A data structure following First In First Out (FIFO) principle used in distribut
 
 **Random Load Balancing**
 A load balancing algorithm that randomly selects a server for each request, providing simple distribution without state tracking.
+
+**Resilience**
+The ability of a system to recover from failures and continue operating despite disruptions. Distinguished from anti-fragility, which requires systems to improve from stress.
 
 **Rate Limiting**
 A technique controlling the rate at which requests are processed to avoid overwhelming systems.
@@ -378,6 +462,15 @@ An algorithm that distributes requests sequentially across servers.
 
 **Scalability**
 A property enabling systems to handle growth and load efficiently, also applies to engineering teams working in parallel.
+
+**Secrets Management**
+The practice of securely storing, rotating, accessing, and auditing sensitive credentials and keys using tools like AWS KMS, HashiCorp Vault, or secrets managers.
+
+**Security Audit**
+Systematic examination of systems for security vulnerabilities, compliance issues, and adherence to security standards. Part of attention to detail.
+
+**Service Contract**
+The explicit API specification defining how services communicate, including request and response formats, error handling, and behavioral guarantees. Well-designed contracts enable loose coupling and allow internal implementation changes without breaking clients.
 
 **Schema Evolution**
 The practice of changing data structures, API contracts, or message formats over time while maintaining compatibility with existing clients and services.
@@ -430,7 +523,16 @@ Services that maintain state information across multiple requests, more complex 
 **Stateless Services**
 Services that do not retain information about previous interactions; any necessary state is stored in external systems like databases or caches.
 
+**System Modernization**
+The process of updating legacy systems to use modern technologies, patterns, and practices while maintaining stability and reducing risk. Requires discipline and specific approaches.
+
 ## T
+
+**Test Passing Rate**
+The percentage of test suite tests that pass successfully, indicating code correctness and serving as metric for stability.
+
+**Testing in Production**
+A disciplined practice of validating system behavior, performance, and reliability with real production traffic and data while minimizing risk to users through techniques like canary releases, feature flags, and guard-rails.
 
 **Thinking Tools**
 Tools and techniques architects use for exploring alternatives, evaluating trade-offs, and solving problems creatively, including plain text files, markdown, diagrams, and proof of concepts.
@@ -462,12 +564,18 @@ A cache management technique where items are assigned a lifespan after which the
 **Tokenization**
 A security technique that replaces sensitive data with non-sensitive tokens, reducing the risk of data exposure while maintaining data utility.
 
+**Technology Evaluation**
+The process of researching and assessing new technologies, tools, and frameworks to determine if they fit architectural needs and can improve systems. Part of architect responsibility.
+
 ## U
 
 **Unleash**
 An open-source feature flag management platform providing feature toggle capabilities and gradual rollouts.
 
 ## W
+
+**Waterfall**
+Traditional sequential software development approach where discovery is completed before delivery. Often leads to inefficiencies when done linearly without iterative feedback.
 
 **Weighted Round Robin**
 A load balancing algorithm variant that distributes requests based on assigned weights, directing more traffic to more powerful servers.

@@ -11,3 +11,9 @@ The most important part of services is the contract. The contract is the API. Th
 [Contracts](https://diego-pacheco.blogspot.com/2021/04/its-all-about-contracts.html) must be well designed and reviewed carefully. It is not difficult to make [poor contracts](https://diego-pacheco.blogspot.com/2024/12/leaky-contracts.html) because engineers, and even more so frontend engineers, are just thinking about what needs to change, and are not thinking if it is the right place to make the change or if it should be that way at all. Contracts must be explicit and not [hidden](https://diego-pacheco.blogspot.com/2023/08/embedded-mocks-and-hidden-contracts.html). The cost of refactoring a [contract](https://diego-pacheco.blogspot.com/2024/01/refactoring-making-sense-of-invisible.html) is usually high, while refactoring the internal implementation is low, as long as you do not break the contract.
 
 Services require a [lot of thinking](https://diego-pacheco.blogspot.com/2024/05/service-chain.html), they are not a panacea.
+
+## SOA it'a big Deal
+
+Service Orientation just be the main operating model for software architecture. Services should be the default way of thinking about solutions. Services should be the default way of building solutions. Services should be the default way of operating solutions.
+
+Because services allow us to have buisness capabilitites that can be shared across different services, apllication, products and use-cases. Services also allow us to isolate and have deoupling from contract and implementation(IF done right), allowign the engineering team to improve things under the hood without breaking ot slowing down the business.
