@@ -5,7 +5,16 @@ A comprehensive glossary of technical terms, concepts, patterns, and methodologi
 ## A
 
 **A/B Testing**
-An experimental technique to gather data and make informed decisions by comparing two versions of a system.
+An experimental technique to gather data and make informed decisions by comparing two versions of a system. Often implemented using feature flags and experimentation platforms.
+
+**Agile Methodology**
+Development approach emphasizing iterative development, team collaboration, and responsiveness to change. Balances discovery and delivery through continuous feedback cycles.
+
+**Architecture Decision Record (ADR)**
+A document recording important architectural decisions, the rationale behind them, consequences, and alternatives considered. Essential for communicating and reviewing architecture.
+
+**Availability**
+A system quality ensuring that services are accessible and operational to users. A key requirement of distributed systems and emphasized in BASE consistency model.
 
 **Access Control Lists (ACLs)**
 A list-based authorization model that explicitly specifies which users or systems can access particular resources.
