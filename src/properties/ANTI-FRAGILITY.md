@@ -7,3 +7,9 @@ In order to achive anti-fragility you need Defensive Programing and Chaos Engine
 You do not want discover in production if the system can recover from failure, you want to know before hand. You want to know that your system is anti-fragile. Testing in production is not the same as discovering in production. Testing in production means, guard-rails and testing in production environment but without impacting real users.
 
 Your systems must be anti-fragile. You architevture must be anti-fragile. Your infrastructure must be anti-fragile. To be anti-fragile you need lots of hypotethesis and experiments to proove your system is anti-fragile. Anti-fragility requires `science` and `creativity`.
+
+## How to develop Anti-Fragile Systems?
+
+Basically we need to do 2 things. First we must test our infrastructure and systems to proof they are anti-fragile. AWS is anti-fragile by nature, but you could be using it wrong, so always a good idea to test it.
+
+Seconnd, you want design with anti-fragiolity in mind. For instance we should not put all applications into a single database, we should have one database per service. Therefore we have isolation and protect agains blast radius. So you see is not just testing(which chaos engineering) but also design with anti-fragility in mind.
