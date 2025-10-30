@@ -191,6 +191,13 @@
 <p>This prevents transactions from reading uncommitted data from other transactions, which could lead to inconsistencies.</p>
 <h2 id="d--durability"><a class="header" href="#d--durability">D == Durability</a></h2>
 <p>Durability guarantees that once a transaction has been committed, it will remain so, even in the event of a system failure. Committed data is saved to non-volatile storage, ensuring that it is not lost. Usually using a WAL (Write Ahead Log) to achieve this.</p>
+<h2 id="why-you-need-to-know-this"><a class="header" href="#why-you-need-to-know-this">Why you need to know this?</a></h2>
+<ol>
+<li>Relational databases like PostgreSQL, MySQL, Oracle are ACID.</li>
+<li>Non-relational databases like DynamoDB, Cassandra or Redis are not ACID.</li>
+<li>knowing that your database has ACID properties allow you to design simple systems because you can rely on ACID properties.</li>
+</ol>
+<p>Let's say you want write a system where only one user can rent a car. You probably can think in some complex solution with locks. However you don't need that because you simply can rely on the ACID properties. If two users try to insert the rental at same time, one will succeed and the other will fail. So ACID allow your code to be simple.</p>
 
                     </main>
 

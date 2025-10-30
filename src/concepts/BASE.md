@@ -22,9 +22,10 @@ This might sound silly but affects the user experience to the sence that you won
 
 Don't belive me? Watch this keynote from AWS re:Invent 2022 where Dr. Werner Vogels (CTO of AWS) explains this concept in detail around the 1 hour mark.
 <div style="position: relative; width: 100%; padding-bottom: 56.25%">
-<iframe src="https://www.youtube.com/watch?v=RfvL_423a-I&t=1s" 
+<iframe src="https://www.youtube.com/embed/RfvL_423a-I?start=1" 
         title="AWS re:Invent 2022 - Keynote with Dr. Werner Vogels" frameborder="0" allowfullscreen
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         style="position: absolute; width: 100%; height: 100%;">
 </iframe>
 </div>
+PS: I was there in Vegas and saw that live, was pretty awesome.

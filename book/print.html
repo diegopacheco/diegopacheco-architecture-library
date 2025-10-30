@@ -725,6 +725,13 @@ Choosing the best and latest solutions</li>
 <p>This prevents transactions from reading uncommitted data from other transactions, which could lead to inconsistencies.</p>
 <h2 id="d--durability"><a class="header" href="#d--durability">D == Durability</a></h2>
 <p>Durability guarantees that once a transaction has been committed, it will remain so, even in the event of a system failure. Committed data is saved to non-volatile storage, ensuring that it is not lost. Usually using a WAL (Write Ahead Log) to achieve this.</p>
+<h2 id="why-you-need-to-know-this"><a class="header" href="#why-you-need-to-know-this">Why you need to know this?</a></h2>
+<ol>
+<li>Relational databases like PostgreSQL, MySQL, Oracle are ACID.</li>
+<li>Non-relational databases like DynamoDB, Cassandra or Redis are not ACID.</li>
+<li>knowing that your database has ACID properties allow you to design simple systems because you can rely on ACID properties.</li>
+</ol>
+<p>Let's say you want write a system where only one user can rent a car. You probably can think in some complex solution with locks. However you don't need that because you simply can rely on the ACID properties. If two users try to insert the rental at same time, one will succeed and the other will fail. So ACID allow your code to be simple.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="authentication--authorization--entitlements"><a class="header" href="#authentication--authorization--entitlements">Authentication &amp; Authorization &amp; Entitlements</a></h1>
 <h2 id="authentication"><a class="header" href="#authentication">Authentication</a></h2>
 <p><a href="https://en.wikipedia.org/wiki/Authentication">Authentication</a> is the process of verifying the identity of a user or system. It ensures that the entity requesting access is who they claim to be. Common methods of authentication include:</p>
@@ -752,18 +759,48 @@ Choosing the best and latest solutions</li>
 <li>See premium content</li>
 <li>See premium features</li>
 </ul>
+<h2 id="why-you-need-to-know-this-1"><a class="header" href="#why-you-need-to-know-this-1">Why you need to know this?</a></h2>
+<p>Authentication</p>
+<ol>
+<li>Not all our services need to be public or customer facing.</li>
+<li>Whatever you have that is customer facing, must have authentication.</li>
+<li>Internal services don't require any authentication.</li>
+</ol>
+<p>Authorization</p>
+<ol>
+<li>It's the next step after authorization.</li>
+<li>In security we can give granular access to resources. This principle is called <a href="https://en.wikipedia.org/wiki/Principle_of_least_privilege">least privilege</a>.</li>
+<li>Authonrization is checking if the user has the fine grained access to a resource.</li>
+</ol>
+<p>Entitlements</p>
+<ol>
+<li>It's common in digital products to have tiers of products. Such tiers can be called: basic, premium, silver, gold, platinum, free, pro, enterprise. But all this ters are also called entitlements.</li>
+<li>Entitlements means, given the user subscription or plan, can he see some feature or not.</li>
+<li>Consider entitlements the gap how tell, what features a user can see or not. Do not confuse entitlements with feature flags or experiments.</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="base"><a class="header" href="#base">BASE</a></h1>
 <p>A concept from NoSQL databases.
 <a href="https://aws.amazon.com/compare/the-difference-between-acid-and-base-database/">BASE</a> systems prioritize availability instead of immediate consistency.</p>
 <h2 id="base-properties"><a class="header" href="#base-properties">BASE Properties</a></h2>
 <p>BASE is an acronym that describes the consistency model used by many NoSQL systems. It stands for:</p>
-<p>BA == Basically Available</p>
+<h3 id="ba--basically-available"><a class="header" href="#ba--basically-available">BA == Basically Available</a></h3>
 <p>The system guarantees availability - it will always respond to requests, even if the response contains stale or inconsistent data. The database remains operational even when parts of the system fail.</p>
-<p>S == Soft state
-The state of the system may change over time, even without new input, due to eventual consistency. Data doesn't have to be immediately consistent across all nodes.</p>
-<p>E == Eventual consistency
-Given enough time without new updates, all replicas will eventually converge to the same value. The system doesn't guarantee immediate consistency but promises that consistency will be achieved eventually.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="idempotency"><a class="header" href="#idempotency">IDEMPOTENCY</a></h1>
+<h3 id="s--soft-state"><a class="header" href="#s--soft-state">S == Soft state</a></h3>
+<p>The state of the system may change over time, even without new input, due to eventual consistency. Data doesn't have to be immediately consistent across all nodes.</p>
+<h3 id="e--eventual-consistency"><a class="header" href="#e--eventual-consistency">E == Eventual consistency</a></h3>
+<p>Given enough time without new updates, all replicas will eventually converge to the same value. The system doesn't guarantee immediate consistency but promises that consistency will be achieved eventually.</p>
+<h2 id="why-you-need-to-know-this-2"><a class="header" href="#why-you-need-to-know-this-2">Why you need to know this?</a></h2>
+<p>NoSQL databases like DynamoDB, Cassandra, Redis are often BASE. By understanding BASE properties you can better understand what to expect from your NoSQL database. For instance knowing you have a BASE set of properties in place mean that if you insert some data, or update some data, you might not see that that replicated across all nodes immediately. Eventually it will be all contistent across all nodes.</p>
+<p>This might sound silly but affects the user experience to the sence that you wont have "immediate affect of anything". In a Sync/Blocking universe everything is immediate, but you might think thats better? Well for humans might be but for systems its sucks and it's much harder to Scale. In AWS everything is Async and Non-Blocking.</p>
+<p>Don't belive me? Watch this keynote from AWS re:Invent 2022 where Dr. Werner Vogels (CTO of AWS) explains this concept in detail around the 1 hour mark.</p>
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/RfvL_423a-I?start=1" 
+        title="AWS re:Invent 2022 - Keynote with Dr. Werner Vogels" frameborder="0" allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
+PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break-before: page; page-break-before: always;"></div><h1 id="idempotency"><a class="header" href="#idempotency">IDEMPOTENCY</a></h1>
 <p>It is an interesting property that allows the same operation to be performed multiple times without changing the result beyond the initial application.</p>
 <p>In REST APIs, idempotency is an important concept, especially for HTTP methods. Common idempotent HTTP methods include GET, HEAD, OPTIONS, TRACE, and PUT.</p>
 <ul>
