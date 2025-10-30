@@ -25,3 +25,23 @@ Entitlements refer to the specific rights or privileges granted to a user or sys
 - Access a product catalog (invisible by default)
 - See premium content
 - See premium features
+
+## Why you need to know this?
+
+Authentication
+
+1. Not all our services need to be public or customer facing.
+2. Whatever you have that is customer facing, must have authentication.
+3. Internal services don't require any authentication.
+
+Authorization
+
+1. It's the next step after authorization. 
+2. In security we can give granular access to resources. This principle is called [least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
+3. Authonrization is checking if the user has the fine grained access to a resource.
+
+Entitlements
+
+1. It's common in digital products to have tiers of products. Such tiers can be called: basic, premium, silver, gold, platinum, free, pro, enterprise. But all this ters are also called entitlements.
+2. Entitlements means, given the user subscription or plan, can he see some feature or not. 
+3. Consider entitlements the gap how tell, what features a user can see or not. Do not confuse entitlements with feature flags or experiments.
