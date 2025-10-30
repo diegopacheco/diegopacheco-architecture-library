@@ -8,6 +8,6 @@ Stateless does not mean that the service cannot use state at all; rather, it mea
 
 ## Why you need to know this?
 
-As much as possible try to create services as stateless. This will bring you a lot of benefits in terms of scalability, reliability, and maintainability. Most importantly it will be much easier to reason, mantain and evolve your services over time.
+As much as possible try to create services as stateless. This will bring you a lot of benefits in terms of scalability, reliability, and maintainability. Most importantly it will be much easier to reason, maintain and evolve your services over time.
 
 When you need to create stateful services, be very careful about how you manage state. Consider using external systems to store state information and ensure that your services can handle failures gracefully. Always evaluate the trade-offs between stateless and stateful designs based on your specific use case and requirements.

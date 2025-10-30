@@ -41,7 +41,7 @@ Hire, develop, retain, and truly grow talent at scale
 * 📚[Amazon Author](https://amazon.com/author/diegopacheco)
 * 🏢[LinkedIn](https://www.linkedin.com/in/diegopachecors/)
 * 🐦[X](https://twitter.com/diego_pacheco)
-* 🐦[Blusky](https://bsky.app/profile/diegopacheco.bsky.social)
+* 🐦[Bluesky](https://bsky.app/profile/diegopacheco.bsky.social)
 * 📺[YouTube Tech Channel](https://www.youtube.com/channel/UC81qdxTnQWQxw73_CmIZAjg/videos)
 
 ### 📝 Tiny Essays:

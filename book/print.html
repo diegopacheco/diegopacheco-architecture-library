@@ -216,7 +216,7 @@ Hire, develop, retain, and truly grow talent at scale</p>
 <li>📚<a href="https://amazon.com/author/diegopacheco">Amazon Author</a></li>
 <li>🏢<a href="https://www.linkedin.com/in/diegopachecors/">LinkedIn</a></li>
 <li>🐦<a href="https://twitter.com/diego_pacheco">X</a></li>
-<li>🐦<a href="https://bsky.app/profile/diegopacheco.bsky.social">Blusky</a></li>
+<li>🐦<a href="https://bsky.app/profile/diegopacheco.bsky.social">Bluesky</a></li>
 <li>📺<a href="https://www.youtube.com/channel/UC81qdxTnQWQxw73_CmIZAjg/videos">YouTube Tech Channel</a></li>
 </ul>
 <h3 id="-tiny-essays"><a class="header" href="#-tiny-essays">📝 Tiny Essays:</a></h3>
@@ -790,9 +790,9 @@ Choosing the best and latest solutions</li>
 <h3 id="e--eventual-consistency"><a class="header" href="#e--eventual-consistency">E == Eventual consistency</a></h3>
 <p>Given enough time without new updates, all replicas will eventually converge to the same value. The system doesn't guarantee immediate consistency but promises that consistency will be achieved eventually.</p>
 <h2 id="why-you-need-to-know-this-2"><a class="header" href="#why-you-need-to-know-this-2">Why you need to know this?</a></h2>
-<p>NoSQL databases like DynamoDB, Cassandra, Redis are often BASE. By understanding BASE properties you can better understand what to expect from your NoSQL database. For instance knowing you have a BASE set of properties in place mean that if you insert some data, or update some data, you might not see that that replicated across all nodes immediately. Eventually it will be all contistent across all nodes.</p>
-<p>This might sound silly but affects the user experience to the sence that you wont have "immediate affect of anything". In a Sync/Blocking universe everything is immediate, but you might think thats better? Well for humans might be but for systems its sucks and it's much harder to Scale. In AWS everything is Async and Non-Blocking.</p>
-<p>Don't belive me? Watch this keynote from AWS re:Invent 2022 where Dr. Werner Vogels (CTO of AWS) explains this concept in detail around the 1 hour mark.</p>
+<p>NoSQL databases like DynamoDB, Cassandra, Redis are often BASE. By understanding BASE properties you can better understand what to expect from your NoSQL database. For instance knowing you have a BASE set of properties in place means that if you insert some data, or update some data, you might not see that replicated across all nodes immediately. Eventually it will be all consistent across all nodes.</p>
+<p>This might sound silly but affects the user experience to the sense that you will not have immediate effect of anything. In a Sync/Blocking universe everything is immediate, but you might think that is better? Well for humans might be but for systems it sucks and it is much harder to scale. In AWS everything is Async and Non-Blocking.</p>
+<p>Do not believe me? Watch this keynote from AWS re:Invent 2022 where Dr. Werner Vogels (CTO of AWS) explains this concept in detail around the 1 hour mark.</p>
 <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 <iframe src="https://www.youtube.com/embed/RfvL_423a-I?start=1" 
         title="AWS re:Invent 2022 - Keynote with Dr. Werner Vogels" frameborder="0" allowfullscreen
@@ -924,7 +924,7 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <p>It is much easier to work with stateless services because they can scale more easily, recover from failures faster, and are generally simpler to manage. However, there are scenarios where stateful services are necessary, such as when maintaining user sessions or handling transactions.</p>
 <p>Stateless does not mean that the service cannot use state at all; rather, it means that the service itself does not store state between requests. Instead, any necessary state can be stored in external systems like databases or caches. Stateful services are more complex.</p>
 <h2 id="why-you-need-to-know-this-8"><a class="header" href="#why-you-need-to-know-this-8">Why you need to know this?</a></h2>
-<p>As much as possible try to create services as stateless. This will bring you a lot of benefits in terms of scalability, reliability, and maintainability. Most importantly it will be much easier to reason, mantain and evolve your services over time.</p>
+<p>As much as possible try to create services as stateless. This will bring you a lot of benefits in terms of scalability, reliability, and maintainability. Most importantly it will be much easier to reason, maintain and evolve your services over time.</p>
 <p>When you need to create stateful services, be very careful about how you manage state. Consider using external systems to store state information and ensure that your services can handle failures gracefully. Always evaluate the trade-offs between stateless and stateful designs based on your specific use case and requirements.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-patterns"><a class="header" href="#why-patterns">Why Patterns?</a></h1>
 <p><a href="https://diego-pacheco.blogspot.com/2023/09/design-patterns.html">Patterns</a> are common "Recipes" to solve recurring problems. They are proven solutions that have been tested and refined over time.</p>
@@ -1205,8 +1205,24 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <p>For a comprehensive collection of blog posts, articles, technical documentation, and external resources, please see <a href="epilogue/REFERENCES.html">References</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
 <p>All notable changes to this project will be documented in this file.</p>
-<h2 id="102---2025-10-28"><a class="header" href="#102---2025-10-28">[1.0.2] - 2025-10-28</a></h2>
+<h2 id="103---2025-10-29"><a class="header" href="#103---2025-10-29">[1.0.3] - 2025-10-29</a></h2>
+<h3 id="added"><a class="header" href="#added">Added</a></h3>
+<ul>
+<li>Comprehensive content for STATELESS_VS_STATEFULL_SVC.md</li>
+<li>Comprehensive content for SOURCE_OF_TRUTH.md</li>
+<li>Comprehensive content for SCHEMA_EVOLUTION.md</li>
+<li>Comprehensive content for PARTITION.md</li>
+<li>Comprehensive content for OPLOCKING.md</li>
+<li>Comprehensive content for IDEMPOTENCY.md</li>
+</ul>
 <h3 id="changed"><a class="header" href="#changed">Changed</a></h3>
+<ul>
+<li>Enhanced BASE.md with additional details and clarity</li>
+<li>Enhanced AUTHENT.md with comprehensive authentication and authorization coverage</li>
+<li>Enhanced ACID.md with detailed transaction property explanations</li>
+</ul>
+<h2 id="102---2025-10-28"><a class="header" href="#102---2025-10-28">[1.0.2] - 2025-10-28</a></h2>
+<h3 id="changed-1"><a class="header" href="#changed-1">Changed</a></h3>
 <ul>
 <li>Enhanced ANTI-FRAGILITY.md with additional content</li>
 <li>Expanded OSS.md with more open source insights</li>
@@ -1216,12 +1232,12 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Improved STAGNATION.md anti-pattern documentation</li>
 <li>Expanded GLOSSARY.md with more architectural terms</li>
 </ul>
-<h3 id="added"><a class="header" href="#added">Added</a></h3>
+<h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
 <ul>
 <li>CHANGELOG.md file to track changes and updates</li>
 </ul>
 <h2 id="101---2025-10-27"><a class="header" href="#101---2025-10-27">[1.0.1] - 2025-10-27</a></h2>
-<h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
+<h3 id="added-2"><a class="header" href="#added-2">Added</a></h3>
 <ul>
 <li>Chapter 0 (Zero) with rationale and reasoning behind the book</li>
 <li>Chapter 2 (Anti-Patterns): TECH_DEBT_PLAGUE, IGNORE_CULTURE, STAGNATION, REQUIREMENTS</li>
@@ -1238,7 +1254,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Resources section with books and learning materials</li>
 <li>References section with external links</li>
 </ul>
-<h3 id="changed-1"><a class="header" href="#changed-1">Changed</a></h3>
+<h3 id="changed-2"><a class="header" href="#changed-2">Changed</a></h3>
 <ul>
 <li>Reorganized book structure into numbered chapters</li>
 <li>Separated Concepts and Patterns into distinct chapters</li>
@@ -1254,7 +1270,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Documentation structure inconsistencies</li>
 </ul>
 <h2 id="100---2025-10-27"><a class="header" href="#100---2025-10-27">[1.0.0] - 2025-10-27</a></h2>
-<h3 id="added-2"><a class="header" href="#added-2">Added</a></h3>
+<h3 id="added-3"><a class="header" href="#added-3">Added</a></h3>
 <ul>
 <li>Initial project setup with mdBook</li>
 <li>Introduction and cover page</li>

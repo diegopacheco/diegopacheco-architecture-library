@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2025-10-29
+
+### Added
+- Comprehensive content for STATELESS_VS_STATEFULL_SVC.md
+- Comprehensive content for SOURCE_OF_TRUTH.md
+- Comprehensive content for SCHEMA_EVOLUTION.md
+- Comprehensive content for PARTITION.md
+- Comprehensive content for OPLOCKING.md
+- Comprehensive content for IDEMPOTENCY.md
+
+### Changed
+- Enhanced BASE.md with additional details and clarity
+- Enhanced AUTHENT.md with comprehensive authentication and authorization coverage
+- Enhanced ACID.md with detailed transaction property explanations
+
 ## [1.0.2] - 2025-10-28
 
 ### Changed
