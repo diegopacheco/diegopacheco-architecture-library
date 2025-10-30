@@ -71,3 +71,11 @@ Database schemas require special care because data persists:
 * Use views or aliases to maintain old column names during transitions
 
 Schema evolution is not optional in production systems. Every change must consider compatibility to avoid outages during deployments.
+
+## Why you need to know this?
+
+All backend systems have databases. Backend systems should never share database access with other services. We need mantain and evolve database schemas without breaking existing application. By following good schema evolution patterns we can ensure smooth deployments and maintain system reliability.
+
+Backward compability is more important than forward compatibility in most backend systems, because backend systems are the source of truth for data. Also if you need rolback the code on the application for a bug or some mistake, our the business just change theier minds, you can do that easily without breaking the database. If you smart enought you might be able to scape database migrations in some cases even.
+
+Forward compatibility is more important in event-driven systems, where multiple services consume the same events. In this case, you want to make sure that old services can still process new events without issues.
