@@ -800,7 +800,7 @@ Choosing the best and latest solutions</li>
         style="position: absolute; width: 100%; height: 100%;">
 </iframe>
 </div>
-PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break-before: page; page-break-before: always;"></div><h1 id="idempotency"><a class="header" href="#idempotency">IDEMPOTENCY</a></h1>
+PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break-before: page; page-break-before: always;"></div><h1 id="idempotency"><a class="header" href="#idempotency">Idempotency</a></h1>
 <p>It is an interesting property that allows the same operation to be performed multiple times without changing the result beyond the initial application.</p>
 <p>In REST APIs, idempotency is an important concept, especially for HTTP methods. Common idempotent HTTP methods include GET, HEAD, OPTIONS, TRACE, and PUT.</p>
 <ul>
@@ -809,11 +809,29 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <p><a href="https://en.wikipedia.org/wiki/Idempotence">Idempotency</a> is important because if the same request arrives twice (there are no side effects), the server can safely ignore the second request or return the same result as the first one without any unintended consequences, or just re-process the same thing again without issues.</p>
 <p>Such principle keeps us from writing complex software. For instance, if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.</p>
 <p>So we want to honor the idempotency principle to keep our software simple and predictable.</p>
+<h2 id="why-you-need-to-know-this-3"><a class="header" href="#why-you-need-to-know-this-3">Why you need to know this?</a></h2>
+<p>When you are designing and implementing REST APIS. Which pretty much is the bread and butter of all backend development now a days. You must guarantee that your GET, HEAD, OPTIONS, TRACE and PUT methods are idempotent. This is not a merely rule of thumb, is a must. Because your consumers/clients will expect that behavior from your API. If you break that expectation, you will have a bad time debugging and fixing issues that could be easily avoided by following the idempotency principle.</p>
+<p>Secondly IF you break idempotency you will have more complex code to maintain. Because you will have to handle edge cases and weired things, it will be harder to test, everything will be worse. So just follow the principle and keep your code simple.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pessimistic-vs-optimistic-locking"><a class="header" href="#pessimistic-vs-optimistic-locking">Pessimistic vs Optimistic Locking</a></h1>
 <p>When dealing with concurrent access to shared resources, two primary locking strategies can be employed: <a href="https://en.wikipedia.org/wiki/Lock_(computer_science)">pessimistic locking</a> and <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic locking</a>.</p>
 <p><strong>Pessimistic locking</strong>: assumes that conflicts will occur and therefore locks the resource for exclusive access when a transaction begins. This approach is suitable for environments with high contention, as it prevents other transactions from modifying the resource until the lock is released. However, it can lead to reduced concurrency and potential deadlocks.</p>
 <p><strong>Optimistic locking</strong>: assumes that conflicts are rare and allows multiple transactions to access the resource concurrently. Instead of locking the resource, it checks for conflicts only when a transaction attempts to commit changes. If a conflict is detected, the transaction is rolled back and can be retried. This approach is more efficient in low-contention environments, as it maximizes concurrency and minimizes locking overhead.</p>
 <p>Optimistic locking is often implemented using versioning, where each resource has a version number that is checked and updated during transactions. If the version number has changed since the transaction began, it indicates a conflict.</p>
+<h2 id="why-you-need-to-know-this-4"><a class="header" href="#why-you-need-to-know-this-4">Why you need to know this?</a></h2>
+<p>Understanding the differences between pessimistic and optimistic locking is crucial for designing systems that handle concurrent access to shared resources effectively. Choosing the right locking strategy can significantly impact system performance, scalability, and user experience.</p>
+<p>Pessimits locking is better when:</p>
+<ul>
+<li>High contention for resources is expected.</li>
+<li>The cost of rolling back transactions is high.</li>
+</ul>
+<p>Optimistic locking is better when:</p>
+<ul>
+<li>Contention for resources is low.</li>
+<li>The cost of rolling back transactions is low.</li>
+<li>High concurrency is desired.</li>
+</ul>
+<p>It's very appealing to just use optimistic locking everywhere. However there are scenatios where you should have none. For instance, you classical example. It's an anti-pattern but happen a lot, React applications on the frontend might not be fully tested and might have many re-renderings causing many requests to be sent to the bbackend. In such scenario optimistic locking can cause a lot of pain and will be unnecessary overhead. In such scenario, just do nothing and rely on last write wins strategy or just pig bank on ACID properties.</p>
+<p>Ofcourse it really dependends on what the application does and the criticallity of the transaction. But the React scenario is not hypothetical, I've seen it happen many times in real life. Also if the frontend did not implement a time based debounce mechanism, the user might have a nervous finger and click multiple times on a button causing multiple requests to be sent to the backend. In such scenario optimistic locking will just add unnecessary pain and false positives.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="partition"><a class="header" href="#partition">Partition</a></h1>
 <p>A <strong>partition</strong> of a set is a way of dividing the data set into subsets such that every element in the original set is included in exactly one of the subsets. In other words, a <a href="https://en.wikipedia.org/wiki/Partition_(database)">partition</a> breaks down a set into distinct parts where no part shares any elements with another, and all parts together cover the entire original set.</p>
 <p>Partition by:</p>
@@ -828,6 +846,9 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 </ul>
 <p>Partitions matter because they can significantly impact the performance and efficiency of data processing tasks. Proper partitioning can lead to faster query execution, reduced data shuffling, and improved resource utilization in distributed computing environments.</p>
 <p>When designing partitions, consider factors such as data distribution, query patterns, and the underlying storage system to ensure optimal performance.</p>
+<h2 id="why-you-need-to-know-this-5"><a class="header" href="#why-you-need-to-know-this-5">Why you need to know this?</a></h2>
+<p>When you don't have a lot of data you can 100% survive without partitions. But as your data grows, partitions become crucial for maintaining performance and scalability. Proper partitioning can help you manage large datasets more effectively, improve query performance, and optimize resource usage.</p>
+<p>Partitions are a MUST at Scale. Another scenario you want partition is when the data grows quickly, like a lot of data everyday, recurent batch jogs getting data non-stop. If you just updating data in place you are fine, but if you keep inserting data without partitions, you will quickly run into performance issues as the dataset grows larger.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="schema-evolution"><a class="header" href="#schema-evolution">Schema Evolution</a></h1>
 <p><a href="https://en.wikipedia.org/wiki/Schema_evolution">Schema evolution</a> is the practice of changing data structures, API contracts, or message formats over time while maintaining compatibility with existing clients and services. This is critical for zero-downtime deployments in distributed systems.</p>
 <h2 id="forward-compatibility"><a class="header" href="#forward-compatibility">Forward Compatibility</a></h2>
@@ -887,13 +908,24 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <li>Use views or aliases to maintain old column names during transitions</li>
 </ul>
 <p>Schema evolution is not optional in production systems. Every change must consider compatibility to avoid outages during deployments.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="source-of-truth"><a class="header" href="#source-of-truth">SOURCE OF TRUTH</a></h1>
+<h2 id="why-you-need-to-know-this-6"><a class="header" href="#why-you-need-to-know-this-6">Why you need to know this?</a></h2>
+<p>All backend systems have databases. Backend systems should never share database access with other services. We need mantain and evolve database schemas without breaking existing application. By following good schema evolution patterns we can ensure smooth deployments and maintain system reliability.</p>
+<p>Backward compability is more important than forward compatibility in most backend systems, because backend systems are the source of truth for data. Also if you need rolback the code on the application for a bug or some mistake, our the business just change theier minds, you can do that easily without breaking the database. If you smart enought you might be able to scape database migrations in some cases even.</p>
+<p>Forward compatibility is more important in event-driven systems, where multiple services consume the same events. In this case, you want to make sure that old services can still process new events without issues.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="source-of-truth"><a class="header" href="#source-of-truth">Source of Truth</a></h1>
 <p>It is a concept that means what database or system is considered the authoritative source for a particular piece of information. It is common in distributed systems to have multiple databases or even systems that store the same data. In such cases, it is crucial to designate one of these as the <a href="https://en.wikipedia.org/wiki/Single_source_of_truth">"source of truth"</a> to ensure consistency and reliability of the data across the entire system.</p>
 <p>The same concept is used in migrations. While you are migrating from System A to System B, System A is the source of truth until the migration is complete and verified. After that, System B becomes the new source of truth.</p>
+<h2 id="why-you-need-to-know-this-7"><a class="header" href="#why-you-need-to-know-this-7">Why you need to know this?</a></h2>
+<p>In distributed systems, having a clear source of truth is essential to avoid data inconsistencies and conflicts. When multiple services or databases can modify the same data, it can lead to situations where different parts of the system have different versions of the truth. This can cause errors, confusion, and data integrity issues.</p>
+<p>It's common to have one system or one database behind a service to be the Source of Truth. This also means that a bunch of systems can READ or have a COPY of the data, usually in a form of a CACHE to have performance benefits, but when regards of where to WRITE must be a clear and only one place.</p>
+<p>This might sound silly, but this can either bring great sanity or a big mess to your system. Always make sure you have a clear Source of Truth for your data.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="stateless-vs-stateful-services"><a class="header" href="#stateless-vs-stateful-services">Stateless vs Stateful Services</a></h1>
 <p>When <a href="https://en.wikipedia.org/wiki/Service_statelessness_principle">designing services</a>, one of the key architectural decisions is whether to implement them as stateless or stateful. <a href="https://diego-pacheco.blogspot.com/2024/12/state.html">State</a> is a big thing. Stateless services do not retain any information about previous interactions, while stateful services maintain state information across multiple requests.</p>
 <p>It is much easier to work with stateless services because they can scale more easily, recover from failures faster, and are generally simpler to manage. However, there are scenarios where stateful services are necessary, such as when maintaining user sessions or handling transactions.</p>
 <p>Stateless does not mean that the service cannot use state at all; rather, it means that the service itself does not store state between requests. Instead, any necessary state can be stored in external systems like databases or caches. Stateful services are more complex.</p>
+<h2 id="why-you-need-to-know-this-8"><a class="header" href="#why-you-need-to-know-this-8">Why you need to know this?</a></h2>
+<p>As much as possible try to create services as stateless. This will bring you a lot of benefits in terms of scalability, reliability, and maintainability. Most importantly it will be much easier to reason, mantain and evolve your services over time.</p>
+<p>When you need to create stateful services, be very careful about how you manage state. Consider using external systems to store state information and ensure that your services can handle failures gracefully. Always evaluate the trade-offs between stateless and stateful designs based on your specific use case and requirements.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-patterns"><a class="header" href="#why-patterns">Why Patterns?</a></h1>
 <p><a href="https://diego-pacheco.blogspot.com/2023/09/design-patterns.html">Patterns</a> are common "Recipes" to solve recurring problems. They are proven solutions that have been tested and refined over time.</p>
 <p>Patterns allow us to save time, because if someone knows the pattern, then you do not need to explain. If everything in the universe must be explained, you end up with slow progress.</p>
