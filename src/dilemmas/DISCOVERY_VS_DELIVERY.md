@@ -11,3 +11,16 @@ If you just go from discovery to delivery, you are very likely working in a wate
 You need speed, but it's not just speed of delivery but actually speed of learning. The goal is to learn fast. Sometimes you can learn before production but often times you can only go to production to learn.
 
 If you need to go to production fast to learn, should we embrace the `Tech Debt plague` and be `Tech Debt First`? No. Because you might learn what the users want or don't want, you might find what can bring revenue to the company, but the code is there (likely forever) and we need to [balance](https://diego-pacheco.blogspot.com/2025/03/the-roads-approach.html) this. So you can't just `pick a side` you need to balance both sides.
+
+## Why you need to know this?
+
+Because such tension it's constant. It's a regular day of product and engineering teams. Being good on this "game" it's game changer for the company like Mark Zuckerberg said "Move Fast with Stable Infra".
+
+Mark Zuckerberg on Fast Learning Cycles
+<div style="position: relative; width: 100%; padding-bottom: 56.25%">
+<iframe src="https://www.youtube.com/embed/YQKsdR1wgK8&t=52s" 
+        title="Mark Zuckerberg on Fast Learning Cycles" frameborder="0" allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        style="position: absolute; width: 100%; height: 100%;">
+</iframe>
+</div>
