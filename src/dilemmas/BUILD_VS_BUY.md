@@ -12,3 +12,7 @@ When buying, it's important to observe:
 * Consider troubleshooting, debugging, observability as part of the cost
 
 If I use an AWS service vs building in-house, is it cheaper? Well, it depends where you want to put the money. In the beginning buying might sound cheaper, but you will pay AWS forever. When you build you might have a better solution (if executed right) but you now need to pay people to maintain it forever. So where do you want the money to go, your people or vendors? The question here is how good you are at execution inside the house. If your execution is terrible, go buy.
+
+## Why you need to know this?
+
+Because such dilemma happens all the time. By running trade-offs you can make better and more informed decisions. Always socialize those decisions with your team and stakeholders. Make sure everyone understands the implications of each choice.
