@@ -11,3 +11,14 @@ When a project starts, or when you start a task, it's very common that product d
 There is nothing wrong with engineering collaborating with product, as long as we mark that as "Discovery work". The issue is, product pushes "not ready" tickets to development and asks: "Why is this not done yet?" then corners are cut, quality is compromised and technical debt is added. Remember the Tech Debt Plague and Ignoring culture, they are all connected.
 
 You need to see requirements as "Temporary decisions", not as martial law. You need to deliver requirements, but you must challenge them, you must question them, and you must validate them. If you don't, you are just a delivery team, not an engineering team.
+
+## Why you need to know this?
+
+Everything you will do will be an requitement. Does not matter if people don't use this word, if people call it user stories, issues, tickets, tasks, jobs, experiences, it's all the same in the sense that you will have to deliver something that somebody else decided. So there are a couple of things you can do here to better handle requirements:
+* Colaborate with product to help them think through the implications of their decisions.
+* Colaborate with UX to understand user behavior and needs.
+* Mark "discovery work" as such, and don't push it to engineering as "ready".
+* Do POCs, which we call [spike](https://en.wikipedia.org/wiki/Spike_(software_development)), XP technique. To learn and them figureout requirements.
+* Get code into production in order to validate requirements as soon as possible.
+* Run experiments to validate requirements(assumptions).
+* Research what the industry is doing to solve similar problems.
