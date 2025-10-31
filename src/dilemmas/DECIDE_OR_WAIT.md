@@ -7,3 +7,11 @@ Decisions are a process, they should not be written in stone. Deciding something
 Sometimes it is too soon to decide, you might not have data or not be sure. You must balance the cost of waiting versus the cost of deciding now. Lean has a tool to deal with this called `cost of delay`. If the cost of delay is low, you can wait more. If it is high, you must decide now.
 
 Experimentation is a good way to make temporary decisions, and then figure out what sticks and what does not stick. You can try A/B testing, feature flags, or prototypes to gather data and make informed decisions later. Deciding and waiting are not mutually exclusive, they require balance.
+
+## Why you need to know this?
+
+Because such dilemma happens almost everyday if not everyday. Knowing when to decide and when to wait is a key skill for architects and engineers. It allows you to make better decisions, avoid mistakes, and deliver value faster. For instance if it's a catastrophic decision better way. If the cost of waiting is high, better move.
+
+That's why it's important to reflect about decisions, usually in retrospectives. Noboddy does this but I belive in something I call [Blameless Feature Reviews](https://diego-pacheco.blogspot.com/2024/03/blameless-feature-reviews.html) which could help us to learn 100x more from our decisions. Such reviews usually happens but only with high executives, and IMHO we must use a proper DevOps blameless mindset and be with the whole team.
+
+Otherwise who is learn? Only the people who don't build the software?
