@@ -10,6 +10,15 @@ An experimental technique to gather data and make informed decisions by comparin
 **Agile Methodology**
 Development approach emphasizing iterative development, team collaboration, and responsiveness to change. Balances discovery and delivery through continuous feedback cycles.
 
+**Akka**
+A high-performance toolkit for building concurrent, distributed, and resilient message-driven applications on the JVM, supporting actor-based concurrency.
+
+**AWS KMS (Key Management Service)**
+Amazon Web Services managed service for creating and controlling encryption keys used to encrypt data across AWS services and applications.
+
+**AWS RDS (Relational Database Service)**
+Amazon Web Services managed relational database service supporting multiple database engines including PostgreSQL and MySQL.
+
 **Architecture Decision Record (ADR)**
 A document recording important architectural decisions, the rationale behind them, consequences, and alternatives considered. Essential for communicating and reviewing architecture.
 
@@ -92,8 +101,17 @@ A software component storing data for faster future access, commonly used in web
 **Capability Oriented Services**
 A principle that services should be organized around business capabilities rather than technical layers, promoting better alignment with business goals.
 
+**Cassandra**
+A distributed NoSQL database designed for handling large amounts of data across many commodity servers, providing high availability with no single point of failure.
+
 **Chaos Engineering**
 A practice of inducing and provoking failure in systems and infrastructure to prove system tolerance and recovery.
+
+**Circuit Breaker**
+A design pattern that prevents cascading failures in distributed systems by detecting failures and temporarily stopping requests to failing services, allowing them time to recover.
+
+**Clojure**
+A modern, functional Lisp dialect running on the JVM, emphasizing immutability and designed for concurrent programming.
 
 **Conceptual Drift**
 An anti-pattern where systems gradually deviate from the intended architecture over time, losing coherence and consistency.
@@ -101,11 +119,17 @@ An anti-pattern where systems gradually deviate from the intended architecture o
 **Conceptual Integrity**
 A principle emphasizing consistency and coherence in system design, ensuring all parts work together harmoniously under a unified vision.
 
+**Community of Practice**
+A group of people who share a common interest or profession and learn from each other through regular interaction, knowledge sharing, and collaboration on common problems.
+
 **Class Diagram**
 A UML diagram useful for internal system design modeling or database table modeling.
 
 **Connection Pool**
 A cache of database connections maintained so connections can be reused for future database requests, reducing the cost of opening/closing connections.
+
+**Core Domain**
+The central, most important part of a business that provides competitive advantage and should receive the most focus, investment, and highest quality architecture and implementation.
 
 **Consistency**
 The property that data in a system is in a valid state and follows all defined rules and constraints. Can be immediate as in ACID transactions or eventual as in BASE consistency model.
@@ -132,6 +156,15 @@ The process of periodically changing credentials and keys to reduce the risk fro
 A pagination method using a cursor (unique identifier) to mark the starting point for the next page.
 
 ## D
+
+**Deadlock**
+A situation in concurrent systems where two or more processes are unable to proceed because each is waiting for the other to release a resource, resulting in a permanent blocking state.
+
+**Docker**
+A platform for developing, shipping, and running applications in containers, providing lightweight virtualization and consistent environments across different systems.
+
+**DynamoDB**
+Amazon Web Services fully managed NoSQL database service designed for high-performance applications requiring consistent, single-digit millisecond latency at any scale.
 
 **Database Migration**
 The process of modifying database schema to support application changes, often requiring special care to execute without downtime.
@@ -186,6 +219,9 @@ Computer systems where components are located on different networked computers t
 **Encryption (In Transit and At Rest)**
 Security measures to protect data during transmission and while stored.
 
+**Envelope Encryption**
+A security practice where data is encrypted with a data encryption key, and that key is then encrypted with a master key, providing an additional layer of security and key management flexibility.
+
 **Error Tracking**
 Systematic monitoring and recording of exceptions and errors in production, with goal of achieving zero exceptions. Critical for identifying and fixing issues.
 
@@ -212,6 +248,9 @@ A practice where architects take complete responsibility for the success and fai
 
 ## F
 
+**Feature Bloat**
+An anti-pattern where systems accumulate excessive features over time, many of which are rarely used, leading to increased complexity, maintenance burden, and reduced usability.
+
 **Feature Flags**
 Runtime configuration switches that enable or disable functionality without deploying new code, decoupling deployment from release.
 
@@ -229,6 +268,9 @@ A search capability like OpenSearch or Elasticsearch for searching large product
 
 ## G
 
+**Gatling**
+A powerful open-source load testing tool designed for testing web applications, microservices, and APIs, providing detailed performance metrics and reports.
+
 **Gemba**
 A Lean principle meaning the real place in Japanese, emphasizing the importance of understanding work by being present where it actually happens. Architects practice gemba by working in the trenches with engineers.
 
@@ -241,10 +283,25 @@ An AI-powered writing assistant tool that helps improve grammar, spelling, and c
 **Gatekeeping**
 An anti-pattern where architects act as bottlenecks by requiring approval for all decisions, reducing team autonomy and slowing delivery.
 
+**Gleam**
+A type-safe functional programming language that runs on the Erlang VM and JavaScript runtimes, designed for building scalable and maintainable systems.
+
+**Go**
+A statically typed, compiled programming language designed by Google, known for its simplicity, efficiency, and excellent support for concurrent programming.
+
 **Guard-rails**
 Safety mechanisms put in place to allow experimentation and testing in production while minimizing risk to users and systems.
 
 ## H
+
+**Haskell**
+A purely functional programming language with strong static typing and lazy evaluation, emphasizing mathematical correctness and type safety.
+
+**HashiCorp Vault**
+An open-source tool for securely storing and accessing secrets, providing encryption services, credential rotation, and access control for sensitive data.
+
+**Hibernate**
+An object-relational mapping framework for Java that provides a framework for mapping an object-oriented domain model to a relational database.
 
 **HikariCP**
 A high-performance JDBC connection pool library for Java, known for being lightweight and fast.
@@ -274,15 +331,33 @@ An algorithm using the client's IP address to determine which server handles the
 
 ## J
 
+**Java 23**
+The latest version of the Java programming language and platform, continuing to evolve with modern features while maintaining backward compatibility and enterprise reliability.
+
+**Jenkins**
+An open-source automation server used for continuous integration and continuous delivery, enabling automated building, testing, and deployment of applications.
+
 **Jitter**
 Adding randomness to retry wait times to prevent synchronized retries from multiple clients.
 
 ## K
 
+**Kanban**
+An agile methodology and visual workflow management system that uses cards and boards to visualize work, limit work in progress, and maximize flow efficiency.
+
 **Keyset Pagination**
 A pagination method using values of the last item in the current page to determine the next page's starting point.
 
+**Kotlin**
+A modern, statically typed programming language running on the JVM, designed to be fully interoperable with Java while providing more concise syntax and enhanced safety features.
+
+**Kubernetes**
+An open-source container orchestration platform for automating deployment, scaling, and management of containerized applications across clusters of hosts.
+
 ## L
+
+**Last Write Wins**
+A conflict resolution strategy in distributed systems where the most recent write operation takes precedence, potentially leading to data loss if concurrent writes occur.
 
 **Layered Architecture**
 A traditional architectural pattern where systems are organized into horizontal layers with communication flowing through layers. Can lead to problems when services are designed 1:1 with features.
@@ -322,6 +397,9 @@ A service that distributes incoming network traffic across multiple servers to e
 
 ## M
 
+**mdBook**
+A command-line tool for creating online books with Markdown, commonly used for technical documentation and architecture libraries.
+
 **Markdown**
 A lightweight markup language used for creating formatted text using plain text, commonly used for documentation, README files, and technical writing. Simple, portable, and works well with AI grammar tools.
 
@@ -358,10 +436,19 @@ A practice of reviewing the entire codebase monthly to understand architectural 
 **Move Fast vs Do It Right Dilemma**
 The tension between rapid iteration and delivery versus quality and stability.
 
+**MySQL**
+An open-source relational database management system known for its speed, reliability, and ease of use, widely used for web applications and data warehousing.
+
 **Multi-Factor Authentication (MFA)**
 An authentication method requiring multiple verification factors.
 
 ## N
+
+**Netty**
+An asynchronous event-driven network application framework for rapid development of maintainable high-performance protocol servers and clients in Java.
+
+**Nim**
+A statically typed compiled systems programming language that combines successful concepts from mature languages like Python, Ada, and Modula with efficiency and expressiveness.
 
 **Null Validations**
 A defensive programming practice of checking for null or undefined values before accessing or manipulating data to prevent runtime errors.
@@ -393,6 +480,9 @@ A reference model dividing network communication into 7 layers, used to describe
 A visual representation showing the big picture of how services communicate and main components.
 
 ## P
+
+**PostgreSQL**
+A powerful open-source relational database system known for its reliability, feature robustness, and performance, supporting advanced data types and extensibility.
 
 **Pagination**
 A technique for breaking large datasets into smaller chunks (pages) that can be retrieved one at a time.
@@ -434,6 +524,12 @@ A data structure following First In First Out (FIFO) principle used in distribut
 
 ## R
 
+**RabbitMQ**
+An open-source message broker that implements the Advanced Message Queuing Protocol, facilitating asynchronous communication between distributed systems.
+
+**Redis**
+An in-memory data structure store used as a database, cache, message broker, and streaming engine, known for its high performance and versatility.
+
 **Random Load Balancing**
 A load balancing algorithm that randomly selects a server for each request, providing simple distribution without state tracking.
 
@@ -470,10 +566,25 @@ An authorization model that assigns permissions based on user roles rather than 
 **Round Robin (Load Balancing)**
 An algorithm that distributes requests sequentially across servers.
 
+**Rust**
+A systems programming language focused on safety, speed, and concurrency, preventing memory errors through its ownership system without requiring a garbage collector.
+
+**RxJava**
+A Java implementation of Reactive Extensions, providing a library for composing asynchronous and event-based programs using observable sequences.
+
 ## S
+
+**Scala 3.x**
+The latest major version of Scala, a programming language combining object-oriented and functional programming paradigms on the JVM with improved type system and syntax.
 
 **Scalability**
 A property enabling systems to handle growth and load efficiently, also applies to engineering teams working in parallel.
+
+**Spring**
+A comprehensive application framework for Java providing infrastructure support for developing enterprise applications with features like dependency injection and aspect-oriented programming.
+
+**Spring Boot**
+An extension of the Spring framework that simplifies the setup and development of Spring applications through convention over configuration and embedded servers.
 
 **Secrets Management**
 The practice of securely storing, rotating, accessing, and auditing sensitive credentials and keys using tools like AWS KMS, HashiCorp Vault, or secrets managers.
@@ -543,6 +654,12 @@ The process of updating legacy systems to use modern technologies, patterns, and
 
 ## T
 
+**Terraform**
+An infrastructure as code tool for building, changing, and versioning infrastructure safely and efficiently across multiple cloud providers.
+
+**Test Automation (TTA)**
+The practice of using automated software tools to execute tests, compare actual outcomes with predicted outcomes, and report results, improving testing efficiency and reliability.
+
 **Test Passing Rate**
 The percentage of test suite tests that pass successfully, indicating code correctness and serving as metric for stability.
 
@@ -582,10 +699,21 @@ A security technique that replaces sensitive data with non-sensitive tokens, red
 **Technology Evaluation**
 The process of researching and assessing new technologies, tools, and frameworks to determine if they fit architectural needs and can improve systems. Part of architect responsibility.
 
+**Tupi Lang**
+A programming language designed for specific computational needs, focusing on simplicity and performance for targeted use cases.
+
+**TypeScript**
+A strongly typed superset of JavaScript that compiles to plain JavaScript, adding static type checking and modern language features for building robust web applications.
+
 ## U
 
 **Unleash**
 An open-source feature flag management platform providing feature toggle capabilities and gradual rollouts.
+
+## V
+
+**V Language**
+A simple, fast, and safe compiled programming language for developing maintainable software with a focus on simplicity and performance.
 
 ## W
 
@@ -616,7 +744,13 @@ A cache strategy where data is written to the cache first and then to underlying
 **Write-Through Cache**
 A cache strategy where data is written to both the cache and underlying storage simultaneously.
 
+**XP (Extreme Programming)**
+An agile software development methodology emphasizing frequent releases, continuous feedback, simplicity, and practices like pair programming and test-driven development.
+
 ## Z
 
 **Zero-Downtime Deployment**
 A deployment strategy enabling schema changes without service interruption.
+
+**Zig**
+A general-purpose programming language designed for robustness, optimality, and maintainability, providing low-level memory control without hidden allocations.

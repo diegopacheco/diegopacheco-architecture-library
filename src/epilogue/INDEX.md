@@ -36,6 +36,9 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 **BFF Pattern**
 [Patterns](../patterns/BFF_PATTERN.md)
 
+**Blue-Green Deployment**
+[Glossary](GLOSSARY.md)
+
 **Build vs Buy**
 [Dilemmas](../dilemmas/BUILD_VS_BUY.md)
 
@@ -43,6 +46,12 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 
 **Cache**
 [Patterns](../patterns/CACHE.md)
+
+**Canary Release**
+[Glossary](GLOSSARY.md)
+
+**Chaos Engineering**
+[Glossary](GLOSSARY.md)
 
 **Connection Pool**
 [Patterns](../patterns/CONNECTION_POOL.md)
@@ -73,8 +82,19 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 **Discovery vs Delivery**
 [Dilemmas](../dilemmas/DISCOVERY_VS_DELIVERY.md)
 
+**Distributed Monolith**
+[Glossary](GLOSSARY.md)
+
 **Doing Hard Things**
 [Philosophy](../philosofy/DOING_HARD_THINGS.md)
+
+## E
+
+**Event-Driven Architecture**
+[Glossary](GLOSSARY.md)
+
+**Event Sourcing**
+[Glossary](GLOSSARY.md)
 
 ## F
 
@@ -83,6 +103,11 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 
 **Frontend vs Backend**
 [Philosophy](../philosofy/FRONTEND_VS_BACKEND.md)
+
+## G
+
+**Glossary**
+[Glossary](GLOSSARY.md)
 
 ## I
 
@@ -107,6 +132,12 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 
 **Message Patterns**
 [Patterns](../patterns/MESSAGE_PATTERNS.md)
+
+**Microservices**
+[Glossary](GLOSSARY.md)
+
+**Monolith**
+[Glossary](GLOSSARY.md)
 
 **Monthly Review**
 [Pratices](../pratices/MONTHLY_REVIEW.md)
@@ -221,6 +252,9 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 **Source of Truth**
 [Concepts](../concepts/SOURCE_OF_TRUTH.md)
 
+**Spike**
+[Glossary](GLOSSARY.md)
+
 **Stability**
 [Properties](../properties/STABILITY.md)
 
@@ -237,6 +271,9 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 
 **Tech Debt Plague**
 [Anti-Patterns](../anti-patterns/TECH_DEBT_PLAGUE.md)
+
+**Testing in Production**
+[Glossary](GLOSSARY.md)
 
 **Thinking Tools**
 [Tools](../tools/THINKING.md)

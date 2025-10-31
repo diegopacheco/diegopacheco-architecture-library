@@ -14,10 +14,10 @@ When you write something down, you are dumping your brain and therefore doing th
 
 ## Why you need to know this?
 
-This probably is the most non-ovbious thing. Backl to the code review, you can only review because someone wrote code. How you review architecture? Well in part can be with diagrams, but you can't do 100% all the things with diagrams. Because architecture also drive:
+This probably is the most non-obvious thing. Back to the code review, you can only review because someone wrote code. How do you review architecture? Well in part it can be with diagrams, but you can't do 100% of all the things with diagrams. Because architecture also drives:
 * Technical Strategy
 * Decisions
 * Guidance to engineers
 * Standards and practices
 
-Even on Architecture and design you can only best capture my writing. When you write, again we have some to review, to socialize. Architects must write, otherwise how they review what they do? How they convey their ideas? How they socialize their vision? Writting also has a nice property which - enable scaling - because many people can read your writing, and you can reach a larger audience.
+Even on Architecture and design you can only best capture by writing. When you write, again we have something to review, to socialize. Architects must write, otherwise how do they review what they do? How do they convey their ideas? How do they socialize their vision? Writing also has a nice property which - enables scaling - because many people can read your writing, and you can reach a larger audience.

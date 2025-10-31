@@ -113,6 +113,7 @@ A comprehensive collection of external references, blog posts, articles, and tec
 * [Going Faster with Testing](https://diego-pacheco.blogspot.com/2020/02/going-faster-with-testing.html)
 * [The Monk and Rockstar](https://diego-pacheco.blogspot.com/2025/02/the-monk-and-rockstar.html)
 * [Shallow vs Deep Mindset](https://diego-pacheco.blogspot.com/2023/08/shallow-vs-deep-mindset.html)
+* [Meetings Cost](https://diego-pacheco.blogspot.com/2023/07/meetings-cost.html)
 
 ## Build vs Buy
 
@@ -153,6 +154,7 @@ A comprehensive collection of external references, blog posts, articles, and tec
 * [Messaging Pattern](https://en.wikipedia.org/wiki/Messaging_pattern)
 * [Message Queue](https://en.wikipedia.org/wiki/Message_queue)
 * [Webhook](https://en.wikipedia.org/wiki/Webhook)
+* [Spike (Software Development)](https://en.wikipedia.org/wiki/Spike_(software_development))
 
 **AWS Resources**
 * [BASE vs ACID](https://aws.amazon.com/compare/the-difference-between-acid-and-base-database/)
@@ -160,6 +162,7 @@ A comprehensive collection of external references, blog posts, articles, and tec
 
 **Other Technical Resources**
 * [REST API Pagination](https://www.merge.dev/blog/rest-api-pagination)
+* [Retrospectives Wiki](https://retrospectivewiki.org/)
 
 ## Tools
 

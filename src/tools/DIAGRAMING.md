@@ -9,6 +9,6 @@ The best paid diagram tool is [LucidCHART](https://www.lucidchart.com/). The bes
 
 ## Why you need to know this?
 
-Visual Diagrams help a lot us to see whats not obvious. A picture is worth a thousand words. Software is complex, the problem we deal with distributed systems at scale are very hard to talk about. Drawing boxes and arrows allow us to put everyboddy into the same page and actually make sense of things.
+Visual Diagrams help us a lot to see what's not obvious. A picture is worth a thousand words. Software is complex, the problems we deal with in distributed systems at scale are very hard to talk about. Drawing boxes and arrows allows us to put everybody on the same page and actually make sense of things.
 
 Does not matter if you follow or not follow [UML standards](https://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html). The goal is to make the invisible into something visible. You can only do code review because you see code in front of you, how you do architecture and design review if there is nothing in front of you? So diagrams are the way to go.

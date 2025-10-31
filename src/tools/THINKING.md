@@ -8,6 +8,6 @@ There is a difference when you are documenting what you solved already and that'
 
 ## Why you need to know this?
 
-Because architecture it's not just "choosing something". It's about a deep analytical and critical thinking process. It's very easy to just dump more software. Lateral thinking requires practice and discipline. Architects need to think, otherwise they are just engineering following instructions from product.
+Because architecture is not just "choosing something". It's about a deep analytical and critical thinking process. It's very easy to just dump more software. Lateral thinking requires practice and discipline. Architects need to think, otherwise they are just engineering following instructions from product.
 
-Thinking it's a must for architects. It must happen, otherwise the role of the architect it's not effective. However no boddy will tell you to think, actually the opposite, they will pressure to deliver and does not matter if you think or not. So you better master the art of thinking, the art of trade-offs, the art of doing POCs, and the art of making good decisions based on your thinking.
+Thinking is a must for architects. It must happen, otherwise the role of the architect is not effective. However nobody will tell you to think, actually the opposite, they will pressure to deliver and it does not matter if you think or not. So you better master the art of thinking, the art of trade-offs, the art of doing POCs, and the art of making good decisions based on your thinking.

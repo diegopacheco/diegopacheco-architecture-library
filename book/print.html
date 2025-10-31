@@ -503,7 +503,7 @@ Choosing the best and latest solutions</li>
 <li>Use your time wisely, make your part to reduce tech debt</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ignore-culture"><a class="header" href="#ignore-culture">Ignore Culture</a></h1>
-<p>If something is wrong. Say something, do something. When you ignore problems consistently over a long period of time, you end up developing an anti-pattern, which I call "Ignore Culture".When you ignore warnings in the build, when you ignore old versions of libraries, when you ignore anti-patterns on the code. When you ignore production monitoring. When you ignore requirements that make no sense.</p>
+<p>If something is wrong. Say something, do something. When you ignore problems consistently over a long period of time, you end up developing an anti-pattern, which I call "Ignore Culture". When you ignore warnings in the build, when you ignore old versions of libraries, when you ignore anti-patterns on the code. When you ignore production monitoring. When you ignore requirements that make no sense.</p>
 <p>Does not matter if you were the one who did the code or not. You must take ownership and under your watch you should ignore nothing.</p>
 <p><a href="https://diego-pacheco.blogspot.com/2024/03/ignoring-culture.html">Ignoring can become a culture</a> because managers can easily do this. Engineers, often pressured by managers also can ignore several wrong things. What's wrong should not be ignored, it should be fought and pushed back.</p>
 <p>Lack of fighting for what is right is immaturity. As an architect you must not ignore what's wrong. Do not let this become a culture. Ignore culture can happen so easily when people say "It's not my job", or "It's not my code" or "It's not my project" or "It's not my responsibility", the extreme lack of ownership can lead to ignore culture. When you are ignoring problems you are making fertile ground for anti-patterns to grow. Tech debt plague requires ignore culture to thrive.</p>
@@ -770,7 +770,7 @@ Choosing the best and latest solutions</li>
 <li>Communicate ideas clearly</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="acid"><a class="header" href="#acid">ACID</a></h1>
-<p><a href="https://en.wikipedia.org/wiki/ACID">ACID</a> is a property of database transactions intended to guarantee validity even in the event of errors or power failures. It is a RELATIONAL database concept.</p>
+<p><a href="https://en.wikipedia.org/wiki/ACID">ACID</a> is a property of database transactions intended to guarantee validity even in the event of errors or power failures. It is a relational database concept.</p>
 <h2 id="a--atomicity"><a class="header" href="#a--atomicity">A == Atomicity</a></h2>
 <p>Atomicity ensures that a transaction is treated as a single unit, which either completely succeeds or completely fails.</p>
 <p>If any part of the transaction fails, the entire transaction is rolled back, and the database remains unchanged.</p>
@@ -785,9 +785,9 @@ Choosing the best and latest solutions</li>
 <ol>
 <li>Relational databases like PostgreSQL, MySQL, Oracle are ACID.</li>
 <li>Non-relational databases like DynamoDB, Cassandra or Redis are not ACID.</li>
-<li>knowing that your database has ACID properties allow you to design simple systems because you can rely on ACID properties.</li>
+<li>Knowing that your database has ACID properties allows you to design simple systems because you can rely on ACID properties.</li>
 </ol>
-<p>Let's say you want write a system where only one user can rent a car. You probably can think in some complex solution with locks. However you don't need that because you simply can rely on the ACID properties. If two users try to insert the rental at same time, one will succeed and the other will fail. So ACID allow your code to be simple.</p>
+<p>Let's say you want to write a system where only one user can rent a car. You probably can think of some complex solution with locks. However you don't need that because you can simply rely on the ACID properties. If two users try to insert the rental at the same time, one will succeed and the other will fail. So ACID allows your code to be simple.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="authentication--authorization--entitlements"><a class="header" href="#authentication--authorization--entitlements">Authentication &amp; Authorization &amp; Entitlements</a></h1>
 <h2 id="authentication"><a class="header" href="#authentication">Authentication</a></h2>
 <p><a href="https://en.wikipedia.org/wiki/Authentication">Authentication</a> is the process of verifying the identity of a user or system. It ensures that the entity requesting access is who they claim to be. Common methods of authentication include:</p>
@@ -824,15 +824,15 @@ Choosing the best and latest solutions</li>
 </ol>
 <p>Authorization</p>
 <ol>
-<li>It's the next step after authorization.</li>
+<li>It's the next step after authentication.</li>
 <li>In security we can give granular access to resources. This principle is called <a href="https://en.wikipedia.org/wiki/Principle_of_least_privilege">least privilege</a>.</li>
-<li>Authonrization is checking if the user has the fine grained access to a resource.</li>
+<li>Authorization is checking if the user has the fine grained access to a resource.</li>
 </ol>
 <p>Entitlements</p>
 <ol>
-<li>It's common in digital products to have tiers of products. Such tiers can be called: basic, premium, silver, gold, platinum, free, pro, enterprise. But all this ters are also called entitlements.</li>
-<li>Entitlements means, given the user subscription or plan, can he see some feature or not.</li>
-<li>Consider entitlements the gap how tell, what features a user can see or not. Do not confuse entitlements with feature flags or experiments.</li>
+<li>It's common in digital products to have tiers of products. Such tiers can be called: basic, premium, silver, gold, platinum, free, pro, enterprise. But all these tiers are also called entitlements.</li>
+<li>Entitlements means, given the user subscription or plan, can they see some feature or not.</li>
+<li>Consider entitlements the way to tell what features a user can see or not. Do not confuse entitlements with feature flags or experiments.</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="base"><a class="header" href="#base">BASE</a></h1>
 <p>A concept from NoSQL databases.
@@ -846,8 +846,8 @@ Choosing the best and latest solutions</li>
 <h3 id="e--eventual-consistency"><a class="header" href="#e--eventual-consistency">E == Eventual consistency</a></h3>
 <p>Given enough time without new updates, all replicas will eventually converge to the same value. The system doesn't guarantee immediate consistency but promises that consistency will be achieved eventually.</p>
 <h2 id="why-you-need-to-know-this-10"><a class="header" href="#why-you-need-to-know-this-10">Why you need to know this?</a></h2>
-<p>NoSQL databases like DynamoDB, Cassandra, Redis are often BASE. By understanding BASE properties you can better understand what to expect from your NoSQL database. For instance knowing you have a BASE set of properties in place means that if you insert some data, or update some data, you might not see that replicated across all nodes immediately. Eventually it will be all consistent across all nodes.</p>
-<p>This might sound silly but affects the user experience to the sense that you will not have immediate effect of anything. In a Sync/Blocking universe everything is immediate, but you might think that is better? Well for humans might be but for systems it sucks and it is much harder to scale. In AWS everything is Async and Non-Blocking.</p>
+<p>NoSQL databases like DynamoDB, Cassandra, Redis are often BASE. By understanding BASE properties you can better understand what to expect from your NoSQL database. For instance knowing you have a BASE set of properties in place means that if you insert some data, or update some data, you might not see it replicated across all nodes immediately. Eventually it will be all consistent across all nodes.</p>
+<p>This might sound silly but affects the user experience in the sense that you will not have immediate effect of anything. In a Sync/Blocking universe everything is immediate, but you might think that is better? Well for humans might be but for systems it sucks and it is much harder to scale. In AWS everything is Async and Non-Blocking.</p>
 <p>Do not believe me? Watch this keynote from AWS re:Invent 2022 where Dr. Werner Vogels (CTO of AWS) explains this concept in detail around the 1 hour mark.</p>
 <div style="position: relative; width: 100%; padding-bottom: 56.25%">
 <iframe src="https://www.youtube.com/embed/RfvL_423a-I?start=1" 
@@ -866,8 +866,8 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <p>Such principle keeps us from writing complex software. For instance, if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.</p>
 <p>So we want to honor the idempotency principle to keep our software simple and predictable.</p>
 <h2 id="why-you-need-to-know-this-11"><a class="header" href="#why-you-need-to-know-this-11">Why you need to know this?</a></h2>
-<p>When you are designing and implementing REST APIS. Which pretty much is the bread and butter of all backend development now a days. You must guarantee that your GET, HEAD, OPTIONS, TRACE and PUT methods are idempotent. This is not a merely rule of thumb, is a must. Because your consumers/clients will expect that behavior from your API. If you break that expectation, you will have a bad time debugging and fixing issues that could be easily avoided by following the idempotency principle.</p>
-<p>Secondly IF you break idempotency you will have more complex code to maintain. Because you will have to handle edge cases and weird things, it will be harder to test, everything will be worse. So just follow the principle and keep your code simple.</p>
+<p>When you are designing and implementing REST APIS. Which pretty much is the bread and butter of all backend development now a days. You must guarantee that your GET, HEAD, OPTIONS, TRACE and PUT methods are idempotent. This is not merely a rule of thumb, it is a must. Because your consumers/clients will expect that behavior from your API. If you break that expectation, you will have a bad time debugging and fixing issues that could be easily avoided by following the idempotency principle.</p>
+<p>Secondly if you break idempotency you will have more complex code to maintain. Because you will have to handle edge cases and weird things, it will be harder to test, everything will be worse. So just follow the principle and keep your code simple.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pessimistic-vs-optimistic-locking"><a class="header" href="#pessimistic-vs-optimistic-locking">Pessimistic vs Optimistic Locking</a></h1>
 <p>When dealing with concurrent access to shared resources, two primary locking strategies can be employed: <a href="https://en.wikipedia.org/wiki/Lock_(computer_science)">pessimistic locking</a> and <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic locking</a>.</p>
 <p><strong>Pessimistic locking</strong>: assumes that conflicts will occur and therefore locks the resource for exclusive access when a transaction begins. This approach is suitable for environments with high contention, as it prevents other transactions from modifying the resource until the lock is released. However, it can lead to reduced concurrency and potential deadlocks.</p>
@@ -904,7 +904,7 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <p>When designing partitions, consider factors such as data distribution, query patterns, and the underlying storage system to ensure optimal performance.</p>
 <h2 id="why-you-need-to-know-this-13"><a class="header" href="#why-you-need-to-know-this-13">Why you need to know this?</a></h2>
 <p>When you don't have a lot of data you can 100% survive without partitions. But as your data grows, partitions become crucial for maintaining performance and scalability. Proper partitioning can help you manage large datasets more effectively, improve query performance, and optimize resource usage.</p>
-<p>Partitions are a MUST at Scale. Another scenario you want partition is when the data grows quickly, like a lot of data everyday, recurrent batch jogs getting data non-stop. If you just updating data in place you are fine, but if you keep inserting data without partitions, you will quickly run into performance issues as the dataset grows larger.</p>
+<p>Partitions are a MUST at Scale. Another scenario you want partition is when the data grows quickly, like a lot of data everyday, recurrent batch jobs getting data non-stop. If you are just updating data in place you are fine, but if you keep inserting data without partitions, you will quickly run into performance issues as the dataset grows larger.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="schema-evolution"><a class="header" href="#schema-evolution">Schema Evolution</a></h1>
 <p><a href="https://en.wikipedia.org/wiki/Schema_evolution">Schema evolution</a> is the practice of changing data structures, API contracts, or message formats over time while maintaining compatibility with existing clients and services. This is critical for zero-downtime deployments in distributed systems.</p>
 <h2 id="forward-compatibility"><a class="header" href="#forward-compatibility">Forward Compatibility</a></h2>
@@ -965,8 +965,8 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 </ul>
 <p>Schema evolution is not optional in production systems. Every change must consider compatibility to avoid outages during deployments.</p>
 <h2 id="why-you-need-to-know-this-14"><a class="header" href="#why-you-need-to-know-this-14">Why you need to know this?</a></h2>
-<p>All backend systems have databases. Backend systems should never share database access with other services. We need maintain and evolve database schemas without breaking existing application. By following good schema evolution patterns we can ensure smooth deployments and maintain system reliability.</p>
-<p>Backward compatibility is more important than forward compatibility in most backend systems, because backend systems are the source of truth for data. Also if you need rollback the code on the application for a bug or some mistake, our the business just change their minds, you can do that easily without breaking the database. If you smart enough you might be able to escape database migrations in some cases even.</p>
+<p>All backend systems have databases. Backend systems should never share database access with other services. We need to maintain and evolve database schemas without breaking existing application. By following good schema evolution patterns we can ensure smooth deployments and maintain system reliability.</p>
+<p>Backward compatibility is more important than forward compatibility in most backend systems, because backend systems are the source of truth for data. Also if you need to rollback the code on the application for a bug or some mistake, or the business just changes their minds, you can do that easily without breaking the database. If you are smart enough you might be able to escape database migrations in some cases even.</p>
 <p>Forward compatibility is more important in event-driven systems, where multiple services consume the same events. In this case, you want to make sure that old services can still process new events without issues.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="source-of-truth"><a class="header" href="#source-of-truth">Source of Truth</a></h1>
 <p>It is a concept that means what database or system is considered the authoritative source for a particular piece of information. It is common in distributed systems to have multiple databases or even systems that store the same data. In such cases, it is crucial to designate one of these as the <a href="https://en.wikipedia.org/wiki/Single_source_of_truth">"source of truth"</a> to ensure consistency and reliability of the data across the entire system.</p>
@@ -1212,7 +1212,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </ul>
 <p>The best paid diagram tool is <a href="https://www.lucidchart.com/">LucidCHART</a>. The best free diagram tool is <a href="https://app.diagrams.net/">Diagrams.net</a>.</p>
 <h2 id="why-you-need-to-know-this-17"><a class="header" href="#why-you-need-to-know-this-17">Why you need to know this?</a></h2>
-<p>Visual Diagrams help a lot us to see whats not obvious. A picture is worth a thousand words. Software is complex, the problem we deal with distributed systems at scale are very hard to talk about. Drawing boxes and arrows allow us to put everyboddy into the same page and actually make sense of things.</p>
+<p>Visual Diagrams help us a lot to see what's not obvious. A picture is worth a thousand words. Software is complex, the problems we deal with in distributed systems at scale are very hard to talk about. Drawing boxes and arrows allows us to put everybody on the same page and actually make sense of things.</p>
 <p>Does not matter if you follow or not follow <a href="https://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html">UML standards</a>. The goal is to make the invisible into something visible. You can only do code review because you see code in front of you, how you do architecture and design review if there is nothing in front of you? So diagrams are the way to go.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="writing"><a class="header" href="#writing">Writing</a></h1>
 <p>Architects must <a href="https://diego-pacheco.blogspot.com/2020/01/why-writing-matters.html">write</a>. I used a variety of tools to write like Evernote, Grammarly, Google docs, Markdown files, MS Word, and many others. Today, the best tool for me is Markdown files.</p>
@@ -1226,21 +1226,21 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </ul>
 <p>When you write something down, you are dumping your brain and therefore doing the same as an engineer when they fire up a PR. You are allowing others to review. Written documents scale, because many people can read them, and they might last forever.</p>
 <h2 id="why-you-need-to-know-this-18"><a class="header" href="#why-you-need-to-know-this-18">Why you need to know this?</a></h2>
-<p>This probably is the most non-ovbious thing. Backl to the code review, you can only review because someone wrote code. How you review architecture? Well in part can be with diagrams, but you can't do 100% all the things with diagrams. Because architecture also drive:</p>
+<p>This probably is the most non-obvious thing. Back to the code review, you can only review because someone wrote code. How do you review architecture? Well in part it can be with diagrams, but you can't do 100% of all the things with diagrams. Because architecture also drives:</p>
 <ul>
 <li>Technical Strategy</li>
 <li>Decisions</li>
 <li>Guidance to engineers</li>
 <li>Standards and practices</li>
 </ul>
-<p>Even on Architecture and design you can only best capture my writing. When you write, again we have some to review, to socialize. Architects must write, otherwise how they review what they do? How they convey their ideas? How they socialize their vision? Writting also has a nice property which - enable scaling - because many people can read your writing, and you can reach a larger audience.</p>
+<p>Even on Architecture and design you can only best capture by writing. When you write, again we have something to review, to socialize. Architects must write, otherwise how do they review what they do? How do they convey their ideas? How do they socialize their vision? Writing also has a nice property which - enables scaling - because many people can read your writing, and you can reach a larger audience.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="thinking"><a class="header" href="#thinking">Thinking</a></h1>
 <p>An architect needs a thinking toolbox. In my humble opinion, you can use the same tool you use for Diagramming and Writing. POC's are a great laboratory for thinking as well. I used a lot of mind-maps in the past, but I find that nowadays I prefer to use plain text files with a good structure (headings, lists, code blocks, etc).</p>
 <p>Markdowns can be a great tool for thinking too, but you need a diagram tool to sketch some boxes and arrows. Without coding and experimentation, thinking is just an abstract exercise. When you know the systems and what they can do, then you can think about alternatives. In my humble opinion, thinking is about exploring alternatives, exploring different trade-offs and different ways to solve or model a problem. Thinking is about being creative and open-minded.</p>
 <p>There is a difference when you are documenting what you solved already and that's for review or for engineers to implement. Versus thinking about how to solve a problem that is not solved yet. In the first case you are more focused on clarity and precision, in the second case you are more focused on exploration and creativity.</p>
 <h2 id="why-you-need-to-know-this-19"><a class="header" href="#why-you-need-to-know-this-19">Why you need to know this?</a></h2>
-<p>Because architecture it's not just "choosing something". It's about a deep analytical and critical thinking process. It's very easy to just dump more software. Lateral thinking requires practice and discipline. Architects need to think, otherwise they are just engineering following instructions from product.</p>
-<p>Thinking it's a must for architects. It must happen, otherwise the role of the architect it's not effective. However no boddy will tell you to think, actually the opposite, they will pressure to deliver and does not matter if you think or not. So you better master the art of thinking, the art of trade-offs, the art of doing POCs, and the art of making good decisions based on your thinking.</p>
+<p>Because architecture is not just "choosing something". It's about a deep analytical and critical thinking process. It's very easy to just dump more software. Lateral thinking requires practice and discipline. Architects need to think, otherwise they are just engineering following instructions from product.</p>
+<p>Thinking is a must for architects. It must happen, otherwise the role of the architect is not effective. However nobody will tell you to think, actually the opposite, they will pressure to deliver and it does not matter if you think or not. So you better master the art of thinking, the art of trade-offs, the art of doing POCs, and the art of making good decisions based on your thinking.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="in-the-end"><a class="header" href="#in-the-end">In The End</a></h1>
 <p>Great song. There is no end. Being an architect is a never-ending journey. Software never stops changing, learning never stops. As an architect, you must become a master student so you can become a master teacher.</p>
 <p>Teaching is all that matters. The more people know, the fewer bad decisions are made. The more bad decisions are avoided, the better software we all create. There is no winning without learning. The journey does not end here.</p>
@@ -1276,8 +1276,30 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <p>For a comprehensive collection of blog posts, articles, technical documentation, and external resources, please see <a href="epilogue/REFERENCES.html">References</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
 <p>All notable changes to this project will be documented in this file.</p>
-<h2 id="104---2025-10-30"><a class="header" href="#104---2025-10-30">[1.0.4] - 2025-10-30</a></h2>
+<h2 id="unreleased"><a class="header" href="#unreleased">[Unreleased]</a></h2>
 <h3 id="added"><a class="header" href="#added">Added</a></h3>
+<ul>
+<li>Extensive glossary expansions with programming languages: Java 23, Kotlin, Scala 3.x, Go, Rust, Clojure, Gleam, Haskell, Nim, TypeScript, Tupi Lang, V Language, Zig</li>
+<li>Framework and library terms: Akka, Hibernate, Netty, RxJava, Spring, Spring Boot</li>
+<li>Database and storage technologies: Cassandra, DynamoDB, MySQL, PostgreSQL, RabbitMQ, Redis</li>
+<li>Infrastructure and tools: Docker, Kubernetes, Jenkins, Terraform, HashiCorp Vault, Gatling, mdBook</li>
+<li>AWS services: AWS KMS, AWS RDS</li>
+<li>Design patterns and concepts: Circuit Breaker, Envelope Encryption, Last Write Wins, Feature Bloat, Deadlock</li>
+<li>Methodologies and practices: Kanban, XP (Extreme Programming), Test Automation (TTA), Community of Practice</li>
+<li>Index entries for: Blue-Green Deployment, Canary Release, Chaos Engineering, Distributed Monolith, Event-Driven Architecture, Event Sourcing, Microservices, Monolith, Spike, Testing in Production</li>
+<li>External references: Meetings Cost blog post, Spike Wikipedia entry, Retrospectives Wiki</li>
+</ul>
+<h3 id="changed"><a class="header" href="#changed">Changed</a></h3>
+<ul>
+<li>Expanded WRITING.md with additional content and best practices</li>
+<li>Enhanced DIAGRAMING.md with more details on diagramming approaches</li>
+<li>Improved THINKING.md with expanded thinking tool descriptions</li>
+<li>Minor corrections and improvements across multiple concept files: IDEMPOTENCY, OPLOCKING, PARTITION, SCHEMA_EVOLUTION, SOURCE_OF_TRUTH</li>
+<li>Minor corrections across anti-pattern files: IGNORE_CULTURE, REQUIREMENTS, STAGNATION</li>
+<li>Refinements to DECIDE_OR_WAIT.md dilemma</li>
+</ul>
+<h2 id="104---2025-10-30"><a class="header" href="#104---2025-10-30">[1.0.4] - 2025-10-30</a></h2>
+<h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
 <ul>
 <li>Comprehensive content for DISCOVERY_VS_DELIVERY.md dilemma</li>
 <li>Comprehensive content for MOVE_FAST_VS_DO_IT_RIGHT.md dilemma</li>
@@ -1287,12 +1309,12 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Comprehensive content for STAGNATION.md anti-pattern</li>
 <li>Comprehensive content for REQUIREMENTS.md anti-pattern</li>
 </ul>
-<h3 id="changed"><a class="header" href="#changed">Changed</a></h3>
+<h3 id="changed-1"><a class="header" href="#changed-1">Changed</a></h3>
 <ul>
 <li>Updated GLOSSARY.md with additional terms: Blast Radius, Blameless Feature Reviews, Learning Cycles, OpenSearch/Elasticsearch, Spike</li>
 </ul>
 <h2 id="103---2025-10-29"><a class="header" href="#103---2025-10-29">[1.0.3] - 2025-10-29</a></h2>
-<h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
+<h3 id="added-2"><a class="header" href="#added-2">Added</a></h3>
 <ul>
 <li>Comprehensive content for STATELESS_VS_STATEFULL_SVC.md</li>
 <li>Comprehensive content for SOURCE_OF_TRUTH.md</li>
@@ -1301,14 +1323,14 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Comprehensive content for OPLOCKING.md</li>
 <li>Comprehensive content for IDEMPOTENCY.md</li>
 </ul>
-<h3 id="changed-1"><a class="header" href="#changed-1">Changed</a></h3>
+<h3 id="changed-2"><a class="header" href="#changed-2">Changed</a></h3>
 <ul>
 <li>Enhanced BASE.md with additional details and clarity</li>
 <li>Enhanced AUTHENT.md with comprehensive authentication and authorization coverage</li>
 <li>Enhanced ACID.md with detailed transaction property explanations</li>
 </ul>
 <h2 id="102---2025-10-28"><a class="header" href="#102---2025-10-28">[1.0.2] - 2025-10-28</a></h2>
-<h3 id="changed-2"><a class="header" href="#changed-2">Changed</a></h3>
+<h3 id="changed-3"><a class="header" href="#changed-3">Changed</a></h3>
 <ul>
 <li>Enhanced ANTI-FRAGILITY.md with additional content</li>
 <li>Expanded OSS.md with more open source insights</li>
@@ -1318,12 +1340,12 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Improved STAGNATION.md anti-pattern documentation</li>
 <li>Expanded GLOSSARY.md with more architectural terms</li>
 </ul>
-<h3 id="added-2"><a class="header" href="#added-2">Added</a></h3>
+<h3 id="added-3"><a class="header" href="#added-3">Added</a></h3>
 <ul>
 <li>CHANGELOG.md file to track changes and updates</li>
 </ul>
 <h2 id="101---2025-10-27"><a class="header" href="#101---2025-10-27">[1.0.1] - 2025-10-27</a></h2>
-<h3 id="added-3"><a class="header" href="#added-3">Added</a></h3>
+<h3 id="added-4"><a class="header" href="#added-4">Added</a></h3>
 <ul>
 <li>Chapter 0 (Zero) with rationale and reasoning behind the book</li>
 <li>Chapter 2 (Anti-Patterns): TECH_DEBT_PLAGUE, IGNORE_CULTURE, STAGNATION, REQUIREMENTS</li>
@@ -1340,7 +1362,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Resources section with books and learning materials</li>
 <li>References section with external links</li>
 </ul>
-<h3 id="changed-3"><a class="header" href="#changed-3">Changed</a></h3>
+<h3 id="changed-4"><a class="header" href="#changed-4">Changed</a></h3>
 <ul>
 <li>Reorganized book structure into numbered chapters</li>
 <li>Separated Concepts and Patterns into distinct chapters</li>
@@ -1356,7 +1378,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Documentation structure inconsistencies</li>
 </ul>
 <h2 id="100---2025-10-27"><a class="header" href="#100---2025-10-27">[1.0.0] - 2025-10-27</a></h2>
-<h3 id="added-4"><a class="header" href="#added-4">Added</a></h3>
+<h3 id="added-5"><a class="header" href="#added-5">Added</a></h3>
 <ul>
 <li>Initial project setup with mdBook</li>
 <li>Introduction and cover page</li>
@@ -1486,6 +1508,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><a href="https://diego-pacheco.blogspot.com/2020/02/going-faster-with-testing.html">Going Faster with Testing</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2025/02/the-monk-and-rockstar.html">The Monk and Rockstar</a></li>
 <li><a href="https://diego-pacheco.blogspot.com/2023/08/shallow-vs-deep-mindset.html">Shallow vs Deep Mindset</a></li>
+<li><a href="https://diego-pacheco.blogspot.com/2023/07/meetings-cost.html">Meetings Cost</a></li>
 </ul>
 <h2 id="build-vs-buy-1"><a class="header" href="#build-vs-buy-1">Build vs Buy</a></h2>
 <ul>
@@ -1527,6 +1550,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><a href="https://en.wikipedia.org/wiki/Messaging_pattern">Messaging Pattern</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Message_queue">Message Queue</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Webhook">Webhook</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Spike_(software_development)">Spike (Software Development)</a></li>
 </ul>
 <p><strong>AWS Resources</strong></p>
 <ul>
@@ -1536,6 +1560,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <p><strong>Other Technical Resources</strong></p>
 <ul>
 <li><a href="https://www.merge.dev/blog/rest-api-pagination">REST API Pagination</a></li>
+<li><a href="https://retrospectivewiki.org/">Retrospectives Wiki</a></li>
 </ul>
 <h2 id="tools"><a class="header" href="#tools">Tools</a></h2>
 <p><strong>Diagramming Tools</strong></p>
@@ -1550,6 +1575,12 @@ This pattern combines aspects of both synchronous and asynchronous communication
 An experimental technique to gather data and make informed decisions by comparing two versions of a system. Often implemented using feature flags and experimentation platforms.</p>
 <p><strong>Agile Methodology</strong>
 Development approach emphasizing iterative development, team collaboration, and responsiveness to change. Balances discovery and delivery through continuous feedback cycles.</p>
+<p><strong>Akka</strong>
+A high-performance toolkit for building concurrent, distributed, and resilient message-driven applications on the JVM, supporting actor-based concurrency.</p>
+<p><strong>AWS KMS (Key Management Service)</strong>
+Amazon Web Services managed service for creating and controlling encryption keys used to encrypt data across AWS services and applications.</p>
+<p><strong>AWS RDS (Relational Database Service)</strong>
+Amazon Web Services managed relational database service supporting multiple database engines including PostgreSQL and MySQL.</p>
 <p><strong>Architecture Decision Record (ADR)</strong>
 A document recording important architectural decisions, the rationale behind them, consequences, and alternatives considered. Essential for communicating and reviewing architecture.</p>
 <p><strong>Availability</strong>
@@ -1604,16 +1635,26 @@ A practice where engineers examine and critique code changes before they are mer
 A software component storing data for faster future access, commonly used in web browsers, databases, and operating systems.</p>
 <p><strong>Capability Oriented Services</strong>
 A principle that services should be organized around business capabilities rather than technical layers, promoting better alignment with business goals.</p>
+<p><strong>Cassandra</strong>
+A distributed NoSQL database designed for handling large amounts of data across many commodity servers, providing high availability with no single point of failure.</p>
 <p><strong>Chaos Engineering</strong>
 A practice of inducing and provoking failure in systems and infrastructure to prove system tolerance and recovery.</p>
+<p><strong>Circuit Breaker</strong>
+A design pattern that prevents cascading failures in distributed systems by detecting failures and temporarily stopping requests to failing services, allowing them time to recover.</p>
+<p><strong>Clojure</strong>
+A modern, functional Lisp dialect running on the JVM, emphasizing immutability and designed for concurrent programming.</p>
 <p><strong>Conceptual Drift</strong>
 An anti-pattern where systems gradually deviate from the intended architecture over time, losing coherence and consistency.</p>
 <p><strong>Conceptual Integrity</strong>
 A principle emphasizing consistency and coherence in system design, ensuring all parts work together harmoniously under a unified vision.</p>
+<p><strong>Community of Practice</strong>
+A group of people who share a common interest or profession and learn from each other through regular interaction, knowledge sharing, and collaboration on common problems.</p>
 <p><strong>Class Diagram</strong>
 A UML diagram useful for internal system design modeling or database table modeling.</p>
 <p><strong>Connection Pool</strong>
 A cache of database connections maintained so connections can be reused for future database requests, reducing the cost of opening/closing connections.</p>
+<p><strong>Core Domain</strong>
+The central, most important part of a business that provides competitive advantage and should receive the most focus, investment, and highest quality architecture and implementation.</p>
 <p><strong>Consistency</strong>
 The property that data in a system is in a valid state and follows all defined rules and constraints. Can be immediate as in ACID transactions or eventual as in BASE consistency model.</p>
 <p><strong>Consistent Hashing</strong>
@@ -1631,6 +1672,12 @@ The process of periodically changing credentials and keys to reduce the risk fro
 <p><strong>Cursor-Based Pagination</strong>
 A pagination method using a cursor (unique identifier) to mark the starting point for the next page.</p>
 <h2 id="d"><a class="header" href="#d">D</a></h2>
+<p><strong>Deadlock</strong>
+A situation in concurrent systems where two or more processes are unable to proceed because each is waiting for the other to release a resource, resulting in a permanent blocking state.</p>
+<p><strong>Docker</strong>
+A platform for developing, shipping, and running applications in containers, providing lightweight virtualization and consistent environments across different systems.</p>
+<p><strong>DynamoDB</strong>
+Amazon Web Services fully managed NoSQL database service designed for high-performance applications requiring consistent, single-digit millisecond latency at any scale.</p>
 <p><strong>Database Migration</strong>
 The process of modifying database schema to support application changes, often requiring special care to execute without downtime.</p>
 <p><strong>Data Migration</strong>
@@ -1666,6 +1713,8 @@ Computer systems where components are located on different networked computers t
 <h2 id="e"><a class="header" href="#e">E</a></h2>
 <p><strong>Encryption (In Transit and At Rest)</strong>
 Security measures to protect data during transmission and while stored.</p>
+<p><strong>Envelope Encryption</strong>
+A security practice where data is encrypted with a data encryption key, and that key is then encrypted with a master key, providing an additional layer of security and key management flexibility.</p>
 <p><strong>Error Tracking</strong>
 Systematic monitoring and recording of exceptions and errors in production, with goal of achieving zero exceptions. Critical for identifying and fixing issues.</p>
 <p><strong>Event-Driven Architecture</strong>
@@ -1683,6 +1732,8 @@ A retry strategy where the wait time increases exponentially with each retry att
 <p><strong>Extreme Ownership</strong>
 A practice where architects take complete responsibility for the success and failure of the architecture they design.</p>
 <h2 id="f"><a class="header" href="#f">F</a></h2>
+<p><strong>Feature Bloat</strong>
+An anti-pattern where systems accumulate excessive features over time, many of which are rarely used, leading to increased complexity, maintenance burden, and reduced usability.</p>
 <p><strong>Feature Flags</strong>
 Runtime configuration switches that enable or disable functionality without deploying new code, decoupling deployment from release.</p>
 <p><strong>FIFO Ordering</strong>
@@ -1694,6 +1745,8 @@ When old code can read data written by new code, allowing old services to safely
 <p><strong>Full Text Search</strong>
 A search capability like OpenSearch or Elasticsearch for searching large product catalogs.</p>
 <h2 id="g"><a class="header" href="#g">G</a></h2>
+<p><strong>Gatling</strong>
+A powerful open-source load testing tool designed for testing web applications, microservices, and APIs, providing detailed performance metrics and reports.</p>
 <p><strong>Gemba</strong>
 A Lean principle meaning the real place in Japanese, emphasizing the importance of understanding work by being present where it actually happens. Architects practice gemba by working in the trenches with engineers.</p>
 <p><strong>GitOps</strong>
@@ -1702,9 +1755,19 @@ A practice using Git repositories as the single source of truth for declarative 
 An AI-powered writing assistant tool that helps improve grammar, spelling, and clarity in documentation and architectural writing.</p>
 <p><strong>Gatekeeping</strong>
 An anti-pattern where architects act as bottlenecks by requiring approval for all decisions, reducing team autonomy and slowing delivery.</p>
+<p><strong>Gleam</strong>
+A type-safe functional programming language that runs on the Erlang VM and JavaScript runtimes, designed for building scalable and maintainable systems.</p>
+<p><strong>Go</strong>
+A statically typed, compiled programming language designed by Google, known for its simplicity, efficiency, and excellent support for concurrent programming.</p>
 <p><strong>Guard-rails</strong>
 Safety mechanisms put in place to allow experimentation and testing in production while minimizing risk to users and systems.</p>
 <h2 id="h"><a class="header" href="#h">H</a></h2>
+<p><strong>Haskell</strong>
+A purely functional programming language with strong static typing and lazy evaluation, emphasizing mathematical correctness and type safety.</p>
+<p><strong>HashiCorp Vault</strong>
+An open-source tool for securely storing and accessing secrets, providing encryption services, credential rotation, and access control for sensitive data.</p>
+<p><strong>Hibernate</strong>
+An object-relational mapping framework for Java that provides a framework for mapping an object-oriented domain model to a relational database.</p>
 <p><strong>HikariCP</strong>
 A high-performance JDBC connection pool library for Java, known for being lightweight and fast.</p>
 <p><strong>HTTP Methods (GET, PUT, POST, DELETE)</strong>
@@ -1723,12 +1786,24 @@ An anti-pattern where problems are consistently ignored over time, making it acc
 <p><strong>IP Hash (Load Balancing)</strong>
 An algorithm using the client's IP address to determine which server handles the request.</p>
 <h2 id="j"><a class="header" href="#j">J</a></h2>
+<p><strong>Java 23</strong>
+The latest version of the Java programming language and platform, continuing to evolve with modern features while maintaining backward compatibility and enterprise reliability.</p>
+<p><strong>Jenkins</strong>
+An open-source automation server used for continuous integration and continuous delivery, enabling automated building, testing, and deployment of applications.</p>
 <p><strong>Jitter</strong>
 Adding randomness to retry wait times to prevent synchronized retries from multiple clients.</p>
 <h2 id="k"><a class="header" href="#k">K</a></h2>
+<p><strong>Kanban</strong>
+An agile methodology and visual workflow management system that uses cards and boards to visualize work, limit work in progress, and maximize flow efficiency.</p>
 <p><strong>Keyset Pagination</strong>
 A pagination method using values of the last item in the current page to determine the next page's starting point.</p>
+<p><strong>Kotlin</strong>
+A modern, statically typed programming language running on the JVM, designed to be fully interoperable with Java while providing more concise syntax and enhanced safety features.</p>
+<p><strong>Kubernetes</strong>
+An open-source container orchestration platform for automating deployment, scaling, and management of containerized applications across clusters of hosts.</p>
 <h2 id="l"><a class="header" href="#l">L</a></h2>
+<p><strong>Last Write Wins</strong>
+A conflict resolution strategy in distributed systems where the most recent write operation takes precedence, potentially leading to data loss if concurrent writes occur.</p>
 <p><strong>Layered Architecture</strong>
 A traditional architectural pattern where systems are organized into horizontal layers with communication flowing through layers. Can lead to problems when services are designed 1:1 with features.</p>
 <p><strong>Lean Principle</strong>
@@ -1754,6 +1829,8 @@ A cache eviction strategy that removes the least recently accessed items when th
 <p><strong>Load Balancer</strong>
 A service that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed.</p>
 <h2 id="m"><a class="header" href="#m">M</a></h2>
+<p><strong>mdBook</strong>
+A command-line tool for creating online books with Markdown, commonly used for technical documentation and architecture libraries.</p>
 <p><strong>Markdown</strong>
 A lightweight markup language used for creating formatted text using plain text, commonly used for documentation, README files, and technical writing. Simple, portable, and works well with AI grammar tools.</p>
 <p><strong>Microservices</strong>
@@ -1778,9 +1855,15 @@ An agile development approach that runs multiple parallel tracks for different t
 A practice of reviewing the entire codebase monthly to understand architectural concepts, code quality trends, and patterns.</p>
 <p><strong>Move Fast vs Do It Right Dilemma</strong>
 The tension between rapid iteration and delivery versus quality and stability.</p>
+<p><strong>MySQL</strong>
+An open-source relational database management system known for its speed, reliability, and ease of use, widely used for web applications and data warehousing.</p>
 <p><strong>Multi-Factor Authentication (MFA)</strong>
 An authentication method requiring multiple verification factors.</p>
 <h2 id="n"><a class="header" href="#n">N</a></h2>
+<p><strong>Netty</strong>
+An asynchronous event-driven network application framework for rapid development of maintainable high-performance protocol servers and clients in Java.</p>
+<p><strong>Nim</strong>
+A statically typed compiled systems programming language that combines successful concepts from mature languages like Python, Ada, and Modula with efficiency and expressiveness.</p>
 <p><strong>Null Validations</strong>
 A defensive programming practice of checking for null or undefined values before accessing or manipulating data to prevent runtime errors.</p>
 <h2 id="o"><a class="header" href="#o">O</a></h2>
@@ -1801,6 +1884,8 @@ A reference model dividing network communication into 7 layers, used to describe
 <p><strong>Overall Architecture Diagram</strong>
 A visual representation showing the big picture of how services communicate and main components.</p>
 <h2 id="p"><a class="header" href="#p">P</a></h2>
+<p><strong>PostgreSQL</strong>
+A powerful open-source relational database system known for its reliability, feature robustness, and performance, supporting advanced data types and extensibility.</p>
 <p><strong>Pagination</strong>
 A technique for breaking large datasets into smaller chunks (pages) that can be retrieved one at a time.</p>
 <p><strong>Performance Metrics</strong>
@@ -1827,6 +1912,10 @@ A messaging pattern where publishers send messages to topics and subscribers exp
 <p><strong>Queue</strong>
 A data structure following First In First Out (FIFO) principle used in distributed systems for asynchronous processing and load balancing.</p>
 <h2 id="r"><a class="header" href="#r">R</a></h2>
+<p><strong>RabbitMQ</strong>
+An open-source message broker that implements the Advanced Message Queuing Protocol, facilitating asynchronous communication between distributed systems.</p>
+<p><strong>Redis</strong>
+An in-memory data structure store used as a database, cache, message broker, and streaming engine, known for its high performance and versatility.</p>
 <p><strong>Random Load Balancing</strong>
 A load balancing algorithm that randomly selects a server for each request, providing simple distribution without state tracking.</p>
 <p><strong>Resilience</strong>
@@ -1851,9 +1940,19 @@ A technique used in distributed systems to handle transient failures by attempti
 An authorization model that assigns permissions based on user roles rather than individual users.</p>
 <p><strong>Round Robin (Load Balancing)</strong>
 An algorithm that distributes requests sequentially across servers.</p>
+<p><strong>Rust</strong>
+A systems programming language focused on safety, speed, and concurrency, preventing memory errors through its ownership system without requiring a garbage collector.</p>
+<p><strong>RxJava</strong>
+A Java implementation of Reactive Extensions, providing a library for composing asynchronous and event-based programs using observable sequences.</p>
 <h2 id="s"><a class="header" href="#s">S</a></h2>
+<p><strong>Scala 3.x</strong>
+The latest major version of Scala, a programming language combining object-oriented and functional programming paradigms on the JVM with improved type system and syntax.</p>
 <p><strong>Scalability</strong>
 A property enabling systems to handle growth and load efficiently, also applies to engineering teams working in parallel.</p>
+<p><strong>Spring</strong>
+A comprehensive application framework for Java providing infrastructure support for developing enterprise applications with features like dependency injection and aspect-oriented programming.</p>
+<p><strong>Spring Boot</strong>
+An extension of the Spring framework that simplifies the setup and development of Spring applications through convention over configuration and embedded servers.</p>
 <p><strong>Secrets Management</strong>
 The practice of securely storing, rotating, accessing, and auditing sensitive credentials and keys using tools like AWS KMS, HashiCorp Vault, or secrets managers.</p>
 <p><strong>Security Audit</strong>
@@ -1899,6 +1998,10 @@ Services that do not retain information about previous interactions; any necessa
 <p><strong>System Modernization</strong>
 The process of updating legacy systems to use modern technologies, patterns, and practices while maintaining stability and reducing risk. Requires discipline and specific approaches.</p>
 <h2 id="t"><a class="header" href="#t">T</a></h2>
+<p><strong>Terraform</strong>
+An infrastructure as code tool for building, changing, and versioning infrastructure safely and efficiently across multiple cloud providers.</p>
+<p><strong>Test Automation (TTA)</strong>
+The practice of using automated software tools to execute tests, compare actual outcomes with predicted outcomes, and report results, improving testing efficiency and reliability.</p>
 <p><strong>Test Passing Rate</strong>
 The percentage of test suite tests that pass successfully, indicating code correctness and serving as metric for stability.</p>
 <p><strong>Testing in Production</strong>
@@ -1925,9 +2028,16 @@ A cache management technique where items are assigned a lifespan after which the
 A security technique that replaces sensitive data with non-sensitive tokens, reducing the risk of data exposure while maintaining data utility.</p>
 <p><strong>Technology Evaluation</strong>
 The process of researching and assessing new technologies, tools, and frameworks to determine if they fit architectural needs and can improve systems. Part of architect responsibility.</p>
+<p><strong>Tupi Lang</strong>
+A programming language designed for specific computational needs, focusing on simplicity and performance for targeted use cases.</p>
+<p><strong>TypeScript</strong>
+A strongly typed superset of JavaScript that compiles to plain JavaScript, adding static type checking and modern language features for building robust web applications.</p>
 <h2 id="u"><a class="header" href="#u">U</a></h2>
 <p><strong>Unleash</strong>
 An open-source feature flag management platform providing feature toggle capabilities and gradual rollouts.</p>
+<h2 id="v"><a class="header" href="#v">V</a></h2>
+<p><strong>V Language</strong>
+A simple, fast, and safe compiled programming language for developing maintainable software with a focus on simplicity and performance.</p>
 <h2 id="w"><a class="header" href="#w">W</a></h2>
 <p><strong>Waterfall</strong>
 Traditional sequential software development approach where discovery is completed before delivery. Often leads to inefficiencies when done linearly without iterative feedback.</p>
@@ -1947,9 +2057,13 @@ A practice based on the Lean principle of "going to the real place" where work i
 A cache strategy where data is written to the cache first and then to underlying storage at a later time.</p>
 <p><strong>Write-Through Cache</strong>
 A cache strategy where data is written to both the cache and underlying storage simultaneously.</p>
+<p><strong>XP (Extreme Programming)</strong>
+An agile software development methodology emphasizing frequent releases, continuous feedback, simplicity, and practices like pair programming and test-driven development.</p>
 <h2 id="z"><a class="header" href="#z">Z</a></h2>
 <p><strong>Zero-Downtime Deployment</strong>
 A deployment strategy enabling schema changes without service interruption.</p>
+<p><strong>Zig</strong>
+A general-purpose programming language designed for robustness, optimality, and maintainability, providing low-level memory control without hidden allocations.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="index"><a class="header" href="#index">Index</a></h1>
 <p>A comprehensive index of all topics, patterns, concepts, and practices covered in this architecture library.</p>
 <h2 id="a-1"><a class="header" href="#a-1">A</a></h2>
@@ -1975,11 +2089,17 @@ A deployment strategy enabling schema changes without service interruption.</p>
 <a href="epilogue/../concepts/BASE.html">Concepts</a></p>
 <p><strong>BFF Pattern</strong>
 <a href="epilogue/../patterns/BFF_PATTERN.html">Patterns</a></p>
+<p><strong>Blue-Green Deployment</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
 <p><strong>Build vs Buy</strong>
 <a href="epilogue/../dilemmas/BUILD_VS_BUY.html">Dilemmas</a></p>
 <h2 id="c-1"><a class="header" href="#c-1">C</a></h2>
 <p><strong>Cache</strong>
 <a href="epilogue/../patterns/CACHE.html">Patterns</a></p>
+<p><strong>Canary Release</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
+<p><strong>Chaos Engineering</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
 <p><strong>Connection Pool</strong>
 <a href="epilogue/../patterns/CONNECTION_POOL.html">Patterns</a></p>
 <p><strong>Crystal Ball</strong>
@@ -2000,13 +2120,23 @@ A deployment strategy enabling schema changes without service interruption.</p>
 <a href="epilogue/../dilemmas/DECIDE_OR_WAIT.html">Decide or Wait</a></p>
 <p><strong>Discovery vs Delivery</strong>
 <a href="epilogue/../dilemmas/DISCOVERY_VS_DELIVERY.html">Dilemmas</a></p>
+<p><strong>Distributed Monolith</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
 <p><strong>Doing Hard Things</strong>
 <a href="epilogue/../philosofy/DOING_HARD_THINGS.html">Philosophy</a></p>
+<h2 id="e-1"><a class="header" href="#e-1">E</a></h2>
+<p><strong>Event-Driven Architecture</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
+<p><strong>Event Sourcing</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
 <h2 id="f-1"><a class="header" href="#f-1">F</a></h2>
 <p><strong>Feature Flags</strong>
 <a href="epilogue/../patterns/FEATURE_FLAGS.html">Patterns</a></p>
 <p><strong>Frontend vs Backend</strong>
 <a href="epilogue/../philosofy/FRONTEND_VS_BACKEND.html">Philosophy</a></p>
+<h2 id="g-1"><a class="header" href="#g-1">G</a></h2>
+<p><strong>Glossary</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
 <h2 id="i-1"><a class="header" href="#i-1">I</a></h2>
 <p><strong>Idempotency</strong>
 <a href="epilogue/../concepts/IDEMPOTENCY.html">Concepts</a></p>
@@ -2022,6 +2152,10 @@ A deployment strategy enabling schema changes without service interruption.</p>
 <a href="epilogue/../patterns/MESSAGE_ID.html">Patterns</a></p>
 <p><strong>Message Patterns</strong>
 <a href="epilogue/../patterns/MESSAGE_PATTERNS.html">Patterns</a></p>
+<p><strong>Microservices</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
+<p><strong>Monolith</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
 <p><strong>Monthly Review</strong>
 <a href="epilogue/../pratices/MONTHLY_REVIEW.html">Pratices</a></p>
 <p><strong>Move Fast vs Do it Right</strong>
@@ -2105,6 +2239,8 @@ A deployment strategy enabling schema changes without service interruption.</p>
 <a href="epilogue/../philosofy/SO.html">Philosophy</a></p>
 <p><strong>Source of Truth</strong>
 <a href="epilogue/../concepts/SOURCE_OF_TRUTH.html">Concepts</a></p>
+<p><strong>Spike</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
 <p><strong>Stability</strong>
 <a href="epilogue/../properties/STABILITY.html">Properties</a></p>
 <p><strong>Stagnation</strong>
@@ -2116,6 +2252,8 @@ A deployment strategy enabling schema changes without service interruption.</p>
 <h2 id="t-1"><a class="header" href="#t-1">T</a></h2>
 <p><strong>Tech Debt Plague</strong>
 <a href="epilogue/../anti-patterns/TECH_DEBT_PLAGUE.html">Anti-Patterns</a></p>
+<p><strong>Testing in Production</strong>
+<a href="epilogue/GLOSSARY.html">Glossary</a></p>
 <p><strong>Thinking Tools</strong>
 <a href="epilogue/../tools/THINKING.html">Tools</a></p>
 <p><strong>Tools</strong>

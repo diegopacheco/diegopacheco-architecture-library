@@ -1,6 +1,6 @@
 # Ignore Culture
 
-If something is wrong. Say something, do something. When you ignore problems consistently over a long period of time, you end up developing an anti-pattern, which I call "Ignore Culture".When you ignore warnings in the build, when you ignore old versions of libraries, when you ignore anti-patterns on the code. When you ignore production monitoring. When you ignore requirements that make no sense.
+If something is wrong. Say something, do something. When you ignore problems consistently over a long period of time, you end up developing an anti-pattern, which I call "Ignore Culture". When you ignore warnings in the build, when you ignore old versions of libraries, when you ignore anti-patterns on the code. When you ignore production monitoring. When you ignore requirements that make no sense.
 
 Does not matter if you were the one who did the code or not. You must take ownership and under your watch you should ignore nothing.
 
