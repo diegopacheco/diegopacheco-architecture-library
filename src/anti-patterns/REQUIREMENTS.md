@@ -14,11 +14,11 @@ You need to see requirements as "Temporary decisions", not as martial law. You n
 
 ## Why you need to know this?
 
-Everything you will do will be an requitement. Does not matter if people don't use this word, if people call it user stories, issues, tickets, tasks, jobs, experiences, it's all the same in the sense that you will have to deliver something that somebody else decided. So there are a couple of things you can do here to better handle requirements:
-* Colaborate with product to help them think through the implications of their decisions.
-* Colaborate with UX to understand user behavior and needs.
+Everything you will do will be a requirement. Does not matter if people don't use this word, if people call it user stories, issues, tickets, tasks, jobs, experiences, it's all the same in the sense that you will have to deliver something that somebody else decided. So there are a couple of things you can do here to better handle requirements:
+* Collaborate with product to help them think through the implications of their decisions.
+* Collaborate with UX to understand user behavior and needs.
 * Mark "discovery work" as such, and don't push it to engineering as "ready".
-* Do POCs, which we call [spike](https://en.wikipedia.org/wiki/Spike_(software_development)), XP technique. To learn and them figureout requirements.
+* Do POCs, which we call [spike](https://en.wikipedia.org/wiki/Spike_(software_development)), XP technique. To learn and then figure out requirements.
 * Get code into production in order to validate requirements as soon as possible.
 * Run experiments to validate requirements(assumptions).
 * Research what the industry is doing to solve similar problems.

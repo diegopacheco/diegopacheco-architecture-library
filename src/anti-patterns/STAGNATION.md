@@ -8,9 +8,9 @@ As an architect you cannot become old school. You must always be looking for new
 
 ## Why you need to know this?
 
-Because such temptation it's constant. It's very easy to fall into the "auto-pilot" mode and dont chanlledge how you are working. [Retrospectives](https://retrospectivewiki.org/) are important thinking tools. Even if you do not have retrospectices you can take 30 min or 1h to think about whats going on and if is right or wrong. Stagnation must be fight, IMHO the fest thing to do is:
-* Have passion and cuirosity to drive you forward
-* Read books, papers, articles, blogs, constnaly
+Because such temptation it's constant. It's very easy to fall into the "auto-pilot" mode and don't challenge how you are working. [Retrospectives](https://retrospectivewiki.org/) are important thinking tools. Even if you do not have retrospectives you can take 30 min or 1h to think about what's going on and if is right or wrong. Stagnation must be fight, IMHO the best thing to do is:
+* Have passion and curiosity to drive you forward
+* Read books, papers, articles, blogs, constantly
 * Go to conferences, meetups, webinars
 * Talk to other architects, share knowledge
 * Experiment with new technologies, patterns, ideas

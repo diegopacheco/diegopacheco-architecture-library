@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2025-10-30
+
+### Added
+- Comprehensive content for DISCOVERY_VS_DELIVERY.md dilemma
+- Comprehensive content for MOVE_FAST_VS_DO_IT_RIGHT.md dilemma
+- Comprehensive content for DECIDE_OR_WAIT.md dilemma
+- Comprehensive content for BUILD_VS_BUY.md dilemma
+- Comprehensive content for TECH_DEBT_PLAGUE.md anti-pattern
+- Comprehensive content for STAGNATION.md anti-pattern
+- Comprehensive content for REQUIREMENTS.md anti-pattern
+
+### Changed
+- Updated GLOSSARY.md with additional terms: Blast Radius, Blameless Feature Reviews, Learning Cycles, OpenSearch/Elasticsearch, Spike
+
 ## [1.0.3] - 2025-10-29
 
 ### Added

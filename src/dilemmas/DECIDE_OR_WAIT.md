@@ -12,6 +12,6 @@ Experimentation is a good way to make temporary decisions, and then figure out w
 
 Because such dilemma happens almost everyday if not everyday. Knowing when to decide and when to wait is a key skill for architects and engineers. It allows you to make better decisions, avoid mistakes, and deliver value faster. For instance if it's a catastrophic decision better way. If the cost of waiting is high, better move.
 
-That's why it's important to reflect about decisions, usually in retrospectives. Noboddy does this but I belive in something I call [Blameless Feature Reviews](https://diego-pacheco.blogspot.com/2024/03/blameless-feature-reviews.html) which could help us to learn 100x more from our decisions. Such reviews usually happens but only with high executives, and IMHO we must use a proper DevOps blameless mindset and be with the whole team.
+That's why it's important to reflect about decisions, usually in retrospectives. Nobody does this but I believe in something I call [Blameless Feature Reviews](https://diego-pacheco.blogspot.com/2024/03/blameless-feature-reviews.html) which could help us to learn 100x more from our decisions. Such reviews usually happens but only with high executives, and IMHO we must use a proper DevOps blameless mindset and be with the whole team.
 
-Otherwise who is learn? Only the people who don't build the software?
+Otherwise who is learning? Only the people who don't build the software?

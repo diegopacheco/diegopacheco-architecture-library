@@ -8,6 +8,6 @@ The same concept is used in migrations. While you are migrating from System A to
 
 In distributed systems, having a clear source of truth is essential to avoid data inconsistencies and conflicts. When multiple services or databases can modify the same data, it can lead to situations where different parts of the system have different versions of the truth. This can cause errors, confusion, and data integrity issues.
 
-It's common to have one system or one database behind a service to be the Source of Truth. This also means that a bunch of systems can READ or have a COPY of the data, usually in a form of a CACHE to have performance benefits, but when regards of where to WRITE must be a clear and only one place.
+It's common to have one system or one database behind a service to be the Source of Truth. This also means that a bunch of systems can READ or have a COPY of the data, usually in a form of a CACHE to have performance benefits, but when it regards where to WRITE must be a clear and only one place.
 
 This might sound silly, but this can either bring great sanity or a big mess to your system. Always make sure you have a clear Source of Truth for your data.

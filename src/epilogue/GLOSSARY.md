@@ -66,6 +66,12 @@ An anti-pattern where a system has no recognizable architecture, with haphazardl
 **Biometric Verification**
 An authentication method using unique biological characteristics such as fingerprints, facial recognition, or iris scans to verify identity.
 
+**Blast Radius**
+The scope of impact when a failure or security breach occurs in a system, limited through practices like least privilege principle and proper isolation.
+
+**Blameless Feature Reviews**
+A practice of reviewing features without blaming individuals, focusing on learning and improvement rather than fault-finding.
+
 **Build vs Buy Dilemma**
 The decision between building solutions in-house for core business advantages or buying external solutions.
 
@@ -299,6 +305,9 @@ Metrics measuring response time distribution for upstream and downstream depende
 **LaunchDarkly**
 A commercial feature flag management service providing advanced targeting and experimentation capabilities.
 
+**Learning Cycles**
+Iterative feedback loops for discovering what users want and validating assumptions through production experimentation and rapid testing.
+
 **Leaky Contracts**
 An anti-pattern where service contracts expose internal implementation details, making it difficult to evolve services without breaking clients.
 
@@ -367,6 +376,9 @@ A system property enabling understanding of how a system behaves in production a
 
 **Offset-Based Pagination**
 A pagination method where the client specifies an offset (starting point) and limit (number of items).
+
+**OpenSearch/Elasticsearch**
+Open-source full-text search and analytics engines used for searching large datasets, logging, and real-time analysis.
 
 **Open Source First**
 A philosophy of making open source the default choice and avoiding proprietary software.
@@ -504,6 +516,9 @@ AWS object storage service, sometimes used as an anti-pattern when treated as a 
 
 **Single Source of Truth (SSOT)**
 The concept of designating one authoritative database or system as the definitive source for a particular piece of information in distributed systems.
+
+**Spike**
+A time-boxed research activity to investigate a technical question, explore solutions, or reduce uncertainty before committing to implementation.
 
 **SSL Termination**
 A load balancer feature that handles SSL/TLS encryption/decryption.

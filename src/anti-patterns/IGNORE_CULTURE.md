@@ -10,6 +10,6 @@ Lack of fighting for what is right is immaturity. As an architect you must not i
 
 ## Why you need to know this?
 
-Because you will very likely see this happen in a small or large scale. The quesion is how you behave. Yes, an architect must care about culture. Caring is the first step to change. You can't change just with software and technology you must address culture by being part of the change you want see.
+Because you will very likely see this happen in a small or large scale. The question is how you behave. Yes, an architect must care about culture. Caring is the first step to change. You can't change just with software and technology you must address culture by being part of the change you want see.
 
-An architecture is a leader, it's a teacher, therefore it must set an example of caring, passion, and action-oriented behavior. Even if little, every PR counts, every little improvement counts.
+An architect is a leader, it's a teacher, therefore it must set an example of caring, passion, and action-oriented behavior. Even if little, every PR counts, every little improvement counts.
