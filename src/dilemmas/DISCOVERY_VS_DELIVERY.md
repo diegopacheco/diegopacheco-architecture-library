@@ -17,9 +17,9 @@ If you need to go to production fast to learn, should we embrace the `Tech Debt 
 Because such tension it's constant. It's a regular day of product and engineering teams. Being good on this "game" it's game changer for the company like Mark Zuckerberg said "Product strategy is: IF we can learn faster than any other company, we're going to win".
 
 <div style="position: relative; width: 100%; padding-bottom: 56.25%">
-<iframe src=https://www.tiktok.com/@founderfront/video/7417686352097168686"
-        title="Mark Zuckerberg on Product strategy " frameborder="0" allowfullscreen
+<iframe src="https://www.tiktok.com/embed/v2/7417686352097168686"
+        title="Mark Zuckerberg on Product strategy" frameborder="0" allowfullscreen
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        style="position: absolute; width: 100%; height: 100%;">
+        style="position: absolute; width: 50%; height: 130%;">
 </iframe>
 </div>
