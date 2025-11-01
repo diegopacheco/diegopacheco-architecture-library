@@ -10,3 +10,15 @@ Basic benefit here is to reduce the amount of data transferred in a single reque
 2. **Cursor-Based Pagination**: Instead of using an offset, this method uses a cursor (a unique identifier for a specific item) to mark the starting point for the next page of results. For example, `GET /items?cursor=abc123&limit=10` would return the next 10 items after the item with the cursor `abc123`.
 3. **Page Number Pagination**: This method uses page numbers to specify which page of results to return. For example, `GET /items?page=2&limit=10` would return the second page of results, with 10 items per page.
 4. **Keyset Pagination**: This method uses the values of the last item in the current page to determine the starting point for the next page. For example, if the last item on the current page has an ID of 50, the next request might be `GET /items?after_id=50&limit=10`.
+
+## Why you need to know this?
+
+When not do pagination?
+
+iF a system needs process analytical transformations for reporting, aggregation, forecasrting or even for machine learnign workloads, in that case we are dealing with a big data scenario where we need a different stack and different solutions for this problem, we would not paginate in this case. We would use patterns like CDC (Change Data Capture) to stream data into a data warehouse or data lake, and then use specialized tools to process and analyze the data. Event Sourcing with Kaafka + stream processing(kafka streams, flink or spark) could be another way to handle this problem.
+
+When do pagination?
+
+Everything you have a lot of data. You need to be careful with `findAll` or `Select *` queries that can return a lot of data at once. This can lead to performance issues, timeouts, and high memory usage. Also the client cannot make sense of all this data at once, so in that scenarios always use pagination.
+
+
