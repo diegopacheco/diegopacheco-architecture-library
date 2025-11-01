@@ -11,7 +11,7 @@ Your code should be resilient. It should not break that easily.
 Consider the following pseudo-code with Scala 3x:
 
 ```scala
-class ProducService(
+class ProductService(
     @Autowired productRepository: ProductRepository,
     @Autowired logger: Logger
 ){

@@ -8,4 +8,4 @@ Java has a great connection pooling libraries like HikariCP.
 
 ## Why you need to know this?
 
-You must use this pattern everything a backend system need access a database. Connection pools are used to reduce the overhead of establishing a connection each time a database access is required. Because connections are expensive and they must be reused.
+You must use this pattern every time a backend system needs to access a database. Connection pools are used to reduce the overhead of establishing a connection each time a database access is required. Because connections are expensive and they must be reused.

@@ -182,7 +182,7 @@
                     <main>
                         <h1 id="diego-pachecos-software-architecture-library"><a class="header" href="#diego-pachecos-software-architecture-library">Diego Pacheco's Software Architecture Library</a></h1>
 <img src="cover.png" width="400">
-<p>This repository contains a curated collection of concepts, guidance about Software Architecture by Diego Pacheco.</p>
+<p>This repository contains a curated collection of concepts, guidance on Software Architecture by Diego Pacheco.</p>
 <p>I wrote this book because I have been doing software architecture for more than 20 years and I want to share my philosophy, practices, and important concepts and patterns with other architects and aspiring architects. This is also an experiment - a living piece of advice that I want to improve over time.</p>
 <h2 id="what-to-expect"><a class="header" href="#what-to-expect">What to Expect</a></h2>
 <ul>
@@ -404,7 +404,7 @@ Choosing the best and latest solutions</li>
 </ul>
 <p>Your code should be resilient. It should not break that easily.</p>
 <p>Consider the following pseudo-code with Scala 3x:</p>
-<pre><code class="language-scala">class ProducService(
+<pre><code class="language-scala">class ProductService(
     @Autowired productRepository: ProductRepository,
     @Autowired logger: Logger
 ){
@@ -757,7 +757,7 @@ Choosing the best and latest solutions</li>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="working-on-trenches"><a class="header" href="#working-on-trenches">Working on Trenches</a></h1>
 <p>Lean has this principle of "Gemba" which means "the real place" in Japanese. It emphasizes the importance of going to the actual place where work is done to understand processes and identify opportunities for improvement.</p>
 <p>Software is a war that never ends. Architects need to be on the battle front, on the trenches with engineers. Architects should not fix all the problems and code all the stories. However they need to code, they need to help the team to deal with complex problems. Architects going there and helping the team is a way to prevent a timeline disruption. Otherwise what <a href="https://diego-pacheco.blogspot.com/2021/02/architects-as-gatekeepers.html">kind of architect</a> are you?</p>
-<p>Architects on the frontend line is also how they can understand the real problems the team is facing. Architects cannot be hands off.</p>
+<p>Architects on the front line is also how they can understand the real problems the team is facing. Architects cannot be hands off.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-concepts"><a class="header" href="#why-concepts">Why Concepts?</a></h1>
 <p>Without knowing key concepts, you did not really learn something properly. Knowing concepts allows you to build mental models that help you understand new information faster and better.</p>
 <p>Without mental models, you are just memorizing information, and that is not a good way to learn and the worst way to operate. Mental models can only be built with proper understanding of concepts.</p>
@@ -886,7 +886,7 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <li>The cost of rolling back transactions is low.</li>
 <li>High concurrency is desired.</li>
 </ul>
-<p>It's very appealing to just use optimistic locking everywhere. However there are scenarios where you should have none. For instance, a classical example. It's an anti-pattern but happen a lot, React applications on the frontend might not be fully tested and might have many re-renderings causing many requests to be sent to the backend. In such scenario optimistic locking can cause a lot of pain and will be unnecessary overhead. In such scenario, just do nothing and rely on last write wins strategy or just piggyback on ACID properties.</p>
+<p>It's very appealing to just use optimistic locking everywhere. However there are scenarios where you should have none. For instance, a classical example. It's an anti-pattern but happens a lot, React applications on the frontend that are not fully tested might have many re-renderings causing many requests to be sent to the backend. In such scenario optimistic locking can cause a lot of pain and will be unnecessary overhead. In such scenario, just do nothing and rely on last write wins strategy or just piggyback on ACID properties.</p>
 <p>Of course it really depends on what the application does and the criticality of the transaction. But the React scenario is not hypothetical, I've seen it happen many times in real life. Also if the frontend did not implement a time based debounce mechanism, the user might have a nervous finger and click multiple times on a button causing multiple requests to be sent to the backend. In such scenario optimistic locking will just add unnecessary pain and false positives.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="partition"><a class="header" href="#partition">Partition</a></h1>
 <p>A <strong>partition</strong> of a set is a way of dividing the data set into subsets such that every element in the original set is included in exactly one of the subsets. In other words, a <a href="https://en.wikipedia.org/wiki/Partition_(database)">partition</a> breaks down a set into distinct parts where no part shares any elements with another, and all parts together cover the entire original set.</p>
@@ -1006,6 +1006,13 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <li><strong>Protocol Translation</strong>: Converts requests and responses between different protocols (e.g., HTTP to WebSocket).</li>
 <li><strong>Load Balancing</strong>: Distributes incoming requests across multiple instances of a microservice to ensure high availability and reliability.</li>
 </ul>
+<h2 id="why-you-need-to-know-this-17"><a class="header" href="#why-you-need-to-know-this-17">Why you need to know this?</a></h2>
+<p>Because there are 3 common scenarios where, using API gateway is the right thing to do:</p>
+<ol>
+<li><strong>Exposing Public facing APIs</strong>: When we need to expose an API to the the world, an API gateway is a must have. It will help us to manage security, rate limiting, logging, monitoring, etc.</li>
+<li><strong>Cross Cloud Communication</strong>: Let's say you have 2 departments in your company, one is in AWS and the other in Azure. You can use an API gateway to manage the communication between both clouds, handling security, routing, etc.</li>
+<li><strong>Migrations</strong>: When migrating from a monolith to microservices, an API gateway can help to manage the transition, routing requests to the monolith or the new microservices as needed.</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="backend-for-frontend-pattern"><a class="header" href="#backend-for-frontend-pattern">Backend for Frontend Pattern</a></h1>
 <p>The <a href="https://diego-pacheco.blogspot.com/2020/08/bff-dilema.html">Backend for Frontend (BFF)</a> pattern involves creating separate backend services tailored to the specific needs of different frontend applications. Usually written in a language that is common for the frontend team, meaning: NodeJS with JS or TypeScript.</p>
 <p>BFFs should have <code>Rendering Logic</code> and should NEVER have <code>Business Logic</code> because that should be encapsulated in the core backend services.</p>
@@ -1020,6 +1027,9 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <p>While both BFF and API Gateway sit between frontends and backend services, they serve different purposes:</p>
 <p><strong>API Gateway</strong>: Provides common functionality like authentication, rate limiting, and routing. It serves all clients with the same generic interface.</p>
 <p><strong>BFF</strong>: Tailors the API specifically to each frontend's needs. It aggregates, transforms, and optimizes responses for a specific client type. Rendering logic is part of the BFF.</p>
+<h2 id="why-you-need-to-know-this-18"><a class="header" href="#why-you-need-to-know-this-18">Why you need to know this?</a></h2>
+<p>Now a day pretty much the frontend is written in Typescript and NodeJS or other modern runtimes like Deno or Bun. BFF allow us to have common render logic for Mobile and Frontend. It's very common pattern to have a BFF between the web/mobile and the backend services.</p>
+<p>You will see this pattern happening a lot. You should be leveraging this pattern as well. However you always need to be careful what you put on BFFs. Remember: No Business Logic on BFFs, only Rendering Logic.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cache"><a class="header" href="#cache">Cache</a></h1>
 <p>A <a href="https://en.wikipedia.org/wiki/Cache_(computing)">cache</a> is a software component that stores data so that future requests for that data can be served faster. Caches are commonly used to improve performance and reduce latency in various applications, including web browsers, databases, and operating systems.</p>
 <h2 id="types-of-caches"><a class="header" href="#types-of-caches">Types of Caches</a></h2>
@@ -1045,10 +1055,16 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <li><strong>Automatic Invalidation</strong>: Using TTL or other mechanisms to automatically remove stale data.</li>
 <li><strong>Event-Driven Invalidation</strong>: Invalidating cache entries based on specific events, such as data updates.</li>
 </ol>
+<h2 id="why-you-need-to-know-this-19"><a class="header" href="#why-you-need-to-know-this-19">Why you need to know this?</a></h2>
+<p>This pattern should be used often. However you need make sure you always have an invalidation mechanism in place to avoid serving stale data. Usually the most simple invalidation mechanism is to use a Time-to-Live (TTL) strategy, where cached data is automatically removed after a certain period. Imagine the cache expires after 2h or something like that.</p>
+<p>Backend system should have cache to protect from database latency in case of slow queries or high traffic. Even if you call a downstream dependency that is slow, or a 3rd party API which is also slow you should cache as much as possible.</p>
+<p>This pattern not only reduce latency but improves the user experience as well. IF the users see everything happens pretty fast they will be more happy rather than if everything is slow. But you might arguee, OH, the first call will always be slow. Well for that case you can pre-warm the cache and make the call before the user need.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="connection-pool"><a class="header" href="#connection-pool">Connection Pool</a></h1>
 <p>A <a href="https://en.wikipedia.org/wiki/Connection_pool">connection pool</a> is a cache of database connections maintained so that the connections can be reused when future requests to the database are required. Connection pools are used to enhance the performance of executing commands on a database. Opening and maintaining a database connection for each user, especially requests made to a dynamic database-driven website application, is costly and wastes resources.</p>
 <p>It's expensive to open and close connections to the database all the time. That's why these objects are created at application startup and they are borrowed and returned to the pool as needed.</p>
 <p>Java has a great connection pooling libraries like HikariCP.</p>
+<h2 id="why-you-need-to-know-this-20"><a class="header" href="#why-you-need-to-know-this-20">Why you need to know this?</a></h2>
+<p>You must use this pattern every time a backend system needs to access a database. Connection pools are used to reduce the overhead of establishing a connection each time a database access is required. Because connections are expensive and they must be reused.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="feature-flags"><a class="header" href="#feature-flags">Feature Flags</a></h1>
 <p><a href="https://en.wikipedia.org/wiki/Feature_toggle">Feature flags</a> are runtime configuration switches that enable or disable functionality without deploying new code. They decouple deployment from release, allowing gradual rollouts and instant rollbacks, migrations and A/B testing.</p>
 <h2 id="strategies"><a class="header" href="#strategies">Strategies</a></h2>
@@ -1071,6 +1087,16 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <p><strong>Nested Flags</strong>: Flags inside flags create exponential complexity. Avoid deeply nested conditions.</p>
 <p><strong>Flag Proliferation</strong>: Too many flags make system hard to reason about. Be selective.</p>
 <p><strong>Using Flags for Configuration</strong>: Feature flags are not general configuration. Use proper config systems for that.</p>
+<h2 id="why-you-need-to-know-this-21"><a class="header" href="#why-you-need-to-know-this-21">Why you need to know this?</a></h2>
+<p>Because if you want to do experiments and A-B testing you will need use feature flags. Feature flags should:</p>
+<ul>
+<li>Have a clear time to die. i.e this feature flag will last 3 sprints or 2 weeks.</li>
+<li>Never be nested (make it flat, make it simple)</li>
+<li>Have a highly descriptive name. i.e <code>sales.report.top.sales.experience.v2</code> make sure you name your feature flags all with the same pattern.</li>
+<li>Feature flags should not be confused with the CORE business(backend) or even with permanent configuration. i.e display.theme = dark | light is not a feature flag.</li>
+<li>Be documented in a central place so everyone knows what they are and what they do. A Catalog for feature flags it's a good idea.</li>
+<li>Feature flags must be tested. You must have tests that cover the feature flag being ON and OFF.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="load-balancer"><a class="header" href="#load-balancer">Load Balancer</a></h1>
 <p><a href="https://en.wikipedia.org/wiki/Load_balancing_(computing)">LB</a> is a service that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed, improving application availability and responsiveness.</p>
 <p>Load balancers can operate at different layers of the OSI model, such as Layer 4 (Transport Layer) and Layer 7 (Application Layer), providing various features like SSL termination, session persistence, and health monitoring of backend servers.</p>
@@ -1083,6 +1109,8 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <li><strong>Random</strong>: Distributes requests randomly across the servers.</li>
 <li><strong>Metric-Based</strong>: Uses specific metrics (like response time or server load) to make load balancing decisions.</li>
 </ol>
+<h2 id="why-you-need-to-know-this-22"><a class="header" href="#why-you-need-to-know-this-22">Why you need to know this?</a></h2>
+<p>Backend services must have a load balancer in front of them. This is a good pattern, because it allow us to better use infrastructure resources and improve availability of our services. Usually the default if you are using AWS is to have a Application Load Balancer in front of your backend services. In case you have a lot of traffic you can also use a Network Load Balancer.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="message-patterns"><a class="header" href="#message-patterns">Message Patterns</a></h1>
 <p>There are <a href="https://en.wikipedia.org/wiki/Messaging_pattern">different</a> ways to structure message communication between systems.</p>
 <h2 id="publishsubscribe-pattern"><a class="header" href="#publishsubscribe-pattern">Publish/Subscribe Pattern</a></h2>
@@ -1126,15 +1154,27 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><strong>Partition Ordering</strong>: Messages within the same partition maintain order.</li>
 <li><strong>No Ordering</strong>: Messages may be processed in any order for maximum throughput.</li>
 </ul>
+<h2 id="why-you-need-to-know-this-23"><a class="header" href="#why-you-need-to-know-this-23">Why you need to know this?</a></h2>
+<p>Basically there are 2 common scenarios you want to use such patterns.</p>
+<ol>
+<li>
+<p>You have multiple services that need to communicate with each other in a decoupled way. In this case you will use Publish/Subscribe pattern. Such pattern allow async communication and multiple services can listen to the same event. Ideally for event-driven architectures. For instance using Kafka topics or similar messaging systems.</p>
+</li>
+<li>
+<p>You have a task that needs to be processed by a single service or worker. In this case you will use Point-to-Point pattern. Such pattern ensure that only one service will process the message. Ideal for task distribution and load balancing. For instance using AWS SQS or RabbitMQ.</p>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="message-id"><a class="header" href="#message-id">Message Id</a></h1>
 <p><a href="https://en.wikipedia.org/wiki/Message-ID">Message ID</a> Also known as CORRELATION_ID. The idea that each message or request must have a unique id, and you will pass down such id into the downstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID.</p>
-<p>Why this is important?</p>
+<h2 id="why-this-is-important"><a class="header" href="#why-this-is-important">Why this is important?</a></h2>
 <ul>
 <li>Traceability: When you have a unique MESSAGE_ID for each request, you can trace the entire lifecycle of that request across multiple services. This is especially useful in microservices architectures where a single user action may trigger multiple service calls.</li>
 <li>Debugging: If an error occurs, having a MESSAGE_ID allows you to quickly locate all logs and events related to that specific request. This can significantly speed up the debugging process.</li>
 <li>Monitoring: MESSAGE_IDs can be used to monitor the performance of requests as they pass through different services.</li>
 </ul>
 <p>Without a MESSAGE_ID, it becomes impossible to debug distributed systems.</p>
+<h2 id="why-you-need-to-know-this-24"><a class="header" href="#why-you-need-to-know-this-24">Why you need to know this?</a></h2>
+<p>Every time you have services and distributed systems you must implement this pattern. If you are using messaging or kafka you also must implement this pattern. Otherwise it's impossible to debug issues in distributed systems.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pagination"><a class="header" href="#pagination">Pagination</a></h1>
 <p>When you have an endpoint that returns a large list of items, it is often useful to <a href="https://www.merge.dev/blog/rest-api-pagination">paginate</a> the results. This means breaking the results into smaller chunks, or "pages", that can be retrieved one at a time.</p>
 <p>Basic benefit here is to reduce the amount of data transferred in a single request, which can improve performance and reduce load on the server. Less latency and more responsive applications are the end result.</p>
@@ -1145,6 +1185,11 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><strong>Page Number Pagination</strong>: This method uses page numbers to specify which page of results to return. For example, <code>GET /items?page=2&amp;limit=10</code> would return the second page of results, with 10 items per page.</li>
 <li><strong>Keyset Pagination</strong>: This method uses the values of the last item in the current page to determine the starting point for the next page. For example, if the last item on the current page has an ID of 50, the next request might be <code>GET /items?after_id=50&amp;limit=10</code>.</li>
 </ol>
+<h2 id="why-you-need-to-know-this-25"><a class="header" href="#why-you-need-to-know-this-25">Why you need to know this?</a></h2>
+<p>When not do pagination?</p>
+<p>If a system needs process analytical transformations for reporting, aggregation, forecasting or even for machine learning workloads, in that case we are dealing with a big data scenario where we need a different stack and different solutions for this problem, we would not paginate in this case. We would use patterns like CDC (Change Data Capture) to stream data into a data warehouse or data lake, and then use specialized tools to process and analyze the data. Event Sourcing with Kafka + stream processing(kafka streams, flink or spark) could be another way to handle this problem.</p>
+<p>When do pagination?</p>
+<p>Every time you have a lot of data. You need to be careful with <code>findAll</code> or <code>Select *</code> queries that can return a lot of data at once. This can lead to performance issues, timeouts, and high memory usage. Also the client cannot make sense of all this data at once, so in that scenarios always use pagination.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="queue"><a class="header" href="#queue">Queue</a></h1>
 <p><a href="https://en.wikipedia.org/wiki/Message_queue">Queue</a> is a data structure that follows the First In First Out (FIFO) principle. Elements are added to the back of the queue and removed from the front.</p>
 <p>In distributed systems, queues are often used to manage tasks, messages, or data that need to be processed asynchronously. They help in decoupling different parts of a system, allowing for better scalability and fault tolerance.</p>
@@ -1163,6 +1208,14 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li><strong>Latency</strong>: Queues can introduce delays in processing, especially if they become overloaded.</li>
 <li><strong>Backpressure</strong>: If the rate of incoming messages exceeds the processing capacity, it can lead to increased latency and potential message loss.</li>
 </ul>
+<h2 id="why-you-need-to-know-this-26"><a class="header" href="#why-you-need-to-know-this-26">Why you need to know this?</a></h2>
+<p>Queues are very useful. In a couple of very common scenarios:</p>
+<ol>
+<li>You want to do asynchronous processing: You can use an internal in-memory queue, or you can use an external queue, depending on your durability needs.</li>
+<li>You want to decouple different parts of your system: Using a queue can help you achieve better scalability and fault tolerance. Because now if the receiver system is down, the sender still can send a message and receiver can process later, make the system more resilient.</li>
+<li>Queues are present in any HTTP server implementation: Behind the scenes, most HTTP servers use queues to manage incoming requests and distribute them to worker threads or processes for handling. Understanding how queues work can help you optimize the performance and scalability of your web applications. Queue allow your systems to "breath" under high load.</li>
+</ol>
+<p>However you always want monitor queue depth, arrival and processing rate to make sure your system is healthy. This a good metrics to always keep an eye on in any system using queues.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="retry"><a class="header" href="#retry">Retry</a></h1>
 <p><a href="https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/">Retry</a> is a technique used in distributed systems to handle transient failures by attempting an operation multiple times before giving up. This approach is particularly useful in distributed systems, where network issues or temporary unavailability of services can lead to failures that may be resolved with subsequent attempts.</p>
 <h2 id="timeouts"><a class="header" href="#timeouts">Timeouts</a></h2>
@@ -1176,6 +1229,9 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </ul>
 <h2 id="thundering-herd-problem"><a class="header" href="#thundering-herd-problem">Thundering Herd Problem</a></h2>
 <p>The thundering herd problem occurs when multiple clients simultaneously retry an operation after a failure, leading to a sudden surge in requests that can overwhelm the system. To mitigate this issue, techniques such as jitter in backoff strategies and limiting the number of concurrent retries can be employed.</p>
+<h2 id="why-you-need-to-know-this-27"><a class="header" href="#why-you-need-to-know-this-27">Why you need to know this?</a></h2>
+<p>Everytime you make a call, does not matter if the service is internal or external you want combine retries with timeouts and progressive backoff to make your system more resilient to transient failures. This is especially important in distributed systems where network issues and service unavailability are common.</p>
+<p>Everysingle call to AWS is the same principle, the good news is that AWS SDKs already implement retries with timeouts and progressive backoff for you, so you just need to configure them properly.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="webhook"><a class="header" href="#webhook">Webhook</a></h1>
 <p>A <a href="https://en.wikipedia.org/wiki/Webhook">webhook</a> is just an endpoint in an API or REST server. A webhook is used to notify internal/external services when certain events happen.</p>
 <p>When an event occurs, the server makes an HTTP request (usually a POST request) to the specified URL of the web hook, sending relevant data about the event.</p>
@@ -1195,6 +1251,16 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </li>
 </ul>
 <p>Webhooks do not require special technology. You can apply them with any backend technology that can handle HTTP requests.</p>
+<h2 id="why-you-need-to-know-this-28"><a class="header" href="#why-you-need-to-know-this-28">Why you need to know this?</a></h2>
+<p>Webhooks are interesting patrern for 2 common scenarios:</p>
+<ol>
+<li>
+<p>You are doing async processing and want to notify another system when the processing is done. Lets say the other system is external. So this prevent the need for polling. Same pattern can be applied for internal systems as well.</p>
+</li>
+<li>
+<p>You want to integrate with 3rd party systems that support webhooks to get notified about events happening in those systems. For example, you can use webhooks to get notified about new orders in an e-commerce platform or new issues in a project management tool. Being event driven is always better than polling.</p>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-tools"><a class="header" href="#why-tools">Why Tools?</a></h1>
 <p>An architect needs a couple of tools. I thought a lot about writing this section because this can easily get deprecated since tools keep evolving, but then I decided to talk about the essence of tools we need and give some current recommendations.</p>
 <p>An architect does not need many tools, but for engineering, we need lots of tools. For architecture, we need a couple of tools for:</p>
@@ -1211,7 +1277,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Sequence/state diagrams: Useful to understand how a system works internally, how data flows through the system. I would not have hundreds of these, the goal here is not to have one per UI. The goal is to have them for the most important and complex things.</li>
 </ul>
 <p>The best paid diagram tool is <a href="https://www.lucidchart.com/">LucidCHART</a>. The best free diagram tool is <a href="https://app.diagrams.net/">Diagrams.net</a>.</p>
-<h2 id="why-you-need-to-know-this-17"><a class="header" href="#why-you-need-to-know-this-17">Why you need to know this?</a></h2>
+<h2 id="why-you-need-to-know-this-29"><a class="header" href="#why-you-need-to-know-this-29">Why you need to know this?</a></h2>
 <p>Visual Diagrams help us a lot to see what's not obvious. A picture is worth a thousand words. Software is complex, the problems we deal with in distributed systems at scale are very hard to talk about. Drawing boxes and arrows allows us to put everybody on the same page and actually make sense of things.</p>
 <p>Does not matter if you follow or not follow <a href="https://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html">UML standards</a>. The goal is to make the invisible into something visible. You can only do code review because you see code in front of you, how you do architecture and design review if there is nothing in front of you? So diagrams are the way to go.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="writing"><a class="header" href="#writing">Writing</a></h1>
@@ -1225,7 +1291,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Decisions</li>
 </ul>
 <p>When you write something down, you are dumping your brain and therefore doing the same as an engineer when they fire up a PR. You are allowing others to review. Written documents scale, because many people can read them, and they might last forever.</p>
-<h2 id="why-you-need-to-know-this-18"><a class="header" href="#why-you-need-to-know-this-18">Why you need to know this?</a></h2>
+<h2 id="why-you-need-to-know-this-30"><a class="header" href="#why-you-need-to-know-this-30">Why you need to know this?</a></h2>
 <p>This probably is the most non-obvious thing. Back to the code review, you can only review because someone wrote code. How do you review architecture? Well in part it can be with diagrams, but you can't do 100% of all the things with diagrams. Because architecture also drives:</p>
 <ul>
 <li>Technical Strategy</li>
@@ -1238,7 +1304,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <p>An architect needs a thinking toolbox. In my humble opinion, you can use the same tool you use for Diagramming and Writing. POC's are a great laboratory for thinking as well. I used a lot of mind-maps in the past, but I find that nowadays I prefer to use plain text files with a good structure (headings, lists, code blocks, etc).</p>
 <p>Markdowns can be a great tool for thinking too, but you need a diagram tool to sketch some boxes and arrows. Without coding and experimentation, thinking is just an abstract exercise. When you know the systems and what they can do, then you can think about alternatives. In my humble opinion, thinking is about exploring alternatives, exploring different trade-offs and different ways to solve or model a problem. Thinking is about being creative and open-minded.</p>
 <p>There is a difference when you are documenting what you solved already and that's for review or for engineers to implement. Versus thinking about how to solve a problem that is not solved yet. In the first case you are more focused on clarity and precision, in the second case you are more focused on exploration and creativity.</p>
-<h2 id="why-you-need-to-know-this-19"><a class="header" href="#why-you-need-to-know-this-19">Why you need to know this?</a></h2>
+<h2 id="why-you-need-to-know-this-31"><a class="header" href="#why-you-need-to-know-this-31">Why you need to know this?</a></h2>
 <p>Because architecture is not just "choosing something". It's about a deep analytical and critical thinking process. It's very easy to just dump more software. Lateral thinking requires practice and discipline. Architects need to think, otherwise they are just engineering following instructions from product.</p>
 <p>Thinking is a must for architects. It must happen, otherwise the role of the architect is not effective. However nobody will tell you to think, actually the opposite, they will pressure to deliver and it does not matter if you think or not. So you better master the art of thinking, the art of trade-offs, the art of doing POCs, and the art of making good decisions based on your thinking.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="in-the-end"><a class="header" href="#in-the-end">In The End</a></h1>
@@ -1279,24 +1345,14 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <h2 id="unreleased"><a class="header" href="#unreleased">[Unreleased]</a></h2>
 <h3 id="added"><a class="header" href="#added">Added</a></h3>
 <ul>
-<li>Extensive glossary expansions with programming languages: Java 23, Kotlin, Scala 3.x, Go, Rust, Clojure, Gleam, Haskell, Nim, TypeScript, Tupi Lang, V Language, Zig</li>
-<li>Framework and library terms: Akka, Hibernate, Netty, RxJava, Spring, Spring Boot</li>
-<li>Database and storage technologies: Cassandra, DynamoDB, MySQL, PostgreSQL, RabbitMQ, Redis</li>
-<li>Infrastructure and tools: Docker, Kubernetes, Jenkins, Terraform, HashiCorp Vault, Gatling, mdBook</li>
-<li>AWS services: AWS KMS, AWS RDS</li>
-<li>Design patterns and concepts: Circuit Breaker, Envelope Encryption, Last Write Wins, Feature Bloat, Deadlock</li>
-<li>Methodologies and practices: Kanban, XP (Extreme Programming), Test Automation (TTA), Community of Practice</li>
-<li>Index entries for: Blue-Green Deployment, Canary Release, Chaos Engineering, Distributed Monolith, Event-Driven Architecture, Event Sourcing, Microservices, Monolith, Spike, Testing in Production</li>
-<li>External references: Meetings Cost blog post, Spike Wikipedia entry, Retrospectives Wiki</li>
+<li>Comprehensive content for all pattern files: WEB_HOOK, RETRY, QUEUE, PAGINATION, MESSAGE_ID, LB, FEATURE_FLAGS, CONNECTION_POOL, CACHE, BFF_PATTERN, API_GATEWAY</li>
+<li>Additional references: Grammarly, Figma, V Language, Gleam, Deno, Bun homepages</li>
+<li>Video references: AWS re:Invent 2022 keynote, Mark Zuckerberg product strategy videos</li>
 </ul>
 <h3 id="changed"><a class="header" href="#changed">Changed</a></h3>
 <ul>
-<li>Expanded WRITING.md with additional content and best practices</li>
-<li>Enhanced DIAGRAMING.md with more details on diagramming approaches</li>
-<li>Improved THINKING.md with expanded thinking tool descriptions</li>
-<li>Minor corrections and improvements across multiple concept files: IDEMPOTENCY, OPLOCKING, PARTITION, SCHEMA_EVOLUTION, SOURCE_OF_TRUTH</li>
-<li>Minor corrections across anti-pattern files: IGNORE_CULTURE, REQUIREMENTS, STAGNATION</li>
-<li>Refinements to DECIDE_OR_WAIT.md dilemma</li>
+<li>Enhanced all pattern files with detailed explanations and best practices</li>
+<li>Updated REFERENCES.md with additional tools and media resources</li>
 </ul>
 <h2 id="104---2025-10-30"><a class="header" href="#104---2025-10-30">[1.0.4] - 2025-10-30</a></h2>
 <h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
@@ -1567,6 +1623,27 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <ul>
 <li><a href="https://www.lucidchart.com/">LucidChart</a></li>
 <li><a href="https://app.diagrams.net/">Diagrams.net</a></li>
+</ul>
+<p><strong>Writing Tools</strong></p>
+<ul>
+<li><a href="https://www.grammarly.com/">Grammarly</a></li>
+</ul>
+<p><strong>Design Tools</strong></p>
+<ul>
+<li><a href="https://www.figma.com/">Figma</a></li>
+</ul>
+<p><strong>Language &amp; Runtime Homepages</strong></p>
+<ul>
+<li><a href="https://vlang.io">V Language</a></li>
+<li><a href="https://gleam.run">Gleam</a></li>
+<li><a href="https://deno.land">Deno</a></li>
+<li><a href="https://bun.sh">Bun</a></li>
+</ul>
+<p><strong>Videos &amp; Media</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=RfvL_423a-I">AWS re:Invent 2022 - Keynote with Dr. Werner Vogels</a></li>
+<li><a href="https://www.tiktok.com/@zuck/video/7417686352097168686">Mark Zuckerberg on Product Strategy</a></li>
+<li><a href="https://www.youtube.com/watch?v=YQKsdR1wgK8">Mark Zuckerberg on Fast Learning Cycles</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="glossary"><a class="header" href="#glossary">Glossary</a></h1>
 <p>A comprehensive glossary of technical terms, concepts, patterns, and methodologies covered in this architecture library.</p>

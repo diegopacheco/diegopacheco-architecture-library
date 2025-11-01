@@ -5,23 +5,13 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Added
-- Extensive glossary expansions with programming languages: Java 23, Kotlin, Scala 3.x, Go, Rust, Clojure, Gleam, Haskell, Nim, TypeScript, Tupi Lang, V Language, Zig
-- Framework and library terms: Akka, Hibernate, Netty, RxJava, Spring, Spring Boot
-- Database and storage technologies: Cassandra, DynamoDB, MySQL, PostgreSQL, RabbitMQ, Redis
-- Infrastructure and tools: Docker, Kubernetes, Jenkins, Terraform, HashiCorp Vault, Gatling, mdBook
-- AWS services: AWS KMS, AWS RDS
-- Design patterns and concepts: Circuit Breaker, Envelope Encryption, Last Write Wins, Feature Bloat, Deadlock
-- Methodologies and practices: Kanban, XP (Extreme Programming), Test Automation (TTA), Community of Practice
-- Index entries for: Blue-Green Deployment, Canary Release, Chaos Engineering, Distributed Monolith, Event-Driven Architecture, Event Sourcing, Microservices, Monolith, Spike, Testing in Production
-- External references: Meetings Cost blog post, Spike Wikipedia entry, Retrospectives Wiki
+- Comprehensive content for all pattern files: WEB_HOOK, RETRY, QUEUE, PAGINATION, MESSAGE_ID, LB, FEATURE_FLAGS, CONNECTION_POOL, CACHE, BFF_PATTERN, API_GATEWAY
+- Additional references: Grammarly, Figma, V Language, Gleam, Deno, Bun homepages
+- Video references: AWS re:Invent 2022 keynote, Mark Zuckerberg product strategy videos
 
 ### Changed
-- Expanded WRITING.md with additional content and best practices
-- Enhanced DIAGRAMING.md with more details on diagramming approaches
-- Improved THINKING.md with expanded thinking tool descriptions
-- Minor corrections and improvements across multiple concept files: IDEMPOTENCY, OPLOCKING, PARTITION, SCHEMA_EVOLUTION, SOURCE_OF_TRUTH
-- Minor corrections across anti-pattern files: IGNORE_CULTURE, REQUIREMENTS, STAGNATION
-- Refinements to DECIDE_OR_WAIT.md dilemma
+- Enhanced all pattern files with detailed explanations and best practices
+- Updated REFERENCES.md with additional tools and media resources
 
 ## [1.0.4] - 2025-10-30
 

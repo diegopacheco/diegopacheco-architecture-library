@@ -15,10 +15,10 @@ Basic benefit here is to reduce the amount of data transferred in a single reque
 
 When not do pagination?
 
-iF a system needs process analytical transformations for reporting, aggregation, forecasrting or even for machine learnign workloads, in that case we are dealing with a big data scenario where we need a different stack and different solutions for this problem, we would not paginate in this case. We would use patterns like CDC (Change Data Capture) to stream data into a data warehouse or data lake, and then use specialized tools to process and analyze the data. Event Sourcing with Kaafka + stream processing(kafka streams, flink or spark) could be another way to handle this problem.
+If a system needs process analytical transformations for reporting, aggregation, forecasting or even for machine learning workloads, in that case we are dealing with a big data scenario where we need a different stack and different solutions for this problem, we would not paginate in this case. We would use patterns like CDC (Change Data Capture) to stream data into a data warehouse or data lake, and then use specialized tools to process and analyze the data. Event Sourcing with Kafka + stream processing(kafka streams, flink or spark) could be another way to handle this problem.
 
 When do pagination?
 
-Everything you have a lot of data. You need to be careful with `findAll` or `Select *` queries that can return a lot of data at once. This can lead to performance issues, timeouts, and high memory usage. Also the client cannot make sense of all this data at once, so in that scenarios always use pagination.
+Every time you have a lot of data. You need to be careful with `findAll` or `Select *` queries that can return a lot of data at once. This can lead to performance issues, timeouts, and high memory usage. Also the client cannot make sense of all this data at once, so in that scenarios always use pagination.
 
 

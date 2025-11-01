@@ -169,3 +169,20 @@ A comprehensive collection of external references, blog posts, articles, and tec
 **Diagramming Tools**
 * [LucidChart](https://www.lucidchart.com/)
 * [Diagrams.net](https://app.diagrams.net/)
+
+**Writing Tools**
+* [Grammarly](https://www.grammarly.com/)
+
+**Design Tools**
+* [Figma](https://www.figma.com/)
+
+**Language & Runtime Homepages**
+* [V Language](https://vlang.io)
+* [Gleam](https://gleam.run)
+* [Deno](https://deno.land)
+* [Bun](https://bun.sh)
+
+**Videos & Media**
+* [AWS re:Invent 2022 - Keynote with Dr. Werner Vogels](https://www.youtube.com/watch?v=RfvL_423a-I)
+* [Mark Zuckerberg on Product Strategy](https://www.tiktok.com/@zuck/video/7417686352097168686)
+* [Mark Zuckerberg on Fast Learning Cycles](https://www.youtube.com/watch?v=YQKsdR1wgK8)

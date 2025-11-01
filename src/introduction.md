@@ -2,7 +2,7 @@
 
 <img src="cover.png" width="400">
 
-This repository contains a curated collection of concepts, guidance about Software Architecture by Diego Pacheco.
+This repository contains a curated collection of concepts, guidance on Software Architecture by Diego Pacheco.
 
 I wrote this book because I have been doing software architecture for more than 20 years and I want to share my philosophy, practices, and important concepts and patterns with other architects and aspiring architects. This is also an experiment - a living piece of advice that I want to improve over time.
 

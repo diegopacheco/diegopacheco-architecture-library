@@ -47,7 +47,7 @@ Message ordering guarantees vary by pattern and implementation:
 
 ## Why you need to know this?
 
-Basicaly there is 2 common secnario you want use such patterns.
+Basically there are 2 common scenarios you want to use such patterns.
 
 1. You have multiple services that need to communicate with each other in a decoupled way. In this case you will use Publish/Subscribe pattern. Such pattern allow async communication and multiple services can listen to the same event. Ideally for event-driven architectures. For instance using Kafka topics or similar messaging systems.
 

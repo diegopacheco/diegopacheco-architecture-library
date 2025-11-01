@@ -15,4 +15,4 @@ Load balancers can operate at different layers of the OSI model, such as Layer 4
 
 ## Why you need to know this?
 
-Backend services must have a load balancer in front of them. This is a good pattern, because it allow us to better use infrastructure resorcues and improve availability of our services. Usually the default if you are using AWS is to have a Application Load Balancer in front of your backend services. In case you have a lot of traffic you can also use a Network Load Balancer.
+Backend services must have a load balancer in front of them. This is a good pattern, because it allow us to better use infrastructure resources and improve availability of our services. Usually the default if you are using AWS is to have a Application Load Balancer in front of your backend services. In case you have a lot of traffic you can also use a Network Load Balancer.

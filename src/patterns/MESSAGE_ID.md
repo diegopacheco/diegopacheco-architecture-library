@@ -12,4 +12,4 @@ Without a MESSAGE_ID, it becomes impossible to debug distributed systems.
 
 ## Why you need to know this?
 
-Eveythime you have services and distributed systems you must implement this pattern. If you are using messaging or kafka you also must implement this pattern. Otherwise it's impossible to debug issues in distributed systems.
+Every time you have services and distributed systems you must implement this pattern. If you are using messaging or kafka you also must implement this pattern. Otherwise it's impossible to debug issues in distributed systems.
