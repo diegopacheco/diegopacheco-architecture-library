@@ -31,3 +31,13 @@ Flags can target based on:
 **Flag Proliferation**: Too many flags make system hard to reason about. Be selective.
 
 **Using Flags for Configuration**: Feature flags are not general configuration. Use proper config systems for that.
+
+## Why you need to know this?
+
+Because if you want to do experiments and A-B testing you will need use feature flags. Feature flags should:
+* Have a clear time to die. i.e this feaure flag will last 3 sprints or 2 weeks.
+* Never be nested (make it flat, make it simple)
+* Have a highly descriptive name. i.e `sales.report.top.sales.experrience.v2` make sure you name your feature flags all with the same pattern.
+* Feature flags should not be confused with the CORE buisness(backend) or even with permanent configuration. i.e display.themme = dark | light is not a feature flag.
+* Be documented in a central place so everyone knows what they are and what they do. A Catalog for feature flags it's a good idea.
+* Feature falgs must be testd. You must have tests that cover the feature flag being ON and OFF.
