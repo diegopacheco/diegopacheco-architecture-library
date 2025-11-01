@@ -18,3 +18,9 @@ While both BFF and API Gateway sit between frontends and backend services, they 
 **API Gateway**: Provides common functionality like authentication, rate limiting, and routing. It serves all clients with the same generic interface.
 
 **BFF**: Tailors the API specifically to each frontend's needs. It aggregates, transforms, and optimizes responses for a specific client type. Rendering logic is part of the BFF.
+
+## Why you need to know this?
+
+Now a day pretty much the frontend is written in Typescript and NodeJS or other modern runtimes like Deno or Bun. BFF allow us to have common render logic for Mobile and Frontend. It's very common pattern to have a BFF between the web/mmobile and the backend services.
+
+You will see this pattrern happening a lot. You should be leveraging this pattern as well. However you always need to be careful what you put on BFFs. Remember: No Business Logic on BFFs, only Rendering Logic.
