@@ -25,3 +25,10 @@ Cache invalidation is the process of removing or updating cached data when it be
 2. **Automatic Invalidation**: Using TTL or other mechanisms to automatically remove stale data.
 3. **Event-Driven Invalidation**: Invalidating cache entries based on specific events, such as data updates.
 
+## Why you need to know this?
+
+This pattern should be used often. However you need make sure you always have an invalidation mechanism in place to avoid serving stale data. Usually the most simmple invalidation mechanism is to use a Time-to-Live (TTL) strategy, where cached data is automatically removed after a certain period. Imagine the cache spires after 2h or something like that.
+
+Backend system should have cache to protect from database latency in case of slow queries or high traffic. Even if you call a downstream dependency that is slow, or a 3rd party API which is also slow you should cache as much as possible.
+
+This pattern now only reduce latency but improves the user experience as well. IF the users see everything happens pretty fast they will be more happy rather than if everything is slow. But you might arguee, OH, the first call will always be slow. Well for that case you can pre-warm the cache amd make the call before the user need.
