@@ -1343,47 +1343,86 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
 <p>All notable changes to this project will be documented in this file.</p>
 <h2 id="unreleased"><a class="header" href="#unreleased">[Unreleased]</a></h2>
+<h2 id="105---2025-10-31"><a class="header" href="#105---2025-10-31">[1.0.5] - 2025-10-31</a></h2>
 <h3 id="added"><a class="header" href="#added">Added</a></h3>
+<p>Pattern files - Added "Why you need to know this?" sections with practical guidance:</p>
 <ul>
-<li>Comprehensive content for all pattern files: WEB_HOOK, RETRY, QUEUE, PAGINATION, MESSAGE_ID, LB, FEATURE_FLAGS, CONNECTION_POOL, CACHE, BFF_PATTERN, API_GATEWAY</li>
-<li>Additional references: Grammarly, Figma, V Language, Gleam, Deno, Bun homepages</li>
-<li>Video references: AWS re:Invent 2022 keynote, Mark Zuckerberg product strategy videos</li>
+<li>WEB_HOOK.md: Added section explaining use cases for async processing notifications and 3rd party integrations, emphasizing event-driven architecture over polling</li>
+<li>RETRY.md: Added section on implementing retries with timeouts and progressive backoff for resilience, with AWS SDK examples</li>
+<li>QUEUE.md: Added section covering three scenarios: async processing, system decoupling, and HTTP server request management, plus monitoring guidance for queue depth and processing rates</li>
+<li>PAGINATION.md: Added section distinguishing when to use pagination vs big data patterns like CDC, Event Sourcing with Kafka, addressing findAll and Select * anti-patterns</li>
+<li>MESSAGE_PATTERNS.md: Added section explaining Publish/Subscribe for event-driven architectures and Point-to-Point for task distribution</li>
+<li>MESSAGE_ID.md: Added section emphasizing necessity for distributed systems and messaging/Kafka implementations</li>
+<li>LB.md: Added section explaining load balancer requirements for backend services with AWS ALB/NLB examples</li>
+<li>FEATURE_FLAGS.md: Added section with best practices including time-to-live, naming conventions, avoiding nesting, testing requirements, and catalog documentation</li>
+<li>CONNECTION_POOL.md: Added section on database connection pooling necessity and connection reuse benefits</li>
+<li>CACHE.md: Added section on TTL invalidation strategies, protecting against database latency, and cache pre-warming techniques</li>
+<li>BFF_PATTERN.md: Added section on TypeScript/NodeJS/Deno/Bun implementations, emphasizing separation of rendering logic from business logic</li>
+<li>API_GATEWAY.md: Added section covering three scenarios: public-facing APIs, cross-cloud communication, and monolith-to-microservices migrations</li>
+</ul>
+<p>References and resources:</p>
+<ul>
+<li>REFERENCES.md: Added Grammarly under Writing Tools section</li>
+<li>REFERENCES.md: Added Figma under Design Tools section</li>
+<li>REFERENCES.md: Added V Language, Gleam, Deno, and Bun homepages under Language &amp; Runtime Homepages section</li>
+<li>REFERENCES.md: Added AWS re:Invent 2022 keynote with Dr. Werner Vogels under Videos &amp; Media section</li>
+<li>REFERENCES.md: Added Mark Zuckerberg videos on product strategy and fast learning cycles under Videos &amp; Media section</li>
 </ul>
 <h3 id="changed"><a class="header" href="#changed">Changed</a></h3>
+<p>Grammar and spelling corrections across multiple files:</p>
 <ul>
-<li>Enhanced all pattern files with detailed explanations and best practices</li>
-<li>Updated REFERENCES.md with additional tools and media resources</li>
+<li>introduction.md: Changed "guidance about Software Architecture" to "guidance on Software Architecture"</li>
+<li>DEFENSIVE.md: Fixed typo "ProducService" to "ProductService" in Scala code example</li>
+<li>WORKING_ON_TRENCHES.md: Changed "frontend line" to "front line"</li>
+<li>OPLOCKING.md: Improved grammar in React re-rendering scenario explanation</li>
+<li>API_GATEWAY.md: Fixed "todo" to "to do", "Comunication" to "Communication", "departaments" to "departments"</li>
+<li>BFF_PATTERN.md: Fixed "mmobile" to "mobile", "pattrern" to "pattern"</li>
+<li>CACHE.md: Fixed "simmple" to "simple", "spires" to "expires", "now only" to "not only", "amd" to "and"</li>
+<li>CONNECTION_POOL.md: Changed "everything a backend system need access" to "every time a backend system needs to access"</li>
+<li>FEATURE_FLAGS.md: Fixed "feaure" to "feature", "experrience" to "experience", "buisness" to "business", "themme" to "theme", "falgs" to "flags", "testd" to "tested"</li>
+<li>LB.md: Fixed "resorcues" to "resources"</li>
+<li>MESSAGE_ID.md: Improved section header formatting from "Why this is important?" to proper header</li>
+<li>MESSAGE_PATTERNS.md: Fixed "secnario" to "scenario"</li>
+<li>PAGINATION.md: Fixed "forecasrting" to "forecasting", "learnign" to "learning", "Everything" to "Every time"</li>
+<li>QUEUE.md: Fixed "reciver" to "receiver", "needss" to "needs", "a good metrics" to "good metrics"</li>
+<li>RETRY.md: Fixed "Everytime" to "Every time", "Everysingle" to "Every single"</li>
 </ul>
 <h2 id="104---2025-10-30"><a class="header" href="#104---2025-10-30">[1.0.4] - 2025-10-30</a></h2>
 <h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
+<p>Dilemmas - Added "Why you need to know this?" sections:</p>
 <ul>
-<li>Comprehensive content for DISCOVERY_VS_DELIVERY.md dilemma</li>
-<li>Comprehensive content for MOVE_FAST_VS_DO_IT_RIGHT.md dilemma</li>
-<li>Comprehensive content for DECIDE_OR_WAIT.md dilemma</li>
-<li>Comprehensive content for BUILD_VS_BUY.md dilemma</li>
-<li>Comprehensive content for TECH_DEBT_PLAGUE.md anti-pattern</li>
-<li>Comprehensive content for STAGNATION.md anti-pattern</li>
-<li>Comprehensive content for REQUIREMENTS.md anti-pattern</li>
+<li>DISCOVERY_VS_DELIVERY.md: Added section emphasizing learning speed as competitive advantage with Mark Zuckerberg product strategy reference, fixed TikTok embed iframe for proper display</li>
+<li>MOVE_FAST_VS_DO_IT_RIGHT.md: Enhanced content on balancing speed vs quality in product development</li>
+<li>DECIDE_OR_WAIT.md: Added section on cost of delay analysis, experimentation strategies, and importance of Blameless Feature Reviews for learning from decisions</li>
+<li>BUILD_VS_BUY.md: Added section on collaboration with product/UX, conducting trade-off analysis, and socializing decisions with stakeholders</li>
+</ul>
+<p>Anti-patterns - Added "Why you need to know this?" sections:</p>
+<ul>
+<li>TECH_DEBT_PLAGUE.md: Added section with strategies to fight tech debt including incremental improvements, team education, pushing back on bad practices, and explaining costs to management</li>
+<li>STAGNATION.md: Added section on fighting auto-pilot mode through passion, continuous learning, conferences, knowledge sharing, experimentation, and POCs</li>
+<li>REQUIREMENTS.md: Added section on handling requirements through product collaboration, UX understanding, spike techniques, production validation, experiments, and industry research</li>
+<li>IGNORE_CULTURE.md: Enhanced content emphasizing architect's role as leader and teacher in setting example for caring and action-oriented behavior</li>
 </ul>
 <h3 id="changed-1"><a class="header" href="#changed-1">Changed</a></h3>
 <ul>
-<li>Updated GLOSSARY.md with additional terms: Blast Radius, Blameless Feature Reviews, Learning Cycles, OpenSearch/Elasticsearch, Spike</li>
+<li>GLOSSARY.md: Added terms including Blast Radius, Blameless Feature Reviews, Learning Cycles, OpenSearch/Elasticsearch, and Spike</li>
 </ul>
 <h2 id="103---2025-10-29"><a class="header" href="#103---2025-10-29">[1.0.3] - 2025-10-29</a></h2>
 <h3 id="added-2"><a class="header" href="#added-2">Added</a></h3>
+<p>Concepts - Added "Why you need to know this?" sections:</p>
 <ul>
-<li>Comprehensive content for STATELESS_VS_STATEFULL_SVC.md</li>
-<li>Comprehensive content for SOURCE_OF_TRUTH.md</li>
-<li>Comprehensive content for SCHEMA_EVOLUTION.md</li>
-<li>Comprehensive content for PARTITION.md</li>
-<li>Comprehensive content for OPLOCKING.md</li>
-<li>Comprehensive content for IDEMPOTENCY.md</li>
+<li>STATELESS_VS_STATEFULL_SVC.md: Added comprehensive content on service architecture patterns</li>
+<li>SOURCE_OF_TRUTH.md: Added section explaining importance in distributed systems, addressing write vs read patterns, and avoiding data inconsistencies</li>
+<li>SCHEMA_EVOLUTION.md: Added section on backward vs forward compatibility strategies, emphasizing backend systems as source of truth and rollback considerations</li>
+<li>PARTITION.md: Added section explaining when partitions become necessary at scale and for rapidly growing datasets</li>
+<li>OPLOCKING.md: Added section comparing pessimistic vs optimistic locking use cases, including React re-rendering scenario and high/low contention environments</li>
+<li>IDEMPOTENCY.md: Added section on REST API design requirements for GET/HEAD/OPTIONS/TRACE/PUT methods and code complexity implications</li>
 </ul>
 <h3 id="changed-2"><a class="header" href="#changed-2">Changed</a></h3>
 <ul>
-<li>Enhanced BASE.md with additional details and clarity</li>
-<li>Enhanced AUTHENT.md with comprehensive authentication and authorization coverage</li>
-<li>Enhanced ACID.md with detailed transaction property explanations</li>
+<li>BASE.md: Enhanced with additional details and clarity on eventual consistency patterns</li>
+<li>AUTHENT.md: Enhanced with comprehensive authentication and authorization coverage</li>
+<li>ACID.md: Enhanced with detailed transaction property explanations</li>
 </ul>
 <h2 id="102---2025-10-28"><a class="header" href="#102---2025-10-28">[1.0.2] - 2025-10-28</a></h2>
 <h3 id="changed-3"><a class="header" href="#changed-3">Changed</a></h3>
