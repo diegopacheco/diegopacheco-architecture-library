@@ -44,3 +44,11 @@ Message ordering guarantees vary by pattern and implementation:
 - **FIFO Ordering**: Messages are processed in the order they are sent.
 - **Partition Ordering**: Messages within the same partition maintain order.
 - **No Ordering**: Messages may be processed in any order for maximum throughput.
+
+## Why you need to know this?
+
+Basicaly there is 2 common secnario you want use such patterns.
+
+1. You have multiple services that need to communicate with each other in a decoupled way. In this case you will use Publish/Subscribe pattern. Such pattern allow async communication and multiple services can listen to the same event. Ideally for event-driven architectures. For instance using Kafka topics or similar messaging systems.
+
+2. You have a task that needs to be processed by a single service or worker. In this case you will use Point-to-Point pattern. Such pattern ensure that only one service will process the message. Ideal for task distribution and load balancing. For instance using AWS SQS or RabbitMQ.
