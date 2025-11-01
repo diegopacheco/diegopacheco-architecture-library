@@ -12,3 +12,7 @@ Load balancers can operate at different layers of the OSI model, such as Layer 4
 4. **Weighted Round Robin**: Similar to Round Robin but allows assigning weights to servers based on their capacity.
 5. **Random**: Distributes requests randomly across the servers.
 6. **Metric-Based**: Uses specific metrics (like response time or server load) to make load balancing decisions.
+
+## Why you need to know this?
+
+Backend services must have a load balancer in front of them. This is a good pattern, because it allow us to better use infrastructure resorcues and improve availability of our services. Usually the default if you are using AWS is to have a Application Load Balancer in front of your backend services. In case you have a lot of traffic you can also use a Network Load Balancer.
