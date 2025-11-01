@@ -12,3 +12,11 @@ Web hooks are commonly used for:
 * **Event-driven architectures**: Triggering actions in response to specific events.
 
 Webhooks do not require special technology. You can apply them with any backend technology that can handle HTTP requests.
+
+## Why you need to know this?
+
+Webhooks are interesting patrern for 2 common scenarios:
+
+1. You are doing async processing and want to notify another system when the processing is done. Lets say the other system is external. So this prevent the need for polling. Same pattern can be applied for internal systems as well.
+
+2. You want to integrate with 3rd party systems that support webhooks to get notified about events happening in those systems. For example, you can use webhooks to get notified about new orders in an e-commerce platform or new issues in a project management tool. Being event driven is always better than polling.
