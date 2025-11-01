@@ -16,3 +16,11 @@ An [API Gateway](https://en.wikipedia.org/wiki/API_management) and a Load Balanc
 - **Cross-Cutting Concerns**: Manages common functionalities such as authentication, logging, rate limiting, and caching.
 - **Protocol Translation**: Converts requests and responses between different protocols (e.g., HTTP to WebSocket).
 - **Load Balancing**: Distributes incoming requests across multiple instances of a microservice to ensure high availability and reliability.
+
+## Why you need to know this?
+
+Because there are 3 common scenarios where, using API gateway is the right thing todo:
+
+1. **Exposing Public facing APIs**: When we need to expose an API to the the world, an API gateway is a must have. It will help us to manage security, rate limiting, logging, monitoring, etc.
+2. **Cross Cloud Comunication**: Let's say you have 2 departaments in your company, one is in AWS and the other in Azure. You can use an API gateway to manage the comunication between both clouds, handling security, routing, etc.
+3. **Migrations**: When migrating from a monolith to microservices, an API gateway can help to manage the transition, routing requests to the monolith or the new microservices as needed.
