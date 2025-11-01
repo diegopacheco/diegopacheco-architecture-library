@@ -17,3 +17,13 @@ Common Issues with Queues:
 * **Duplicate messages**: In some cases, messages may be delivered more than once, leading to redundant processing.
 * **Latency**: Queues can introduce delays in processing, especially if they become overloaded.
 * **Backpressure**: If the rate of incoming messages exceeds the processing capacity, it can lead to increased latency and potential message loss.
+
+## Why you need to know this?
+
+Queues are very useful. In a couple of very common scenarios:
+
+1. You want do asynchronous processing: You can use an internal in-memory queue, or you can use an external queue, dependeing on your durability needss.
+2. You want to decouple different parts of your system: Using a queue can help you achieve better scalability and fault tolerance. Because now if the reciver system is down, the sender still can send a message and reciver can process later, make the system more resilient.
+3. Queues are present in any HTTP server implementation: Behind the scenes, most HTTP servers use queues to manage incoming requests and distribute them to worker threads or processes for handling. Understanding how queues work can help you optimize the performance and scalability of your web applications. Queue allow your systems to "breath" under high load.
+
+However you always want monitor queue depth, arrival and processing rate to make sure your system is healthy. This a good metrics to always keep an eye on in any system using queues.
