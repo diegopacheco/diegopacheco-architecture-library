@@ -5,3 +5,7 @@ A [connection pool](https://en.wikipedia.org/wiki/Connection_pool) is a cache of
 It's expensive to open and close connections to the database all the time. That's why these objects are created at application startup and they are borrowed and returned to the pool as needed.
 
 Java has a great connection pooling libraries like HikariCP.
+
+## Why you need to know this?
+
+You must use this pattern everything a backend system need access a database. Connection pools are used to reduce the overhead of establishing a connection each time a database access is required. Because connections are expensive and they must be reused.
