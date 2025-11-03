@@ -31,6 +31,8 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../theme/custom.css">
 
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
         <!-- Provide site root and default themes to javascript -->
         <script>
@@ -189,7 +191,7 @@
 <p>Such principle keeps us from writing complex software. For instance, if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.</p>
 <p>So we want to honor the idempotency principle to keep our software simple and predictable.</p>
 <h2 id="why-you-need-to-know-this"><a class="header" href="#why-you-need-to-know-this">Why you need to know this?</a></h2>
-<p>When you are designing and implementing REST APIS. Which pretty much is the bread and butter of all backend development now a days. You must guarantee that your GET, HEAD, OPTIONS, TRACE and PUT methods are idempotent. This is not merely a rule of thumb, it is a must. Because your consumers/clients will expect that behavior from your API. If you break that expectation, you will have a bad time debugging and fixing issues that could be easily avoided by following the idempotency principle.</p>
+<p>When you are designing and implementing REST APIS. Which pretty much is the bread and butter of all backend development nowadays. You must guarantee that your GET, HEAD, OPTIONS, TRACE and PUT methods are idempotent. This is not merely a rule of thumb, it is a must. Because your consumers/clients will expect that behavior from your API. If you break that expectation, you will have a bad time debugging and fixing issues that could be easily avoided by following the idempotency principle.</p>
 <p>Secondly if you break idempotency you will have more complex code to maintain. Because you will have to handle edge cases and weird things, it will be harder to test, everything will be worse. So just follow the principle and keep your code simple.</p>
 
                     </main>
@@ -221,6 +223,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

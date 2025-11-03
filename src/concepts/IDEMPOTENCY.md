@@ -14,6 +14,6 @@ So we want to honor the idempotency principle to keep our software simple and pr
 
 ## Why you need to know this?
 
-When you are designing and implementing REST APIS. Which pretty much is the bread and butter of all backend development now a days. You must guarantee that your GET, HEAD, OPTIONS, TRACE and PUT methods are idempotent. This is not merely a rule of thumb, it is a must. Because your consumers/clients will expect that behavior from your API. If you break that expectation, you will have a bad time debugging and fixing issues that could be easily avoided by following the idempotency principle.
+When you are designing and implementing REST APIS. Which pretty much is the bread and butter of all backend development nowadays. You must guarantee that your GET, HEAD, OPTIONS, TRACE and PUT methods are idempotent. This is not merely a rule of thumb, it is a must. Because your consumers/clients will expect that behavior from your API. If you break that expectation, you will have a bad time debugging and fixing issues that could be easily avoided by following the idempotency principle.
 
 Secondly if you break idempotency you will have more complex code to maintain. Because you will have to handle edge cases and weird things, it will be harder to test, everything will be worse. So just follow the principle and keep your code simple.

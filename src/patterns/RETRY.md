@@ -21,4 +21,4 @@ The thundering herd problem occurs when multiple clients simultaneously retry an
 
 Everytime you make a call, does not matter if the service is internal or external you want combine retries with timeouts and progressive backoff to make your system more resilient to transient failures. This is especially important in distributed systems where network issues and service unavailability are common.
 
-Everysingle call to AWS is the same principle, the good news is that AWS SDKs already implement retries with timeouts and progressive backoff for you, so you just need to configure them properly.
+Every single call to AWS is the same principle, the good news is that AWS SDKs already implement retries with timeouts and progressive backoff for you, so you just need to configure them properly.

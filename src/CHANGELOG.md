@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- HOW_I_WROTE_THE_BOOK.md: Behind the scenes of the book creation process
+
+### Changed
+- GLOSSARY.md: Added Business Logic, Discovery Work, and Experimentation terms
+
 ## [1.0.5] - 2025-10-31
 
 ### Added

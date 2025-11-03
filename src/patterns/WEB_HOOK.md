@@ -15,7 +15,7 @@ Webhooks do not require special technology. You can apply them with any backend 
 
 ## Why you need to know this?
 
-Webhooks are interesting patrern for 2 common scenarios:
+Webhooks are interesting pattern for 2 common scenarios:
 
 1. You are doing async processing and want to notify another system when the processing is done. Lets say the other system is external. So this prevent the need for polling. Same pattern can be applied for internal systems as well.
 

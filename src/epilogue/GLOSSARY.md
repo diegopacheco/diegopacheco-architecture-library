@@ -87,6 +87,9 @@ The decision between building solutions in-house for core business advantages or
 **Build Status**
 The state of the automated build process, which should consistently pass in stable systems as indicator of code quality.
 
+**Business Logic**
+The core domain logic implementing business rules and operations, distinguished from rendering logic which prepares data for presentation.
+
 ## C
 
 **Canary Release**
@@ -184,6 +187,9 @@ The rate at which deployments to production complete without errors or rollbacks
 **Design Document**
 A living document that captures architectural design, including diagrams, key decisions, rationale, trade-offs, and principles. Serves as communication tool and basis for review and feedback.
 
+**Discovery Work**
+Early phase of project work focused on understanding problems, exploring solutions, and validating assumptions through research, prototyping, and testing before committing to full implementation.
+
 **Deep Work**
 Focused, uninterrupted time that architects must protect for research, thinking about trade-offs, evaluating solutions, and reading code, typically 3-6 hours at least 3 times per week.
 
@@ -239,6 +245,9 @@ A technique storing a sequence of events that can be processed later to reconstr
 
 **Expand-Contract Pattern**
 A three-phase deployment strategy for breaking changes: expand (add new field), migrate (update services), contract (remove old field).
+
+**Experimentation**
+The practice of using A/B tests, prototypes, and production trials to validate assumptions and make informed decisions about features and architecture.
 
 **Exponential Backoff**
 A retry strategy where the wait time increases exponentially with each retry attempt.

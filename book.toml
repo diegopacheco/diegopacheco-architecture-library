@@ -6,6 +6,7 @@ multilingual = false
 src = "src"
 
 [output.html]
+mathjax-support = true
 default-theme = "rust"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/diegopacheco/diegopacheco-architecture-library"

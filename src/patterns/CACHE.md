@@ -31,4 +31,4 @@ This pattern should be used often. However you need make sure you always have an
 
 Backend system should have cache to protect from database latency in case of slow queries or high traffic. Even if you call a downstream dependency that is slow, or a 3rd party API which is also slow you should cache as much as possible.
 
-This pattern not only reduce latency but improves the user experience as well. IF the users see everything happens pretty fast they will be more happy rather than if everything is slow. But you might arguee, OH, the first call will always be slow. Well for that case you can pre-warm the cache and make the call before the user need.
+This pattern not only reduce latency but improves the user experience as well. IF the users see everything happens pretty fast they will be more happy rather than if everything is slow. But you might argue, OH, the first call will always be slow. Well for that case you can pre-warm the cache and make the call before the user need.

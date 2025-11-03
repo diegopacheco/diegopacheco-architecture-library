@@ -32,6 +32,8 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="theme/custom.css">
 
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
         <!-- Provide site root and default themes to javascript -->
         <script>
@@ -867,7 +869,7 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <p>Such principle keeps us from writing complex software. For instance, if a GET operation also does inserts and deletes, we would have to handle the case where the same GET request is sent multiple times, which could lead to data inconsistency and unexpected behavior.</p>
 <p>So we want to honor the idempotency principle to keep our software simple and predictable.</p>
 <h2 id="why-you-need-to-know-this-11"><a class="header" href="#why-you-need-to-know-this-11">Why you need to know this?</a></h2>
-<p>When you are designing and implementing REST APIS. Which pretty much is the bread and butter of all backend development now a days. You must guarantee that your GET, HEAD, OPTIONS, TRACE and PUT methods are idempotent. This is not merely a rule of thumb, it is a must. Because your consumers/clients will expect that behavior from your API. If you break that expectation, you will have a bad time debugging and fixing issues that could be easily avoided by following the idempotency principle.</p>
+<p>When you are designing and implementing REST APIS. Which pretty much is the bread and butter of all backend development nowadays. You must guarantee that your GET, HEAD, OPTIONS, TRACE and PUT methods are idempotent. This is not merely a rule of thumb, it is a must. Because your consumers/clients will expect that behavior from your API. If you break that expectation, you will have a bad time debugging and fixing issues that could be easily avoided by following the idempotency principle.</p>
 <p>Secondly if you break idempotency you will have more complex code to maintain. Because you will have to handle edge cases and weird things, it will be harder to test, everything will be worse. So just follow the principle and keep your code simple.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pessimistic-vs-optimistic-locking"><a class="header" href="#pessimistic-vs-optimistic-locking">Pessimistic vs Optimistic Locking</a></h1>
 <p>When dealing with concurrent access to shared resources, two primary locking strategies can be employed: <a href="https://en.wikipedia.org/wiki/Lock_(computer_science)">pessimistic locking</a> and <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic locking</a>.</p>
@@ -1029,7 +1031,7 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <p><strong>API Gateway</strong>: Provides common functionality like authentication, rate limiting, and routing. It serves all clients with the same generic interface.</p>
 <p><strong>BFF</strong>: Tailors the API specifically to each frontend's needs. It aggregates, transforms, and optimizes responses for a specific client type. Rendering logic is part of the BFF.</p>
 <h2 id="why-you-need-to-know-this-18"><a class="header" href="#why-you-need-to-know-this-18">Why you need to know this?</a></h2>
-<p>Now a day pretty much the frontend is written in Typescript and NodeJS or other modern runtimes like Deno or Bun. BFF allow us to have common render logic for Mobile and Frontend. It's very common pattern to have a BFF between the web/mobile and the backend services.</p>
+<p>Nowadays pretty much the frontend is written in Typescript and NodeJS or other modern runtimes like Deno or Bun. BFF allow us to have common render logic for Mobile and Frontend. It's very common pattern to have a BFF between the web/mobile and the backend services.</p>
 <p>You will see this pattern happening a lot. You should be leveraging this pattern as well. However you always need to be careful what you put on BFFs. Remember: No Business Logic on BFFs, only Rendering Logic.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cache"><a class="header" href="#cache">Cache</a></h1>
 <p>A <a href="https://en.wikipedia.org/wiki/Cache_(computing)">cache</a> is a software component that stores data so that future requests for that data can be served faster. Caches are commonly used to improve performance and reduce latency in various applications, including web browsers, databases, and operating systems.</p>
@@ -1059,7 +1061,7 @@ PS: I was there in Vegas and saw that live, was pretty awesome.<div style="break
 <h2 id="why-you-need-to-know-this-19"><a class="header" href="#why-you-need-to-know-this-19">Why you need to know this?</a></h2>
 <p>This pattern should be used often. However you need make sure you always have an invalidation mechanism in place to avoid serving stale data. Usually the most simple invalidation mechanism is to use a Time-to-Live (TTL) strategy, where cached data is automatically removed after a certain period. Imagine the cache expires after 2h or something like that.</p>
 <p>Backend system should have cache to protect from database latency in case of slow queries or high traffic. Even if you call a downstream dependency that is slow, or a 3rd party API which is also slow you should cache as much as possible.</p>
-<p>This pattern not only reduce latency but improves the user experience as well. IF the users see everything happens pretty fast they will be more happy rather than if everything is slow. But you might arguee, OH, the first call will always be slow. Well for that case you can pre-warm the cache and make the call before the user need.</p>
+<p>This pattern not only reduce latency but improves the user experience as well. IF the users see everything happens pretty fast they will be more happy rather than if everything is slow. But you might argue, OH, the first call will always be slow. Well for that case you can pre-warm the cache and make the call before the user need.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="connection-pool"><a class="header" href="#connection-pool">Connection Pool</a></h1>
 <p>A <a href="https://en.wikipedia.org/wiki/Connection_pool">connection pool</a> is a cache of database connections maintained so that the connections can be reused when future requests to the database are required. Connection pools are used to enhance the performance of executing commands on a database. Opening and maintaining a database connection for each user, especially requests made to a dynamic database-driven website application, is costly and wastes resources.</p>
 <p>It's expensive to open and close connections to the database all the time. That's why these objects are created at application startup and they are borrowed and returned to the pool as needed.</p>
@@ -1232,7 +1234,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <p>The thundering herd problem occurs when multiple clients simultaneously retry an operation after a failure, leading to a sudden surge in requests that can overwhelm the system. To mitigate this issue, techniques such as jitter in backoff strategies and limiting the number of concurrent retries can be employed.</p>
 <h2 id="why-you-need-to-know-this-27"><a class="header" href="#why-you-need-to-know-this-27">Why you need to know this?</a></h2>
 <p>Everytime you make a call, does not matter if the service is internal or external you want combine retries with timeouts and progressive backoff to make your system more resilient to transient failures. This is especially important in distributed systems where network issues and service unavailability are common.</p>
-<p>Everysingle call to AWS is the same principle, the good news is that AWS SDKs already implement retries with timeouts and progressive backoff for you, so you just need to configure them properly.</p>
+<p>Every single call to AWS is the same principle, the good news is that AWS SDKs already implement retries with timeouts and progressive backoff for you, so you just need to configure them properly.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="webhook"><a class="header" href="#webhook">Webhook</a></h1>
 <p>A <a href="https://en.wikipedia.org/wiki/Webhook">webhook</a> is just an endpoint in an API or REST server. A webhook is used to notify internal/external services when certain events happen.</p>
 <p>When an event occurs, the server makes an HTTP request (usually a POST request) to the specified URL of the web hook, sending relevant data about the event.</p>
@@ -1253,7 +1255,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </ul>
 <p>Webhooks do not require special technology. You can apply them with any backend technology that can handle HTTP requests.</p>
 <h2 id="why-you-need-to-know-this-28"><a class="header" href="#why-you-need-to-know-this-28">Why you need to know this?</a></h2>
-<p>Webhooks are interesting patrern for 2 common scenarios:</p>
+<p>Webhooks are interesting pattern for 2 common scenarios:</p>
 <ol>
 <li>
 <p>You are doing async processing and want to notify another system when the processing is done. Lets say the other system is external. So this prevent the need for polling. Same pattern can be applied for internal systems as well.</p>
@@ -1342,20 +1344,23 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <h2 id="external-links"><a class="header" href="#external-links">External Links</a></h2>
 <p>For a comprehensive collection of blog posts, articles, technical documentation, and external resources, please see <a href="epilogue/REFERENCES.html">References</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="how-i-wrote-this-book"><a class="header" href="#how-i-wrote-this-book">How I wrote this book?</a></h1>
-<p>I wrote this book in a very different way compared with my 3 previous books. My 3 previous books were written in a formal way. This one was written in a very differrent way. Let's exmplain the "formal process" and how usually it worked for me:</p>
+<p>I blog <a href="https://diego-pacheco.blogspot.com/2007/03/boas-vindas-primeiro-post.html">since</a> <code>2007</code> that is:
+\( \text{current year} - 2007 \)
+years blogging.</p>
+<p>I wrote this book in a very different way compared with my 3 previous books. My 3 previous books were written in a formal way. This one was written in a very different way. Let's explain the "formal process" and how usually it worked for me:</p>
 <ul>
 <li>You need to write a proposal, proposal get debated and approved, you write.</li>
-<li>Formal books habe length requirements usually 300 pages.</li>
+<li>Formal books have length requirements usually 300 pages.</li>
 <li>Formal books once approved are waterfall and have several phases.</li>
 <li>Once you deliver a chapter, there is a a english reviewer.</li>
-<li>After the english reviwer there is the technical reviewer.</li>
-<li>After that there is copy-writing, index, layouting and finilay printing.</li>
+<li>After the english reviewer there is the technical reviewer.</li>
+<li>After that there is copy-writing, index, layouting and finally printing.</li>
 <li>Traditional process take from 7 to 12 months.</li>
-<li>I wrote books alone and with other people, more people you have, more coordination you need and longer it takes, more things can go wrong, it's literaly no diffrent than a project.</li>
+<li>I wrote books alone and with other people, more people you have, more coordination you need and longer it takes, more things can go wrong, it's literally no different than a project.</li>
 </ul>
 <p>I want a different experience, I did several things differently here, I'm not saying I would never do traditional books again, but for sure is different, there are somethings here I like a lot, for instance:</p>
 <ul>
-<li>Becaue I used <code>mdbook</code> the book is written with a tool in Rust which is markdown based.</li>
+<li>Because I used <code>mdbook</code> the book is written with a tool in Rust which is markdown based.</li>
 <li>Mdbook has 3 killer features for me:
 <ul>
 <li>It has a built in search engine, and a very good one.</li>
@@ -1376,7 +1381,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>References</li>
 <li>Spell check and proof reading my english (fix typos and fix grammar issues never to wrote whole paragraphs).</li>
 </ul>
-<p>I used claude code <a href="https://github.com/diegopacheco/decks/blob/main/tech-notes/claude-code.md#3-create-custom-commands">custom commands</a> to do all this tasks, I create a <code>book-all</code> custom command that automated all thast workflows:</p>
+<p>I used claude code <a href="https://github.com/diegopacheco/decks/blob/main/tech-notes/claude-code.md#3-create-custom-commands">custom commands</a> to do all this tasks, I create a <code>book-all</code> custom command that automated all those workflows:</p>
 <p>book-all.md</p>
 <pre><code class="language-markdown">## Perform several Tasks to publish my book
 - Read all markdown files
@@ -1386,8 +1391,8 @@ This pattern combines aspects of both synchronous and asynchronous communication
 - My glossary is on a GLOSSARY.md
 - Make sure my glossary is up to date
 
-## Task 2 - # Create or Update my Referenses
-- My refenreces are in REFERENCES.md
+## Task 2 - # Create or Update my References
+- My references are in REFERENCES.md
 - Make sure my external references/links are up to date
 
 ## Task 3 - # Create or update my book index
@@ -1396,7 +1401,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 
 ## Task 4 - # Create or update book CHANGELOG.md
 - Read commits from git history
-- Makesure the changelog has meaning
+- Make sure the changelog has meaning
 - Only look for markdown files, ignore *.html.
 
 ## Task 5 - # Fix my english
@@ -1414,7 +1419,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 </code></pre>
 <p>Running this custom commands uses in avg ~70k tokens. So I use AI for the boring and repetitive tasks, not to write the book itself.</p>
 <h2 id="cicd"><a class="header" href="#cicd">CI/CD</a></h2>
-<p>THis book was right with CI/CD in mind from day one. I have a script called <code>bump-version.sh</code> that bumps the version of the book on a file on the root called "VERSION". When I released the book it had ~100 pages on version <code>1.0.0</code> during the first week of the book, I released content everyday. For the first week I did 5 releases: 1.0.1, 1.0.2, 1.0.3, 1.0.4, 1.0.5. Each release had new content. I also used AI to generate a CHANGELOG.md file so you can track my changes. After release 1.0.5 the book is with 125 pages.</p>
+<p>This book was written with CI/CD in mind from day one. I have a script called <code>bump-version.sh</code> that bumps the version of the book on a file on the root called "VERSION". When I released the book it had ~100 pages on version <code>1.0.0</code> during the first week of the book, I released content everyday. For the first week I did 5 releases: 1.0.1, 1.0.2, 1.0.3, 1.0.4, 1.0.5. Each release had new content. I also used AI to generate a CHANGELOG.md file so you can track my changes. After release 1.0.5 the book is with 125 pages.</p>
 <p>This is killer feature because I can keep releasing new content, in a very lean/agile way, directly to you the reader.</p>
 <h2 id="did-you-like-my-work-did-it-help-you"><a class="header" href="#did-you-like-my-work-did-it-help-you">Did you like my work? Did it help you?</a></h2>
 <p>IF you like my work, you can help me buying one of my other books here:</p>
@@ -1427,8 +1432,16 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
 <p>All notable changes to this project will be documented in this file.</p>
 <h2 id="unreleased"><a class="header" href="#unreleased">[Unreleased]</a></h2>
-<h2 id="105---2025-10-31"><a class="header" href="#105---2025-10-31">[1.0.5] - 2025-10-31</a></h2>
 <h3 id="added"><a class="header" href="#added">Added</a></h3>
+<ul>
+<li>HOW_I_WROTE_THE_BOOK.md: Behind the scenes of the book creation process</li>
+</ul>
+<h3 id="changed"><a class="header" href="#changed">Changed</a></h3>
+<ul>
+<li>GLOSSARY.md: Added Business Logic, Discovery Work, and Experimentation terms</li>
+</ul>
+<h2 id="105---2025-10-31"><a class="header" href="#105---2025-10-31">[1.0.5] - 2025-10-31</a></h2>
+<h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
 <p>Pattern files - Added "Why you need to know this?" sections with practical guidance:</p>
 <ul>
 <li>WEB_HOOK.md: Added section explaining use cases for async processing notifications and 3rd party integrations, emphasizing event-driven architecture over polling</li>
@@ -1452,7 +1465,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>REFERENCES.md: Added AWS re:Invent 2022 keynote with Dr. Werner Vogels under Videos &amp; Media section</li>
 <li>REFERENCES.md: Added Mark Zuckerberg videos on product strategy and fast learning cycles under Videos &amp; Media section</li>
 </ul>
-<h3 id="changed"><a class="header" href="#changed">Changed</a></h3>
+<h3 id="changed-1"><a class="header" href="#changed-1">Changed</a></h3>
 <p>Grammar and spelling corrections across multiple files:</p>
 <ul>
 <li>introduction.md: Changed "guidance about Software Architecture" to "guidance on Software Architecture"</li>
@@ -1472,7 +1485,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>RETRY.md: Fixed "Everytime" to "Every time", "Everysingle" to "Every single"</li>
 </ul>
 <h2 id="104---2025-10-30"><a class="header" href="#104---2025-10-30">[1.0.4] - 2025-10-30</a></h2>
-<h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
+<h3 id="added-2"><a class="header" href="#added-2">Added</a></h3>
 <p>Dilemmas - Added "Why you need to know this?" sections:</p>
 <ul>
 <li>DISCOVERY_VS_DELIVERY.md: Added section emphasizing learning speed as competitive advantage with Mark Zuckerberg product strategy reference, fixed TikTok embed iframe for proper display</li>
@@ -1487,12 +1500,12 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>REQUIREMENTS.md: Added section on handling requirements through product collaboration, UX understanding, spike techniques, production validation, experiments, and industry research</li>
 <li>IGNORE_CULTURE.md: Enhanced content emphasizing architect's role as leader and teacher in setting example for caring and action-oriented behavior</li>
 </ul>
-<h3 id="changed-1"><a class="header" href="#changed-1">Changed</a></h3>
+<h3 id="changed-2"><a class="header" href="#changed-2">Changed</a></h3>
 <ul>
 <li>GLOSSARY.md: Added terms including Blast Radius, Blameless Feature Reviews, Learning Cycles, OpenSearch/Elasticsearch, and Spike</li>
 </ul>
 <h2 id="103---2025-10-29"><a class="header" href="#103---2025-10-29">[1.0.3] - 2025-10-29</a></h2>
-<h3 id="added-2"><a class="header" href="#added-2">Added</a></h3>
+<h3 id="added-3"><a class="header" href="#added-3">Added</a></h3>
 <p>Concepts - Added "Why you need to know this?" sections:</p>
 <ul>
 <li>STATELESS_VS_STATEFULL_SVC.md: Added comprehensive content on service architecture patterns</li>
@@ -1502,14 +1515,14 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>OPLOCKING.md: Added section comparing pessimistic vs optimistic locking use cases, including React re-rendering scenario and high/low contention environments</li>
 <li>IDEMPOTENCY.md: Added section on REST API design requirements for GET/HEAD/OPTIONS/TRACE/PUT methods and code complexity implications</li>
 </ul>
-<h3 id="changed-2"><a class="header" href="#changed-2">Changed</a></h3>
+<h3 id="changed-3"><a class="header" href="#changed-3">Changed</a></h3>
 <ul>
 <li>BASE.md: Enhanced with additional details and clarity on eventual consistency patterns</li>
 <li>AUTHENT.md: Enhanced with comprehensive authentication and authorization coverage</li>
 <li>ACID.md: Enhanced with detailed transaction property explanations</li>
 </ul>
 <h2 id="102---2025-10-28"><a class="header" href="#102---2025-10-28">[1.0.2] - 2025-10-28</a></h2>
-<h3 id="changed-3"><a class="header" href="#changed-3">Changed</a></h3>
+<h3 id="changed-4"><a class="header" href="#changed-4">Changed</a></h3>
 <ul>
 <li>Enhanced ANTI-FRAGILITY.md with additional content</li>
 <li>Expanded OSS.md with more open source insights</li>
@@ -1519,12 +1532,12 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Improved STAGNATION.md anti-pattern documentation</li>
 <li>Expanded GLOSSARY.md with more architectural terms</li>
 </ul>
-<h3 id="added-3"><a class="header" href="#added-3">Added</a></h3>
+<h3 id="added-4"><a class="header" href="#added-4">Added</a></h3>
 <ul>
 <li>CHANGELOG.md file to track changes and updates</li>
 </ul>
 <h2 id="101---2025-10-27"><a class="header" href="#101---2025-10-27">[1.0.1] - 2025-10-27</a></h2>
-<h3 id="added-4"><a class="header" href="#added-4">Added</a></h3>
+<h3 id="added-5"><a class="header" href="#added-5">Added</a></h3>
 <ul>
 <li>Chapter 0 (Zero) with rationale and reasoning behind the book</li>
 <li>Chapter 2 (Anti-Patterns): TECH_DEBT_PLAGUE, IGNORE_CULTURE, STAGNATION, REQUIREMENTS</li>
@@ -1541,7 +1554,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Resources section with books and learning materials</li>
 <li>References section with external links</li>
 </ul>
-<h3 id="changed-4"><a class="header" href="#changed-4">Changed</a></h3>
+<h3 id="changed-5"><a class="header" href="#changed-5">Changed</a></h3>
 <ul>
 <li>Reorganized book structure into numbered chapters</li>
 <li>Separated Concepts and Patterns into distinct chapters</li>
@@ -1557,7 +1570,7 @@ This pattern combines aspects of both synchronous and asynchronous communication
 <li>Documentation structure inconsistencies</li>
 </ul>
 <h2 id="100---2025-10-27"><a class="header" href="#100---2025-10-27">[1.0.0] - 2025-10-27</a></h2>
-<h3 id="added-5"><a class="header" href="#added-5">Added</a></h3>
+<h3 id="added-6"><a class="header" href="#added-6">Added</a></h3>
 <ul>
 <li>Initial project setup with mdBook</li>
 <li>Introduction and cover page</li>
@@ -1826,6 +1839,8 @@ A practice of reviewing features without blaming individuals, focusing on learni
 The decision between building solutions in-house for core business advantages or buying external solutions.</p>
 <p><strong>Build Status</strong>
 The state of the automated build process, which should consistently pass in stable systems as indicator of code quality.</p>
+<p><strong>Business Logic</strong>
+The core domain logic implementing business rules and operations, distinguished from rendering logic which prepares data for presentation.</p>
 <h2 id="c"><a class="header" href="#c">C</a></h2>
 <p><strong>Canary Release</strong>
 A deployment strategy where new code is gradually rolled out to a small percentage of users first, allowing observation of behavior and issues before full deployment. Often enabled through feature flags.</p>
@@ -1890,6 +1905,8 @@ The planned approach for releasing code to production, including methods like ca
 The rate at which deployments to production complete without errors or rollbacks, indicating system reliability and confidence in release processes.</p>
 <p><strong>Design Document</strong>
 A living document that captures architectural design, including diagrams, key decisions, rationale, trade-offs, and principles. Serves as communication tool and basis for review and feedback.</p>
+<p><strong>Discovery Work</strong>
+Early phase of project work focused on understanding problems, exploring solutions, and validating assumptions through research, prototyping, and testing before committing to full implementation.</p>
 <p><strong>Deep Work</strong>
 Focused, uninterrupted time that architects must protect for research, thinking about trade-offs, evaluating solutions, and reading code, typically 3-6 hours at least 3 times per week.</p>
 <p><strong>Decide or Wait Dilemma</strong>
@@ -1927,6 +1944,8 @@ A note-taking and organization application that can be used by architects for do
 A technique storing a sequence of events that can be processed later to reconstruct system state.</p>
 <p><strong>Expand-Contract Pattern</strong>
 A three-phase deployment strategy for breaking changes: expand (add new field), migrate (update services), contract (remove old field).</p>
+<p><strong>Experimentation</strong>
+The practice of using A/B tests, prototypes, and production trials to validate assumptions and make informed decisions about features and architecture.</p>
 <p><strong>Exponential Backoff</strong>
 A retry strategy where the wait time increases exponentially with each retry attempt.</p>
 <p><strong>Extreme Ownership</strong>
@@ -2597,6 +2616,22 @@ A general-purpose programming language designed for robustness, optimality, and 
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
@@ -2618,7 +2653,9 @@ A general-purpose programming language designed for robustness, optimality, and 
 
         <script>
         window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
         });
         </script>
 
