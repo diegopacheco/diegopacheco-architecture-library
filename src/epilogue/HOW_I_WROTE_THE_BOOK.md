@@ -1,7 +1,7 @@
 # How I wrote this book?
 
 I blog [since](https://diego-pacheco.blogspot.com/2007/03/boas-vindas-primeiro-post.html) `2007` that is:
-\\( \text{current year} - 2007 \\)
+$2025 - 2007 = 18$
 years blogging.
 
 I wrote this book in a very different way compared with my 3 previous books. My 3 previous books were written in a formal way. This one was written in a very different way. Let's explain the "formal process" and how usually it worked for me:
