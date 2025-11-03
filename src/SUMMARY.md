@@ -93,6 +93,7 @@ Choosing the best and latest solutions
 # 9. Chapter 9 - Epilogue
 - [Epilogue](epilogue/IN_THE_END.md) - Final thoughts and next steps
 - [Resources](epilogue/RESOURCES.md) - Recommended books and learning materials
+- [How I Wrote The Book](epilogue/HOW_I_WROTE_THE_BOOK.md) - Behind the scenes of the book's creation
 - [Changelog](CHANGELOG.md) - Updates and revisions to the book
 - [References](epilogue/REFERENCES.md) - External blog posts, articles, and technical documentation
 - [Glossary](epilogue/GLOSSARY.md) - Definitions of key terms used in the book
