@@ -1,8 +1,7 @@
 # How I wrote this book?
 
-I blog [since](https://diego-pacheco.blogspot.com/2007/03/boas-vindas-primeiro-post.html) `2007` that is:
-$2025 - 2007 = 18$
-years blogging.
+I blog [since](https://diego-pacheco.blogspot.com/2007/03/boas-vindas-primeiro-post.html) `2007`, that is: <b><span id="years-blogging"></span></b>.
+Every page on this book has one or multiple links to blog posts I did on the past.
 
 I wrote this book in a very different way compared with my 3 previous books. My 3 previous books were written in a formal way. This one was written in a very different way. Let's explain the "formal process" and how usually it worked for me:
 * You need to write a proposal, proposal get debated and approved, you write.
@@ -73,11 +72,11 @@ book-all.md
 - Make sure you did not delete anything wrongly
 ```
 
-Running this custom commands uses in avg ~70k tokens. So I use AI for the boring and repetitive tasks, not to write the book itself.
+Running this custom commands uses in avg ~70k tokens. So I use AI for the boring and repetitive tasks, not to write the book itself. When I run out of tokens on Claude Code I would fallback to Github Copilot.
 
 ## CI/CD
 
-This book was written with CI/CD in mind from day one. I have a script called `bump-version.sh` that bumps the version of the book on a file on the root called "VERSION". When I released the book it had ~100 pages on version `1.0.0` during the first week of the book, I released content everyday. For the first week I did 5 releases: 1.0.1, 1.0.2, 1.0.3, 1.0.4, 1.0.5. Each release had new content. I also used AI to generate a CHANGELOG.md file so you can track my changes. After release 1.0.5 the book is with 125 pages.
+This book was written with CI/CD in mind from day one. I have a script called `bump-version.sh` that bumps the version of the book on a file on the root called "VERSION". When I released the book it had ~100 pages on version `1.0.0` during the first week of the book, I released content everyday. For the first week I did 6 releases: 1.0.1, 1.0.2, 1.0.3, 1.0.4, 1.0.5 and 1.0.6. Each release had new content. I also used AI to generate a CHANGELOG.md file so you can track my changes. After release 1.0.5 the book is with 132 pages.
 
 This is killer feature because I can keep releasing new content, in a very lean/agile way, directly to you the reader.
 

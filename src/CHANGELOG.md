@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [1.0.6] - 2025-11-02
 
 ### Added
 - HOW_I_WROTE_THE_BOOK.md: Behind the scenes of the book creation process
