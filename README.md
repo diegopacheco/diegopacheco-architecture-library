@@ -101,6 +101,7 @@ Choosing the best and latest solutions
 - [Why](src/concepts/WHY.md)
 - [ACID](src/concepts/ACID.md) - Relational database transaction properties
 - [Authentication & Authorization](src/concepts/AUTHENT.md) - Identity verification and access control
+- [JWT](src/concepts/JWT.md) - JSON Web Tokens for secure data exchange
 - [BASE](src/concepts/BASE.md) - NoSQL consistency model
 - [Idempotency](src/concepts/IDEMPOTENCY.md) - Safe operation repetition
 - [Optimistic vs Pessimistic Locking](src/concepts/OPLOCKING.md) - Concurrency control strategies

@@ -59,6 +59,7 @@ Choosing the best and latest solutions
 - [Why](concepts/WHY.md)
 - [ACID](concepts/ACID.md)
 - [Authentication & Authorization](concepts/AUTHENT.md)
+- [JWT](concepts/JWT.md)
 - [BASE](concepts/BASE.md)
 - [Idempotency](concepts/IDEMPOTENCY.md)
 - [Optimistic vs Pessimistic Locking](concepts/OPLOCKING.md)
