@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.7] - 2025-11-06
+
+### Added
+- JWT.md: Comprehensive documentation on JSON Web Tokens including structure, flow, and security best practices
+- GLOSSARY.md: Added JSON Web Token (JWT) entry with definition and explanation
+- INDEX.md: Added JWT entry in alphabetical index and Chapter 6 concepts section
+- REFERENCES.md: Added JWT.io debugger tool and Wikipedia JWT reference
+
 ## [1.0.6] - 2025-11-02
 
 ### Added

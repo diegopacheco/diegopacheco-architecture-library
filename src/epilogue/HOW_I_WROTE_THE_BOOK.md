@@ -7,8 +7,8 @@ I wrote this book in a very different way compared with my 3 previous books. My 
 * You need to write a proposal, proposal get debated and approved, you write.
 * Formal books have length requirements usually 300 pages.
 * Formal books once approved are waterfall and have several phases.
-* Once you deliver a chapter, there is a a english reviewer.
-* After the english reviewer there is the technical reviewer.
+* Once you deliver a chapter, there is an English reviewer.
+* After the English reviewer there is the technical reviewer.
 * After that there is copy-writing, index, layouting and finally printing.
 * Traditional process take from 7 to 12 months.
 * I wrote books alone and with other people, more people you have, more coordination you need and longer it takes, more things can go wrong, it's literally no different than a project.
@@ -31,7 +31,7 @@ I did not use AI to generate the entire book. The book is mine, all content I wr
 * Index
 * Glossary
 * References
-* Spell check and proof reading my english (fix typos and fix grammar issues never to wrote whole paragraphs).
+* Spell check and proof reading my English (fix typos and fix grammar issues never to write whole paragraphs).
 
 I used claude code [custom commands](https://github.com/diegopacheco/decks/blob/main/tech-notes/claude-code.md#3-create-custom-commands) to do all this tasks, I create a `book-all` custom command that automated all those workflows:
 

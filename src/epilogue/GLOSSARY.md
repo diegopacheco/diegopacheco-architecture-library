@@ -349,6 +349,9 @@ An open-source automation server used for continuous integration and continuous 
 **Jitter**
 Adding randomness to retry wait times to prevent synchronized retries from multiple clients.
 
+**JSON Web Token (JWT)**
+A standard created in 2010 that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs consist of three parts: header, payload, and signature, enabling stateless authentication without server-side session storage.
+
 ## K
 
 **Kanban**

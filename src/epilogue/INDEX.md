@@ -114,6 +114,9 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 **Idempotency**
 [Concepts](../concepts/IDEMPOTENCY.md)
 
+**JWT (JSON Web Token)**
+[Concepts](../concepts/JWT.md)
+
 **Ignore Culture**
 [Anti-Patterns](../anti-patterns/IGNORE_CULTURE.md)
 
@@ -367,6 +370,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 * [Authentication & Authorization](../concepts/AUTHENT.md)
 * [BASE](../concepts/BASE.md)
 * [Idempotency](../concepts/IDEMPOTENCY.md)
+* [JWT](../concepts/JWT.md)
 * [Optimistic vs Pessimistic Locking](../concepts/OPLOCKING.md)
 * [Partition](../concepts/PARTITION.md)
 * [Schema Evolution](../concepts/SCHEMA_EVOLUTION.md)

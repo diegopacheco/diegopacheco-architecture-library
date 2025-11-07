@@ -138,6 +138,7 @@ A comprehensive collection of external references, blog posts, articles, and tec
 * [Authentication](https://en.wikipedia.org/wiki/Authentication)
 * [Authorization](https://en.wikipedia.org/wiki/Authorization)
 * [Idempotence](https://en.wikipedia.org/wiki/Idempotence)
+* [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token)
 * [Lock (Computer Science)](https://en.wikipedia.org/wiki/Lock_(computer_science))
 * [Optimistic Concurrency Control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control)
 * [Partition (Database)](https://en.wikipedia.org/wiki/Partition_(database))
@@ -163,6 +164,7 @@ A comprehensive collection of external references, blog posts, articles, and tec
 **Other Technical Resources**
 * [REST API Pagination](https://www.merge.dev/blog/rest-api-pagination)
 * [Retrospectives Wiki](https://retrospectivewiki.org/)
+* [JWT.io - JWT Debugger](https://jwt.io/)
 
 ## Tools
 
