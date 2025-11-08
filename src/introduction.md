@@ -6,6 +6,10 @@ This repository contains a curated collection of concepts, guidance on Software 
 
 I wrote this book because I have been doing software architecture for more than 20 years and I want to share my philosophy, practices, and important concepts and patterns with other architects and aspiring architects. This is also an experiment - a living piece of advice that I want to improve over time.
 
+## Disclaimer
+
+This book does not represent the views of any of my employers or clients past or future. The opinions expressed here are my own and do not reflect the views of any organization I am affiliated with past or future. All this book os provided with my own personal time, effort and devices. Several pages have links to my personal blog and POCs made on my personal time.
+
 ## What to Expect
 
 * Honest and direct advice
