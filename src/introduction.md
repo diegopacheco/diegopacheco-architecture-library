@@ -19,7 +19,7 @@ This book does not represent the views of any of my employers or clients past or
 ## What this book is NOT
 
 * Not a tutorial or step-by-step guide
-* It's not a panacea for all architecture problems
+* It's not a panacea for all architecture problems and solutions
 
 ## About the Author
 
