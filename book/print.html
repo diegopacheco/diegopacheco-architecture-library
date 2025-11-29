@@ -501,6 +501,8 @@ Choosing the best and latest solutions</li>
 <p>It is important to know what is wrong, so you can avoid doing it.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tech-debt-plague"><a class="header" href="#tech-debt-plague">Tech Debt Plague</a></h1>
 <p>Tech debt is a <a href="https://diego-pacheco.blogspot.com/2020/01/breaking-debt-cycle.html">plague</a>. It is something that all companies suffer from. It is normal to have tech debt. What is not correct is architects not fighting tech debt constantly. Tech debt must be fought all the time, either by simplifying requirements to avoid feature bloat, or by making better decisions that lead to better systems.</p>
+<img src="anti-patterns/../images/01-tech-debt-plague-gemini-3-banana-pro.png" width="600"/>
+<p>PS: Image create with Gemini 3 - Banana Pro model</p>
 <p>When I was thinking about this section, I was thinking in terms of <a href="https://diego-pacheco.blogspot.com/2024/04/tech-debt-first.html">"Tech Debt First"</a>. Because often I see tech debt being the "default choice," which is an anti-pattern. Some technical principles should be non-negotiable.</p>
 <p>Imagine you are building a house. Pretty sure the buyer does not expect the house to collapse 6 months later after buying it. To cut corners, you would not decide to use paper for walls, styrofoam for the roof, and direct sunlight for electricity. However, when we build software, bad management, bad architects, and bad developers decide to cut corners to the point of making the software collapse after a few months of being in production.</p>
 <p>One classical example is skipping tests. Tests are not nice to have, they are a must have. If you do not have tests, you are building a house without a foundation. You can build it fast, but sooner or later it will collapse. How will you do refactoring without tests? Management often pushes for such bad practices, but <a href="https://diego-pacheco.blogspot.com/2020/06/dont-outsmart-hard-chooses-why.html">even architects (the bad ones)</a> push for that. Tests are non-negotiable.</p>
@@ -2698,22 +2700,6 @@ A general-purpose programming language designed for robustness, optimality, and 
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
