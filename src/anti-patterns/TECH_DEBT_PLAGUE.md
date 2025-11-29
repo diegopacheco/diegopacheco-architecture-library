@@ -2,6 +2,10 @@
 
 Tech debt is a [plague](https://diego-pacheco.blogspot.com/2020/01/breaking-debt-cycle.html). It is something that all companies suffer from. It is normal to have tech debt. What is not correct is architects not fighting tech debt constantly. Tech debt must be fought all the time, either by simplifying requirements to avoid feature bloat, or by making better decisions that lead to better systems.
 
+<img src="../images/01-tech-debt-plague-gemini-3-banana-pro.png" width="600"/>
+
+PS: Image create with Gemini 3 - Banana Pro model
+
 When I was thinking about this section, I was thinking in terms of ["Tech Debt First"](https://diego-pacheco.blogspot.com/2024/04/tech-debt-first.html). Because often I see tech debt being the "default choice," which is an anti-pattern. Some technical principles should be non-negotiable.
 
 Imagine you are building a house. Pretty sure the buyer does not expect the house to collapse 6 months later after buying it. To cut corners, you would not decide to use paper for walls, styrofoam for the roof, and direct sunlight for electricity. However, when we build software, bad management, bad architects, and bad developers decide to cut corners to the point of making the software collapse after a few months of being in production.
