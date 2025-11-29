@@ -188,6 +188,11 @@
 <h2 id="backend-thinking"><a class="header" href="#backend-thinking">Backend Thinking</a></h2>
 <p>Tends to think 1:many. One API endpoint serves many features, many pages. This might be fine for backend but not for frontend. By default, backend services should be generic and reusable.</p>
 <p>It is okay to have many pages or many components, but it is not okay to have that many services. They should be generic, more centralized, and reusable by design.</p>
+<h2 id="a-tale-of-a-frontend-car"><a class="header" href="#a-tale-of-a-frontend-car">A tale of a Frontend Car</a></h2>
+<p>This is a car built by frontend engineers.</p>
+<img src="../images/01-frontned-car-wheels-gemini-3-banana-pro.png" width="600"/>
+<p>PS: Image created with Gemini 3 Banana Pro model</p>
+<p>A backend car is generic and endpoints can do more and have reuse by design not by acident. A frontend car has a wheel to turn left, a wheel to turn right, a wheel to go forward, and a wheel to go backward, every single thing ia a new whell. Now replace the word "wheel" with "API endpoint" and you get the idea.</p>
 
                     </main>
 
@@ -218,22 +223,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
