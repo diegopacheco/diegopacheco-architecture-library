@@ -8,3 +8,13 @@ Tends to think 1:1. One component, one feature, one page. This might be fine for
 Tends to think 1:many. One API endpoint serves many features, many pages. This might be fine for backend but not for frontend. By default, backend services should be generic and reusable.
 
 It is okay to have many pages or many components, but it is not okay to have that many services. They should be generic, more centralized, and reusable by design.
+
+## A tale of a Frontend Car
+
+This is a car built by frontend engineers.
+
+<img src="../images/01-frontned-car-wheels-gemini-3-banana-pro.png" width="600"/>
+
+PS: Image created with Gemini 3 Banana Pro model
+
+A backend car is generic and endpoints can do more and have reuse by design not by acident. A frontend car has a wheel to turn left, a wheel to turn right, a wheel to go forward, and a wheel to go backward, every single thing ia a new whell. Now replace the word "wheel" with "API endpoint" and you get the idea.
