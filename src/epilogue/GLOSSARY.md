@@ -623,7 +623,7 @@ UML diagrams useful for understanding how a system works internally and how data
 A technology for pushing updates from server to client.
 
 **Service Oriented Architecture (SOA)**
-A architectural approach treating services as first-class citizens, enabling isolation, independence, and flexibility.
+An architectural approach treating services as first-class citizens, enabling isolation, independence, and flexibility.
 
 **Session Persistence**
 A load balancer feature ensuring a client's requests go to the same backend server.
@@ -692,9 +692,6 @@ An anti-pattern where bad decisions are made as the default choice instead of ma
 
 **Technical Principles**
 Non-negotiable architectural standards and guidelines that define acceptable approaches to system design and implementation.
-
-**Testing in Production**
-A practice of validating system behavior and performance with real production traffic and data, using techniques like canary releases and feature flags.
 
 **Tech Debt Plague**
 An anti-pattern where technical debt accumulates unchecked and architects fail to fight technical debt continuously.

@@ -1,6 +1,6 @@
-# Message Id
+# Message ID
 
-[Message ID](https://en.wikipedia.org/wiki/Message-ID) Also known as CORRELATION_ID. The idea that each message or request must have a unique id, and you will pass down such id into the downstream services. Via headers or other means. When you log anything you also log the MESSAGE_ID.
+[Message ID](https://en.wikipedia.org/wiki/Message-ID), also known as CORRELATION_ID. Each message or request must have a unique ID that is passed to downstream services via headers or other means. When you log anything you also log the MESSAGE_ID.
 
 ## Why this is important?
 

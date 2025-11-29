@@ -28,15 +28,15 @@ A comprehensive collection of external references, blog posts, articles, and tec
 * [Misc](https://gist.github.com/diegopacheco/49329d726d0e2bd1c709ba1187a92c97)
 
 **Side Projects**
-* [Tupi Lang](https://github.com/diegopacheco/tupilang) - Programming language written in Java 23
-* [Jello](https://github.com/diegopacheco/jello) - Vanilla JS web-apis, Trello-like application
-* [Zim](https://github.com/diegopacheco/zim) - Vim-like editor written in Zig 0.13
-* [Gorminator](https://github.com/diegopacheco/gorminator) - Simple and dumb Linux terminal written in Go
-* [Kit](https://github.com/diegopacheco/kit) - Git-like tool written in Kotlin
-* [Shrust](https://github.com/diegopacheco/Shrust) - Compress/Decompress tool written in Rust
-* [Smith](https://github.com/diegopacheco/Smith) - Security Agent written with Scala 3.x
-* [ZOS](https://github.com/diegopacheco/zos) - Very tiny OS written in Zig
-* [Tiny Games](https://gist.github.com/diegopacheco/d48104e8f584e3209ce7d5f5c0186e0e) - Collection of JavaScript games
+* [Tupi Lang](https://github.com/diegopacheco/tupilang) - A programming language written in Java 23
+* [Jello](https://github.com/diegopacheco/jello) - Vanilla JS web APIs, Trello-like application
+* [Zim](https://github.com/diegopacheco/zim) - A Vim-like editor written in Zig 0.13
+* [Gorminator](https://github.com/diegopacheco/gorminator) - A simple and dumb Linux terminal written in Go
+* [Kit](https://github.com/diegopacheco/kit) - A Git-like tool written in Kotlin
+* [Shrust](https://github.com/diegopacheco/Shrust) - A compression/decompression tool written in Rust
+* [Smith](https://github.com/diegopacheco/Smith) - A security agent written with Scala 3.x
+* [ZOS](https://github.com/diegopacheco/zos) - A very tiny OS written in Zig
+* [Tiny Games](https://gist.github.com/diegopacheco/d48104e8f584e3209ce7d5f5c0186e0e) - A collection of JavaScript games
 
 ## Architecture & Design
 

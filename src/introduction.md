@@ -2,13 +2,13 @@
 
 <img src="cover.png" width="400">
 
-This repository contains a curated collection of concepts, guidance on Software Architecture by Diego Pacheco.
+This repository contains a curated collection of concepts and guidance on Software Architecture by Diego Pacheco.
 
 I wrote this book because I have been doing software architecture for more than 20 years and I want to share my philosophy, practices, and important concepts and patterns with other architects and aspiring architects. This is also an experiment - a living piece of advice that I want to improve over time.
 
 ## Disclaimer
 
-This book does not represent the views of any of my employers or clients past or future. The opinions expressed here are my own and do not reflect the views of any organization I am affiliated with past or future. All this book os provided with my own personal time, effort and devices. Several pages have links to my personal blog and POCs made on my personal time.
+This book does not represent the views of any of my employers or clients past or future. The opinions expressed here are my own and do not reflect the views of any organization I am affiliated with past or future. All of this book is provided with my own personal time, effort, and devices. Several pages have links to my personal blog and POCs made on my personal time.
 
 ## What to Expect
 
@@ -24,7 +24,7 @@ This book does not represent the views of any of my employers or clients past or
 ## About the Author
 
 👨‍💻 Diego Pacheco Bio
-Diego Pacheco is a seasoned, experienced 🇧🇷 Brazilian software architect, author, speaker, technology mentor, and DevOps practitioner with more than 20 years of solid experience. I have been building teams and mentoring people for more than a decade, teaching soft skills and technology daily. Selling projects, hiring, building solutions, running coding dojos, long retrospectives, weekly 1:1s, design sessions, code reviews, and my favorite debate club: architects community of practices and development groups for more than a decade. Living, breathing, and practicing real Agile since 2005, coaching teams, and helping many companies discover better ways to work using Lean and Kanban, Agile principles, and methods like XP and DTA/TTA. I have led complex architecture teams and engineering teams at scale guided by SOA principles, using a variety of open-source languages like Java, Scala, Rust, Go, Python, Groovy, JavaScript, and TypeScript, cloud providers like AWS Cloud and Google GCP, amazing solutions like Akka, ActiveMQ, Netty, Tomcat, and Gatling, NoSQL databases like Cassandra, Redis, Elasticache Redis, Elasticsearch, Opensearch, RabbitMQ, libraries like Spring, Hibernate, and Spring Boot, and also the NetflixOSS Stack: Simian Army, RxJava, Karyon, Dynomite, Eureka, and Ribbon. I have implemented complex security solutions at scale using AWS KMS, S3, Containers (ECS and EKS), Terraform, and Jenkins. Over a decade of experience as a consultant, coding, designing, and training people at big customers in Brazil, London, Barcelona, India, and the USA (Silicon Valley and Midwest). I have a passion for functional programming and distributed systems, NoSQL Databases, a mindset for Observability, and always learning new programming languages.
+Diego Pacheco is a seasoned, experienced 🇧🇷 Brazilian software architect, author, speaker, technology mentor, and DevOps practitioner with more than 20 years of solid experience. I have been building teams and mentoring people for more than a decade, teaching soft skills and technology daily. Selling projects, hiring, building solutions, running coding dojos, long retrospectives, weekly 1:1s, design sessions, code reviews, and my favorite debate club: architects community of practices and development groups for more than a decade. Living, breathing, and practicing real Agile since 2005, coaching teams, and helping many companies discover better ways to work using Lean and Kanban, Agile principles, and methods like XP and DTA/TTA. I have led complex architecture teams and engineering teams at scale guided by SOA principles, using a variety of open-source languages like Java, Scala, Rust, Go, Python, Groovy, JavaScript, and TypeScript, cloud providers like AWS Cloud and Google GCP, amazing solutions like Akka, ActiveMQ, Netty, Tomcat, and Gatling, NoSQL databases like Cassandra, Redis, Elasticache Redis, Elasticsearch, OpenSearch, RabbitMQ, libraries like Spring, Hibernate, and Spring Boot, and also the NetflixOSS Stack: Simian Army, RxJava, Karyon, Dynomite, Eureka, and Ribbon. I have implemented complex security solutions at scale using AWS KMS, S3, Containers (ECS and EKS), Terraform, and Jenkins. Over a decade of experience as a consultant, coding, designing, and training people at big customers in Brazil, London, Barcelona, India, and the USA (Silicon Valley and Midwest). I have a passion for functional programming and distributed systems, NoSQL Databases, a mindset for Observability, and am always learning new programming languages.
 
 🌱Currently: Working as a principal Software Architect with AWS public cloud, Kubernetes/EKS, performing complex cloud migrations, library migrations, server and persistence migrations, and security at scale with multi-level envelope encryption solutions using KMS and S3. While still hiring, teaching, mentoring, and growing engineers and architects. During my free time, I love playing with my daughter, playing guitar, gaming, coding POCs, and blogging. Active blogger at http://diego-pacheco.blogspot.com.br/
 
@@ -101,7 +101,7 @@ Hire, develop, retain, and truly grow talent at scale
 3. Chapter 3 - Dilemmas
 - [Why](dilemmas/WHY.md)
 - [Discovery vs Delivery](dilemmas/DISCOVERY_VS_DELIVERY.md) - Balancing exploration and execution
-- [Move Fast vs Do it Right](dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) - Speed vs Quality
+- [Move Fast vs Do It Right](dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) - Speed vs Quality
 - [Build vs Buy](dilemmas/BUILD_VS_BUY.md) - When to build in-house vs buy and integrate
 - [Decide or Wait](dilemmas/DECIDE_OR_WAIT.md) - Making timely decisions vs delaying for more info
 
@@ -123,7 +123,7 @@ Choosing the best and latest solutions
 - [Ownership](pratices/OWNERSHIP.md) - Extreme ownership and proactive behavior for architects
 - [Reading Code](pratices/READING_CODE.md) - Importance of reading code as an architect
 - [Monthly Review](pratices/MONTHLY_REVIEW.md) - See the whole picture.
-- [Working on Trenches](pratices/WORKING_ON_TRENCHES.md) - Hands-on, front-line work with the team.
+- [Working in the Trenches](pratices/WORKING_ON_TRENCHES.md) - Hands-on, front-line work with the team.
 
 6. Chapter 6 - Concepts
 - [Why](concepts/WHY.md)
@@ -147,7 +147,7 @@ Choosing the best and latest solutions
 - [Feature Flags](patterns/FEATURE_FLAGS.md) - Runtime configuration and gradual rollouts
 - [Load Balancer](patterns/LB.md) - Traffic distribution across servers
 - [Message Patterns](patterns/MESSAGE_PATTERNS.md) - Publish/Subscribe, Point-to-Point messaging
-- [Message Id](patterns/MESSAGE_ID.md) - Unique identifier for tracing requests
+- [Message ID](patterns/MESSAGE_ID.md) - Unique identifier for tracing requests
 - [Pagination](patterns/PAGINATION.md) - Breaking large datasets into pages
 - [Queue](patterns/QUEUE.md) - Asynchronous message processing
 - [Retry](patterns/RETRY.md) - Handling transient failures with retry strategies
@@ -156,7 +156,7 @@ Choosing the best and latest solutions
 8. Chapter 8 - Tools
 
 - [Why](tools/WHY.md)
-- [Diagraming Tools](tools/DIAGRAMING.md) - Visualizing architecture with diagrams
+- [Diagramming Tools](tools/DIAGRAMING.md) - Visualizing architecture with diagrams
 - [Writing Tools](tools/WRITING.md) - Documenting architecture effectively
 - [Thinking Tools](tools/THINKING.md) - Tools for structured thinking and exploration.
 

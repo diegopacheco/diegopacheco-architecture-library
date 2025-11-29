@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.8] - 2025-11-28
+
+### Added
+- PROTECT_YOUR_TIME.md: Added Gemini 3 Banana Pro illustration for the Protect Your Time chapter
+
+### Changed
+- INDEX.md: Corrected spelling, updated naming (Practices, Message ID), added How I Wrote the Book, and refreshed tool labels
+- GLOSSARY.md, REFERENCES.md, and other markdown files: Minor grammar and consistency fixes across terms and navigation content
+- TECH_DEBT_PLAGUE.md: Clarified wording around tests and Jira references
+
 ## [1.0.7] - 2025-11-06
 
 ### Added

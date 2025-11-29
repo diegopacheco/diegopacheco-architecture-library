@@ -28,7 +28,7 @@
 # 3. Chapter 3 - Dilemmas
 - [Why](dilemmas/WHY.md)
 - [Discovery vs Delivery](dilemmas/DISCOVERY_VS_DELIVERY.md) - Balancing exploration and execution
-- [Move Fast vs Do it Right](dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) - Speed vs Quality
+- [Move Fast vs Do It Right](dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) - Speed vs Quality
 - [Build vs Buy](dilemmas/BUILD_VS_BUY.md) - When to build in-house vs buy and integrate
 - [Decide or Wait](dilemmas/DECIDE_OR_WAIT.md) - Making timely decisions vs delaying for more info
 
@@ -36,8 +36,7 @@
 
 - [Why](properties/WHY.md)
 - [Anti-Fragility](properties/ANTI-FRAGILITY.md) - Systems Thriving on Failure
-- [State of the Art](properties/STATE-OF-THE-ART.md) -
-Choosing the best and latest solutions
+- [State of the Art](properties/STATE-OF-THE-ART.md) - Choosing the best and latest solutions
 - [Scalability](properties/SCALABILITY.md) - Designing for growth and load
 - [Observability](properties/OBSERVABLE.md) - Monitoring and understanding system behavior
 - [Stability](properties/STABILITY.md) - Ensuring stable daily practices.
@@ -52,7 +51,7 @@ Choosing the best and latest solutions
 - [Ownership](pratices/OWNERSHIP.md)
 - [Reading Code](pratices/READING_CODE.md)
 - [Monthly Review](pratices/MONTHLY_REVIEW.md)
-- [Working on Trenches](pratices/WORKING_ON_TRENCHES.md)
+- [Working in the Trenches](pratices/WORKING_ON_TRENCHES.md)
 
 # 6. Chapter 6 - Concepts
 
@@ -78,7 +77,7 @@ Choosing the best and latest solutions
 - [Feature Flags](patterns/FEATURE_FLAGS.md)
 - [Load Balancer](patterns/LB.md)
 - [Message Patterns](patterns/MESSAGE_PATTERNS.md)
-- [Message Id](patterns/MESSAGE_ID.md)
+- [Message ID](patterns/MESSAGE_ID.md)
 - [Pagination](patterns/PAGINATION.md)
 - [Queue](patterns/QUEUE.md)
 - [Retry](patterns/RETRY.md)
@@ -87,7 +86,7 @@ Choosing the best and latest solutions
 # 8. Chapter 8 - Tools
 
 - [Why](tools/WHY.md)
-- [Diagraming Tools](tools/DIAGRAMING.md) - Visualizing architecture with diagrams
+- [Diagramming Tools](tools/DIAGRAMING.md) - Visualizing architecture with diagrams
 - [Writing Tools](tools/WRITING.md) - Documenting architecture effectively
 - [Thinking Tools](tools/THINKING.md) - Tools for structured thinking and exploration.
 

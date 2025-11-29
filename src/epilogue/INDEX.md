@@ -20,10 +20,10 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 [Patterns](../patterns/API_GATEWAY.md)
 
 **Architecture Review**
-[Pratices](../pratices/ARCH_REVIEW.md)
+[Practices](../pratices/ARCH_REVIEW.md)
 
 **Attention to Detail**
-[Pratices](../pratices/ATTENTION_TO_DETAIL.md)
+[Practices](../pratices/ATTENTION_TO_DETAIL.md)
 
 **Authentication & Authorization**
 [Concepts](../concepts/AUTHENT.md)
@@ -68,14 +68,14 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 [Philosophy](../philosofy/DEFENSIVE.md)
 
 **Design First**
-[Pratices](../pratices/DESIGN_FIRST.md)
+[Practices](../pratices/DESIGN_FIRST.md)
 
-**Diagraming Tools**
+**Diagramming Tools**
 [Tools](../tools/DIAGRAMING.md)
 
 **Dilemmas**
 [Discovery vs Delivery](../dilemmas/DISCOVERY_VS_DELIVERY.md) |
-[Move Fast vs Do it Right](../dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) |
+[Move Fast vs Do It Right](../dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md) |
 [Build vs Buy](../dilemmas/BUILD_VS_BUY.md) |
 [Decide or Wait](../dilemmas/DECIDE_OR_WAIT.md)
 
@@ -108,6 +108,11 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 
 **Glossary**
 [Glossary](GLOSSARY.md)
+
+## H
+
+**How I Wrote the Book**
+[Epilogue](HOW_I_WROTE_THE_BOOK.md)
 
 ## I
 
@@ -143,9 +148,9 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 [Glossary](GLOSSARY.md)
 
 **Monthly Review**
-[Pratices](../pratices/MONTHLY_REVIEW.md)
+[Practices](../pratices/MONTHLY_REVIEW.md)
 
-**Move Fast vs Do it Right**
+**Move Fast vs Do It Right**
 [Dilemmas](../dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md)
 
 ## O
@@ -160,7 +165,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 [Concepts](../concepts/OPLOCKING.md)
 
 **Ownership**
-[Pratices](../pratices/OWNERSHIP.md)
+[Practices](../pratices/OWNERSHIP.md)
 
 ## P
 
@@ -178,7 +183,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 [Feature Flags](../patterns/FEATURE_FLAGS.md) |
 [Load Balancer](../patterns/LB.md) |
 [Message Patterns](../patterns/MESSAGE_PATTERNS.md) |
-[Message Id](../patterns/MESSAGE_ID.md) |
+[Message ID](../patterns/MESSAGE_ID.md) |
 [Pagination](../patterns/PAGINATION.md) |
 [Queue](../patterns/QUEUE.md) |
 [Retry](../patterns/RETRY.md) |
@@ -200,7 +205,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 [Ownership](../pratices/OWNERSHIP.md) |
 [Reading Code](../pratices/READING_CODE.md) |
 [Monthly Review](../pratices/MONTHLY_REVIEW.md) |
-[Working on Trenches](../pratices/WORKING_ON_TRENCHES.md)
+[Working in the Trenches](../pratices/WORKING_ON_TRENCHES.md)
 
 **Properties**
 [Anti-Fragility](../properties/ANTI-FRAGILITY.md) |
@@ -224,7 +229,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 [Zero](../zero/RATIONALE.md)
 
 **Reading Code**
-[Pratices](../pratices/READING_CODE.md)
+[Practices](../pratices/READING_CODE.md)
 
 **References**
 [References](REFERENCES.md)
@@ -282,7 +287,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 [Tools](../tools/THINKING.md)
 
 **Tools**
-[Diagraming Tools](../tools/DIAGRAMING.md) |
+[Diagramming Tools](../tools/DIAGRAMING.md) |
 [Writing Tools](../tools/WRITING.md) |
 [Thinking Tools](../tools/THINKING.md)
 
@@ -302,8 +307,8 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 [Why Patterns?](../patterns/WHY.md) |
 [Why Tools?](../tools/WHY.md)
 
-**Working on Trenches**
-[Pratices](../pratices/WORKING_ON_TRENCHES.md)
+**Working in the Trenches**
+[Practices](../pratices/WORKING_ON_TRENCHES.md)
 
 **Writing Tools**
 [Tools](../tools/WRITING.md)
@@ -341,7 +346,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 ### Chapter 3 - Dilemmas
 * [Why Dilemmas?](../dilemmas/WHY.md)
 * [Discovery vs Delivery](../dilemmas/DISCOVERY_VS_DELIVERY.md)
-* [Move Fast vs Do it Right](../dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md)
+* [Move Fast vs Do It Right](../dilemmas/MOVE_FAST_VS_DO_IT_RIGHT.md)
 * [Build vs Buy](../dilemmas/BUILD_VS_BUY.md)
 * [Decide or Wait](../dilemmas/DECIDE_OR_WAIT.md)
 
@@ -362,7 +367,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 * [Ownership](../pratices/OWNERSHIP.md)
 * [Reading Code](../pratices/READING_CODE.md)
 * [Monthly Review](../pratices/MONTHLY_REVIEW.md)
-* [Working on Trenches](../pratices/WORKING_ON_TRENCHES.md)
+* [Working in the Trenches](../pratices/WORKING_ON_TRENCHES.md)
 
 ### Chapter 6 - Concepts
 * [Why Concepts?](../concepts/WHY.md)
@@ -386,7 +391,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 * [Feature Flags](../patterns/FEATURE_FLAGS.md)
 * [Load Balancer](../patterns/LB.md)
 * [Message Patterns](../patterns/MESSAGE_PATTERNS.md)
-* [Message Id](../patterns/MESSAGE_ID.md)
+* [Message ID](../patterns/MESSAGE_ID.md)
 * [Pagination](../patterns/PAGINATION.md)
 * [Queue](../patterns/QUEUE.md)
 * [Retry](../patterns/RETRY.md)
@@ -394,7 +399,7 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 
 ### Chapter 8 - Tools
 * [Why Tools?](../tools/WHY.md)
-* [Diagraming Tools](../tools/DIAGRAMING.md)
+* [Diagramming Tools](../tools/DIAGRAMING.md)
 * [Writing Tools](../tools/WRITING.md)
 * [Thinking Tools](../tools/THINKING.md)
 
@@ -403,4 +408,5 @@ A comprehensive index of all topics, patterns, concepts, and practices covered i
 * [Resources](RESOURCES.md)
 * [References](REFERENCES.md)
 * [Epilogue](IN_THE_END.md)
+* [How I Wrote the Book](HOW_I_WROTE_THE_BOOK.md)
 * [Index](INDEX.md)
